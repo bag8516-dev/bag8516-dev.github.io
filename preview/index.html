@@ -268,8 +268,10 @@ a{color:inherit;}
   .s-num{font-size:54px;}
   .el-grid{grid-template-columns:repeat(7,1fr);gap:12px;}
   .el-wide{grid-column:auto;}
-  .nc{display:grid;grid-template-columns:170px 1fr;column-gap:3rem;}
-  .nc-meta{flex-direction:column;align-items:flex-start;gap:8px;}
+  .nc{display:grid;grid-template-columns:150px 1fr;column-gap:3rem;align-items:start;}
+  .nc > *{grid-column:2;}
+  .nc-meta{grid-column:1;grid-row:1 / span 12;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:0;}
+  .nc-tags{margin-top:.4rem;}
   .nc-ttl{font-size:23px;}
   .loc-row{grid-template-columns:150px 1fr;}
   .hist-row{grid-template-columns:80px 1fr;}
