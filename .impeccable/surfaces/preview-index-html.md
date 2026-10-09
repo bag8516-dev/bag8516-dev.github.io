@@ -1,0 +1,26 @@
+---
+version: 1
+slug: "preview-index-html"
+primary_target: "preview/index.html"
+related_targets: []
+---
+
+## Direction contract
+
+THESIS: 이 홈페이지는 '코인 소개 랜딩'이 아니라 한 권의 시추 탐사 로그다. 방문자는 페이지를 읽는 게 아니라 깊이를 따라 내려간다. 거부하는 정석: 다크 바탕 위 수치 카드 3장과 금속 포인트로 꾸민 크립토 랜딩.
+
+OWN-WORLD: 밤의 탐사 캠프 조사등 아래 펼친 제본 로그북. 바탕은 흑운모 암반 블랙(#0C0B09)에 아주 옅은 방안 괘선, 잉크는 공식 구리(#C2773F) 단일 커밋(화면의 30% 이상을 선·면으로 지배). 지층 밴드 색 3종만 허용: 공작석 녹(#2E6B52), 석영 회백(#B8B2A6), 적철 적(#8A3B2A). 표제는 Noto Serif KR 900, 측정치·라벨은 Spline Sans Mono, 본문 Noto Sans KR. 서명 요소: 왼쪽 고정 깊이 눈금자(0m→), 구리 원형 직인("시추 진행 중"), 코어 박스 도판 프레임, 리더라인 주석. 콘텐츠 없이도 이 괘선·눈금·직인만으로 알아본다.
+
+STORY: 방문자는 "말이 아니라 기록"을 본다 — 깊이 눈금을 따라 내려가며 캠프(사진), 13개 공(주상도), 공인 검증(ALS·SGS), 그리고 마지막에 '내 거래를 지키는 장치(에스크로)'에 도달해 앱을 연다.
+
+FIRST VIEWPORT: 로그북 표지. 왼쪽 가장자리에 깊이 눈금자 0m 기점. 중앙 상단에 공식 다이아 마크와 "차간톨고이 시추 탐사 기록" 표제(세리프 900), 그 아래 모노 측정 라벨 3줄(공번 13 / 원소 44종 / 6,481ha), 오른쪽 하단에 구리 원형 직인 '2026 · 진행 중'이 비스듬히 찍힘. 현장 사진은 표지 하단 1/3에 코어 박스 도판 띠로 깔림. 주 행동(에스크로 앱)은 직인 아래 구리 면 버튼.
+
+FORM: 시추 코어 로그 — 내 grounded 목록 1위(사용자 직접 선택, 주사위 패 공개 후 메뉴 선택). seed key ff8cf013 (direction round, reroll 라운드는 사용자 오클릭으로 무효 처리, 최종 선택은 구조화 질문 채널).
+
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+
+## Surface scope
+- 범위: preview/index.html 전면 (6페이지 전환 구조 유지: 홈/프로젝트/현장/진행/뉴스/에스크로)
+- 모드: Persuade. 청중: 중장년 커뮤니티 회원(폰) + 회사·신규(PC)
+- 불변: 사실 수치만, 회사 발언 "밝혔다"체, 투자 권유 아님 고지, 에스크로 앱 연결이 최종 행동
+- 미해결: 없음 (코드 주도 빌드)

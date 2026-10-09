@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&family=Marcellus&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&family=Spline+Sans+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.css">
 <style>
 /* MPC RWA - 리포트 에디토리얼 v5 (전면 신규) */
@@ -307,6 +307,80 @@ input,textarea{caret-color:var(--cop2);}
   *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
   .page.on{animation:none;}
 }
+
+/* ═══ v6: 시추 코어 로그 세계 (방향 계약 커밋) ═══ */
+:root{
+  --bg:#0C0B09; --bg2:#12100D; --ink:#EDE7DA; --mut:#A49C8D; --dim:#8A8478;
+  --cop:#C2773F; --cop2:#E09A62;
+  --st-g:#2E6B52; --st-q:#B8B2A6; --st-r:#8A3B2A;
+  --line:rgba(194,119,63,.3); --line2:rgba(194,119,63,.14);
+  --mono:'Spline Sans Mono',ui-monospace,monospace;
+}
+body{background:
+  linear-gradient(rgba(194,119,63,.045) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(194,119,63,.045) 1px,transparent 1px),
+  linear-gradient(rgba(194,119,63,.02) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(194,119,63,.02) 1px,transparent 1px),
+  var(--bg);
+  background-size:96px 96px,96px 96px,24px 24px,24px 24px;}
+.meas,.nc-date,.hq-num,.s-num,.sp-num,.esc-num,.el-num,.el-sym{font-family:var(--mono);}
+/* 로그북 표지 히어로 */
+.hero{position:relative;display:flex;flex-direction:column;min-height:100dvh;overflow:hidden;background:transparent;}
+.hero .hc{position:relative;padding:92px 22px 34px;flex:1;display:flex;flex-direction:column;justify-content:center;}
+#star-c{position:absolute;inset:0;width:100%;height:100%;opacity:.35;pointer-events:none;}
+#hero3d{position:absolute;right:-4%;top:6%;width:62%;height:58%;pointer-events:none;opacity:.5;}
+.log-head{display:flex;align-items:center;gap:12px;margin-bottom:1.8rem;padding-bottom:1rem;border-bottom:1px solid var(--line);}
+.log-head-id{display:flex;flex-direction:column;gap:3px;}
+.log-head-id .meas{font-size:11.5px;letter-spacing:.12em;color:var(--cop2);}
+.h-title{font-family:var(--serif);font-weight:900;font-size:40px;line-height:1.18;letter-spacing:-.02em;margin-bottom:.7rem;}
+.h-sub{font-size:13.5px;color:var(--mut);margin-bottom:1.8rem;}
+.log-meas{border-top:1px solid var(--line);margin-bottom:1.8rem;}
+.meas-row{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:.65rem 0;border-bottom:1px solid var(--line2);align-items:baseline;}
+.meas-k{font-size:12px;color:var(--dim);}
+.meas-v{font-family:var(--mono);font-size:19px;color:var(--cop2);}
+.meas-v i{font-style:normal;font-family:var(--sans);font-size:12px;color:var(--mut);margin-left:7px;}
+.stamp{position:absolute;right:18px;bottom:36%;width:108px;height:108px;border:2px solid rgba(194,119,63,.75);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;transform:rotate(-9deg);box-shadow:inset 0 0 0 4px rgba(194,119,63,.14);color:var(--cop2);pointer-events:none;}
+.stamp::before{content:'';position:absolute;inset:7px;border:1px solid rgba(194,119,63,.45);border-radius:50%;}
+.stamp span{font-weight:700;font-size:14px;letter-spacing:.08em;}
+.stamp small{font-family:var(--mono);font-size:11px;color:var(--cop);}
+.cover-strip{margin:0;position:relative;height:30dvh;min-height:190px;border-top:1px solid var(--line);}
+.cover-strip img{width:100%;height:100%;object-fit:cover;object-position:center 60%;filter:saturate(.9) contrast(1.02);}
+.cover-strip::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),transparent 35%);pointer-events:none;}
+.cover-strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:9px 22px;background:rgba(12,11,9,.82);border-top:1px solid var(--line2);font-size:12px;color:var(--mut);display:flex;gap:12px;align-items:baseline;}
+.cover-strip .meas{font-size:11px;color:var(--cop);letter-spacing:.14em;}
+/* 깊이 눈금 레일 */
+.depth-rail{display:none;}
+@media (min-width:1000px){
+  .depth-rail{display:block;position:fixed;left:0;top:0;bottom:0;width:58px;z-index:900;border-right:1px solid var(--line2);
+    background:repeating-linear-gradient(180deg,var(--line) 0 1px,transparent 1px 24px) 46px 0/8px 100% no-repeat,
+               repeating-linear-gradient(180deg,var(--line) 0 1px,transparent 1px 120px) 38px 0/16px 100% no-repeat;}
+  .depth-cur{position:absolute;left:4px;top:0;transform:translateY(80px);transition:transform .15s linear;font-family:var(--mono);font-size:10.5px;color:var(--cop2);border-top:1.5px solid var(--cop);padding-top:3px;width:46px;}
+  .depth-cur b{font-size:14px;font-weight:600;}
+  .lp,.nav{padding-left:58px;}
+  .nav{padding-left:92px;}
+  .hero .hc{padding:120px 60px 40px;max-width:860px;}
+  .h-title{font-size:66px;}
+  #hero3d{width:46%;height:64%;right:2%;top:10%;}
+  .stamp{right:10%;bottom:34%;width:132px;height:132px;}
+  .stamp span{font-size:16px;}
+  .cover-strip{height:26dvh;}
+}
+/* 지층 밴드: 섹션 머리 구분 */
+.page .sec:nth-of-type(3n+1){border-top:4px solid var(--st-g);}
+.page .sec:nth-of-type(3n+2){border-top:4px solid var(--st-q);}
+.page .sec:nth-of-type(3n){border-top:4px solid var(--st-r);}
+.page .sec{border-top-width:4px;}
+/* 주상도형 타임라인 */
+.tl-wrap{padding-left:0;}
+.tl-track{left:64px;background:linear-gradient(180deg,var(--cop) 60%,#242018 100%);width:2px;}
+.tl-row{padding:0 0 1.3rem 88px;}
+.tl-row::before{content:attr(data-depth);position:absolute;left:0;top:2px;font-family:var(--mono);font-size:11px;color:var(--dim);width:52px;text-align:right;}
+.tl-dot{left:56px;}
+/* 뉴스·표 월드 톤 */
+.nc-src{background:var(--cop);color:#0C0B09;}
+.sec-ttl{font-size:28px;}
+@media (min-width:1000px){.sec-ttl{font-size:40px;}.page:not(#page-home) .sec:first-child .sec-ttl{font-size:52px;}}
+
 </style>
 </head>
 <body>
@@ -349,38 +423,35 @@ input,textarea{caret-color:var(--cop2);}
   </nav>
 </div>
 
+<aside class="depth-rail" aria-hidden="true"><div class="depth-cur" id="depthCur"><b id="depthNum">0</b>m</div></aside>
 <div class="lp" id="top">
 <div class="page" id="page-home">
 <section class="hero">
-  <div class="hero-l">
-    <canvas id="star-c"></canvas>
-<div class="hc">
-    <div class="h-badge"><div class="h-badge-dot"></div>MONGOLIA · RWA · MINING<div class="h-badge-dot"></div></div>
-    <div class="h-sym">
-      <svg width="76" height="96" viewBox="0 0 50.74 64" class="mark-glow" role="img" aria-label="MPC 공식 심볼"><use href="#mpc-mark"/></svg>
-      <div class="h-markword">MPC</div>
+  <canvas id="star-c"></canvas>
+  <canvas id="hero3d"></canvas>
+  <div class="hc">
+    <div class="log-head">
+      <svg width="34" height="43" viewBox="0 0 50.74 64" class="mark-glow" role="img" aria-label="MPC 공식 심볼"><use href="#mpc-mark"/></svg>
+      <div class="log-head-id"><span class="meas">LOG No.MPC-2026</span><span class="meas">TSAGAAN TOLGOI · MONGOLIA</span></div>
     </div>
-    <div class="h-title">MPC RWA 리포트</div>
-    <div class="h-en">MINERAL PROJECT COIN · RWA REPORT</div>
-    <div class="h-line"></div>
-    <div class="h-sub">몽골 차간톨고이 광산 프로젝트 | 핵심광물 | MPC 코인</div>
-    <div class="h-hook">
-      <div class="h-hook-label">왜 지금인가</div>
-      <div class="h-hook-text">전기차·AI 반도체가 폭발적으로 늘수록<br>희토류·텅스텐·구리 수요는 함께 급등합니다.</div>
-      <div class="h-hook-sub">구소련·중국 탐사로 44종 원소가 확인된 광산.<br>현재 시추가 진행 중 — 지금까지 13개 공을 시추했고,<br>ALS·SGS 국제 공인기관의 분석 보고서로 검증이 이어지고 있습니다.</div>
+    <h1 class="h-title">차간톨고이<br>시추 탐사 기록</h1>
+    <div class="h-sub">MPC — Mineral Project Coin · 핵심광물 RWA 리포트</div>
+    <div class="log-meas">
+      <div class="meas-row"><span class="meas-k">시추공</span><span class="meas-v">13<i>공 · 진행 중</i></span></div>
+      <div class="meas-row"><span class="meas-k">확인 원소</span><span class="meas-v">44<i>종 (구소련·중국 탐사)</i></span></div>
+      <div class="meas-row"><span class="meas-k">광구 면적</span><span class="meas-v">6,481<i>ha · 라이선스 XV-022460</i></span></div>
+      <div class="meas-row"><span class="meas-k">검증 기관</span><span class="meas-v">ALS · SGS<i> 분석 보고서 수령</i></span></div>
     </div>
-    <div class="h-fullname">MPC — Mineral Project Coin</div>
+    <div class="stamp" aria-hidden="true"><span>시추 진행 중</span><small>2026 · 제13공</small></div>
     <div class="btns">
       <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-g"><svg width="17" height="17" aria-hidden="true"><use href="#i-shield"/></svg>MPC 에스크로 안전거래 앱</a>
-      <a href="#project" class="btn-o">프로젝트 자세히 보기</a>
-      <a href="https://www.youtube.com/@MPC.RWA%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" class="btn-o"><svg width="15" height="15" aria-hidden="true"><use href="#i-play"/></svg>유튜브 채널 구독</a>
+      <a href="#project" class="btn-o">기록 열람 — 프로젝트</a>
     </div>
   </div>
-  </div>
-  <div class="hero-r" aria-hidden="true">
-    <div class="hero-photo"></div>
-    <canvas id="hero3d"></canvas>
-  </div>
+  <figure class="cover-strip" aria-label="차간톨고이 현장 — 시추 자재">
+    <img src="../assets/site-0042.jpg" alt="차간톨고이 현장의 시추 파이프와 자재" width="960" height="720">
+    <figcaption><span class="meas">PLATE 01</span> 시추 파이프 · 탐사 캠프, 2026-07</figcaption>
+  </figure>
 </section>
 
 <section class="home-quick">
@@ -581,14 +652,14 @@ input,textarea{caret-color:var(--cop2);}
   </div>
   <div class="tl-wrap">
     <div class="tl-track" id="tl-track"></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">광구 확보</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">환경영향평가 승인</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">페그마타이트 노두 확인</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">SGS 지표 노두 성분분석 완료</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">ALS 정밀 탐사 계약 체결</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">시추</span><span class="chip c-now">진행 중 · 13공 시추</span></div>
-    <div class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">ALS·SGS 정밀 분석</span><span class="chip c-now">진행 중 · 보고서 수령</span></div>
-    <div class="tl-row pend"><div class="tl-dot">○</div><span class="tl-txt">JORC 자원 평가</span><span class="chip c-pend">예정</span></div>
+    <div data-depth="00m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">광구 확보</span><span class="chip c-done">완료</span></div>
+    <div data-depth="12m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">환경영향평가 승인</span><span class="chip c-done">완료</span></div>
+    <div data-depth="28m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">페그마타이트 노두 확인</span><span class="chip c-done">완료</span></div>
+    <div data-depth="41m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">SGS 지표 노두 성분분석 완료</span><span class="chip c-done">완료</span></div>
+    <div data-depth="57m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">ALS 정밀 탐사 계약 체결</span><span class="chip c-done">완료</span></div>
+    <div data-depth="72m" class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">시추</span><span class="chip c-now">진행 중 · 13공 시추</span></div>
+    <div data-depth="88m" class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">ALS·SGS 정밀 분석</span><span class="chip c-now">진행 중 · 보고서 수령</span></div>
+    <div data-depth="104m" class="tl-row pend"><div class="tl-dot">○</div><span class="tl-txt">JORC 자원 평가</span><span class="chip c-pend">예정</span></div>
   </div>
 </section>
 </div>

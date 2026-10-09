@@ -1,0 +1,89 @@
+{
+  "title": "MPC RWA 홈페이지 — 비주얼 월드 선택",
+  "question": "주사위는 '광물 표본실'을 지목했습니다. 이대로 갈지, 다른 카드로 갈지, 다시 돌릴지 고르세요.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "광물 표본실 카탈로그",
+      "kicker": "THE ROLL",
+      "lineage": "자연사 박물관 광물 표본 서랍과 라벨 카드",
+      "thesis": "프로젝트 전체를 '표본 수집'으로 전시한다 — 원소 44종, 현장 사진, 수치가 전부 번호 붙은 표본이 된다.",
+      "palette": ["#0D0B09", "#C2773F", "#2E7D5B", "#EFE8D8"],
+      "materials": ["벨벳 서랍 바닥", "적동 금속 잉크", "표본 라벨 카드", "도판 사진"],
+      "viewport": "검은 벨벳 위에 구리 다이아 표본 하나가 핀으로 고정돼 있고, 그 아래 라벨 카드에 '표본 No.001 — 차간톨고이'와 실측 수치. 오른쪽에 현장 도판 사진.",
+      "risk": "라벨 타이포를 작게 깔면 박물관 기념품처럼 약해진다 — 표본 번호와 괘선을 전면 크기로 밀어야 산다.",
+      "raised": [
+        { "from": "challenger-riso", "raise": "색 전략을 Committed로: 구리 1색이 화면의 30% 이상을 '면'으로 지배한다 (포인트 색이 아니라)." },
+        { "from": "challenger-sewing", "raise": "모든 표본·사진·수치에 일련번호 체계(No.001~) — 한 장의 수집 지도처럼 번호로 꿰어진다." },
+        { "from": "challenger-tensegrity", "raise": "설명은 박스가 아니라 리더라인(표본에서 뻗는 주석선)으로 단다." }
+      ],
+      "hero": "https://impeccable.style/worlds/cards/civic-bureau-prospectus-late-modern-hero.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "시추 코어 로그 (탐사 보고서)",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "지질 탐사 시추공 주상도와 코어 박스 — ALS·SGS 보고서의 세계",
+      "thesis": "홈페이지 자체가 한 권의 탐사 로그다 — 세로로 내려가는 깊이 눈금을 따라 13개 공의 이야기가 쌓인다.",
+      "palette": ["#F2EDE2", "#1A1A18", "#C2773F", "#B33A2B"],
+      "materials": ["방안지", "코어 박스 목재", "지층 밴드", "현장 스탬프"],
+      "viewport": "화면 왼쪽에 깊이 눈금자(0m→)가 고정되고, 스크롤하면 지층처럼 섹션이 쌓인다. 첫 화면은 '시추공 13 / 진행 중' 도장이 찍힌 로그 표지.",
+      "risk": "우리 청중이 가장 바로 알아보는 세계 — 그만큼 이 카테고리 작업들이 흔히 닿는 곳이기도 하다."
+    },
+    {
+      "id": "challenger-civic",
+      "label": "공공 프로스펙터스 (후기 모던)",
+      "verdict": "competitive",
+      "lineage": "1970~80년대 공공기관 연차 보고서의 절제된 코퍼레이트 문법",
+      "thesis": "본화이트 여백에 색은 단 한 줄기 — 신뢰 서류의 극단적 절제.",
+      "palette": ["#F4F1EA", "#15151A", "#C2773F"],
+      "materials": ["본화이트 플레이트", "한 줄기 리본 광", "회색 괘선 인장"],
+      "viewport": "거의 전부 비어 있는 밝은 판 위에 구리 리본 하나와 두 웨이트의 타이포만.",
+      "case": "제품 명료성은 최강. 다만 중장년 회원 정서(어두운 금속·광산)와의 동일시에서 밀린다.",
+      "risk": "밝은 판은 지금까지의 다크 정체성과 정반대 — 전면 전환 각오 필요.",
+      "hero": "https://impeccable.style/worlds/cards/civic-bureau-prospectus-late-modern-hero.webp"
+    },
+    {
+      "id": "challenger-riso",
+      "label": "리소그래프 2도 인쇄",
+      "verdict": "declined",
+      "lineage": "리소 공방의 형광 2도 스팟 잉크",
+      "palette": ["#F3ECDC", "#FF48B0", "#0078BF"],
+      "materials": ["거친 종이", "스팟 잉크 겹침"],
+      "case": "형광 팝은 투자 신뢰 서사와 충돌 — 두 축 모두 패배.",
+      "kept": "잉크 하나가 면을 통째로 먹는 전면 커밋 → 어사인드의 색 전략으로 흡수."
+    },
+    {
+      "id": "challenger-sewing",
+      "label": "재봉 패턴 봉투",
+      "verdict": "declined",
+      "lineage": "가정용 재봉 패턴의 재단 지도",
+      "palette": ["#E8DCC0", "#1A1A1A", "#C23B2E"],
+      "materials": ["마닐라 티슈", "점선 재단선"],
+      "case": "청중 동일시 실패 — 두 축 모두 패배.",
+      "kept": "번호 붙은 조각들이 한 장 지도로 꿰어지는 규율 → 일련번호 체계로 흡수."
+    },
+    {
+      "id": "challenger-tensegrity",
+      "label": "텐세그리티 구조물",
+      "verdict": "declined",
+      "lineage": "탄소 막대와 붉은 줄의 장력 조각",
+      "palette": ["#D8D5CE", "#121212", "#C62828"],
+      "materials": ["탄소 막대", "장력 코드"],
+      "case": "추상 조각은 광산의 사실 서사를 못 싣는다 — 두 축 모두 패배.",
+      "kept": "주석을 박스가 아닌 관계선으로 다는 정직성 → 리더라인 주석으로 흡수."
+    }
+  ],
+  "canonCard": {
+    "id": "canon",
+    "label": "정석: 다크 크립토 프로젝트 사이트",
+    "lineage": "이 카테고리의 표준 — 어두운 바탕, 금속 포인트, 수치 카드",
+    "thesis": "익숙함이 곧 신뢰인 길. 지금의 v5를 업계 1급 수준으로만 끝까지 다듬는다.",
+    "palette": ["#070807", "#C2773F", "#C9A84C", "#EAE5D8"],
+    "materials": ["다크 그라운드", "구리·금 포인트", "세리프 표제"],
+    "viewport": "현재 미리보기의 분할 히어로를 유지하고 마감 품질만 끌어올린다.",
+    "risk": "어느 코인 사이트와도 구분되지 않을 위험."
+  },
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false }
+}
