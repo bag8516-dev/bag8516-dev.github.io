@@ -461,6 +461,30 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;o
   .core-row{gap:12px;height:190px;max-width:820px;}
   .core b{font-size:11.5px;}
 }
+
+/* 폴리싱 2차 */
+.page-plate{margin:0 0 2rem;position:relative;border:1px solid var(--line2);}
+.page-plate img{width:100%;height:220px;object-fit:cover;object-position:center 55%;}
+.page-plate figcaption{padding:9px 12px;border-top:1px solid var(--line2);font-size:12px;color:var(--mut);display:flex;gap:10px;}
+.page-plate .meas{font-size:11px;color:var(--cop);letter-spacing:.14em;}
+@media (min-width:1000px){.page-plate img{height:300px;}}
+/* 주상도: 모바일 가로 스크롤 */
+.core-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+.core-row{min-width:560px;}
+@media (min-width:1000px){.core-row{min-width:0;}}
+/* 펼침 삼각형 완전 제거(iOS) */
+summary::-webkit-details-marker{display:none;}
+/* 뉴스 좌열 마감 */
+@media (min-width:1000px){
+  .nc-meta{border-left:2px solid var(--line);padding-left:12px;}
+  .nc-src,.nc-src2,.nc-src3{border-radius:0;}
+}
+/* 에스크로 수치 키우기 */
+.esc-num{font-size:30px;}
+@media (min-width:1000px){.esc-num{font-size:40px;}}
+/* 버튼 마감 */
+.btn-g:active,.btn-cta:active{transform:translateY(1px);}
+.site-fig figcaption .meas{color:var(--cop);letter-spacing:.14em;font-size:11px;margin-right:8px;}
 </style>
 </head>
 <body>
@@ -550,6 +574,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;o
 <section id="sec-project" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LOCATION & LICENSE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">차간톨고이 광산 소개</div>
+
+  <figure class="page-plate fade-in" aria-label="탐사 캠프 파노라마">
+    <img src="../assets/site-0039.jpg" alt="초원 위 탐사 캠프 파노라마" width="960" height="720" loading="lazy">
+    <span class="anno" style="left:10%;bottom:26%"><i></i>현장 사무소</span>
+    <span class="anno anno-r" style="right:6%;bottom:40%"><i></i>게르 숙영지</span>
+    <figcaption><span class="meas">PLATE 06</span> 탐사 캠프 전경 · 2026-07</figcaption>
+  </figure>
 
   <div class="loc-card fade-in d1">
     <div class="loc-header"><span class="loc-header-icon">📍</span><span class="loc-header-label">광산 위치</span></div>
@@ -720,11 +751,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;o
 
   <div class="swiper site-swiper fade-in">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0038.jpg" width="960" height="720" loading="lazy" alt="차간톨고이 탐사 캠프 — 트럭, 굴착기, 현장 사무소와 게르"><figcaption>탐사 캠프 구축 — 장비 반입과 현장 사무소 설치</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0039.jpg" width="960" height="720" loading="lazy" alt="초원 위 탐사 캠프 전경"><figcaption>초원 위에 세워진 캠프 전경</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0040.jpg" width="960" height="720" loading="lazy" alt="현장 작업 모습"><figcaption>현장 설치 작업</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0042.jpg" width="960" height="720" loading="lazy" alt="시추 자재와 장비"><figcaption>시추 파이프와 자재 — 탐사 준비</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0043.jpg" width="960" height="720" loading="lazy" alt="현장 장비"><figcaption>현장에 배치된 장비</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0038.jpg" width="960" height="720" loading="lazy" alt="차간톨고이 탐사 캠프 — 트럭, 굴착기, 현장 사무소와 게르"><figcaption><span class="meas">PLATE 02</span> 탐사 캠프 구축 — 장비 반입</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0039.jpg" width="960" height="720" loading="lazy" alt="초원 위 탐사 캠프 전경"><figcaption><span class="meas">PLATE 03</span> 초원 위 캠프 전경</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0040.jpg" width="960" height="720" loading="lazy" alt="현장 작업 모습"><figcaption><span class="meas">PLATE 04</span> 현장 설치 작업</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0042.jpg" width="960" height="720" loading="lazy" alt="시추 자재와 장비"><figcaption><span class="meas">PLATE 01</span> 시추 파이프와 자재</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="../assets/site-0043.jpg" width="960" height="720" loading="lazy" alt="현장 장비"><figcaption><span class="meas">PLATE 05</span> 배치된 장비</figcaption></figure></div>
     </div>
     <div class="swiper-pagination site-pag"></div>
   </div>
@@ -748,7 +779,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;o
   <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
   <div class="meas prog-line fade-in">진행 현황 — 완료 5 · 진행 중 2 / 전체 8구간</div>
   <div class="core-strip fade-in" aria-label="시추 주상도 모식도">
-    <div class="core-row"><div class="core"><div class="core-col"><i class="sq" style="height:20%"></i><i class="sg" style="height:39%"></i><i class="sr" style="height:16%"></i><i class="sg" style="height:25%"></i></div><b>D-01</b></div><div class="core"><div class="core-col"><i class="sg" style="height:35%"></i><i class="sq" style="height:28%"></i><i class="sg" style="height:38%"></i></div><b>D-02</b></div><div class="core"><div class="core-col"><i class="sq" style="height:17%"></i><i class="sr" style="height:24%"></i><i class="sg" style="height:44%"></i><i class="sq" style="height:15%"></i></div><b>D-03</b></div><div class="core"><div class="core-col"><i class="sg" style="height:54%"></i><i class="sq" style="height:24%"></i><i class="sr" style="height:22%"></i></div><b>D-04</b></div><div class="core"><div class="core-col"><i class="sq" style="height:29%"></i><i class="sg" style="height:32%"></i><i class="sq" style="height:24%"></i><i class="sg" style="height:15%"></i></div><b>D-05</b></div><div class="core"><div class="core-col"><i class="sr" style="height:16%"></i><i class="sg" style="height:51%"></i><i class="sq" style="height:32%"></i></div><b>D-06</b></div><div class="core"><div class="core-col"><i class="sg" style="height:30%"></i><i class="sq" style="height:41%"></i><i class="sg" style="height:30%"></i></div><b>D-07</b></div><div class="core"><div class="core-col"><i class="sq" style="height:21%"></i><i class="sg" style="height:38%"></i><i class="sr" style="height:23%"></i><i class="sq" style="height:18%"></i></div><b>D-08</b></div><div class="core"><div class="core-col"><i class="sg" style="height:46%"></i><i class="sq" style="height:35%"></i><i class="sg" style="height:19%"></i></div><b>D-09</b></div><div class="core"><div class="core-col"><i class="sq" style="height:26%"></i><i class="sr" style="height:18%"></i><i class="sg" style="height:42%"></i><i class="sq" style="height:13%"></i></div><b>D-10</b></div><div class="core"><div class="core-col"><i class="sg" style="height:35%"></i><i class="sq" style="height:30%"></i><i class="sg" style="height:35%"></i></div><b>D-11</b></div><div class="core"><div class="core-col"><i class="sq" style="height:26%"></i><i class="sg" style="height:57%"></i><i class="sr" style="height:17%"></i></div><b>D-12</b></div><div class="core core-now"><div class="core-col" style="height:62%"><i class="sg" style="height:57%"></i><i class="sq" style="height:43%"></i></div><b>D-13</b></div></div>
+    <div class="core-wrap"><div class="core-row"><div class="core"><div class="core-col"><i class="sq" style="height:20%"></i><i class="sg" style="height:39%"></i><i class="sr" style="height:16%"></i><i class="sg" style="height:25%"></i></div><b>D-01</b></div><div class="core"><div class="core-col"><i class="sg" style="height:35%"></i><i class="sq" style="height:28%"></i><i class="sg" style="height:38%"></i></div><b>D-02</b></div><div class="core"><div class="core-col"><i class="sq" style="height:17%"></i><i class="sr" style="height:24%"></i><i class="sg" style="height:44%"></i><i class="sq" style="height:15%"></i></div><b>D-03</b></div><div class="core"><div class="core-col"><i class="sg" style="height:54%"></i><i class="sq" style="height:24%"></i><i class="sr" style="height:22%"></i></div><b>D-04</b></div><div class="core"><div class="core-col"><i class="sq" style="height:29%"></i><i class="sg" style="height:32%"></i><i class="sq" style="height:24%"></i><i class="sg" style="height:15%"></i></div><b>D-05</b></div><div class="core"><div class="core-col"><i class="sr" style="height:16%"></i><i class="sg" style="height:51%"></i><i class="sq" style="height:32%"></i></div><b>D-06</b></div><div class="core"><div class="core-col"><i class="sg" style="height:30%"></i><i class="sq" style="height:41%"></i><i class="sg" style="height:30%"></i></div><b>D-07</b></div><div class="core"><div class="core-col"><i class="sq" style="height:21%"></i><i class="sg" style="height:38%"></i><i class="sr" style="height:23%"></i><i class="sq" style="height:18%"></i></div><b>D-08</b></div><div class="core"><div class="core-col"><i class="sg" style="height:46%"></i><i class="sq" style="height:35%"></i><i class="sg" style="height:19%"></i></div><b>D-09</b></div><div class="core"><div class="core-col"><i class="sq" style="height:26%"></i><i class="sr" style="height:18%"></i><i class="sg" style="height:42%"></i><i class="sq" style="height:13%"></i></div><b>D-10</b></div><div class="core"><div class="core-col"><i class="sg" style="height:35%"></i><i class="sq" style="height:30%"></i><i class="sg" style="height:35%"></i></div><b>D-11</b></div><div class="core"><div class="core-col"><i class="sq" style="height:26%"></i><i class="sg" style="height:57%"></i><i class="sr" style="height:17%"></i></div><b>D-12</b></div><div class="core core-now"><div class="core-col" style="height:62%"><i class="sg" style="height:57%"></i><i class="sq" style="height:43%"></i></div><b>D-13</b></div></div></div>
     <div class="core-legend"><span><i class="sg"></i>페그마타이트대</span><span><i class="sq"></i>석영·규석대</span><span><i class="sr"></i>산화대</span></div>
     <div class="core-note meas">모식도 — 구간 색은 상징 표기입니다. 실제 주상도·품위는 공인기관 검증 확정 후 공식 공개됩니다.</div>
   </div>
