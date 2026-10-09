@@ -19,7 +19,7 @@
   --ink:#EAE5D8; --mut:#A09A8C; --dim:#8A8478;
   --cop:#C2773F; --cop2:#E09A62; --gold:#C9A84C; --gold2:#E8C96A;
   --line:rgba(194,119,63,.25); --line2:rgba(194,119,63,.12);
-  --serif:'Noto Serif KR','Marcellus',serif; --disp:'Marcellus',serif; --sans:'Noto Sans KR',sans-serif;
+  --serif:'Noto Serif KR',serif; --sans:'Noto Sans KR',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;scroll-padding-top:76px;}
@@ -74,15 +74,11 @@ a{color:inherit;}
 .h-hook-sub{font-size:13px;color:var(--mut);margin-top:.8rem;line-height:1.85;}
 .h-fullname{display:none;}
 .btns{display:flex;flex-direction:column;gap:11px;}
-.btn-g,.btn-o,.btn-cta,.btn-yt{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-size:14.5px;padding:15px 20px;border-radius:2px;transition:background .25s,color .25s,border-color .25s;}
+.btn-g,.btn-o,.btn-cta,.btn-yt{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-size:14.5px;padding:13px 20px;border-radius:2px;transition:background .25s,color .25s,border-color .25s;}
 .btn-g,.btn-cta{background:var(--cop);color:#0B0C0B;font-weight:700;}
 .btn-g:hover,.btn-cta:hover{background:var(--cop2);}
 .btn-o,.btn-yt{border:1px solid rgba(194,119,63,.4);color:var(--ink);}
 .btn-o:hover,.btn-yt:hover{border-color:var(--cop2);color:var(--cop2);}
-.home-quick{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:2rem 22px 3rem;border-top:1px solid var(--line2);}
-.hq-num{font-family:var(--disp);font-size:30px;color:var(--cop2);line-height:1;}
-.hq-num small{font-size:12px;color:var(--dim);margin-left:3px;}
-.hq-lbl{font-size:12.5px;color:var(--mut);margin-top:.5rem;}
 .sec,.stats,.social{padding:3.4rem 22px;}
 .sec-hd{display:flex;align-items:center;gap:12px;margin-bottom:.9rem;position:relative;}
 .sec-kicker2,.s-kicker{font-family:var(--disp);font-size:10px;letter-spacing:.3em;color:var(--cop);white-space:nowrap;}
@@ -124,7 +120,7 @@ a{color:inherit;}
 .era-sgs{background:rgba(46,107,82,.25);color:#7FBFA3;}
 .hist-title{font-weight:700;font-size:14.5px;color:var(--ink);margin-bottom:.3rem;}
 .hist-desc{font-size:13px;color:var(--mut);line-height:1.75;}
-.hist-highlight{color:var(--gold2);}
+.hist-highlight{color:var(--cop2);}
 .el-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;}
 .el{border:1px solid var(--line2);border-radius:2px;padding:11px 4px;text-align:center;cursor:pointer;transition:border-color .25s,background .25s;-webkit-tap-highlight-color:transparent;}
 .el:hover{border-color:var(--cop);background:rgba(194,119,63,.05);}
@@ -191,7 +187,7 @@ a{color:inherit;}
 .nc-body{font-size:13.5px;color:var(--mut);line-height:1.8;}
 .nc-list{margin:.7rem 0 0;padding-left:1.1rem;display:flex;flex-direction:column;gap:8px;}
 .nc-list li{font-size:13px;color:var(--mut);line-height:1.75;}
-.nc-list strong{color:var(--gold2);font-weight:600;}
+.nc-list strong{color:var(--cop2);font-weight:600;}
 .nc-tags{display:flex;gap:12px;margin-top:.8rem;}
 .nc-tag{font-size:12px;color:var(--dim);}
 .nc-link{display:inline-flex;align-items:center;gap:8px;margin-top:.9rem;font-size:13px;font-weight:700;color:var(--cop2);text-decoration:none;border:1px solid var(--line);padding:9px 16px;border-radius:2px;transition:background .25s;}
@@ -246,7 +242,6 @@ a{color:inherit;}
 .f-links span{color:#4A4B45;}
 .f-sub{font-size:12px;color:#8A857A;line-height:1.6;}
 .h-title,.sec-ttl,.cta-ttl,.nc-ttl{text-wrap:balance;}
-.hq-num,.s-num,.sp-num,.esc-num,.nc-date{font-variant-numeric:tabular-nums;}
 .fade-in{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
 .fade-in.vis{opacity:1;transform:none;}
 .d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}.d4{transition-delay:.2s}
@@ -265,9 +260,7 @@ a{color:inherit;}
   .h-hook-text{font-size:20px;}
   .btns{flex-direction:row;flex-wrap:wrap;}
   .btns a{min-width:250px;}
-  .home-quick{gap:48px;padding:2.6rem 60px 3.4rem;}
-  .hq-num{font-size:46px;}
-  .sec,.stats,.social,.cta{padding:5rem 60px;}
+      .sec,.stats,.social,.cta{padding:5rem 60px;}
   .sec>*,.stats>*,.social>*,.cta>*{max-width:1160px;margin-left:auto;margin-right:auto;}
   .sec-ttl{font-size:44px;margin-bottom:2.2rem;}
   .page:not(#page-home) .sec:first-child .sec-ttl{font-size:56px;}
@@ -323,19 +316,18 @@ body{background:
   linear-gradient(90deg,rgba(194,119,63,.02) 1px,transparent 1px),
   var(--bg);
   background-size:96px 96px,96px 96px,24px 24px,24px 24px;}
-.meas,.nc-date,.hq-num,.s-num,.sp-num,.esc-num,.el-num,.el-sym{font-family:var(--mono);}
-/* 로그북 표지 히어로 */
+.meas,.nc-date,/* 로그북 표지 히어로 */
 .hero{position:relative;display:flex;flex-direction:column;min-height:100dvh;overflow:hidden;background:transparent;}
-.hero .hc{position:relative;padding:92px 22px 34px;flex:1;display:flex;flex-direction:column;justify-content:center;}
+.hero .hc{position:relative;padding:78px 22px 20px;flex:1;display:flex;flex-direction:column;justify-content:center;}
 #star-c{position:absolute;inset:0;width:100%;height:100%;opacity:.35;pointer-events:none;}
 #hero3d{position:absolute;right:-4%;top:6%;width:62%;height:58%;pointer-events:none;opacity:.5;}
-.log-head{display:flex;align-items:center;gap:12px;margin-bottom:1.8rem;padding-bottom:1rem;border-bottom:1px solid var(--line);}
+.log-head{display:flex;align-items:center;gap:12px;margin-bottom:1.1rem;padding-bottom:.8rem;border-bottom:1px solid var(--line);}
 .log-head-id{display:flex;flex-direction:column;gap:3px;}
 .log-head-id .meas{font-size:11.5px;letter-spacing:.12em;color:var(--cop2);}
-.h-title{font-family:var(--serif);font-weight:900;font-size:40px;line-height:1.18;letter-spacing:-.02em;margin-bottom:.7rem;}
-.h-sub{font-size:13.5px;color:var(--mut);margin-bottom:1.8rem;}
-.log-meas{border-top:1px solid var(--line);margin-bottom:1.8rem;}
-.meas-row{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:.65rem 0;border-bottom:1px solid var(--line2);align-items:baseline;}
+.h-title{font-family:var(--serif);font-weight:900;font-size:37px;line-height:1.16;letter-spacing:-.02em;margin-bottom:.6rem;}
+.h-sub{font-size:13.5px;color:var(--mut);margin-bottom:1.1rem;}
+.log-meas{border-top:1px solid var(--line);margin-bottom:1.1rem;}
+.meas-row{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:.48rem 0;border-bottom:1px solid var(--line2);align-items:baseline;}
 .meas-k{font-size:12px;color:var(--dim);}
 .meas-v{font-family:var(--mono);font-size:19px;color:var(--cop2);}
 .meas-v i{font-style:normal;font-family:var(--sans);font-size:12px;color:var(--mut);margin-left:7px;}
@@ -402,7 +394,7 @@ body{background:
 .depth-mobile-wrap i{display:block;height:100%;width:0;background:var(--cop);}
 @media (min-width:1000px){.depth-mobile-wrap{display:none;}}
 @media (max-width:480px){
-  .stamp{position:static;transform:rotate(-6deg);margin:.6rem 0 1.2rem auto;}
+  .stamp{position:static;transform:rotate(-6deg) scale(.88);margin:.1rem 0 .6rem auto;}
 }
 </style>
 </head>
@@ -693,7 +685,7 @@ body{background:
     <div class="nc-ttl">MPC 글로벌 라이브 AMA (트위터 스페이스)</div>
     <div class="nc-body">CEO Bayo Okusanya와 COO Quentin Ho가 출연해 마이닝 RWA와 생태계 로드맵을 직접 설명하는 생방송. 한국시간 10월 15일 0시.</div>
     <div class="nc-tags"><span class="nc-tag"># 생방송</span><span class="nc-tag"># AMA</span></div>
-    <a href="https://x.com/MPC_Global_X" class="nc-link">𝕏 공식 계정에서 참여 (팔로워 41만)</a>
+    <a href="https://x.com/MPC_Global_X" class="nc-link">X 공식 계정에서 참여 (팔로워 41만)</a>
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.29</span></div>
@@ -790,27 +782,6 @@ const EL_DATA={
   w:{num:'74',sym:'W',kr:'텅스텐',cat:'희소금속·전이금속',catClass:'cm',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#2E6B52',ringColor:'#C2773F33',desc:'금속 중 최고 융점(3,422°C). 절삭공구·방산·반도체 전략 소재.',tags:['최고융점','절삭공구','방산'],uses:[{title:'초경합금 절삭공구',desc:'WC 합금으로 드릴·밀링커터 제조. 금속 가공 산업 필수.',tags:['초경합금','절삭']},{title:'방산·관통자',desc:'고밀도(19.3g/cm³) 탄약 관통자·군용 합금.',tags:['방산','전략물자']},{title:'반도체 배선',desc:'DRAM·낸드플래시 텅스텐 플러그 배선 공정.',tags:['반도체']}],demand:[{l:'절삭·초경합금',w:60},{l:'방산·특수합금',w:25},{l:'반도체',w:15}]},
   cu:{num:'29',sym:'Cu',kr:'구리',cat:'비철금속·전이금속',catClass:'cm',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#C2773F',ringColor:'#C2773F33',desc:'탁월한 전기·열 전도성. 전동화·신재생 에너지 전환의 기반 소재.',tags:['전기전도','EV배선','신재생'],uses:[{title:'전기차 배선·모터 권선',desc:'EV 1대당 약 80~100kg. 내연기관 대비 3~4배.',tags:['EV','충전 인프라']},{title:'AI 데이터센터 배선',desc:'GPU 서버·냉각 시스템 전력 배선. AI 인프라 급증으로 수요 폭등.',tags:['AI','데이터센터']},{title:'전력 인프라',desc:'변압기·송전 케이블의 기본 소재. 전력망의 근간.',tags:['전력 케이블','변압기']}],demand:[{l:'전기·전자',w:50},{l:'건축·인프라',w:30},{l:'수송·산업',w:20}]}
 };
-
-// 별 파티클
-(function(){
-  const cv=null;if(!cv)return;
-  const cx=cv.getContext('2d');
-  function resize(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
-  resize();window.addEventListener('resize',resize);
-  const ss=Array.from({length:80},()=>({x:Math.random(),y:Math.random(),r:Math.random()<.18?1.3:.5,b:Math.random()*.18+.04,sp:Math.random()*2+1.5,ph:Math.random()*Math.PI*2,g:Math.random()<.4}));
-  let t=0;
-  (function draw(){
-    cx.clearRect(0,0,cv.width,cv.height);
-    const W=cv.width,H=cv.height;
-    ss.forEach(s=>{
-      const a=s.b+(Math.sin(t/s.sp+s.ph)*.5+.5)*(1-s.b)*.7;
-      cx.beginPath();cx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);
-      cx.fillStyle=s.g?`rgba(201,168,76,${a})`:`rgba(160,180,220,${a})`;
-      cx.fill();
-    });
-    t+=.035;requestAnimationFrame(draw);
-  })();
-})();
 
 // IntersectionObserver
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1});
