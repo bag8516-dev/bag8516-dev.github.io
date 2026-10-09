@@ -478,6 +478,62 @@ html{scroll-padding-top:74px;}
   .btn-cta,.btn-yt{max-width:440px;margin-left:auto;margin-right:auto;}
   .footer{padding:1.8rem 1rem;}
 }
+
+/* ══ 에디토리얼 v4: 박스 전면 제거 → 괘선·여백·대형 타이포의 지면 디자인 ══ */
+/* 타이포 위계: 페이지 첫 제목은 표제급 */
+.sec-ttl{font-size:27px;letter-spacing:-.015em;}
+.sec-ttl::before{display:none;}
+.page:not(#page-home) .sec:first-child{padding-top:3.2rem;}
+.page:not(#page-home) .sec:first-child .sec-ttl{font-size:32px;}
+/* 뉴스: 박스 → 날짜·본문 지면 리스트 */
+.nc{background:transparent;border:0;border-top:1px solid #C9A84C26;border-radius:0;padding:1.5rem 0 1.7rem;margin-bottom:0;backdrop-filter:none;-webkit-backdrop-filter:none;}
+.nc::before{display:none;}
+.nc-date{color:#6B7689;font-family:'Marcellus',serif;letter-spacing:.08em;}
+.nc-ttl{font-size:18px;line-height:1.4;}
+.nc-tag{border:0;padding:0;color:#5E6878;}
+/* 광산 소개: 박스 → 괘선 표 */
+.loc-card{background:transparent;border:0;border-top:1px solid #C9A84C26;border-radius:0;margin-bottom:0;padding:1.4rem 0 1.6rem;}
+.loc-header{background:none;border-bottom:0;padding:.0 0 .9rem;}
+.loc-header-icon{display:none;}
+.loc-header-label{font-size:11px;letter-spacing:.22em;color:#C9A84C7A;font-family:'Marcellus','Noto Sans KR',serif;}
+/* 실적 미니카드·보도 라인: 박스 제거 */
+.sp-card{background:transparent;border:0;border-top:1px solid #C9A84C30;border-radius:0;text-align:left;padding:.95rem .1rem .3rem;}
+.media-row{background:transparent;border:0;border-top:1px solid #C9A84C1C;border-radius:0;padding:.9rem .1rem;}
+/* 에스크로 카드: 왼쪽 금선만 */
+.esc-card{background:transparent;border:0;border-left:2px solid #C9A84C3A;border-radius:0;padding:.3rem 0 .3rem 1.1rem;min-height:0;backdrop-filter:none;-webkit-backdrop-filter:none;}
+/* 원소 타일: 묽게 */
+.el{background:transparent;border:1px solid #171E2C;}
+/* 현장 사진: 모서리 없는 지면 사진 + 금색 순번 캡션 */
+.site-fig{border:0;border-radius:0;background:transparent;}
+.site-fig img{border-radius:0;}
+.site-fig figcaption{padding:10px 2px;border-bottom:1px solid #C9A84C1C;}
+/* 홈: 사진을 더 세게 */
+.hero-photo{opacity:.55;}
+.h-title{font-size:42px;}
+/* 섹션 여백 확대 */
+.sec{padding:3rem 1.3rem;}
+@media (min-width:1000px){
+  .sec{padding:4.8rem 3rem;}
+  .page:not(#page-home) .sec:first-child .sec-ttl{font-size:52px;}
+  .sec-ttl{font-size:34px;}
+  .h-title{font-size:88px;}
+  .hero{text-align:left;min-height:92dvh;justify-content:center;}
+  .hero .h-badge{margin-left:0;}
+  .hero .h-sym{margin:0 0 1rem;display:flex;align-items:center;gap:14px;}
+  .hero .h-markword{margin:0;}
+  .hero .h-en,.hero .h-sub,.hero .h-hook-text,.hero .h-hook-sub,.hero .h-fullname{text-align:left;}
+  .hero .h-hook{margin-left:0;max-width:640px;}
+  .hero .btns{justify-content:flex-start;}
+  .home-quick{max-width:none;padding:0 3rem 3.4rem;}
+  /* 뉴스: 날짜 왼쪽 열 분리 */
+  .nc{display:grid;grid-template-columns:150px 1fr;column-gap:2rem;}
+  .nc-meta{grid-column:1;flex-direction:column;align-items:flex-start;gap:6px;}
+  .nc-ttl,.nc-body,.nc-list,.nc-tags,.nc-link{grid-column:2;}
+  .nc-grid{display:block;}
+  /* 광산 소개 2단 유지 + 행간 */
+  .loc-card{padding:1.8rem 0 2rem;}
+}
+
 </style>
 </head>
 <body>
