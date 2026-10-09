@@ -886,12 +886,12 @@ window.addEventListener('DOMContentLoaded', function(){
       gem.computeVertexNormals();
       const grp = new THREE.Group();
       grp.add(new THREE.Mesh(gem, new THREE.MeshStandardMaterial({
-        color: copper, metalness: .6, roughness: .32, flatShading: true,
-        emissive: 0x6B3A16, emissiveIntensity: .55, transparent: true, opacity: .96,
+        color: copper, metalness: .85, roughness: .25, flatShading: true,
+        transparent: true, opacity: .22,
       })));
       grp.add(new THREE.LineSegments(new THREE.EdgesGeometry(gem),
-        new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .8 })));
-      grp.scale.setScalar(.72);
+        new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .65 })));
+      grp.scale.setScalar(.85);
       grp.position.y = .55; // 사진 위쪽에 보석처럼
       scene.add(grp);
       // 금가루 입자 (은하수처럼 떠다니는 먼지)
