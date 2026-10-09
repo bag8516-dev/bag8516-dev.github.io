@@ -1046,8 +1046,6 @@ window.addEventListener('DOMContentLoaded', function(){
       }));
             window.__sw.push(new Swiper('.cover-swiper', {
         slidesPerView: 1, loop: true, speed: 650,
-        autoplay: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? false
-                : { delay: 5200, disableOnInteraction: true },
         pagination: { el: '.cover-pag', clickable: true },
       }));
       window.__sw.push(new Swiper('.site-swiper', {
