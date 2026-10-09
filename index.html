@@ -805,6 +805,8 @@ window.addEventListener('DOMContentLoaded', function(){
       anime.set(heroEls, { opacity: 0, translateY: 18 });
       anime({ targets: heroEls, opacity: 1, translateY: 0, duration: 750,
               delay: anime.stagger(110, { start: 150 }), easing: 'easeOutCubic' });
+      // 안전장치: 백그라운드 탭 등으로 연출이 멈춰도 2.6초 뒤엔 무조건 전부 표시
+      setTimeout(() => heroEls.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; }), 2600);
       const stats = document.querySelectorAll('.esc-stat');
       if (stats.length && 'IntersectionObserver' in window) {
         anime.set(stats, { opacity: 0, translateY: 14 });
@@ -812,6 +814,7 @@ window.addEventListener('DOMContentLoaded', function(){
           if (en.some(e => e.isIntersecting)) {
             anime({ targets: stats, opacity: 1, translateY: 0, duration: 600,
                     delay: anime.stagger(90), easing: 'easeOutCubic' });
+            setTimeout(() => stats.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; }), 1800);
             io2.disconnect();
           }
         }, { threshold: 0.25 });
