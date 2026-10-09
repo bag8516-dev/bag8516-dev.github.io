@@ -328,6 +328,24 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
 .s-num{font-size:40px;}
 .esc-stat{background:transparent;border:0;border-top:1px solid #C9A84C30;border-radius:0;text-align:left;padding:.95rem .15rem .3rem;backdrop-filter:none;-webkit-backdrop-filter:none;}
 .esc-num{font-size:24px;}
+/* 차간톨고이 현장 갤러리 */
+.site-swiper{padding-bottom:30px;margin-bottom:1.1rem;}
+.site-swiper .swiper-wrapper{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
+.site-swiper .swiper-slide{flex:0 0 86%;scroll-snap-align:center;margin-right:10px;}
+.site-swiper.swiper-initialized .swiper-wrapper{overflow-x:visible;}
+.site-swiper.swiper-initialized .swiper-slide{margin-right:0;}
+.site-fig{margin:0;border-radius:14px;overflow:hidden;border:1px solid #C9A84C26;background:#0A0E16;}
+.site-fig img{display:block;width:100%;height:auto;}
+.site-fig figcaption{font-size:11.5px;color:#8E99AC;padding:9px 12px;line-height:1.5;}
+.site-pag{bottom:0 !important;}
+.site-pag .swiper-pagination-bullet{background:#C9A84C55;opacity:1;}
+.site-pag .swiper-pagination-bullet-active{background:#C9A84C;}
+.site-stage{margin-top:.4rem;}
+.site-stage-row{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-bottom:.7rem;}
+.site-stage-chip{font-size:11px;color:#5E6878;border:1px solid #1C2432;border-radius:999px;padding:5px 12px;}
+.site-stage-chip.on{color:#0A0C12;background:linear-gradient(135deg,#E8C96A,#C9A84C);border-color:transparent;font-weight:700;}
+.site-stage-chip.on small{font-weight:400;}
+.site-stage-note{font-size:12.5px;color:#939DB0;line-height:1.75;text-align:center;}
 /* 마무리 대형화 */
 .cta-ttl{font-size:27px;letter-spacing:-.01em;line-height:1.3;color:#EAE0C2;}
 .cta-ey{letter-spacing:.3em;}
@@ -450,6 +468,36 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
       <div class="s-bar-wrap"><div class="s-bar" data-w="55"></div></div>
     </div>
   </div>
+</section>
+<div class="divider"></div>
+
+<!-- 차간톨고이 현장 -->
+<section class="sec" style="background:#05070C;">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">FIELD · TSAGAAN TOLGOI</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">차간톨고이 현장</div>
+  <div class="esc-sub fade-in">2026년 7월, 몽골 초원의 광구에서 탐사가 시작됐습니다.<br>트럭과 굴착기로 장비를 들이고, 현장 사무소와 게르 캠프를 세웠습니다.<br>아래는 공식 홈페이지에 공개된 실제 현장 사진입니다.</div>
+
+  <div class="swiper site-swiper fade-in">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0038.jpg" width="960" height="720" loading="lazy" alt="차간톨고이 탐사 캠프 — 트럭, 굴착기, 현장 사무소와 게르"><figcaption>탐사 캠프 구축 — 장비 반입과 현장 사무소 설치</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0039.jpg" width="960" height="720" loading="lazy" alt="초원 위 탐사 캠프 전경"><figcaption>초원 위에 세워진 캠프 전경</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0040.jpg" width="960" height="720" loading="lazy" alt="현장 작업 모습"><figcaption>현장 설치 작업</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0042.jpg" width="960" height="720" loading="lazy" alt="시추 자재와 장비"><figcaption>시추 파이프와 자재 — 탐사 준비</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0043.jpg" width="960" height="720" loading="lazy" alt="현장 장비"><figcaption>현장에 배치된 장비</figcaption></figure></div>
+    </div>
+    <div class="swiper-pagination site-pag"></div>
+  </div>
+
+  <div class="site-stage fade-in">
+    <div class="site-stage-row">
+      <span class="site-stage-chip on">탐사 <small>진행 중</small></span>
+      <span class="site-stage-chip">개발·채굴</span>
+      <span class="site-stage-chip">가공·정제</span>
+      <span class="site-stage-chip">유통·인도</span>
+    </div>
+    <div class="site-stage-note">광산 생애주기 중 첫 단계인 탐사가 진행 중입니다. 규모·일정 등 세부 수치는 확정되는 대로 공식 채널에 공개된다고 밝히고 있습니다.</div>
+  </div>
+  <div class="esc-note fade-in">사진 출처: MPC 공식 홈페이지 현장 소식 (globalmpc.tech/operations) · © Bolor Geo MPC Corp.</div>
 </section>
 <div class="divider"></div>
 
@@ -880,6 +928,10 @@ window.addEventListener('DOMContentLoaded', function(){
       new Swiper('.esc-swiper', {
         slidesPerView: 1.18, centeredSlides: true, spaceBetween: 10, loop: false,
         pagination: { el: '.esc-pag', clickable: true },
+      });
+      new Swiper('.site-swiper', {
+        slidesPerView: 1.12, centeredSlides: true, spaceBetween: 10, loop: false,
+        pagination: { el: '.site-pag', clickable: true },
       });
     }
   } catch(e){}
