@@ -96,7 +96,7 @@ a{color:inherit;}
 .sp-unit{font-size:12px;color:var(--dim);margin-left:3px;}
 .sp-label{font-size:12px;color:var(--mut);margin-top:.4rem;line-height:1.6;}
 .media-row{display:flex;gap:10px;align-items:center;border-top:1px solid var(--line2);margin-top:18px;padding-top:1rem;}
-.media-badge{font-size:11px;font-weight:700;color:#0B0C0B;background:var(--gold);padding:3px 9px;border-radius:2px;white-space:nowrap;}
+.media-badge{font-size:11px;font-weight:700;color:#0C0B09;background:var(--cop);padding:3px 9px;border-radius:2px;white-space:nowrap;}
 .media-text{font-size:12.5px;color:var(--mut);}
 .s-head{display:flex;align-items:center;gap:12px;margin-bottom:1.4rem;}
 .s-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;}
@@ -119,9 +119,9 @@ a{color:inherit;}
 .hist-row{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:1rem 0;border-bottom:1px solid var(--line2);}
 .hist-row:last-child{border-bottom:0;}
 .hist-era-badge{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:2px;}
-.era-ussr{background:#3A2A20;color:#E0B490;}
-.era-cn{background:#3A2020;color:#E09090;}
-.era-sgs{background:#20303A;color:#90C0E0;}
+.era-ussr{background:rgba(194,119,63,.18);color:var(--cop2);}
+.era-cn{background:rgba(138,59,42,.25);color:#D98A74;}
+.era-sgs{background:rgba(46,107,82,.25);color:#7FBFA3;}
 .hist-title{font-weight:700;font-size:14.5px;color:var(--ink);margin-bottom:.3rem;}
 .hist-desc{font-size:13px;color:var(--mut);line-height:1.75;}
 .hist-highlight{color:var(--gold2);}
@@ -133,8 +133,8 @@ a{color:inherit;}
 .el-sym{font-family:var(--disp);font-size:21px;color:var(--cop2);line-height:1.2;}
 .el-name{font-size:11.5px;color:var(--mut);margin-top:2px;}
 .el-cat{display:inline-block;font-size:11px;padding:2px 8px;border-radius:2px;margin-top:4px;}
-.el-cat.cr{background:#2A3220;color:#B8D080;}
-.el-cat.cm{background:#20283A;color:#90B0E0;}
+.el-cat.cr{background:rgba(46,107,82,.25);color:#7FBFA3;}
+.el-cat.cm{background:rgba(184,178,166,.18);color:#B8B2A6;}
 .el-foot{font-size:11.5px;color:var(--dim);margin-top:.9rem;}
 .use-section{margin-top:1.2rem;}
 .el-vis-hero{position:relative;border:1px solid var(--line2);border-radius:2px;overflow:hidden;min-height:210px;margin-bottom:1rem;}
@@ -184,8 +184,8 @@ a{color:inherit;}
 .nc{border-top:1px solid var(--line);padding:1.6rem 0 1.8rem;}
 .nc-meta{display:flex;align-items:center;gap:10px;margin-bottom:.8rem;}
 .nc-src{font-size:11px;font-weight:700;color:#0B0C0B;background:var(--gold);padding:3px 9px;border-radius:2px;}
-.nc-src2{background:#2A3A4A;color:#A8C8E8;}
-.nc-src3{background:#32283F;color:#C0A8E8;}
+.nc-src2{background:rgba(46,107,82,.3);color:#7FBFA3;}
+.nc-src3{background:rgba(138,59,42,.3);color:#D98A74;}
 .nc-date{font-family:var(--disp);font-size:12px;letter-spacing:.08em;color:var(--dim);}
 .nc-ttl{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.45;color:var(--ink);margin-bottom:.6rem;}
 .nc-body{font-size:13.5px;color:var(--mut);line-height:1.8;}
@@ -314,7 +314,7 @@ input,textarea{caret-color:var(--cop2);}
   --cop:#C2773F; --cop2:#E09A62;
   --st-g:#2E6B52; --st-q:#B8B2A6; --st-r:#8A3B2A;
   --line:rgba(194,119,63,.3); --line2:rgba(194,119,63,.14);
-  --mono:'Spline Sans Mono',ui-monospace,monospace;
+  --mono:'Spline Sans Mono',ui-monospace,monospace; --disp:'Spline Sans Mono',ui-monospace,monospace;
 }
 body{background:
   linear-gradient(rgba(194,119,63,.045) 1px,transparent 1px),
@@ -390,6 +390,20 @@ body{background:
 .sec-ttl{font-size:28px;}
 @media (min-width:1000px){.sec-ttl{font-size:40px;}.page:not(#page-home) .sec:first-child .sec-ttl{font-size:52px;}}
 
+
+/* 검수 fix 반영 */
+.cta-ey{display:none;}
+.mc-icon{display:none;}
+.tl-dot{font-size:0;}
+.done .tl-dot::after{content:'';width:7px;height:7px;border-radius:50%;background:var(--cop2);display:block;margin:auto;}
+.prog-line{font-size:13px;color:var(--cop2);margin-bottom:1.2rem;border-top:1px solid var(--line);padding-top:.8rem;}
+.f-disc{font-size:11.5px;color:#7A7468;margin-top:.6rem;}
+.depth-mobile-wrap{position:fixed;top:62px;left:0;right:0;height:2px;z-index:999;background:rgba(194,119,63,.12);}
+.depth-mobile-wrap i{display:block;height:100%;width:0;background:var(--cop);}
+@media (min-width:1000px){.depth-mobile-wrap{display:none;}}
+@media (max-width:480px){
+  .stamp{position:static;transform:rotate(-6deg);margin:.6rem 0 1.2rem auto;}
+}
 </style>
 </head>
 <body>
@@ -432,6 +446,7 @@ body{background:
   </nav>
 </div>
 
+<div class="depth-mobile-wrap" aria-hidden="true"><i id="depthMobile"></i></div>
 <aside class="depth-rail" aria-hidden="true"><div class="depth-cur" id="depthCur"><b id="depthNum">0</b>m</div></aside>
 <div class="lp" id="top">
 <div class="page" id="page-home">
@@ -469,16 +484,11 @@ body{background:
   </div>
 </section>
 
-<section class="home-quick">
-  <div class="hq"><div class="hq-num">13<small>공</small></div><div class="hq-lbl">시추 진행 중</div></div>
-  <div class="hq"><div class="hq-num">44<small>종</small></div><div class="hq-lbl">확인 원소</div></div>
-  <div class="hq"><div class="hq-num">6,481<small>ha</small></div><div class="hq-lbl">광구 면적</div></div>
-</section>
 
 </div>
 
 <div class="page" id="page-project">
-<section id="sec-project" class="sec" style="background:#05070C;">
+<section id="sec-project" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LOCATION & LICENSE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">차간톨고이 광산 소개</div>
 
@@ -536,7 +546,7 @@ body{background:
     </div>
   </div>
 </section>
-<section class="stats" style="background:#07090F;">
+<section class="stats">
   <div class="s-head fade-in"><span class="s-kicker">KEY NUMBERS</span><div class="s-hline"></div></div>
   <div class="s-grid">
     <div class="s-card fade-in d1">
@@ -565,7 +575,7 @@ body{background:
     </div>
   </div>
 </section>
-<section class="sec" style="background:#07090F;">
+<section class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">KEY ELEMENTS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">확인된 핵심 원소</div>
   <div class="el-grid">
@@ -580,7 +590,7 @@ body{background:
   <div class="el-foot fade-in d8">* 원소 클릭 시 주요 산업 용도 확인</div>
   <div class="use-section" id="use-section"><div id="el-detail-wrap"></div></div>
 </section>
-<section class="sec" style="background:#05070C;">
+<section class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">UTILITY TOKEN</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">MPC 코인 소개</div>
   <div class="mc fade-in d1">
@@ -613,7 +623,7 @@ body{background:
     <span class="media-text">볼로르지오-ALS 탐사 계약 체결 보도 · 2026.07.01</span>
   </div>
 </section>
-<section id="sec-field" class="sec" style="background:#05070C;">
+<section id="sec-field" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">FIELD · TSAGAAN TOLGOI</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">차간톨고이 현장</div>
   <div class="esc-sub fade-in">2026년 7월 캠프를 세우고 탐사를 시작해, 현재 시추가 진행 중입니다.<br>지금까지 13개 공을 시추했고 ALS·SGS 분석 보고서를 받으며 검증하고 있습니다.<br>아래는 공식 홈페이지에 공개된 실제 현장 사진입니다.</div>
@@ -643,28 +653,10 @@ body{background:
 </div>
 
 <div class="page" id="page-progress">
-<section id="sec-progress" class="sec" style="background:#07090F;">
+<section id="sec-progress" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">PROJECT PROGRESS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
-  <div style="background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;padding:.8rem;margin-bottom:1.2rem;" class="fade-in d1">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
-      <span style="font-size:11px;color:#C9A84C55;">진행 현황</span>
-      <span style="font-size:12px;font-weight:700;color:#C9A84C;">완료 5 · 진행 중 2 / 8단계</span>
-    </div>
-    <div style="height:5px;background:#0F1825;border-radius:3px;overflow:hidden;">
-      <div id="prog-bar" style="height:100%;width:0;background:linear-gradient(90deg,#C9A84C,#E8C96A);border-radius:3px;transition:width 1.2s cubic-bezier(.22,.61,.36,1);"></div>
-    </div>
-    <div style="display:flex;gap:4px;margin-top:8px;">
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C66;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C66;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
-    </div>
-  </div>
+  <div class="meas prog-line fade-in">진행 현황 — 완료 5 · 진행 중 2 / 전체 8구간</div>
   <div class="tl-wrap">
     <div class="tl-track" id="tl-track"></div>
     <div data-depth="00m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">광구 확보</span><span class="chip c-done">완료</span></div>
@@ -680,7 +672,7 @@ body{background:
 </div>
 
 <div class="page" id="page-news">
-<section id="sec-news" class="sec" style="background:#07090F;">
+<section id="sec-news" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LATEST NEWS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">최신 뉴스</div>
 <div class="nc-grid">
@@ -726,7 +718,7 @@ body{background:
 </div>
 
 <div class="page" id="page-escrow">
-<section id="sec-escrow" class="sec" style="background:#05070C;">
+<section id="sec-escrow" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">SAFE TRADE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">MPC 에스크로 — 회원 간 안전거래</div>
   <div class="esc-sub fade-in">상장 전에도 회원끼리 MPC를 안전하게 사고팔 수 있습니다.<br>판매자의 MPC를 블록체인 금고가 먼저 보관하고,<br>구매자의 USDT 입금이 확인되는 순간 자동으로 맞교환합니다.</div>
@@ -777,8 +769,9 @@ body{background:
 <footer class="footer">
   <div class="f-ghost" aria-hidden="true">MPC</div>
   <div class="f-logo">MPC · MINERAL PROJECT COIN</div>
+  <div class="f-disc">이 사이트는 투자 권유가 아닙니다. 투자 판단과 그 결과는 전적으로 본인 책임입니다.</div>
   <div class="f-links">
-    <a href="https://x.com/MPC_Global_X">𝕏 공식 X</a><span>·</span>
+    <a href="https://x.com/MPC_Global_X">X (트위터)</a><span>·</span>
     <a href="https://t.me/official_mpc_global">텔레그램</a><span>·</span>
     <a href="https://medium.com/@globalmpc2026">미디엄</a><span>·</span>
     <a href="https://www.globalmpc.tech/">공식 홈페이지</a>
@@ -789,18 +782,18 @@ body{background:
 
 <script>
 const EL_DATA={
-  nd:{num:'60',sym:'Nd',kr:'네오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0A1A2E 0%,#0F2A1A 40%,#1A2E10 100%)',accent:'#3AAA6A',ringColor:'#3AAA6A33',desc:'세계에서 가장 강력한 영구자석(NdFeB) 핵심 소재. 전기차·풍력발전 모터에 필수.',tags:['영구자석','전기차','풍력'],uses:[{title:'전기차 구동 모터',desc:'EV 1대당 약 1~2kg 소요. 테슬라·현대·BMW 전 전기차에 적용.',tags:['Tesla','현대 아이오닉']},{title:'풍력발전 터빈',desc:'대형 터빈 1기당 수백 kg. 해상풍력 직접구동 방식 핵심.',tags:['해상풍력']},{title:'스마트폰 스피커',desc:'초소형 고출력 진동판. 애플·삼성 전 모델 탑재.',tags:['스마트폰']}],demand:[{l:'전기차·모터',w:72},{l:'풍력발전',w:16},{l:'전자기기',w:12}]},
-  pr:{num:'59',sym:'Pr',kr:'프라세오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0D1A2E 0%,#121828 60%,#0E2030 100%)',accent:'#4A8FD4',ringColor:'#4A8FD433',desc:'Nd와 합금화해 더 강력한 NdPr 자석 생성. 항공우주·군수 활용.',tags:['항공우주','NdPr','군수'],uses:[{title:'NdPr 영구자석',desc:'전기차 모터 효율 직접 향상.',tags:['NdFeB','EV 모터']},{title:'항공우주 합금',desc:'마그네슘·알루미늄 합금 첨가로 내열성·강도 향상.',tags:['항공 합금','군수']},{title:'특수 유리·세라믹',desc:'녹황색 발색제로 특수 유리 제조.',tags:['특수 유리']}],demand:[{l:'영구자석',w:68},{l:'항공·군수',w:20},{l:'세라믹',w:12}]},
-  dy:{num:'66',sym:'Dy',kr:'디스프로슘',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#1A0A2E 0%,#220A20 50%,#1A0E28 100%)',accent:'#C060E0',ringColor:'#C060E033',desc:'희토류 중 가장 희소·고가. Nd 자석에 소량 첨가 시 고온에서도 자력 유지.',tags:['최희소','고온내열','원자력'],uses:[{title:'고온 내열 자석',desc:'NdFeB에 2~3% 첨가 시 180°C에서도 자력 유지.',tags:['고온 내열','EV']},{title:'원자로 제어봉',desc:'높은 중성자 흡수 단면적. 원자력 발전소 안전 소재.',tags:['원자로']},{title:'산업 로봇·드론',desc:'고정밀 소형 모터에 필수.',tags:['로봇','드론']}],demand:[{l:'자석 첨가제',w:80},{l:'원자력',w:12},{l:'로봇·드론',w:8}]},
-  la:{num:'57',sym:'La',kr:'란탄',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0A1E1A 0%,#0E1A10 50%,#0A1818 100%)',accent:'#40C0A0',ringColor:'#40C0A033',desc:'수소저장합금·광학유리·배터리 전극 소재로 광범위하게 활용.',tags:['NiMH배터리','광학','촉매'],uses:[{title:'니켈-수소 배터리',desc:'하이브리드차 배터리 전극. 도요타 프리우스 등 핵심.',tags:['하이브리드','NiMH']},{title:'고굴절률 광학 유리',desc:'카메라 렌즈·현미경 정밀 광학기기.',tags:['카메라 렌즈']},{title:'석유 정제 촉매',desc:'FCC 공정. 전 세계 정유소 필수 소재.',tags:['FCC 촉매']}],demand:[{l:'배터리·합금',w:42},{l:'정유 촉매',w:34},{l:'광학 유리',w:24}]},
-  ce:{num:'58',sym:'Ce',kr:'세륨',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#1E1A08 0%,#2A2010 50%,#1E1808 100%)',accent:'#E0B030',ringColor:'#E0B03033',desc:'희토류 중 지각 함유량 최대. 자동차 배기가스 정화·연마제·LED 형광체.',tags:['자동차촉매','LED','반도체'],uses:[{title:'자동차 삼원촉매',desc:'배기가스 정화. 전 세계 내연기관차 촉매변환기.',tags:['배기가스','촉매']},{title:'LED·OLED 형광체',desc:'백색 LED 황색 형광체. TV·스마트폰 디스플레이.',tags:['LED','OLED']},{title:'반도체 웨이퍼 연마',desc:'CeO₂ 슬러리로 반도체 웨이퍼 정밀 연마.',tags:['반도체 CMP']}],demand:[{l:'자동차 촉매',w:45},{l:'연마·반도체',w:30},{l:'LED',w:25}]},
-  w:{num:'74',sym:'W',kr:'텅스텐',cat:'희소금속·전이금속',catClass:'cm',grad:'linear-gradient(135deg,#0E1A22 0%,#0A1830 50%,#0E1C28 100%)',accent:'#60A0D8',ringColor:'#60A0D833',desc:'금속 중 최고 융점(3,422°C). 절삭공구·방산·반도체 전략 소재.',tags:['최고융점','절삭공구','방산'],uses:[{title:'초경합금 절삭공구',desc:'WC 합금으로 드릴·밀링커터 제조. 금속 가공 산업 필수.',tags:['초경합금','절삭']},{title:'방산·관통자',desc:'고밀도(19.3g/cm³) 탄약 관통자·군용 합금.',tags:['방산','전략물자']},{title:'반도체 배선',desc:'DRAM·낸드플래시 텅스텐 플러그 배선 공정.',tags:['반도체']}],demand:[{l:'절삭·초경합금',w:60},{l:'방산·특수합금',w:25},{l:'반도체',w:15}]},
-  cu:{num:'29',sym:'Cu',kr:'구리',cat:'비철금속·전이금속',catClass:'cm',grad:'linear-gradient(135deg,#1E1008 0%,#2A1A0A 50%,#1E1208 100%)',accent:'#E07840',ringColor:'#E0784033',desc:'탁월한 전기·열 전도성. 전동화·신재생 에너지 전환의 기반 소재.',tags:['전기전도','EV배선','신재생'],uses:[{title:'전기차 배선·모터 권선',desc:'EV 1대당 약 80~100kg. 내연기관 대비 3~4배.',tags:['EV','충전 인프라']},{title:'AI 데이터센터 배선',desc:'GPU 서버·냉각 시스템 전력 배선. AI 인프라 급증으로 수요 폭등.',tags:['AI','데이터센터']},{title:'전력 인프라',desc:'변압기·송전 케이블의 기본 소재. 전력망의 근간.',tags:['전력 케이블','변압기']}],demand:[{l:'전기·전자',w:50},{l:'건축·인프라',w:30},{l:'수송·산업',w:20}]}
+  nd:{num:'60',sym:'Nd',kr:'네오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#C2773F',ringColor:'#C2773F33',desc:'세계에서 가장 강력한 영구자석(NdFeB) 핵심 소재. 전기차·풍력발전 모터에 필수.',tags:['영구자석','전기차','풍력'],uses:[{title:'전기차 구동 모터',desc:'EV 1대당 약 1~2kg 소요. 테슬라·현대·BMW 전 전기차에 적용.',tags:['Tesla','현대 아이오닉']},{title:'풍력발전 터빈',desc:'대형 터빈 1기당 수백 kg. 해상풍력 직접구동 방식 핵심.',tags:['해상풍력']},{title:'스마트폰 스피커',desc:'초소형 고출력 진동판. 애플·삼성 전 모델 탑재.',tags:['스마트폰']}],demand:[{l:'전기차·모터',w:72},{l:'풍력발전',w:16},{l:'전자기기',w:12}]},
+  pr:{num:'59',sym:'Pr',kr:'프라세오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#2E6B52',ringColor:'#C2773F33',desc:'Nd와 합금화해 더 강력한 NdPr 자석 생성. 항공우주·군수 활용.',tags:['항공우주','NdPr','군수'],uses:[{title:'NdPr 영구자석',desc:'전기차 모터 효율 직접 향상.',tags:['NdFeB','EV 모터']},{title:'항공우주 합금',desc:'마그네슘·알루미늄 합금 첨가로 내열성·강도 향상.',tags:['항공 합금','군수']},{title:'특수 유리·세라믹',desc:'녹황색 발색제로 특수 유리 제조.',tags:['특수 유리']}],demand:[{l:'영구자석',w:68},{l:'항공·군수',w:20},{l:'세라믹',w:12}]},
+  dy:{num:'66',sym:'Dy',kr:'디스프로슘',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#B8B2A6',ringColor:'#C2773F33',desc:'희토류 중 가장 희소·고가. Nd 자석에 소량 첨가 시 고온에서도 자력 유지.',tags:['최희소','고온내열','원자력'],uses:[{title:'고온 내열 자석',desc:'NdFeB에 2~3% 첨가 시 180°C에서도 자력 유지.',tags:['고온 내열','EV']},{title:'원자로 제어봉',desc:'높은 중성자 흡수 단면적. 원자력 발전소 안전 소재.',tags:['원자로']},{title:'산업 로봇·드론',desc:'고정밀 소형 모터에 필수.',tags:['로봇','드론']}],demand:[{l:'자석 첨가제',w:80},{l:'원자력',w:12},{l:'로봇·드론',w:8}]},
+  la:{num:'57',sym:'La',kr:'란탄',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#8A3B2A',ringColor:'#C2773F33',desc:'수소저장합금·광학유리·배터리 전극 소재로 광범위하게 활용.',tags:['NiMH배터리','광학','촉매'],uses:[{title:'니켈-수소 배터리',desc:'하이브리드차 배터리 전극. 도요타 프리우스 등 핵심.',tags:['하이브리드','NiMH']},{title:'고굴절률 광학 유리',desc:'카메라 렌즈·현미경 정밀 광학기기.',tags:['카메라 렌즈']},{title:'석유 정제 촉매',desc:'FCC 공정. 전 세계 정유소 필수 소재.',tags:['FCC 촉매']}],demand:[{l:'배터리·합금',w:42},{l:'정유 촉매',w:34},{l:'광학 유리',w:24}]},
+  ce:{num:'58',sym:'Ce',kr:'세륨',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#E09A62',ringColor:'#C2773F33',desc:'희토류 중 지각 함유량 최대. 자동차 배기가스 정화·연마제·LED 형광체.',tags:['자동차촉매','LED','반도체'],uses:[{title:'자동차 삼원촉매',desc:'배기가스 정화. 전 세계 내연기관차 촉매변환기.',tags:['배기가스','촉매']},{title:'LED·OLED 형광체',desc:'백색 LED 황색 형광체. TV·스마트폰 디스플레이.',tags:['LED','OLED']},{title:'반도체 웨이퍼 연마',desc:'CeO₂ 슬러리로 반도체 웨이퍼 정밀 연마.',tags:['반도체 CMP']}],demand:[{l:'자동차 촉매',w:45},{l:'연마·반도체',w:30},{l:'LED',w:25}]},
+  w:{num:'74',sym:'W',kr:'텅스텐',cat:'희소금속·전이금속',catClass:'cm',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#2E6B52',ringColor:'#C2773F33',desc:'금속 중 최고 융점(3,422°C). 절삭공구·방산·반도체 전략 소재.',tags:['최고융점','절삭공구','방산'],uses:[{title:'초경합금 절삭공구',desc:'WC 합금으로 드릴·밀링커터 제조. 금속 가공 산업 필수.',tags:['초경합금','절삭']},{title:'방산·관통자',desc:'고밀도(19.3g/cm³) 탄약 관통자·군용 합금.',tags:['방산','전략물자']},{title:'반도체 배선',desc:'DRAM·낸드플래시 텅스텐 플러그 배선 공정.',tags:['반도체']}],demand:[{l:'절삭·초경합금',w:60},{l:'방산·특수합금',w:25},{l:'반도체',w:15}]},
+  cu:{num:'29',sym:'Cu',kr:'구리',cat:'비철금속·전이금속',catClass:'cm',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#C2773F',ringColor:'#C2773F33',desc:'탁월한 전기·열 전도성. 전동화·신재생 에너지 전환의 기반 소재.',tags:['전기전도','EV배선','신재생'],uses:[{title:'전기차 배선·모터 권선',desc:'EV 1대당 약 80~100kg. 내연기관 대비 3~4배.',tags:['EV','충전 인프라']},{title:'AI 데이터센터 배선',desc:'GPU 서버·냉각 시스템 전력 배선. AI 인프라 급증으로 수요 폭등.',tags:['AI','데이터센터']},{title:'전력 인프라',desc:'변압기·송전 케이블의 기본 소재. 전력망의 근간.',tags:['전력 케이블','변압기']}],demand:[{l:'전기·전자',w:50},{l:'건축·인프라',w:30},{l:'수송·산업',w:20}]}
 };
 
 // 별 파티클
 (function(){
-  const cv=document.getElementById('star-c');if(!cv)return;
+  const cv=null;if(!cv)return;
   const cx=cv.getContext('2d');
   function resize(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
   resize();window.addEventListener('resize',resize);
@@ -891,6 +884,20 @@ function showEl(id,tab){
 <script>
 // 효과 3종 초기화 — 어느 것이든 로딩 실패 시 해당 효과만 빠지고 내용은 그대로 보인다
 
+
+
+  // 깊이 계기: 스크롤 -> m 환산 (PC 레일 + 모바일 상단 눈금)
+  try {
+    const num = document.getElementById('depthNum'), cur = document.getElementById('depthCur'), mb = document.getElementById('depthMobile');
+    const upd = () => {
+      const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+      const f = Math.min(1, scrollY / max);
+      if (num) num.textContent = Math.round(f * 120);
+      if (cur) cur.style.transform = 'translateY(' + (70 + f * (innerHeight - 140)) + 'px)';
+      if (mb) mb.style.width = (f * 100) + '%';
+    };
+    addEventListener('scroll', upd, { passive: true }); upd();
+  } catch(e){}
 
 // 해시 라우터: 메뉴 = 페이지 전환
 const PAGES = ['home','project','field','progress','news','escrow'];
@@ -1007,16 +1014,21 @@ window.addEventListener('DOMContentLoaded', function(){
         renderer.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
       }
       size(); window.addEventListener('resize', size);
-      (function loop(t) {
-        requestAnimationFrame(loop);
-        if (document.hidden) return; // 백그라운드 탭에서 배터리 절약
-        grp.rotation.y = t * 0.0004 + tx * .6;
-        grp.rotation.x = .12 + ty * .35;
-        grp.position.y = .55 + Math.sin(t * 0.0009) * .12 - Math.min(window.scrollY, 600) * 0.0012; // 둥실 + 스크롤 패럴럭스
-        ring.rotation.y = -t * 0.00022;
-        dust.rotation.y = t * 0.00008;
+      let settled = 0;
+      function renderOnce() {
+        grp.rotation.y = .72 + tx * .6;
+        grp.rotation.x = .16 + ty * .35;
+        grp.position.y = .55;
         renderer.render(scene, cam);
+      }
+      (function settle(t) { // 1회 안착 연출 후 정지 — 이후엔 마우스 움직일 때만 다시 그림
+        if (settled > 46) return;
+        settled++;
+        grp.rotation.y = .72 - (46 - settled) * .012;
+        renderer.render(scene, cam);
+        requestAnimationFrame(settle);
       })(0);
+      window.addEventListener('pointermove', () => renderOnce(), { passive: true });
     }
   } catch(e){}
 
