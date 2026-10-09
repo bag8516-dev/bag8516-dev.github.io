@@ -799,7 +799,8 @@ window.addEventListener('DOMContentLoaded', function(){
   //      (미로딩·감속모션 설정 시 연출 없이 바로 보임 — 내용 손실 없음)
   try {
     const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (window.anime && motionOK) {
+    // 화면이 실제로 보일 때만 연출 — 백그라운드 탭에서 열리면 연출 없이 그대로 표시 (내용이 가려질 여지 차단)
+    if (window.anime && motionOK && document.visibilityState === 'visible') {
       const heroEls = ['.h-sym', '.h-title', '.h-sub', '.h-hook', '.h-fullname', '.btns']
         .map(s => document.querySelector(s)).filter(Boolean);
       anime.set(heroEls, { opacity: 0, translateY: 18 });
