@@ -382,9 +382,9 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
   .btns{flex-direction:row;justify-content:center;flex-wrap:wrap;gap:12px;}
   .btns a{min-width:280px;}
 }
-@media (min-width:1100px){
+@media (min-width:1000px){
   body{font-size:16px;}
-  .lp{max-width:1100px;}
+  .lp{max-width:1080px;}
   .hero{min-height:92vh;min-height:92dvh;}
   .h-title{font-size:64px;}
   .h-en{font-size:12px;}
@@ -1016,13 +1016,13 @@ window.addEventListener('DOMContentLoaded', function(){
         slidesPerView: 1.18, centeredSlides: true, spaceBetween: 10, loop: false,
         pagination: { el: '.esc-pag', clickable: true },
         breakpoints: { 768: { slidesPerView: 2.2, centeredSlides: false, spaceBetween: 14 },
-                       1100: { slidesPerView: 4, centeredSlides: false, spaceBetween: 16 } },
+                       1000: { slidesPerView: 4, centeredSlides: false, spaceBetween: 16 } },
       });
       new Swiper('.site-swiper', {
         slidesPerView: 1.12, centeredSlides: true, spaceBetween: 10, loop: false,
         pagination: { el: '.site-pag', clickable: true },
         breakpoints: { 768: { slidesPerView: 1.6, centeredSlides: true, spaceBetween: 14 },
-                       1100: { slidesPerView: 2.2, centeredSlides: true, spaceBetween: 16 } },
+                       1000: { slidesPerView: 2.2, centeredSlides: true, spaceBetween: 16 } },
       });
     }
   } catch(e){}
