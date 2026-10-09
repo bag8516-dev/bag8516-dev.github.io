@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.css">
 <style>
 @keyframes glow{0%,100%{text-shadow:0 0 10px #C9A84C55}50%{text-shadow:0 0 22px #C9A84Ccc,0 0 44px #C9A84C66}}
@@ -262,6 +262,22 @@ body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothi
 .esc-lbl{font-size:10.5px;color:#5A6376;margin-top:.3rem;}
 .esc-btn{max-width:420px;margin:0 auto;}
 .esc-note{font-size:11px;color:#3A4456;line-height:1.7;text-align:center;margin-top:.9rem;}
+
+/* 고급화: 영문 세리프 포인트 + 유리 질감 카드 + 3D 캔버스 */
+.sec-kicker2,.s-kicker,.cta-ey,.h-fullname{font-family:'Marcellus',Georgia,serif;}
+.s-num,.esc-num,.el-num,.el-sym{font-family:'Marcellus',Georgia,serif;}
+.nc{background:rgba(13,19,33,.55);border:1px solid #C9A84C1C;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);}
+.nc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#C9A84C55,transparent);}
+.nc-src3{background:#2A1F3F;color:#B088E8;}
+.nc-link{display:inline-block;margin-top:.7rem;font-size:12px;font-weight:600;color:#E8C96A;text-decoration:none;border:1px solid #C9A84C3A;border-radius:7px;padding:7px 12px;transition:background .25s,border-color .25s;}
+.nc-link:hover{background:#C9A84C14;border-color:#C9A84C66;}
+.s-card,.esc-card,.esc-stat{background:rgba(12,17,28,.55);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);}
+.esc-card{border:1px solid #C9A84C26;}
+.f-links{display:flex;justify-content:center;align-items:center;gap:8px;margin:.6rem 0 .5rem;font-size:11px;}
+.f-links a{color:#C9A84C88;text-decoration:none;transition:color .25s;}
+.f-links a:hover{color:#E8C96A;}
+.f-links span{color:#1A2230;}
+#hero3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.85;}
 </style>
 </head>
 <body>
@@ -289,6 +305,7 @@ body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothi
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
+  <canvas id="hero3d"></canvas>
   <div class="hero-radial"></div>
   <div class="hero-scan"></div>
   <canvas id="star-c"></canvas>
@@ -515,6 +532,26 @@ body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothi
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LATEST NEWS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">최신 뉴스</div>
   <div class="nc fade-in d1">
+    <div class="nc-meta"><span class="nc-src">매일경제TV</span><span class="nc-date">2026.10.08</span></div>
+    <div class="nc-ttl">「이슈&피플」 방송 출연 — 자원 확보 전쟁 속 대안은?</div>
+    <div class="nc-body">최병호 볼로르지오 경영총괄부사장이 매일경제TV에 출연해 핵심광물 공급망 경쟁과 몽골 자원개발을 설명했다.</div>
+    <div class="nc-tags"><span class="nc-tag"># 방송</span><span class="nc-tag"># 핵심광물</span></div>
+    <a href="https://www.youtube.com/watch?v=7iLVbyigC1Q" class="nc-link">▶ 방송 다시 보기</a>
+  </div>
+  <div class="nc fade-in d1">
+    <div class="nc-meta"><span class="nc-src nc-src3">공식 X 예고</span><span class="nc-date">2026.10.14 예정</span></div>
+    <div class="nc-ttl">MPC 글로벌 라이브 AMA (트위터 스페이스)</div>
+    <div class="nc-body">CEO Bayo Okusanya와 COO Quentin Ho가 출연해 마이닝 RWA와 생태계 로드맵을 직접 설명하는 생방송. 한국시간 10월 15일 0시.</div>
+    <div class="nc-tags"><span class="nc-tag"># 생방송</span><span class="nc-tag"># AMA</span></div>
+    <a href="https://x.com/MPC_Global_X" class="nc-link">𝕏 공식 계정에서 참여 (팔로워 41만)</a>
+  </div>
+  <div class="nc fade-in d2">
+    <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.29</span></div>
+    <div class="nc-ttl">My Mine 보상 체계 전환 완료</div>
+    <div class="nc-body">출석·퀘스트 보상이 opBNB 체인의 Crew로 직접 지급되는 방식으로 전환. 남은 BSC Energy는 1:1.2 비율로 보상 청구 가능.</div>
+    <div class="nc-tags"><span class="nc-tag"># My Mine</span><span class="nc-tag"># opBNB</span></div>
+  </div>
+  <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.01</span></div>
     <div class="nc-ttl">볼로르지오-ALS 탐사 계약 체결</div>
     <div class="nc-body">몽골 차간톨고이 ALS 글로벌 탐사 기관과 공식 계약 완료. 정밀 지질 탐사 및 시추로 이어지는 로드맵 본격 가동.</div>
@@ -585,6 +622,12 @@ body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothi
 
 <footer class="footer">
   <div class="f-logo">MPC · MINERAL PROJECT COIN</div>
+  <div class="f-links">
+    <a href="https://x.com/MPC_Global_X">𝕏 공식 X</a><span>·</span>
+    <a href="https://t.me/official_mpc_global">텔레그램</a><span>·</span>
+    <a href="https://medium.com/@globalmpc2026">미디엄</a><span>·</span>
+    <a href="https://www.globalmpc.tech/">공식 홈페이지</a>
+  </div>
   <div class="f-sub">몽골 불간 아이막 바양누르 솜 · 탐사 라이센스 XV-022460<br>© 2026 MPC RWA Report</div>
 </footer>
 </div>
@@ -686,12 +729,55 @@ function showEl(id,tab){
   setTimeout(()=>wrap.querySelectorAll('.demand-bar').forEach(b=>{b.style.width=b.dataset.w+'%';}),150);
 }
 </script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 <script>
 // 효과 3종 초기화 — 어느 것이든 로딩 실패 시 해당 효과만 빠지고 내용은 그대로 보인다
 window.addEventListener('DOMContentLoaded', function(){
+  // ⓪ Three.js: 히어로 3D 금빛 결정체 (미로딩 시 효과만 빠짐)
+  try {
+    const cv = document.getElementById('hero3d');
+    if (window.THREE && cv) {
+      const renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      const scene = new THREE.Scene();
+      const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+      cam.position.z = 6;
+      const gold = 0xC9A84C;
+      // 결정체: 금빛 반투명 본체 + 와이어프레임 겉면
+      const geo = new THREE.IcosahedronGeometry(1.5, 0);
+      const core = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ color: gold, metalness: .9, roughness: .25, transparent: true, opacity: .32 }));
+      const wire = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: gold, wireframe: true, transparent: true, opacity: .5 }));
+      const grp = new THREE.Group(); grp.add(core); grp.add(wire); scene.add(grp);
+      // 주변 입자 고리
+      const ringGeo = new THREE.BufferGeometry();
+      const pts = [];
+      for (let i = 0; i < 90; i++) { const a = i / 90 * Math.PI * 2; pts.push(Math.cos(a) * 2.6, (Math.random() - .5) * .25, Math.sin(a) * 2.6); }
+      ringGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
+      const ring = new THREE.Points(ringGeo, new THREE.PointsMaterial({ color: gold, size: .035, transparent: true, opacity: .55 }));
+      ring.rotation.x = .5; scene.add(ring);
+      scene.add(new THREE.AmbientLight(0xffffff, .55));
+      const key = new THREE.PointLight(0xFFE9B0, 1.4); key.position.set(3, 3, 4); scene.add(key);
+      let tx = 0, ty = 0;
+      window.addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5); ty = (e.clientY / innerHeight - .5); }, { passive: true });
+      function size() {
+        const w = cv.clientWidth || 1, h = cv.clientHeight || 1;
+        renderer.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
+      }
+      size(); window.addEventListener('resize', size);
+      (function loop(t) {
+        requestAnimationFrame(loop);
+        if (document.hidden) return; // 백그라운드 탭에서 배터리 절약
+        grp.rotation.y = t * 0.00035 + tx * .6;
+        grp.rotation.x = .25 + ty * .4;
+        ring.rotation.y = -t * 0.00022;
+        renderer.render(scene, cam);
+      })(0);
+    }
+  } catch(e){}
+
   // ① Lenis: 부드러운 스크롤
   try {
     if (window.Lenis) {
