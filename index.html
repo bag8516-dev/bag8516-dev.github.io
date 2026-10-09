@@ -370,7 +370,11 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
   .nc:hover{transform:translateY(-4px);border-color:#C9A84C44;}
   .esc-card:hover,.site-fig:hover{border-color:#C9A84C55;}
   .el:hover{transform:translateY(-3px);}
+  .site-fig img{transition:transform .6s cubic-bezier(.22,.61,.36,1);}
+  .site-fig:hover img{transform:scale(1.04);}
 }
+.f-ghost{font-family:'Marcellus',serif;font-size:96px;line-height:1;letter-spacing:.14em;color:#C9A84C0E;text-align:center;user-select:none;margin-bottom:-14px;}
+@media (min-width:1000px){.f-ghost{font-size:180px;margin-bottom:-28px;}}
 @media (prefers-reduced-motion: reduce){
   .h-title{animation:none;}
   .mark-glow{animation:none;}
@@ -797,6 +801,7 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
 </section>
 
 <footer class="footer">
+  <div class="f-ghost" aria-hidden="true">MPC</div>
   <div class="f-logo">MPC · MINERAL PROJECT COIN</div>
   <div class="f-links">
     <a href="https://x.com/MPC_Global_X">𝕏 공식 X</a><span>·</span>
@@ -908,7 +913,6 @@ function showEl(id,tab){
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 <script>
 // 효과 3종 초기화 — 어느 것이든 로딩 실패 시 해당 효과만 빠지고 내용은 그대로 보인다
@@ -1001,13 +1005,7 @@ window.addEventListener('DOMContentLoaded', function(){
     }
   } catch(e){}
 
-  // ① Lenis: 부드러운 스크롤
-  try {
-    if (window.Lenis) {
-      const lenis = new Lenis();
-      (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0);
-    }
-  } catch(e){}
+  // (관성 스크롤은 PC 휠 감각이 부자연스럽다는 피드백으로 제거 — 기본 스크롤 사용)
 
   // ② Swiper: 에스크로 4단계 카드
   try {
