@@ -362,20 +362,16 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
 .mark-glow{filter:drop-shadow(0 0 14px #C2773F55);animation:markPulse 4.5s ease-in-out infinite;}
 @keyframes markPulse{0%,100%{filter:drop-shadow(0 0 8px #C2773F44)}50%{filter:drop-shadow(0 0 22px #C2773F88)}}
 .h-markword{font-family:'Marcellus',serif;font-size:15px;letter-spacing:.5em;color:#C2773F;margin:10px 0 2px;text-indent:.5em;}
-.ticker{overflow:hidden;border-top:1px solid #C9A84C1C;border-bottom:1px solid #C9A84C1C;background:#05070C;padding:11px 0;}
-.ticker-track{display:flex;align-items:center;gap:26px;width:max-content;animation:tickerMove 30s linear infinite;}
-.ticker-track span{font-family:'Marcellus',serif;font-size:11px;letter-spacing:.22em;color:#C9A84C77;white-space:nowrap;}
-.ticker-track i{font-style:normal;font-size:7px;color:#C2773F66;}
-@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.h-title{background-size:220% auto;animation:goldSheen 7s ease-in-out infinite alternate;}
-@keyframes goldSheen{from{background-position:0% center}to{background-position:100% center}}
+/* 정적 고급화: 상시 깜빡임 전부 제거 — 움직임은 3D 결정과 마우스 반응에만 남긴다 */
+.h-badge,.h-badge-dot,.h-sym,.h-sym svg,.h-title,.btn-g,.done .tl-dot,.el-vis-sym-bg{animation:none;}
+.mark-glow{animation:none;filter:drop-shadow(0 0 10px #C2773F40);}
+.hero-scan,.el-vis-scan{display:none;}
 @media (hover:hover){
   .nc:hover{transform:translateY(-4px);border-color:#C9A84C44;}
   .esc-card:hover,.site-fig:hover{border-color:#C9A84C55;}
   .el:hover{transform:translateY(-3px);}
 }
 @media (prefers-reduced-motion: reduce){
-  .ticker-track{animation:none;}
   .h-title{animation:none;}
   .mark-glow{animation:none;}
 }
@@ -488,13 +484,6 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
 </section>
 
 <!-- SOCIAL PROOF -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>MPC · MINERAL PROJECT COIN</span><i>◆</i><span>TSAGAAN TOLGOI · MONGOLIA</span><i>◆</i><span>시추 13공 진행</span><i>◆</i><span>ALS · SGS 국제 공인 검증</span><i>◆</i><span>RWA INFRASTRUCTURE</span><i>◆</i>
-    <span>MPC · MINERAL PROJECT COIN</span><i>◆</i><span>TSAGAAN TOLGOI · MONGOLIA</span><i>◆</i><span>시추 13공 진행</span><i>◆</i><span>ALS · SGS 국제 공인 검증</span><i>◆</i><span>RWA INFRASTRUCTURE</span><i>◆</i>
-  </div>
-</div>
-
 <section class="social">
   <div class="social-grid">
     <div class="sp-card fade-in d1">
@@ -981,14 +970,14 @@ window.addEventListener('DOMContentLoaded', function(){
         dpts.push(Math.cos(a) * r, y, Math.sin(a) * r);
       }
       dustGeo.setAttribute('position', new THREE.Float32BufferAttribute(dpts, 3));
-      const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: gold, size: .022, transparent: true, opacity: .7 }));
+      const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: gold, size: .017, transparent: true, opacity: .38 }));
       scene.add(dust);
       // 주변 입자 고리
       const ringGeo = new THREE.BufferGeometry();
       const pts = [];
       for (let i = 0; i < 90; i++) { const a = i / 90 * Math.PI * 2; pts.push(Math.cos(a) * 2.6, (Math.random() - .5) * .25, Math.sin(a) * 2.6); }
       ringGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
-      const ring = new THREE.Points(ringGeo, new THREE.PointsMaterial({ color: gold, size: .035, transparent: true, opacity: .55 }));
+      const ring = new THREE.Points(ringGeo, new THREE.PointsMaterial({ color: gold, size: .03, transparent: true, opacity: .35 }));
       ring.rotation.x = .5; scene.add(ring);
       scene.add(new THREE.AmbientLight(0xffffff, .55));
       const key = new THREE.PointLight(0xFFE9B0, 1.4); key.position.set(3, 3, 4); scene.add(key);
