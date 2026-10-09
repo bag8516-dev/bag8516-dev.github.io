@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>MPC RWA 리포트 — 몽골 차간톨고이 광산 프로젝트</title>
+<meta name="description" content="몽골 불간 아이막 차간톨고이 광산. 희토류·텅스텐·구리 핵심광물 RWA 프로젝트. MPC 코인.">
+<meta property="og:title" content="MPC RWA 리포트">
+<meta property="og:description" content="전기차·AI 반도체가 폭발적으로 늘수록 희토류·텅스텐·구리 수요는 함께 급등합니다.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+@keyframes glow{0%,100%{text-shadow:0 0 10px #C9A84C55}50%{text-shadow:0 0 22px #C9A84Ccc,0 0 44px #C9A84C66}}
+@keyframes glowB{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 14px #C9A84C66}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes scan{0%{transform:translateY(-100%)}100%{transform:translateY(500%)}}
+@keyframes pulse2{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 4px #C9A84C33)}50%{filter:drop-shadow(0 0 12px #C9A84C88)}}
+@keyframes pulseSym{0%,100%{opacity:.06}50%{opacity:.13}}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-size:14px;-webkit-font-smoothing:antialiased;}
+.lp{width:100%;max-width:480px;margin:0 auto;overflow-x:hidden;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+
+/* HERO */
+.hero{position:relative;padding:2.4rem 1.1rem 3.2rem;text-align:center;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(#C9A84C07 1px,transparent 1px),linear-gradient(90deg,#C9A84C07 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 80%);}
+.hero-radial{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 60%,#1C2E0E44 0%,transparent 60%),linear-gradient(175deg,#0D1830 0%,#08101C 55%,#050810 100%);}
+.hero-scan{position:absolute;left:0;right:0;height:60px;background:linear-gradient(180deg,transparent,#C9A84C05,transparent);animation:scan 7s linear infinite;pointer-events:none;}
+#star-c{position:absolute;inset:0;pointer-events:none;}
+.hero-mtn{position:absolute;bottom:0;left:0;right:0;height:70px;pointer-events:none;}
+.ring-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:1;opacity:.08;}
+.hc{position:relative;z-index:3;}
+.h-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;letter-spacing:.15em;color:#C9A84C;border:1px solid #C9A84C44;padding:5px 14px;border-radius:14px;margin-bottom:1.1rem;background:#C9A84C0A;animation:glowB 3s ease-in-out infinite;}
+.h-badge-dot{width:5px;height:5px;border-radius:50%;background:#C9A84C;animation:pulse2 2s ease-in-out infinite;}
+.h-sym{margin:0 auto .9rem;animation:float 4s ease-in-out infinite;}
+.h-sym svg{animation:logoGlow 3s ease-in-out infinite;}
+.h-title{font-size:30px;font-weight:700;color:#C9A84C;line-height:1.1;margin-bottom:.3rem;animation:glow 3s ease-in-out infinite;}
+.h-en{font-size:10px;letter-spacing:.22em;color:#C9A84C55;margin-bottom:1rem;}
+.h-line{width:60px;height:1px;margin:.1rem auto 1rem;background:linear-gradient(90deg,transparent,#C9A84C,transparent);}
+.h-sub{font-size:13px;color:#8A9BBF;line-height:1.75;margin-bottom:.4rem;}
+.h-hook{background:#C9A84C0E;border:1px solid #C9A84C33;border-radius:10px;padding:1rem 1.1rem;margin:.9rem 0 1.5rem;text-align:left;position:relative;overflow:hidden;}
+.h-hook::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#C9A84C;}
+.h-hook-label{font-size:10px;letter-spacing:.12em;color:#C9A84C88;margin-bottom:6px;}
+.h-hook-text{font-size:14px;color:#D0C8A8;line-height:1.7;font-weight:700;}
+.h-hook-sub{font-size:12px;color:#5A6A7A;margin-top:7px;line-height:1.65;}
+.h-fullname{font-size:11px;color:#C9A84C55;letter-spacing:.04em;margin-bottom:1.5rem;}
+.btns{display:flex;flex-direction:column;gap:10px;}
+.btn-g{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#B8922A,#E8C96A,#C9A84C,#B8922A);background-size:200%;color:#06080C;padding:14px 18px;border-radius:9px;font-size:14px;font-weight:700;text-decoration:none;animation:glowB 3s ease-in-out infinite;transition:background-position .4s,transform .15s;}
+.btn-g:hover{background-position:right center;transform:translateY(-2px);}
+.btn-o{display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#C9A84C;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid #C9A84C44;transition:border-color .25s,background .25s;}
+.btn-o:hover{border-color:#C9A84C;background:#C9A84C0D;}
+
+/* SOCIAL */
+.social{background:#05070C;padding:1.1rem 1rem;}
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.sp-card{background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;padding:.9rem .8rem;text-align:center;position:relative;overflow:hidden;}
+.sp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#C9A84C66,transparent);}
+.sp-num{font-size:26px;font-weight:700;color:#C9A84C;line-height:1;}
+.sp-unit{font-size:12px;color:#C9A84C77;}
+.sp-label{font-size:10px;color:#2A3A50;margin-top:5px;line-height:1.4;}
+.media-row{margin-top:10px;display:flex;align-items:center;gap:9px;padding:.7rem .9rem;background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;}
+.media-badge{font-size:11px;font-weight:700;color:#060810;background:#C9A84C;padding:2px 8px;border-radius:4px;flex-shrink:0;}
+.media-text{font-size:12px;color:#3A4A5E;line-height:1.4;}
+.qbanner{background:#09101E;border-top:1px solid #C9A84C1A;border-bottom:1px solid #C9A84C1A;padding:.8rem 1rem;display:flex;align-items:center;gap:10px;position:relative;}
+.qbanner::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#C9A84C;}
+.qb-txt{font-size:13px;color:#5A6A80;line-height:1.5;}
+.qb-txt strong{color:#C9A84C;}
+
+/* STATS */
+.stats{padding:1.3rem 1rem;}
+.s-head{display:flex;align-items:center;gap:8px;margin-bottom:.8rem;}
+.s-kicker{font-size:10px;letter-spacing:.16em;color:#C9A84C55;}
+.s-hline{flex:1;height:1px;background:linear-gradient(90deg,#C9A84C22,transparent);}
+.s-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.s-card{background:#0A0E18;border:1px solid #C9A84C1A;border-radius:10px;padding:.9rem .8rem;text-align:center;position:relative;overflow:hidden;transition:border-color .3s,transform .2s;}
+.s-card:hover{border-color:#C9A84C44;transform:translateY(-2px);}
+.s-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);}
+.s-num{font-size:32px;font-weight:700;color:#C9A84C;line-height:1;}
+.s-unit{font-size:14px;color:#C9A84C77;}
+.s-desc{font-size:11px;color:#2E3E55;margin-top:4px;line-height:1.35;}
+.s-context{font-size:10px;color:#C9A84C66;margin-top:4px;line-height:1.3;font-style:italic;}
+.s-bar-wrap{height:2px;background:#0F1825;border-radius:1px;margin-top:7px;overflow:hidden;}
+.s-bar{height:100%;width:0;border-radius:1px;background:linear-gradient(90deg,#C9A84C66,#C9A84C);transition:width 1.2s cubic-bezier(.22,.61,.36,1);}
+
+/* SECTIONS */
+.sec{padding:1.5rem 1rem;}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:1.1rem;}
+.sec-kicker2{font-size:10px;letter-spacing:.16em;color:#C9A84C55;white-space:nowrap;}
+.sec-hline{flex:1;height:1px;background:linear-gradient(90deg,#C9A84C18,transparent);}
+.sec-ttl{font-size:16px;font-weight:700;color:#D8D0B8;display:inline-flex;align-items:center;gap:8px;margin-bottom:1.1rem;}
+.sec-ttl::before{content:'';display:inline-block;width:3px;height:15px;background:#C9A84C;border-radius:1px;flex-shrink:0;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,#C9A84C1A,transparent);}
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease;}
+.fade-in.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.05s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}
+.d4{transition-delay:.24s}.d5{transition-delay:.3s}.d6{transition-delay:.36s}
+.d7{transition-delay:.42s}.d8{transition-delay:.48s}
+
+/* TIMELINE */
+.tl-wrap{position:relative;padding-left:30px;}
+.tl-track{position:absolute;left:9px;top:8px;width:2px;height:0;background:linear-gradient(180deg,#C9A84C 55%,#1A2235 100%);border-radius:1px;transition:height 1.5s ease;}
+.tl-track.vis{height:calc(100% - 16px);}
+.tl-row{position:relative;padding:0 0 1.1rem 18px;opacity:0;transform:translateX(-10px);transition:opacity .4s ease,transform .4s ease;}
+.tl-row.vis{opacity:1;transform:translateX(0);}
+.tl-row:last-child{padding-bottom:0;}
+.tl-dot{position:absolute;left:-30px;top:1px;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;z-index:2;}
+.done .tl-dot{background:#C9A84C1A;border:1.5px solid #C9A84C;color:#C9A84C;animation:glowB 2.5s ease-in-out infinite;}
+.pend .tl-dot{background:#0C1120;border:1.5px solid #1A2235;color:#1A2235;}
+.tl-txt{font-size:14px;font-weight:600;color:#C0B898;}
+.pend .tl-txt{color:#1E2A3A;}
+.chip{display:inline-block;font-size:10px;padding:1px 8px;border-radius:7px;margin-left:6px;vertical-align:middle;}
+.c-done{background:#C9A84C12;color:#C9A84C;border:1px solid #C9A84C33;}
+.c-pend{background:#0C1018;color:#1A2235;border:1px solid #141D2A;}
+
+/* LOCATION */
+.loc-card{background:#09101E;border:1px solid #C9A84C1A;border-radius:12px;overflow:hidden;margin-bottom:9px;}
+.loc-card:last-child{margin-bottom:0;}
+.loc-header{background:linear-gradient(90deg,#C9A84C0A,transparent);padding:.8rem 1rem;border-bottom:1px solid #C9A84C15;display:flex;align-items:center;gap:8px;}
+.loc-header-icon{font-size:15px;}
+.loc-header-label{font-size:10px;letter-spacing:.1em;color:#C9A84C88;font-weight:600;}
+.loc-body{padding:.9rem 1rem;}
+.loc-row{display:flex;align-items:flex-start;gap:11px;margin-bottom:9px;}
+.loc-row:last-child{margin-bottom:0;}
+.loc-key{font-size:11px;color:#2A3A50;width:76px;flex-shrink:0;line-height:1.5;padding-top:1px;}
+.loc-val{font-size:13px;color:#A8B4C8;line-height:1.55;flex:1;}
+.loc-val strong{color:#C9A84C;}
+.loc-val .badge{display:inline-block;font-size:10px;font-family:'Courier New',monospace;font-weight:700;color:#C9A84C;background:#C9A84C12;border:1px solid #C9A84C33;padding:3px 10px;border-radius:5px;letter-spacing:.05em;}
+.loc-note{font-size:11px;color:#1E2E40;margin-top:3px;}
+
+/* HISTORY */
+.hist-row{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #0C1320;}
+.hist-row:last-child{border-bottom:none;padding-bottom:0;}
+.hist-era{flex-shrink:0;width:66px;}
+.hist-era-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;display:inline-block;line-height:1.4;}
+.era-ussr{background:#1A3050;color:#5A90C8;}
+.era-cn{background:#501818;color:#C87050;}
+.era-sgs{background:#C9A84C12;color:#C9A84C;border:1px solid #C9A84C33;}
+.hist-body{flex:1;}
+.hist-title{font-size:13px;font-weight:700;color:#A0A888;margin-bottom:3px;}
+.hist-desc{font-size:12px;color:#2A3A50;line-height:1.55;}
+.hist-highlight{font-size:12px;color:#C9A84C88;margin-top:4px;}
+
+/* ELEMENTS */
+.el-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.el{background:#09101E;border:1px solid #C9A84C22;border-radius:9px;padding:9px 4px;text-align:center;position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.el:hover,.el.active-el{border-color:#C9A84C;transform:translateY(-3px);box-shadow:0 6px 20px #C9A84C22;}
+.el::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,#C9A84C88,transparent);}
+.el-num{font-size:8px;color:#C9A84C44;position:absolute;top:4px;left:5px;}
+.el-sym{font-size:20px;font-weight:700;color:#C9A84C;line-height:1;}
+.el-name{font-size:8px;color:#3E5060;margin-top:2px;line-height:1.2;}
+.el-cat{font-size:7px;padding:1px 4px;border-radius:3px;margin-top:3px;display:inline-block;}
+.cr{background:#C9A84C12;color:#C9A84C88;}.cm{background:#142030;color:#2A4A6A;}
+.el-foot{font-size:11px;color:#1A2530;margin-top:10px;}
+.el-wide{grid-column:span 2;}
+.use-section{margin-top:14px;display:none;}
+
+/* ELEMENT VISUAL */
+.el-vis-hero{width:100%;height:190px;border-radius:10px;overflow:hidden;position:relative;margin-bottom:11px;border:1px solid #C9A84C22;}
+.el-vis-bg{position:absolute;inset:0;}
+.el-vis-deco{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.el-vis-sym-bg{font-size:120px;font-weight:900;font-family:Georgia,serif;line-height:1;opacity:.07;animation:pulseSym 3s ease-in-out infinite;user-select:none;}
+.el-vis-ring{position:absolute;border-radius:50%;border:1px solid;}
+.el-vis-overlay{position:absolute;inset:0;background:linear-gradient(to top,#07090F 0%,#07090F55 40%,transparent 100%);}
+.el-vis-grid{position:absolute;inset:0;background-image:linear-gradient(#C9A84C07 1px,transparent 1px),linear-gradient(90deg,#C9A84C07 1px,transparent 1px);background-size:20px 20px;}
+.el-vis-scan{position:absolute;left:0;right:0;height:40px;background:linear-gradient(180deg,transparent,#C9A84C07,transparent);animation:scan 5s linear infinite;}
+.el-vis-info{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1.1rem;}
+.el-vis-sym{font-size:32px;font-weight:700;font-family:Georgia,serif;line-height:1;margin-right:9px;vertical-align:middle;}
+.el-vis-name{font-size:15px;font-weight:700;color:#E8E0C8;vertical-align:middle;}
+.el-vis-num{font-size:10px;color:#C9A84C44;vertical-align:middle;margin-left:5px;}
+.el-vis-cat{display:inline-block;font-size:10px;padding:2px 7px;border-radius:5px;margin-left:7px;vertical-align:middle;}
+.el-vis-desc{font-size:12px;color:#7A8A9A;margin-top:6px;line-height:1.55;}
+.el-vis-tags{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:4px;align-items:flex-end;}
+.el-vis-tag{font-size:9px;color:#C9A84C66;border:1px solid #C9A84C22;padding:2px 7px;border-radius:4px;background:#07090F88;}
+
+/* USE CASES */
+.use-list{display:flex;flex-direction:column;gap:7px;margin-bottom:11px;}
+.use-item{background:#09101E;border:1px solid #C9A84C15;border-radius:9px;padding:.7rem .9rem;display:flex;gap:10px;align-items:flex-start;}
+.use-dot{width:6px;height:6px;border-radius:50%;background:#C9A84C;flex-shrink:0;margin-top:5px;}
+.use-title{font-size:13px;font-weight:700;color:#B0A888;margin-bottom:2px;}
+.use-desc{font-size:12px;color:#2A3A50;line-height:1.5;}
+.use-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px;}
+.use-tag{font-size:9px;color:#C9A84C55;border:1px solid #C9A84C18;padding:2px 6px;border-radius:4px;}
+.demand-wrap{background:#09101E;border:1px solid #C9A84C18;border-radius:9px;padding:.8rem .9rem;}
+.demand-title{font-size:10px;color:#C9A84C55;letter-spacing:.06em;margin-bottom:9px;}
+.demand-row{display:flex;align-items:center;gap:9px;margin-bottom:7px;}
+.demand-row:last-child{margin-bottom:0;}
+.demand-label{font-size:11px;color:#3A4A5E;width:78px;flex-shrink:0;}
+.demand-bar-bg{flex:1;height:5px;background:#0F1825;border-radius:3px;overflow:hidden;}
+.demand-bar{height:100%;border-radius:3px;background:linear-gradient(90deg,#C9A84C66,#C9A84C);width:0;transition:width .9s cubic-bezier(.22,.61,.36,1);}
+.demand-pct{font-size:11px;color:#C9A84C88;width:30px;text-align:right;flex-shrink:0;}
+
+/* MPC COIN */
+.mc{background:#09101E;border:1px solid #C9A84C1A;border-radius:11px;padding:1.1rem;margin-bottom:9px;position:relative;overflow:hidden;}
+.mc:last-child{margin-bottom:0;}
+.mc::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);}
+.mc-top{display:flex;align-items:center;gap:11px;margin-bottom:10px;}
+.mc-icon{width:34px;height:34px;border-radius:8px;background:#C9A84C12;border:1px solid #C9A84C33;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.mc-ttl{font-size:13px;font-weight:700;color:#C9A84C;line-height:1.4;}
+.mc-body{font-size:13px;color:#4A5A72;line-height:1.75;}
+.df-row{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #0C1320;font-size:13px;color:#4A5A72;line-height:1.55;}
+.df-row:last-child{border-bottom:none;padding-bottom:0;}
+.df-arrow{color:#C9A84C;flex-shrink:0;font-size:11px;margin-top:3px;}
+
+/* NEWS */
+.nc{background:#09101E;border:1px solid #141E2E;border-radius:11px;padding:1.1rem;margin-bottom:9px;position:relative;overflow:hidden;transition:border-color .25s,transform .2s;}
+.nc:last-child{margin-bottom:0;}
+.nc:hover{border-color:#C9A84C33;transform:translateY(-2px);}
+.nc::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,#C9A84C,#E8C96A44,transparent);}
+.nc-meta{display:flex;align-items:center;gap:8px;margin-bottom:9px;}
+.nc-src{font-size:11px;font-weight:700;color:#060810;background:#C9A84C;padding:2px 9px;border-radius:4px;}
+.nc-src2{background:#1A3A5A;color:#5A90BE;}
+.nc-date{font-size:11px;color:#1C2A3A;}
+.nc-ttl{font-size:15px;font-weight:700;color:#D0C8B0;margin-bottom:6px;line-height:1.35;}
+.nc-body{font-size:12px;color:#2E3E52;line-height:1.6;}
+.nc-tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap;}
+.nc-tag{font-size:10px;color:#C9A84C66;border:1px solid #C9A84C22;padding:2px 8px;border-radius:7px;}
+
+/* CTA */
+.cta{padding:2.2rem 1rem;text-align:center;position:relative;overflow:hidden;}
+.cta-bg-grid{position:absolute;inset:0;background-image:linear-gradient(#C9A84C06 1px,transparent 1px),linear-gradient(90deg,#C9A84C06 1px,transparent 1px);background-size:24px 24px;}
+.cta-bg-rad{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,#C9A84C0A 0%,transparent 55%),linear-gradient(170deg,#0A1208 0%,#07090F 50%,#05070A 100%);}
+.cta-border{position:absolute;inset:0;border-top:1px solid #C9A84C22;pointer-events:none;}
+.cta-inner{position:relative;z-index:1;}
+.cta-ey{font-size:10px;letter-spacing:.18em;color:#C9A84C44;margin-bottom:.5rem;}
+.cta-ttl{font-size:20px;font-weight:700;color:#E0D8C0;line-height:1.3;margin-bottom:.5rem;}
+.cta-sub{font-size:12px;color:#253040;line-height:1.7;margin-bottom:1.5rem;}
+.btn-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#B8922A,#E8C96A,#C9A84C,#B8922A);background-size:200%;color:#06080C;padding:14px 18px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;margin-bottom:10px;box-shadow:0 4px 20px #C9A84C2A;transition:background-position .4s,transform .15s;}
+.btn-cta:hover{background-position:right center;transform:translateY(-2px);}
+.btn-yt{display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#C9A84C;padding:11px 16px;border-radius:9px;font-size:13px;font-weight:600;text-decoration:none;border:1.5px solid #C9A84C33;transition:all .25s;}
+.btn-yt:hover{border-color:#C9A84C;background:#C9A84C0D;}
+.disc{margin-top:1.2rem;padding:.8rem;background:#030508;border:1px solid #0C1420;border-radius:9px;font-size:11px;color:#182030;line-height:1.65;}
+.cta-close{margin-top:1.2rem;font-size:13px;color:#C9A84C66;line-height:1.7;font-style:italic;}
+.cta-close strong{color:#C9A84C;font-style:normal;}
+
+/* FOOTER */
+.footer{padding:1.2rem 1rem;text-align:center;background:#030407;border-top:1px solid #0C1018;}
+.f-logo{font-size:13px;font-weight:700;color:#C9A84C;letter-spacing:.12em;}
+.f-sub{font-size:10px;color:#121A24;margin-top:3px;line-height:1.5;}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <symbol id="mpc-logo" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="57" stroke="#C9A84C" stroke-width="1.2" fill="none" opacity=".85"/>
+      <polygon points="60,10 102,35 102,85 60,110 18,85 18,35" stroke="#C9A84C" stroke-width="1" fill="none" opacity=".5"/>
+      <line x1="40" y1="28" x2="80" y2="28" stroke="#C9A84C" stroke-width=".6" opacity=".4"/>
+      <line x1="18" y1="55" x2="18" y2="65" stroke="#C9A84C" stroke-width="1.2" opacity=".6"/>
+      <line x1="102" y1="55" x2="102" y2="65" stroke="#C9A84C" stroke-width="1.2" opacity=".6"/>
+      <text x="60" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#C9A84C" font-family="Georgia,serif" letter-spacing="2">MPC</text>
+      <text x="60" y="84" text-anchor="middle" font-size="7.5" fill="#C9A84C" font-family="sans-serif" letter-spacing="3.5" opacity=".8">RWA REPORT</text>
+      <circle cx="52" cy="93" r="1.5" fill="#C9A84C" opacity=".6"/>
+      <circle cx="60" cy="93" r="1.5" fill="#C9A84C" opacity=".6"/>
+      <circle cx="68" cy="93" r="1.5" fill="#C9A84C" opacity=".6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="lp">
+<h1 class="sr-only">MPC RWA 리포트 — 몽골 차간톨고이 광산 프로젝트</h1>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-radial"></div>
+  <div class="hero-scan"></div>
+  <canvas id="star-c"></canvas>
+  <div class="ring-bg">
+    <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
+      <circle cx="150" cy="150" r="145" stroke="#C9A84C" stroke-width=".7" stroke-dasharray="5 10"/>
+      <circle cx="150" cy="150" r="110" stroke="#C9A84C" stroke-width=".4" stroke-dasharray="3 14"/>
+    </svg>
+  </div>
+  <svg class="hero-mtn" viewBox="0 0 400 70" preserveAspectRatio="none">
+    <path d="M0,70 L0,38 L30,22 L58,36 L90,10 L120,32 L150,6 L178,28 L205,16 L232,32 L258,20 L285,38 L312,18 L340,34 L370,24 L400,32 L400,70Z" fill="#0A1205" opacity=".6"/>
+    <path d="M0,70 L0,52 L45,40 L80,54 L118,36 L155,52 L192,40 L228,54 L265,36 L300,52 L340,44 L400,50 L400,70Z" fill="#07090F"/>
+  </svg>
+  <div class="hc">
+    <div class="h-badge"><div class="h-badge-dot"></div>MONGOLIA · RWA · MINING<div class="h-badge-dot"></div></div>
+    <div class="h-sym"><svg width="96" height="96" viewBox="0 0 120 120"><use href="#mpc-logo"/></svg></div>
+    <div class="h-title">MPC RWA 리포트</div>
+    <div class="h-en">MINERAL PROJECT COIN · RWA REPORT</div>
+    <div class="h-line"></div>
+    <div class="h-sub">몽골 차간톨고이 광산 프로젝트 | 핵심광물 | MPC 코인</div>
+    <div class="h-hook">
+      <div class="h-hook-label">왜 지금인가</div>
+      <div class="h-hook-text">전기차·AI 반도체가 폭발적으로 늘수록<br>희토류·텅스텐·구리 수요는 함께 급등합니다.</div>
+      <div class="h-hook-sub">구소련·중국 탐사로 44종 원소가 확인된 광산.<br>SGS 성분분석으로 지표 노두를 재검증했고,<br>ALS와 정밀 탐사 계약을 체결해 지하 매장량 확인에 나섭니다.</div>
+    </div>
+    <div class="h-fullname">MPC — Mineral Project Coin</div>
+    <div class="btns">
+      <a href="https://open.kakao.com/o/gUTqNlCi" class="btn-g">💬 카카오톡 오픈채팅방 입장하기</a>
+      <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-o">🔐 MPC 에스크로 안전거래 앱</a>
+      <a href="https://www.youtube.com/@MPC.RWA프로젝트" class="btn-o">▶ 유튜브 채널 구독</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="social">
+  <div class="social-grid">
+    <div class="sp-card fade-in d1">
+      <div><span class="sp-num" data-t="5">0</span><span class="sp-unit">단계</span></div>
+      <div class="sp-label">완료된<br>프로젝트 단계</div>
+    </div>
+    <div class="sp-card fade-in d2">
+      <div><span class="sp-num" data-t="44">0</span><span class="sp-unit">종</span></div>
+      <div class="sp-label">구소련·중국 탐사<br>확인 원소</div>
+    </div>
+  </div>
+  <div class="media-row fade-in d3">
+    <span class="media-badge">아주경제</span>
+    <span class="media-text">볼로르지오-ALS 탐사 계약 체결 보도 · 2026.07.01</span>
+  </div>
+</section>
+<div class="qbanner fade-in">
+  <span style="color:#C9A84C;font-size:16px;flex-shrink:0;">"</span>
+  <div class="qb-txt">실물 자산 없는 대다수 코인과 다릅니다. <strong>단계별 검증, 하나씩 공개.</strong></div>
+</div>
+
+<!-- KEY NUMBERS -->
+<section class="stats" style="background:#07090F;">
+  <div class="s-head fade-in"><span class="s-kicker">KEY NUMBERS</span><div class="s-hline"></div></div>
+  <div class="s-grid">
+    <div class="s-card fade-in d1">
+      <div><span class="s-num" data-t="190">0</span><span class="s-unit">km</span></div>
+      <div class="s-desc">울란바토르~광산<br>포장도로 직결</div>
+      <div class="s-context">물류 인프라 이미 확보</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="96"></div></div>
+    </div>
+    <div class="s-card fade-in d2">
+      <div><span class="s-num" data-t="10">0</span><span class="s-unit">km</span></div>
+      <div class="s-desc">페그마타이트<br>노두 연장</div>
+      <div class="s-context">희토류 광화 가능성 높은 규모</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="70"></div></div>
+    </div>
+    <div class="s-card fade-in d3">
+      <div><span class="s-num" data-t="44">0</span><span class="s-unit">종</span></div>
+      <div class="s-desc">구소련·중국 탐사<br>확인 원소</div>
+      <div class="s-context">희토류·텅스텐·구리 포함</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="88"></div></div>
+    </div>
+    <div class="s-card fade-in d4">
+      <div><span class="s-num" data-t="16">0</span><span class="s-unit">개</span></div>
+      <div class="s-desc">SGS 지표 노두<br>분석 샘플</div>
+      <div class="s-context">국제공인기관 현장 성분분석</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="55"></div></div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- TIMELINE -->
+<section class="sec" style="background:#07090F;">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">PROJECT PROGRESS</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
+  <div style="background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;padding:.8rem;margin-bottom:1.2rem;" class="fade-in d1">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+      <span style="font-size:11px;color:#C9A84C55;">완료 진행률</span>
+      <span style="font-size:12px;font-weight:700;color:#C9A84C;">5 / 8 단계</span>
+    </div>
+    <div style="height:5px;background:#0F1825;border-radius:3px;overflow:hidden;">
+      <div id="prog-bar" style="height:100%;width:0;background:linear-gradient(90deg,#C9A84C,#E8C96A);border-radius:3px;transition:width 1.2s cubic-bezier(.22,.61,.36,1);"></div>
+    </div>
+    <div style="display:flex;gap:4px;margin-top:8px;">
+      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
+    </div>
+  </div>
+  <div class="tl-wrap">
+    <div class="tl-track" id="tl-track"></div>
+    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">광구 확보</span><span class="chip c-done">완료</span></div>
+    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">환경영향평가 승인</span><span class="chip c-done">완료</span></div>
+    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">페그마타이트 노두 확인</span><span class="chip c-done">완료</span></div>
+    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">SGS 지표 노두 성분분석 완료</span><span class="chip c-done">완료</span></div>
+    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">ALS 정밀 탐사 계약 체결</span><span class="chip c-done">완료</span></div>
+    <div class="tl-row pend"><div class="tl-dot">○</div><span class="tl-txt">시추</span><span class="chip c-pend">진행 예정</span></div>
+    <div class="tl-row pend"><div class="tl-dot">○</div><span class="tl-txt">ALS 정밀 분석</span><span class="chip c-pend">예정</span></div>
+    <div class="tl-row pend"><div class="tl-dot">○</div><span class="tl-txt">JORC 자원 평가</span><span class="chip c-pend">예정</span></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- LOCATION & LICENSE -->
+<section class="sec" style="background:#05070C;">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">LOCATION & LICENSE</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">차간톨고이 광산 소개</div>
+
+  <div class="loc-card fade-in d1">
+    <div class="loc-header"><span class="loc-header-icon">📍</span><span class="loc-header-label">광산 위치</span></div>
+    <div class="loc-body">
+      <div class="loc-row">
+        <span class="loc-key">행정구역</span>
+        <div>
+          <div class="loc-val"><strong>몽골 불간 아이막(Bulgan Aimag)</strong><br>바양누르 솜(Bayannuur Sum)</div>
+        </div>
+      </div>
+      <div class="loc-row">
+        <span class="loc-key">접근성</span>
+        <div>
+          <div class="loc-val">울란바토르에서 서쪽으로 약 <strong>190km</strong></div>
+          <div class="loc-note">포장도로 직결 — 물류 인프라 이미 확보</div>
+        </div>
+      </div>
+      <div class="loc-row">
+        <span class="loc-key">탐사 라이센스</span>
+        <div>
+          <div class="loc-val"><span class="badge">XV-022460</span></div>
+          <div class="loc-note">몽골 광업부 공식 등록 탐사권</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loc-card fade-in d2">
+    <div class="loc-header"><span class="loc-header-icon">🔬</span><span class="loc-header-label">탐사 이력 — 3개국·3단계 데이터 축적</span></div>
+    <div class="loc-body">
+      <div class="hist-row">
+        <div class="hist-era"><span class="hist-era-badge era-ussr">구소련</span></div>
+        <div class="hist-body">
+          <div class="hist-title">소련 지질 탐사</div>
+          <div class="hist-desc">광역 지질조사 및 원소 탐사. 희토류·텅스텐·구리 등 <strong style="color:#A0A888;">44종</strong> 원소 확인 기록.</div>
+        </div>
+      </div>
+      <div class="hist-row">
+        <div class="hist-era"><span class="hist-era-badge era-cn">중국</span></div>
+        <div class="hist-body">
+          <div class="hist-title">중국 탐사팀 재확인</div>
+          <div class="hist-desc">구소련 데이터를 바탕으로 현장 재확인. 핵심 원소 존재 재검증.</div>
+        </div>
+      </div>
+      <div class="hist-row">
+        <div class="hist-era"><span class="hist-era-badge era-sgs">SGS</span></div>
+        <div class="hist-body">
+          <div class="hist-title">SGS 지표 노두 성분분석</div>
+          <div class="hist-desc">국제공인기관 SGS, 지표 노두 <strong style="color:#A0A888;">16개</strong> 샘플 성분분석. 핵심 원소 현장 재검증 완료.</div>
+          <div class="hist-highlight">→ 지하 매장 가능성의 근거 확보 · ALS 정밀 탐사로 연결</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ELEMENTS -->
+<section class="sec" style="background:#07090F;">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">KEY ELEMENTS</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">확인된 핵심 원소</div>
+  <div class="el-grid">
+    <div class="el fade-in d1" onclick="showEl('nd',this)"><div class="el-num">60</div><div class="el-sym">Nd</div><div class="el-name">네오디뮴</div><div class="el-cat cr">희토류</div></div>
+    <div class="el fade-in d2" onclick="showEl('pr',this)"><div class="el-num">59</div><div class="el-sym">Pr</div><div class="el-name">프라세오디뮴</div><div class="el-cat cr">희토류</div></div>
+    <div class="el fade-in d3" onclick="showEl('dy',this)"><div class="el-num">66</div><div class="el-sym">Dy</div><div class="el-name">디스프로슘</div><div class="el-cat cr">희토류</div></div>
+    <div class="el fade-in d4" onclick="showEl('la',this)"><div class="el-num">57</div><div class="el-sym">La</div><div class="el-name">란탄</div><div class="el-cat cr">희토류</div></div>
+    <div class="el fade-in d5" onclick="showEl('ce',this)"><div class="el-num">58</div><div class="el-sym">Ce</div><div class="el-name">세륨</div><div class="el-cat cr">희토류</div></div>
+    <div class="el fade-in d6" onclick="showEl('w',this)"><div class="el-num">74</div><div class="el-sym">W</div><div class="el-name">텅스텐</div><div class="el-cat cm">희소금속</div></div>
+    <div class="el el-wide fade-in d7" onclick="showEl('cu',this)"><div class="el-num">29</div><div class="el-sym">Cu</div><div class="el-name">구리</div><div class="el-cat cm">비철금속</div></div>
+  </div>
+  <div class="el-foot fade-in d8">* 원소 클릭 시 주요 산업 용도 확인</div>
+  <div class="use-section" id="use-section"><div id="el-detail-wrap"></div></div>
+</section>
+<div class="divider"></div>
+
+<!-- MPC COIN -->
+<section class="sec" style="background:#05070C;">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">UTILITY TOKEN</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">MPC 코인 소개</div>
+  <div class="mc fade-in d1">
+    <div class="mc-top"><div class="mc-icon">🏦</div><div class="mc-ttl">미네랄 프로젝트 코인 (Mineral Project Coin)<br>실물자산 기반 RWA 유틸리티 코인</div></div>
+    <div class="mc-body">광산 실물자산을 기반으로 하는 RWA 성격의 유틸리티 코인. 프로젝트 단계가 진행될수록 자산 가치의 근거가 축적됩니다.</div>
+  </div>
+  <div class="mc fade-in d2">
+    <div class="mc-top"><div class="mc-icon">⚖️</div><div class="mc-ttl">일반 코인과 다른 점</div></div>
+    <div class="df-row"><span class="df-arrow">▸</span>실물 광산 자산이 뒷받침하는 구조</div>
+    <div class="df-row"><span class="df-arrow">▸</span>단계별 공개 검증으로 신뢰 누적</div>
+    <div class="df-row"><span class="df-arrow">▸</span>바이백 · 계약 대금 결제 · 파생 프로젝트 연계</div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- NEWS -->
+<section class="sec" style="background:#07090F;">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">LATEST NEWS</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">최신 뉴스</div>
+  <div class="nc fade-in d1">
+    <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.01</span></div>
+    <div class="nc-ttl">볼로르지오-ALS 탐사 계약 체결</div>
+    <div class="nc-body">몽골 차간톨고이 ALS 글로벌 탐사 기관과 공식 계약 완료. 정밀 지질 탐사 및 시추로 이어지는 로드맵 본격 가동.</div>
+    <div class="nc-tags"><span class="nc-tag"># ALS 계약</span><span class="nc-tag"># 탐사</span></div>
+  </div>
+  <div class="nc fade-in d2">
+    <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026 상반기</span></div>
+    <div class="nc-ttl">SGS 지표 노두 성분분석 완료</div>
+    <div class="nc-body">희토류·텅스텐·구리 성분 국제공인기관 확인 완료. 16개 샘플 성분분석.</div>
+    <div class="nc-tags"><span class="nc-tag"># SGS</span><span class="nc-tag"># 희토류</span></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-bg-grid"></div><div class="cta-bg-rad"></div><div class="cta-border"></div>
+  <div class="cta-inner">
+    <div style="margin:0 auto .9rem;"><svg width="72" height="72" viewBox="0 0 120 120"><use href="#mpc-logo"/></svg></div>
+    <div class="cta-ey">KAKAO OPEN CHAT</div>
+    <div class="cta-ttl">지금 오픈채팅방으로 오세요</div>
+    <div class="cta-sub">최신 탐사 현황·뉴스·분석을 가장 빠르게 확인하세요<br>광산 프로젝트의 모든 단계를 함께 지켜봅니다</div>
+    <a href="https://open.kakao.com/o/gUTqNlCi" class="btn-cta">💬 카카오톡 오픈채팅방 입장하기</a>
+    <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-yt">🔐 MPC 에스크로 안전거래 앱 열기</a>
+    <a href="https://www.youtube.com/@MPC.RWA프로젝트" class="btn-yt">▶ 유튜브 채널 구독하기</a>
+    <div class="disc">이 사이트는 투자 권유가 아닙니다. 투자 판단 및 그에 따른 결과는 전적으로 본인 책임입니다.</div>
+    <div class="cta-close">광구 확보, 환경평가, 노두 확인, SGS 분석, ALS 계약—<br><strong>하나씩 순서대로 증명되고 있습니다.</strong></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="f-logo">MPC · MINERAL PROJECT COIN</div>
+  <div class="f-sub">몽골 불간 아이막 바양누르 솜 · 탐사 라이센스 XV-022460<br>© 2026 MPC RWA Report</div>
+</footer>
+</div>
+
+<script>
+const EL_DATA={
+  nd:{num:'60',sym:'Nd',kr:'네오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0A1A2E 0%,#0F2A1A 40%,#1A2E10 100%)',accent:'#3AAA6A',ringColor:'#3AAA6A33',desc:'세계에서 가장 강력한 영구자석(NdFeB) 핵심 소재. 전기차·풍력발전 모터에 필수.',tags:['영구자석','전기차','풍력'],uses:[{title:'전기차 구동 모터',desc:'EV 1대당 약 1~2kg 소요. 테슬라·현대·BMW 전 전기차에 적용.',tags:['Tesla','현대 아이오닉']},{title:'풍력발전 터빈',desc:'대형 터빈 1기당 수백 kg. 해상풍력 직접구동 방식 핵심.',tags:['해상풍력']},{title:'스마트폰 스피커',desc:'초소형 고출력 진동판. 애플·삼성 전 모델 탑재.',tags:['스마트폰']}],demand:[{l:'전기차·모터',w:72},{l:'풍력발전',w:16},{l:'전자기기',w:12}]},
+  pr:{num:'59',sym:'Pr',kr:'프라세오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0D1A2E 0%,#121828 60%,#0E2030 100%)',accent:'#4A8FD4',ringColor:'#4A8FD433',desc:'Nd와 합금화해 더 강력한 NdPr 자석 생성. 항공우주·군수 활용.',tags:['항공우주','NdPr','군수'],uses:[{title:'NdPr 영구자석',desc:'전기차 모터 효율 직접 향상.',tags:['NdFeB','EV 모터']},{title:'항공우주 합금',desc:'마그네슘·알루미늄 합금 첨가로 내열성·강도 향상.',tags:['항공 합금','군수']},{title:'특수 유리·세라믹',desc:'녹황색 발색제로 특수 유리 제조.',tags:['특수 유리']}],demand:[{l:'영구자석',w:68},{l:'항공·군수',w:20},{l:'세라믹',w:12}]},
+  dy:{num:'66',sym:'Dy',kr:'디스프로슘',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#1A0A2E 0%,#220A20 50%,#1A0E28 100%)',accent:'#C060E0',ringColor:'#C060E033',desc:'희토류 중 가장 희소·고가. Nd 자석에 소량 첨가 시 고온에서도 자력 유지.',tags:['최희소','고온내열','원자력'],uses:[{title:'고온 내열 자석',desc:'NdFeB에 2~3% 첨가 시 180°C에서도 자력 유지.',tags:['고온 내열','EV']},{title:'원자로 제어봉',desc:'높은 중성자 흡수 단면적. 원자력 발전소 안전 소재.',tags:['원자로']},{title:'산업 로봇·드론',desc:'고정밀 소형 모터에 필수.',tags:['로봇','드론']}],demand:[{l:'자석 첨가제',w:80},{l:'원자력',w:12},{l:'로봇·드론',w:8}]},
+  la:{num:'57',sym:'La',kr:'란탄',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0A1E1A 0%,#0E1A10 50%,#0A1818 100%)',accent:'#40C0A0',ringColor:'#40C0A033',desc:'수소저장합금·광학유리·배터리 전극 소재로 광범위하게 활용.',tags:['NiMH배터리','광학','촉매'],uses:[{title:'니켈-수소 배터리',desc:'하이브리드차 배터리 전극. 도요타 프리우스 등 핵심.',tags:['하이브리드','NiMH']},{title:'고굴절률 광학 유리',desc:'카메라 렌즈·현미경 정밀 광학기기.',tags:['카메라 렌즈']},{title:'석유 정제 촉매',desc:'FCC 공정. 전 세계 정유소 필수 소재.',tags:['FCC 촉매']}],demand:[{l:'배터리·합금',w:42},{l:'정유 촉매',w:34},{l:'광학 유리',w:24}]},
+  ce:{num:'58',sym:'Ce',kr:'세륨',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#1E1A08 0%,#2A2010 50%,#1E1808 100%)',accent:'#E0B030',ringColor:'#E0B03033',desc:'희토류 중 지각 함유량 최대. 자동차 배기가스 정화·연마제·LED 형광체.',tags:['자동차촉매','LED','반도체'],uses:[{title:'자동차 삼원촉매',desc:'배기가스 정화. 전 세계 내연기관차 촉매변환기.',tags:['배기가스','촉매']},{title:'LED·OLED 형광체',desc:'백색 LED 황색 형광체. TV·스마트폰 디스플레이.',tags:['LED','OLED']},{title:'반도체 웨이퍼 연마',desc:'CeO₂ 슬러리로 반도체 웨이퍼 정밀 연마.',tags:['반도체 CMP']}],demand:[{l:'자동차 촉매',w:45},{l:'연마·반도체',w:30},{l:'LED',w:25}]},
+  w:{num:'74',sym:'W',kr:'텅스텐',cat:'희소금속·전이금속',catClass:'cm',grad:'linear-gradient(135deg,#0E1A22 0%,#0A1830 50%,#0E1C28 100%)',accent:'#60A0D8',ringColor:'#60A0D833',desc:'금속 중 최고 융점(3,422°C). 절삭공구·방산·반도체 전략 소재.',tags:['최고융점','절삭공구','방산'],uses:[{title:'초경합금 절삭공구',desc:'WC 합금으로 드릴·밀링커터 제조. 금속 가공 산업 필수.',tags:['초경합금','절삭']},{title:'방산·관통자',desc:'고밀도(19.3g/cm³) 탄약 관통자·군용 합금.',tags:['방산','전략물자']},{title:'반도체 배선',desc:'DRAM·낸드플래시 텅스텐 플러그 배선 공정.',tags:['반도체']}],demand:[{l:'절삭·초경합금',w:60},{l:'방산·특수합금',w:25},{l:'반도체',w:15}]},
+  cu:{num:'29',sym:'Cu',kr:'구리',cat:'비철금속·전이금속',catClass:'cm',grad:'linear-gradient(135deg,#1E1008 0%,#2A1A0A 50%,#1E1208 100%)',accent:'#E07840',ringColor:'#E0784033',desc:'탁월한 전기·열 전도성. 전동화·신재생 에너지 전환의 기반 소재.',tags:['전기전도','EV배선','신재생'],uses:[{title:'전기차 배선·모터 권선',desc:'EV 1대당 약 80~100kg. 내연기관 대비 3~4배.',tags:['EV','충전 인프라']},{title:'AI 데이터센터 배선',desc:'GPU 서버·냉각 시스템 전력 배선. AI 인프라 급증으로 수요 폭등.',tags:['AI','데이터센터']},{title:'전력 인프라',desc:'변압기·송전 케이블의 기본 소재. 전력망의 근간.',tags:['전력 케이블','변압기']}],demand:[{l:'전기·전자',w:50},{l:'건축·인프라',w:30},{l:'수송·산업',w:20}]}
+};
+
+// 별 파티클
+(function(){
+  const cv=document.getElementById('star-c');if(!cv)return;
+  const cx=cv.getContext('2d');
+  function resize(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
+  resize();window.addEventListener('resize',resize);
+  const ss=Array.from({length:80},()=>({x:Math.random(),y:Math.random(),r:Math.random()<.18?1.3:.5,b:Math.random()*.18+.04,sp:Math.random()*2+1.5,ph:Math.random()*Math.PI*2,g:Math.random()<.4}));
+  let t=0;
+  (function draw(){
+    cx.clearRect(0,0,cv.width,cv.height);
+    const W=cv.width,H=cv.height;
+    ss.forEach(s=>{
+      const a=s.b+(Math.sin(t/s.sp+s.ph)*.5+.5)*(1-s.b)*.7;
+      cx.beginPath();cx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);
+      cx.fillStyle=s.g?`rgba(201,168,76,${a})`:`rgba(160,180,220,${a})`;
+      cx.fill();
+    });
+    t+=.035;requestAnimationFrame(draw);
+  })();
+})();
+
+// IntersectionObserver
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+// Timeline
+const tlIo=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;
+  document.getElementById('tl-track').classList.add('vis');
+  document.querySelectorAll('.tl-row').forEach((r,i)=>setTimeout(()=>r.classList.add('vis'),i*120));
+  tlIo.disconnect();});},{threshold:.08});
+const tlEl=document.querySelector('.tl-wrap');if(tlEl)tlIo.observe(tlEl);
+
+// Progress bar
+const pbIo=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;
+  const b=document.getElementById('prog-bar');if(b)setTimeout(()=>{b.style.width='62.5%';},200);
+  pbIo.disconnect();});},{threshold:.3});
+const pb=document.getElementById('prog-bar');if(pb)pbIo.observe(pb);
+
+// Stat bars
+const barIo=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;
+  e.target.querySelectorAll('.s-bar').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.w+'%';},300);});
+  barIo.unobserve(e.target);});},{threshold:.4});
+document.querySelectorAll('.stats').forEach(el=>barIo.observe(el));
+
+// Count-up
+const cntIo=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;
+  const el=e.target,tg=+el.dataset.t,dur=1300,s=performance.now();
+  (function step(n){const p=Math.min((n-s)/dur,1),ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(ease*tg).toLocaleString();
+    if(p<1)requestAnimationFrame(step);else el.textContent=tg.toLocaleString();})(s);
+  cntIo.unobserve(el);});},{threshold:.6});
+document.querySelectorAll('[data-t]').forEach(el=>cntIo.observe(el));
+
+// Element detail
+function showEl(id,tab){
+  const d=EL_DATA[id];if(!d)return;
+  document.querySelectorAll('.el').forEach(e=>e.classList.remove('active-el'));
+  tab.classList.add('active-el');
+  const sec=document.getElementById('use-section'),wrap=document.getElementById('el-detail-wrap');
+  sec.style.display='block';
+  const tagHTML=d.tags.map(t=>`<div class="el-vis-tag">${t}</div>`).join('');
+  const usesHTML=d.uses.map(u=>`<div class="use-item"><div class="use-dot"></div><div><div class="use-title">${u.title}</div><div class="use-desc">${u.desc}</div><div class="use-tags">${u.tags.map(t=>`<span class="use-tag">${t}</span>`).join('')}</div></div></div>`).join('');
+  const demandHTML=d.demand.map(r=>`<div class="demand-row"><span class="demand-label">${r.l}</span><div class="demand-bar-bg"><div class="demand-bar" data-w="${r.w}"></div></div><span class="demand-pct">${r.w}%</span></div>`).join('');
+  wrap.innerHTML=`<div>
+    <div class="el-vis-hero">
+      <div class="el-vis-bg" style="background:${d.grad};"></div>
+      <div class="el-vis-grid"></div><div class="el-vis-scan"></div>
+      <div class="el-vis-deco">
+        <div class="el-vis-sym-bg" style="color:${d.accent};">${d.sym}</div>
+        <div class="el-vis-ring" style="width:140px;height:140px;border-color:${d.ringColor};top:20px;left:50%;transform:translateX(-50%);"></div>
+        <div class="el-vis-ring" style="width:95px;height:95px;border-color:${d.ringColor};top:42px;left:50%;transform:translateX(-50%);"></div>
+      </div>
+      <div class="el-vis-tags">${tagHTML}</div>
+      <div class="el-vis-overlay"></div>
+      <div class="el-vis-info">
+        <div><span class="el-vis-sym" style="color:${d.accent};">${d.sym}</span><span class="el-vis-name">${d.kr}</span><span class="el-vis-num">No.${d.num}</span><span class="el-vis-cat ${d.catClass}">${d.cat}</span></div>
+        <div class="el-vis-desc">${d.desc}</div>
+      </div>
+    </div>
+    <div class="use-list">${usesHTML}</div>
+    <div class="demand-wrap"><div class="demand-title">주요 소비 산업 비중</div>${demandHTML}</div>
+  </div>`;
+  sec.scrollIntoView({behavior:'smooth',block:'nearest'});
+  setTimeout(()=>wrap.querySelectorAll('.demand-bar').forEach(b=>{b.style.width=b.dataset.w+'%';}),150);
+}
+</script>
+</body>
+</html>
