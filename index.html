@@ -577,8 +577,8 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
   <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
   <div style="background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;padding:.8rem;margin-bottom:1.2rem;" class="fade-in d1">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
-      <span style="font-size:11px;color:#C9A84C55;">완료 진행률</span>
-      <span style="font-size:12px;font-weight:700;color:#C9A84C;">5 / 8 단계</span>
+      <span style="font-size:11px;color:#C9A84C55;">진행 현황</span>
+      <span style="font-size:12px;font-weight:700;color:#C9A84C;">완료 5 · 진행 중 2 / 8단계</span>
     </div>
     <div style="height:5px;background:#0F1825;border-radius:3px;overflow:hidden;">
       <div id="prog-bar" style="height:100%;width:0;background:linear-gradient(90deg,#C9A84C,#E8C96A);border-radius:3px;transition:width 1.2s cubic-bezier(.22,.61,.36,1);"></div>
@@ -589,8 +589,8 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
       <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
       <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
       <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#C9A84C66;border-radius:2px;"></div>
+      <div style="flex:1;height:3px;background:#C9A84C66;border-radius:2px;"></div>
       <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
     </div>
   </div>
@@ -858,7 +858,7 @@ const tlEl=document.querySelector('.tl-wrap');if(tlEl)tlIo.observe(tlEl);
 
 // Progress bar
 const pbIo=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;
-  const b=document.getElementById('prog-bar');if(b)setTimeout(()=>{b.style.width='62.5%';},200);
+  const b=document.getElementById('prog-bar');if(b)setTimeout(()=>{b.style.width='75%';},200); // 완료 5 + 진행 중 2×0.5 = 6/8
   pbIo.disconnect();});},{threshold:.3});
 const pb=document.getElementById('prog-bar');if(pb)pbIo.observe(pb);
 
