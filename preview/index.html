@@ -866,7 +866,7 @@ window.addEventListener('DOMContentLoaded', function(){
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       const scene = new THREE.Scene();
       const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-      cam.position.z = 6;
+      cam.position.z = 8;
       const gold = 0xC9A84C, copper = 0xC2773F;
       // 공식 MPC 심볼의 3D 보석화: 4면 연꼴 다이아몬드 (위 짧고 아래 긴) — 닫힌 면 + 모서리 선
       // 심볼 비율: 반폭 7 · 윗높이 6 · 아랫높이 12 → 0.1 배율
@@ -886,11 +886,12 @@ window.addEventListener('DOMContentLoaded', function(){
       gem.computeVertexNormals();
       const grp = new THREE.Group();
       grp.add(new THREE.Mesh(gem, new THREE.MeshStandardMaterial({
-        color: copper, metalness: .75, roughness: .28, flatShading: true,
-        transparent: true, opacity: .88,
+        color: copper, metalness: .6, roughness: .32, flatShading: true,
+        emissive: 0x6B3A16, emissiveIntensity: .55, transparent: true, opacity: .96,
       })));
       grp.add(new THREE.LineSegments(new THREE.EdgesGeometry(gem),
         new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .8 })));
+      grp.scale.setScalar(.72);
       grp.position.y = .55; // 사진 위쪽에 보석처럼
       scene.add(grp);
       // 금가루 입자 (은하수처럼 떠다니는 먼지)
@@ -911,7 +912,8 @@ window.addEventListener('DOMContentLoaded', function(){
       const ring = new THREE.Points(ringGeo, new THREE.PointsMaterial({ color: gold, size: .03, transparent: true, opacity: .35 }));
       ring.rotation.x = .5; scene.add(ring);
       scene.add(new THREE.AmbientLight(0xffffff, .55));
-      const key = new THREE.PointLight(0xFFE9B0, 1.4); key.position.set(3, 3, 4); scene.add(key);
+      const key = new THREE.PointLight(0xFFE9B0, 1.6); key.position.set(3, 3, 4); scene.add(key);
+      const rim = new THREE.PointLight(0xE09A62, 1.0); rim.position.set(-3, -1, 3); scene.add(rim);
       let tx = 0, ty = 0;
       window.addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5); ty = (e.clientY / innerHeight - .5); }, { passive: true });
       function size() {
