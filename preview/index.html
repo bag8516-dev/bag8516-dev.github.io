@@ -348,6 +348,15 @@ body{background:
 .cover-strip::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),transparent 35%);pointer-events:none;}
 .cover-strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:9px 22px;background:rgba(12,11,9,.82);border-top:1px solid var(--line2);font-size:12px;color:var(--mut);display:flex;gap:12px;align-items:baseline;}
 .cover-strip .meas{font-size:11px;color:var(--cop);letter-spacing:.14em;}
+
+/* 표지 도판 슬라이더 */
+.cover-swiper{overflow:hidden;}
+.cover-swiper .swiper-wrapper{display:flex;height:100%;}
+.cover-swiper .swiper-slide{flex:0 0 100%;position:relative;}
+.cover-swiper figure{margin:0;height:100%;}
+.cover-pag{position:absolute;right:14px;top:10px;left:auto !important;bottom:auto !important;width:auto !important;z-index:5;}
+.cover-pag .swiper-pagination-bullet{background:rgba(234,229,216,.5);opacity:1;width:7px;height:7px;}
+.cover-pag .swiper-pagination-bullet-active{background:var(--cop2);}
 /* 깊이 눈금 레일 */
 .depth-rail{display:none;}
 @media (min-width:1000px){
@@ -448,10 +457,16 @@ body{background:
       <a href="#project" class="btn-o">기록 열람 — 프로젝트</a>
     </div>
   </div>
-  <figure class="cover-strip" aria-label="차간톨고이 현장 — 시추 자재">
-    <img src="../assets/site-0042.jpg" alt="차간톨고이 현장의 시추 파이프와 자재" width="960" height="720">
-    <figcaption><span class="meas">PLATE 01</span> 시추 파이프 · 탐사 캠프, 2026-07</figcaption>
-  </figure>
+  <div class="cover-strip swiper cover-swiper" aria-label="차간톨고이 현장 도판">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><figure><img src="../assets/site-0042.jpg" alt="시추 파이프와 자재" width="960" height="720" loading="eager"><figcaption><span class="meas">PLATE 01</span> 시추 파이프 · 탐사 캠프, 2026-07</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="../assets/site-0038.jpg" alt="탐사 캠프 전경 — 트럭, 굴착기, 게르" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 02</span> 캠프 구축 — 장비 반입</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="../assets/site-0039.jpg" alt="초원 위 캠프 파노라마" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 03</span> 초원 위 캠프 전경</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="../assets/site-0040.jpg" alt="현장 설치 작업" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 04</span> 현장 설치 작업</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="../assets/site-0043.jpg" alt="현장 장비" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 05</span> 배치된 장비</figcaption></figure></div>
+    </div>
+    <div class="swiper-pagination cover-pag"></div>
+  </div>
 </section>
 
 <section class="home-quick">
@@ -1016,6 +1031,12 @@ window.addEventListener('DOMContentLoaded', function(){
         pagination: { el: '.esc-pag', clickable: true },
         breakpoints: { 768: { slidesPerView: 2.2, centeredSlides: false, spaceBetween: 14 },
                        1000: { slidesPerView: 4, centeredSlides: false, spaceBetween: 16 } },
+      }));
+            window.__sw.push(new Swiper('.cover-swiper', {
+        slidesPerView: 1, loop: true, speed: 650,
+        autoplay: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? false
+                : { delay: 5200, disableOnInteraction: true },
+        pagination: { el: '.cover-pag', clickable: true },
       }));
       window.__sw.push(new Swiper('.site-swiper', {
         slidesPerView: 1.12, centeredSlides: true, spaceBetween: 10, loop: false,
