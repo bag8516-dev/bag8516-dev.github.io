@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.css">
 <style>
 @keyframes glow{0%,100%{text-shadow:0 0 10px #C9A84C55}50%{text-shadow:0 0 22px #C9A84Ccc,0 0 44px #C9A84C66}}
 @keyframes glowB{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 14px #C9A84C66}}
@@ -240,6 +241,27 @@ body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothi
 .footer{padding:1.2rem 1rem;text-align:center;background:#030407;border-top:1px solid #0C1018;}
 .f-logo{font-size:13px;font-weight:700;color:#C9A84C;letter-spacing:.12em;}
 .f-sub{font-size:10px;color:#121A24;margin-top:3px;line-height:1.5;}
+/* ESCROW 안전거래 섹션 */
+.esc-sub{font-size:13px;color:#8A93A3;line-height:1.8;text-align:center;margin-bottom:1.3rem;}
+.esc-swiper{padding-bottom:30px;margin-bottom:1.1rem;}
+/* Swiper 미로딩 시 폴백: 가로 스크롤로라도 전부 보이게 */
+.esc-swiper .swiper-wrapper{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
+.esc-swiper .swiper-slide{flex:0 0 78%;scroll-snap-align:center;margin-right:10px;}
+.esc-swiper.swiper-initialized .swiper-wrapper{overflow-x:visible;}
+.esc-swiper.swiper-initialized .swiper-slide{margin-right:0;}
+.esc-card{background:linear-gradient(170deg,#0C111C 0%,#0A0E16 100%);border:1px solid #C9A84C22;border-radius:12px;padding:1.1rem 1rem;min-height:148px;}
+.esc-step{font-size:10px;letter-spacing:.16em;color:#C9A84C88;margin-bottom:.4rem;}
+.esc-ct{font-size:16px;font-weight:700;color:#E0D8C0;margin-bottom:.45rem;}
+.esc-cd{font-size:12.5px;color:#8A93A3;line-height:1.7;}
+.esc-pag{bottom:0 !important;}
+.esc-pag .swiper-pagination-bullet{background:#C9A84C55;opacity:1;}
+.esc-pag .swiper-pagination-bullet-active{background:#C9A84C;}
+.esc-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1.2rem;}
+.esc-stat{background:#0A0E16;border:1px solid #C9A84C1A;border-radius:10px;padding:.9rem .4rem;text-align:center;}
+.esc-num{font-size:21px;font-weight:700;color:#E8C96A;font-variant-numeric:tabular-nums;}
+.esc-lbl{font-size:10.5px;color:#5A6376;margin-top:.3rem;}
+.esc-btn{max-width:420px;margin:0 auto;}
+.esc-note{font-size:11px;color:#3A4456;line-height:1.7;text-align:center;margin-top:.9rem;}
 </style>
 </head>
 <body>
@@ -507,6 +529,44 @@ body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothi
 </section>
 <div class="divider"></div>
 
+<!-- ESCROW 안전거래 -->
+<section class="sec" style="background:#05070C;">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">SAFE TRADE</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">MPC 에스크로 — 회원 간 안전거래</div>
+  <div class="esc-sub fade-in">상장 전에도 회원끼리 MPC를 안전하게 사고팔 수 있습니다.<br>판매자의 MPC를 블록체인 금고가 먼저 보관하고,<br>구매자의 USDT 입금이 확인되는 순간 자동으로 맞교환합니다.</div>
+
+  <div class="swiper esc-swiper fade-in">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="esc-card">
+        <div class="esc-step">STEP 1</div><div class="esc-ct">판매 등록</div>
+        <div class="esc-cd">판매자가 수량·가격을 정하면 MPC가 블록체인 금고에 예치됩니다. 판매자 본인도 임의로 꺼낼 수 없습니다.</div>
+      </div></div>
+      <div class="swiper-slide"><div class="esc-card">
+        <div class="esc-step">STEP 2</div><div class="esc-ct">구매 참여</div>
+        <div class="esc-cd">구매자가 장터에서 글을 보고 USDT를 입금합니다. 입금 수량은 블록체인이 직접 검증합니다.</div>
+      </div></div>
+      <div class="swiper-slide"><div class="esc-card">
+        <div class="esc-step">STEP 3</div><div class="esc-ct">자동 맞교환</div>
+        <div class="esc-cd">입금이 확인되는 순간 MPC는 구매자에게, USDT는 판매자에게 동시 지급됩니다. 사람 손을 거치지 않습니다.</div>
+      </div></div>
+      <div class="swiper-slide"><div class="esc-card">
+        <div class="esc-step">STEP 4</div><div class="esc-ct">자동 반환</div>
+        <div class="esc-cd">24시간 안에 구매자가 없으면 버튼 한 번으로 전액 돌려받습니다. 어느 쪽도 먼저 위험을 지지 않습니다.</div>
+      </div></div>
+    </div>
+    <div class="swiper-pagination esc-pag"></div>
+  </div>
+
+  <div class="esc-stats fade-in">
+    <div class="esc-stat"><div class="esc-num" data-end="2206">0</div><div class="esc-lbl">누적 거래 등록</div></div>
+    <div class="esc-stat"><div class="esc-num" id="escLocked" data-end="473464">0</div><div class="esc-lbl">보관 중 MPC</div></div>
+    <div class="esc-stat"><div class="esc-num" data-end="0">0</div><div class="esc-lbl">자산 사고</div></div>
+  </div>
+  <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-g esc-btn fade-in">🔐 에스크로 안전거래 앱 열기</a>
+  <div class="esc-note fade-in">보관 수량은 매일 자동 장부 대조로 검증되어 앱에 공개됩니다. 모든 기록은 폴리곤 블록체인에서 누구나 확인할 수 있습니다.</div>
+</section>
+<div class="divider"></div>
+
 <!-- CTA -->
 <section class="cta">
   <div class="cta-bg-grid"></div><div class="cta-bg-rad"></div><div class="cta-border"></div>
@@ -625,6 +685,59 @@ function showEl(id,tab){
   sec.scrollIntoView({behavior:'smooth',block:'nearest'});
   setTimeout(()=>wrap.querySelectorAll('.demand-bar').forEach(b=>{b.style.width=b.dataset.w+'%';}),150);
 }
+</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+<script>
+// 효과 3종 초기화 — 어느 것이든 로딩 실패 시 해당 효과만 빠지고 내용은 그대로 보인다
+window.addEventListener('DOMContentLoaded', function(){
+  // ① Lenis: 부드러운 스크롤
+  try {
+    if (window.Lenis) {
+      const lenis = new Lenis();
+      (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0);
+    }
+  } catch(e){}
+
+  // ② Swiper: 에스크로 4단계 카드
+  try {
+    if (window.Swiper) {
+      new Swiper('.esc-swiper', {
+        slidesPerView: 1.18, centeredSlides: true, spaceBetween: 10, loop: false,
+        pagination: { el: '.esc-pag', clickable: true },
+      });
+    }
+  } catch(e){}
+
+  // ③ CountUp: 에스크로 수치 — 화면에 들어올 때 1회, 보관 수량은 실시간 값으로 갱신
+  try {
+    const CU = (window.countUp && window.countUp.CountUp) || window.CountUp;
+    const els = document.querySelectorAll('.esc-num');
+    let fired = false;
+    function fire(){
+      if (fired) return; fired = true;
+      els.forEach(function(el){
+        const end = parseInt(el.dataset.end, 10) || 0;
+        if (CU) { const c = new CU(el, end, { duration: 1.6, separator: ',' }); c.error ? el.textContent = end.toLocaleString() : c.start(); }
+        else el.textContent = end.toLocaleString();
+      });
+    }
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function(en){ en.forEach(function(e){ if (e.isIntersecting) { fire(); io.disconnect(); } }); }, { threshold: 0.3 });
+      els.forEach(function(el){ io.observe(el); });
+    } else fire();
+    // 보관 중 MPC: 에스크로 검증 서버에서 실시간 조회 (실패 시 기본값 유지)
+    fetch('https://idqnxrwrnisxjbovvpli.supabase.co/rest/v1/rpc/esc_audit_get', {
+      method: 'POST',
+      headers: { apikey: 'sb_publishable_1Pd6p7r3MRyVQ9vZBABNIg_rv7h71Qh', Authorization: 'Bearer sb_publishable_1Pd6p7r3MRyVQ9vZBABNIg_rv7h71Qh', 'Content-Type': 'application/json' },
+      body: '{}',
+    }).then(function(r){ return r.json(); }).then(function(j){
+      const locked = j && j[0] && Math.round(j[0].locked);
+      if (locked > 0) document.getElementById('escLocked').dataset.end = String(locked);
+    }).catch(function(){});
+  } catch(e){}
+});
 </script>
 </body>
 </html>
