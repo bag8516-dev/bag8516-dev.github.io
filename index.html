@@ -307,6 +307,30 @@ body{font-size:15px;color:#EDECE6;}
 .btn-g svg,.btn-o svg,.btn-cta svg,.btn-yt svg,.nc-link svg{flex-shrink:0;display:inline-block;vertical-align:-2px;}
 .btn-o,.btn-yt{border-color:#C9A84C33;color:#DCCB92;}
 .nc-link{display:inline-flex;align-items:center;gap:7px;}
+/* ── v3: 인상 자체를 바꾸는 층 — 대형 금빛 타이포·알약 버튼·에디토리얼 번호·지면형 통계 ── */
+.hero{min-height:86vh;min-height:86dvh;display:flex;flex-direction:column;justify-content:center;}
+.h-title{font-size:38px;letter-spacing:-.02em;line-height:1.15;background:linear-gradient(135deg,#F4E3AE 0%,#C9A84C 48%,#937832 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.h-en{font-family:'Marcellus',serif;font-size:10px;letter-spacing:.32em;color:#C9A84C99;}
+.h-hook{border:0;background:transparent;padding:0 .2rem;text-align:center;}
+.h-hook::before{display:none;}
+.h-hook-label{display:none;}
+.h-hook-text{font-size:15.5px;color:#E6DBB9;line-height:1.85;}
+/* 알약 버튼 */
+.btn-g,.btn-cta{border-radius:999px;padding:15px 22px;}
+.btn-o,.btn-yt,.nc-link{border-radius:999px;}
+/* 섹션 에디토리얼 번호 (자동 매김) */
+.lp{counter-reset:secn;}
+section.sec{counter-increment:secn;}
+section.sec .sec-hd{position:relative;}
+section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-family:'Marcellus',serif;font-size:46px;line-height:1;color:#C9A84C17;position:absolute;right:0;top:-16px;pointer-events:none;}
+/* 통계: 박스 대신 지면(에디토리얼) 결 */
+.s-card{background:transparent;border:0;border-top:1px solid #C9A84C30;border-radius:0;text-align:left;padding:1rem .15rem .4rem;backdrop-filter:none;-webkit-backdrop-filter:none;}
+.s-num{font-size:40px;}
+.esc-stat{background:transparent;border:0;border-top:1px solid #C9A84C30;border-radius:0;text-align:left;padding:.95rem .15rem .3rem;backdrop-filter:none;-webkit-backdrop-filter:none;}
+.esc-num{font-size:24px;}
+/* 마무리 대형화 */
+.cta-ttl{font-size:27px;letter-spacing:-.01em;line-height:1.3;color:#EAE0C2;}
+.cta-ey{letter-spacing:.3em;}
 @media (prefers-reduced-motion: reduce){
   .el-vis-scan{display:none;}
   *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
@@ -369,8 +393,7 @@ body{font-size:15px;color:#EDECE6;}
     </div>
     <div class="h-fullname">MPC — Mineral Project Coin</div>
     <div class="btns">
-      <a href="https://open.kakao.com/o/gUTqNlCi" class="btn-g"><svg width="17" height="17" aria-hidden="true"><use href="#i-chat"/></svg>카카오톡 오픈채팅방 입장하기</a>
-      <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-o"><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg>MPC 에스크로 안전거래 앱</a>
+      <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-g"><svg width="17" height="17" aria-hidden="true"><use href="#i-shield"/></svg>MPC 에스크로 안전거래 앱</a>
       <a href="https://www.youtube.com/@MPC.RWA프로젝트" class="btn-o"><svg width="15" height="15" aria-hidden="true"><use href="#i-play"/></svg>유튜브 채널 구독</a>
     </div>
   </div>
@@ -645,11 +668,10 @@ body{font-size:15px;color:#EDECE6;}
   <div class="cta-bg-grid"></div><div class="cta-bg-rad"></div><div class="cta-border"></div>
   <div class="cta-inner">
     <div style="margin:0 auto .9rem;"><svg width="72" height="72" viewBox="0 0 120 120"><use href="#mpc-logo"/></svg></div>
-    <div class="cta-ey">KAKAO OPEN CHAT</div>
-    <div class="cta-ttl">지금 오픈채팅방으로 오세요</div>
-    <div class="cta-sub">최신 탐사 현황·뉴스·분석을 가장 빠르게 확인하세요<br>광산 프로젝트의 모든 단계를 함께 지켜봅니다</div>
-    <a href="https://open.kakao.com/o/gUTqNlCi" class="btn-cta"><svg width="17" height="17" aria-hidden="true"><use href="#i-chat"/></svg>카카오톡 오픈채팅방 입장하기</a>
-    <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-yt"><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg>MPC 에스크로 안전거래 앱 열기</a>
+    <div class="cta-ey">SAFE TRADE</div>
+    <div class="cta-ttl">회원 간 거래는<br>에스크로로 안전하게</div>
+    <div class="cta-sub">블록체인 금고가 먼저 보관하고, 입금이 확인되면 자동으로 맞교환합니다<br>상장 전에도 어느 쪽도 먼저 위험을 지지 않는 거래</div>
+    <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-cta"><svg width="17" height="17" aria-hidden="true"><use href="#i-shield"/></svg>MPC 에스크로 안전거래 앱 열기</a>
     <a href="https://www.youtube.com/@MPC.RWA프로젝트" class="btn-yt"><svg width="15" height="15" aria-hidden="true"><use href="#i-play"/></svg>유튜브 채널 구독하기</a>
     <div class="disc">이 사이트는 투자 권유가 아닙니다. 투자 판단 및 그에 따른 결과는 전적으로 본인 책임입니다.</div>
     <div class="cta-close">광구 확보, 환경평가, 노두 확인, SGS 분석, ALS 계약—<br><strong>하나씩 순서대로 증명되고 있습니다.</strong></div>
