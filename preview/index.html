@@ -16,7 +16,7 @@
 /* MPC RWA - 리포트 에디토리얼 v5 (전면 신규) */
 :root{
   --bg:#070807; --bg2:#0C0D0C; --panel:#101110;
-  --ink:#EAE5D8; --mut:#A09A8C; --dim:#6A655B;
+  --ink:#EAE5D8; --mut:#A09A8C; --dim:#8A8478;
   --cop:#C2773F; --cop2:#E09A62; --gold:#C9A84C; --gold2:#E8C96A;
   --line:rgba(194,119,63,.25); --line2:rgba(194,119,63,.12);
   --serif:'Noto Serif KR','Marcellus',serif; --disp:'Marcellus',serif; --sans:'Noto Sans KR',sans-serif;
@@ -68,7 +68,7 @@ a{color:inherit;}
 .h-en{font-family:var(--disp);font-size:10.5px;letter-spacing:.34em;color:var(--dim);margin-bottom:1.6rem;}
 .h-line{display:none;}
 .h-sub{font-size:14px;color:var(--mut);margin-bottom:1.6rem;}
-.h-hook{margin-bottom:2rem;border-left:2px solid var(--cop);padding-left:16px;}
+.h-hook{margin-bottom:2rem;}
 .h-hook-label{font-family:var(--disp);font-size:10px;letter-spacing:.26em;color:var(--cop);margin-bottom:.6rem;}
 .h-hook-text{font-family:var(--serif);font-weight:600;font-size:17.5px;line-height:1.65;color:var(--ink);}
 .h-hook-sub{font-size:13px;color:var(--mut);margin-top:.8rem;line-height:1.85;}
@@ -82,7 +82,7 @@ a{color:inherit;}
 .home-quick{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:2rem 22px 3rem;border-top:1px solid var(--line2);}
 .hq-num{font-family:var(--disp);font-size:30px;color:var(--cop2);line-height:1;}
 .hq-num small{font-size:12px;color:var(--dim);margin-left:3px;}
-.hq-lbl{font-size:11.5px;color:var(--mut);margin-top:.5rem;}
+.hq-lbl{font-size:12.5px;color:var(--mut);margin-top:.5rem;}
 .sec,.stats,.social{padding:3.4rem 22px;}
 .sec-hd{display:flex;align-items:center;gap:12px;margin-bottom:.9rem;position:relative;}
 .sec-kicker2,.s-kicker{font-family:var(--disp);font-size:10px;letter-spacing:.3em;color:var(--cop);white-space:nowrap;}
@@ -104,12 +104,12 @@ a{color:inherit;}
 .s-num{font-family:var(--disp);font-size:42px;color:var(--cop2);line-height:1;}
 .s-unit{font-size:13px;color:var(--dim);margin-left:3px;}
 .s-desc{font-size:12.5px;color:var(--mut);margin-top:.55rem;line-height:1.6;}
-.s-context{font-size:11px;color:var(--cop);margin-top:.35rem;}
+.s-context{font-size:12px;color:var(--cop);margin-top:.35rem;}
 .s-bar-wrap,.s-bar{display:none;}
 .loc-card{border-top:1px solid var(--line);padding:1.5rem 0 1.7rem;}
 .loc-header{margin-bottom:1.1rem;}
 .loc-header-icon{display:none;}
-.loc-header-label{font-family:var(--disp);font-size:11px;letter-spacing:.26em;color:var(--cop);}
+.loc-header-label{font-family:var(--disp);font-size:12.5px;letter-spacing:.12em;color:var(--cop);}
 .loc-row{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:.8rem 0;border-bottom:1px solid var(--line2);}
 .loc-row:last-child{border-bottom:0;}
 .loc-key{font-size:12px;color:var(--dim);padding-top:2px;}
@@ -118,7 +118,7 @@ a{color:inherit;}
 .badge{display:inline-block;font-family:var(--disp);font-size:13px;letter-spacing:.1em;color:var(--cop2);border:1px solid var(--line);padding:3px 10px;border-radius:2px;}
 .hist-row{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:1rem 0;border-bottom:1px solid var(--line2);}
 .hist-row:last-child{border-bottom:0;}
-.hist-era-badge{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:2px;}
+.hist-era-badge{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:2px;}
 .era-ussr{background:#3A2A20;color:#E0B490;}
 .era-cn{background:#3A2020;color:#E09090;}
 .era-sgs{background:#20303A;color:#90C0E0;}
@@ -129,10 +129,10 @@ a{color:inherit;}
 .el{border:1px solid var(--line2);border-radius:2px;padding:11px 4px;text-align:center;cursor:pointer;transition:border-color .25s,background .25s;-webkit-tap-highlight-color:transparent;}
 .el:hover{border-color:var(--cop);background:rgba(194,119,63,.05);}
 .el-wide{grid-column:span 2;}
-.el-num{font-family:var(--disp);font-size:10px;color:var(--dim);}
+.el-num{font-family:var(--disp);font-size:11px;color:var(--dim);}
 .el-sym{font-family:var(--disp);font-size:21px;color:var(--cop2);line-height:1.2;}
-.el-name{font-size:10.5px;color:var(--mut);margin-top:2px;}
-.el-cat{display:inline-block;font-size:9px;padding:1px 6px;border-radius:2px;margin-top:4px;}
+.el-name{font-size:11.5px;color:var(--mut);margin-top:2px;}
+.el-cat{display:inline-block;font-size:11px;padding:2px 8px;border-radius:2px;margin-top:4px;}
 .el-cat.cr{background:#2A3220;color:#B8D080;}
 .el-cat.cm{background:#20283A;color:#90B0E0;}
 .el-foot{font-size:11.5px;color:var(--dim);margin-top:.9rem;}
@@ -177,7 +177,7 @@ a{color:inherit;}
 .done .tl-dot{border-color:var(--cop);color:var(--cop2);background:rgba(194,119,63,.1);}
 .tl-txt{font-size:15px;color:var(--ink);}
 .pend .tl-txt{color:var(--dim);}
-.chip{display:inline-block;font-size:10.5px;padding:2px 9px;border-radius:2px;margin-left:7px;vertical-align:middle;}
+.chip{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:2px;margin-left:7px;vertical-align:middle;}
 .c-done{color:var(--cop2);border:1px solid var(--line);}
 .c-pend{color:var(--dim);border:1px solid #1E1F1E;}
 .c-now{background:var(--cop);color:#0B0C0B;font-weight:700;}
@@ -193,7 +193,7 @@ a{color:inherit;}
 .nc-list li{font-size:13px;color:var(--mut);line-height:1.75;}
 .nc-list strong{color:var(--gold2);font-weight:600;}
 .nc-tags{display:flex;gap:12px;margin-top:.8rem;}
-.nc-tag{font-size:11px;color:var(--dim);}
+.nc-tag{font-size:12px;color:var(--dim);}
 .nc-link{display:inline-flex;align-items:center;gap:8px;margin-top:.9rem;font-size:13px;font-weight:700;color:var(--cop2);text-decoration:none;border:1px solid var(--line);padding:9px 16px;border-radius:2px;transition:background .25s;}
 .nc-link:hover{background:rgba(194,119,63,.08);}
 .esc-sub{font-size:14px;color:var(--mut);line-height:1.85;margin-bottom:1.6rem;}
@@ -202,7 +202,7 @@ a{color:inherit;}
 .esc-swiper .swiper-slide{flex:0 0 80%;scroll-snap-align:center;margin-right:12px;}
 .esc-swiper.swiper-initialized .swiper-wrapper{overflow-x:visible;}
 .esc-swiper.swiper-initialized .swiper-slide{margin-right:0;flex:0 0 auto;}
-.esc-card{border-left:2px solid var(--cop);padding:.2rem 0 .2rem 1rem;}
+.esc-card{border-top:1px solid var(--line);padding:1.1rem .2rem .4rem;}
 .esc-step{font-family:var(--disp);font-size:11px;letter-spacing:.2em;color:var(--cop);margin-bottom:.4rem;}
 .esc-ct{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--ink);margin-bottom:.4rem;}
 .esc-cd{font-size:13px;color:var(--mut);line-height:1.75;}
@@ -212,7 +212,7 @@ a{color:inherit;}
 .esc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:1.6rem;}
 .esc-stat{border-top:1px solid var(--line);padding-top:.85rem;}
 .esc-num{font-family:var(--disp);font-size:25px;color:var(--cop2);}
-.esc-lbl{font-size:11px;color:var(--mut);margin-top:.3rem;}
+.esc-lbl{font-size:12px;color:var(--mut);margin-top:.3rem;}
 .esc-note{font-size:12px;color:var(--dim);line-height:1.75;}
 .site-swiper{padding-bottom:28px;margin-bottom:1.2rem;}
 .site-swiper .swiper-wrapper{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
@@ -230,11 +230,11 @@ a{color:inherit;}
 .cta{position:relative;padding:3.6rem 22px;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(194,119,63,.06),transparent 60%);}
 .cta-bg-grid,.cta-bg-rad,.cta-border{display:none;}
 .cta-inner{position:relative;}
-.cta-ey{font-family:var(--disp);font-size:10px;letter-spacing:.3em;color:var(--cop);margin-bottom:.8rem;}
+.cta-ey{font-family:var(--disp);font-size:11.5px;letter-spacing:.2em;color:var(--cop);margin-bottom:.8rem;}
 .cta-ttl{font-family:var(--serif);font-weight:900;font-size:30px;line-height:1.3;color:var(--ink);margin-bottom:.9rem;}
 .cta-sub{font-size:13.5px;color:var(--mut);line-height:1.85;margin-bottom:1.6rem;}
 .cta .btn-cta{margin-bottom:10px;}
-.disc{font-size:11px;color:var(--dim);margin-top:1.4rem;line-height:1.7;}
+.disc{font-size:12px;color:var(--dim);margin-top:1.4rem;line-height:1.7;}
 .cta-close{margin-top:1.1rem;font-size:13.5px;color:var(--mut);line-height:1.8;}
 .cta-close strong{color:var(--cop2);}
 .footer{padding:2rem 22px 2.4rem;border-top:1px solid var(--line2);text-align:center;overflow:hidden;}
@@ -243,8 +243,8 @@ a{color:inherit;}
 .f-links{display:flex;justify-content:center;gap:9px;margin:.7rem 0 .6rem;font-size:12px;}
 .f-links a{color:var(--cop);text-decoration:none;}
 .f-links a:hover{color:var(--cop2);}
-.f-links span{color:#242524;}
-.f-sub{font-size:10.5px;color:#3A3B38;line-height:1.6;}
+.f-links span{color:#4A4B45;}
+.f-sub{font-size:12px;color:#8A857A;line-height:1.6;}
 .h-title,.sec-ttl,.cta-ttl,.nc-ttl{text-wrap:balance;}
 .hq-num,.s-num,.sp-num,.esc-num,.nc-date{font-variant-numeric:tabular-nums;}
 .fade-in{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
@@ -286,6 +286,19 @@ a{color:inherit;}
   .f-ghost{font-size:200px;margin-bottom:-26px;}
   .tl-wrap{max-width:760px;}
 }
+
+/* impeccable 바닥선 반영 */
+.sec-kicker2,.s-kicker,.h-badge,.h-en{display:none;}
+.sec-hd{margin-bottom:1.1rem;}
+.h-hook-label{display:none;}
+.esc-step{color:var(--dim);}
+::selection{background:rgba(194,119,63,.35);color:#F4EFE3;}
+input,textarea{caret-color:var(--cop2);}
+*::-webkit-scrollbar{width:11px;height:11px;}
+*::-webkit-scrollbar-track{background:#0A0B0A;}
+*::-webkit-scrollbar-thumb{background:#262722;border-radius:6px;border:2px solid #0A0B0A;}
+*::-webkit-scrollbar-thumb:hover{background:#3A3B32;}
+:focus-visible{outline:2px solid var(--cop2);outline-offset:2px;}
 @media (hover:hover){
   .site-fig img{transition:transform .6s cubic-bezier(.22,.61,.36,1);}
   .site-fig:hover img{transform:scale(1.03);}
@@ -319,7 +332,7 @@ a{color:inherit;}
 <header class="nav" id="siteNav">
   <a class="nav-brand" href="#home"><svg width="20" height="25" viewBox="0 0 50.74 64" aria-hidden="true"><use href="#mpc-mark"/></svg><span>MPC RWA</span></a>
   <nav class="nav-links" aria-label="주요 메뉴">
-    <a href="#project"><i>01</i>프로젝트</a><a href="#field"><i>02</i>현장</a><a href="#progress"><i>03</i>진행 현황</a><a href="#news"><i>04</i>뉴스</a><a href="#escrow"><i>05</i>에스크로</a>
+    <a href="#project">프로젝트</a><a href="#field">현장</a><a href="#progress">진행 현황</a><a href="#news">뉴스</a><a href="#escrow">에스크로</a>
   </nav>
   <a class="nav-cta" href="https://bag8516-dev.github.io/mpc-escrow/">앱 열기</a>
   <button class="nav-burger" id="navBurger" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span></button>
