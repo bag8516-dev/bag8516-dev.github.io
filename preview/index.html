@@ -417,6 +417,7 @@ html{scroll-padding-top:74px;}
 
 /* ── 페이지 전환형 구조 ── */
 .page{display:none;}
+.page:not(#page-home).on{padding-top:64px;}
 .page.on{display:block;animation:pageIn .45s ease;}
 @keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .nav-links a.on{color:#E8C96A;}
@@ -430,8 +431,8 @@ html{scroll-padding-top:74px;}
   .home-quick{max-width:1080px;margin:0 auto;gap:40px;padding:2.4rem 3rem 3rem;}
   .hq-num{font-size:40px;}
   .hq-lbl{font-size:13px;}
-  #project.sec{display:grid;grid-template-columns:1fr 1fr;column-gap:2.2rem;}
-  #project.sec .sec-hd,#project.sec .sec-ttl{grid-column:1/-1;}
+  #sec-project.sec{display:grid;grid-template-columns:1fr 1fr;column-gap:2.2rem;}
+  #sec-project.sec .sec-hd,#sec-project.sec .sec-ttl{grid-column:1/-1;}
 }
 @media (prefers-reduced-motion: reduce){.page.on{animation:none;}}
 
@@ -571,7 +572,7 @@ html{scroll-padding-top:74px;}
 </div>
 
 <div class="page" id="page-project">
-<section id="project" class="sec" style="background:#05070C;">
+<section id="sec-project" class="sec" style="background:#05070C;">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LOCATION & LICENSE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">차간톨고이 광산 소개</div>
 
@@ -706,7 +707,7 @@ html{scroll-padding-top:74px;}
     <span class="media-text">볼로르지오-ALS 탐사 계약 체결 보도 · 2026.07.01</span>
   </div>
 </section>
-<section id="field" class="sec" style="background:#05070C;">
+<section id="sec-field" class="sec" style="background:#05070C;">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">FIELD · TSAGAAN TOLGOI</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">차간톨고이 현장</div>
   <div class="esc-sub fade-in">2026년 7월 캠프를 세우고 탐사를 시작해, 현재 시추가 진행 중입니다.<br>지금까지 13개 공을 시추했고 ALS·SGS 분석 보고서를 받으며 검증하고 있습니다.<br>아래는 공식 홈페이지에 공개된 실제 현장 사진입니다.</div>
@@ -736,7 +737,7 @@ html{scroll-padding-top:74px;}
 </div>
 
 <div class="page" id="page-progress">
-<section id="progress" class="sec" style="background:#07090F;">
+<section id="sec-progress" class="sec" style="background:#07090F;">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">PROJECT PROGRESS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
   <div style="background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;padding:.8rem;margin-bottom:1.2rem;" class="fade-in d1">
@@ -773,7 +774,7 @@ html{scroll-padding-top:74px;}
 </div>
 
 <div class="page" id="page-news">
-<section id="news" class="sec" style="background:#07090F;">
+<section id="sec-news" class="sec" style="background:#07090F;">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LATEST NEWS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">최신 뉴스</div>
 <div class="nc-grid">
@@ -819,7 +820,7 @@ html{scroll-padding-top:74px;}
 </div>
 
 <div class="page" id="page-escrow">
-<section id="escrow" class="sec" style="background:#05070C;">
+<section id="sec-escrow" class="sec" style="background:#05070C;">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">SAFE TRADE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">MPC 에스크로 — 회원 간 안전거래</div>
   <div class="esc-sub fade-in">상장 전에도 회원끼리 MPC를 안전하게 사고팔 수 있습니다.<br>판매자의 MPC를 블록체인 금고가 먼저 보관하고,<br>구매자의 USDT 입금이 확인되는 순간 자동으로 맞교환합니다.</div>
