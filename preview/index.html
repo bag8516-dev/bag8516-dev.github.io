@@ -617,9 +617,32 @@ summary::-webkit-details-marker{display:none;}
 .film-strip button.on{opacity:1;border-color:var(--cop);}
 .film-strip button:hover{opacity:.85;}
 
+/* 현장 탭 보강 */
+.field-grid{display:flex;flex-direction:column;gap:22px;margin:0 0 2rem;}
+.flog,.sdata{border:1px solid var(--line2);background:rgba(194,119,63,.03);padding:16px 16px 10px;}
+.flog-row{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:.8rem 0;border-bottom:1px solid var(--line2);font-size:13px;color:var(--mut);line-height:1.7;}
+.flog-row:last-child{border-bottom:none;}
+.flog-row b{color:var(--ink);font-size:13.5px;}
+.flog-d{font-size:11px;color:var(--cop);letter-spacing:.08em;padding-top:2px;}
+.flog-row.now b{color:var(--cop2);}
+.sdata .meas-row{grid-template-columns:64px 1fr;}
+.meas-v2{font-size:13px;color:var(--ink);line-height:1.6;}
+.field-row{display:flex;flex-direction:column;gap:20px;margin:1.6rem 0 0;}
+.core-read{margin:0;max-width:340px;}
+.core-read-img{position:relative;border:1px solid var(--line);background:#14110C;padding:7px;}
+.core-read-img img{display:block;width:100%;height:auto;border:1px solid rgba(194,119,63,.25);filter:saturate(.88);}
+.core-read figcaption{font-size:11.5px;color:var(--mut);padding:8px 2px 0;line-height:1.6;}
+.core-read .meas{font-size:10.5px;color:var(--cop);letter-spacing:.12em;}
+@media (min-width:1000px){
+  .field-grid{flex-direction:row;align-items:stretch;}
+  .flog{flex:1.3;}
+  .sdata{flex:1;}
+  .field-row{flex-direction:row;gap:30px;align-items:flex-start;}
+}
+
 /* 초광폭 교정: margin 단축이 .sec>* 자동 가운데 정렬을 덮어쓰던 것 복원 */
 @media (min-width:1000px){
-  .film-strip,.field-clip,.esc-visual,.gnt-wrap,.page-plate,.ent-fig,.core-strip{margin-left:auto;margin-right:auto;max-width:1160px;}
+  .film-strip,.field-clip,.esc-visual,.gnt-wrap,.page-plate,.ent-fig,.core-strip,.field-grid,.field-row{margin-left:auto;margin-right:auto;max-width:1160px;}
 }
 </style>
 </head>
@@ -972,10 +995,39 @@ summary::-webkit-details-marker{display:none;}
   });
   </script>
 
+  <div class="field-grid">
+    <div class="flog fade-in">
+      <div class="loc-header"><span class="loc-header-label">시추 일지 — FIELD LOG</span></div>
+      <div class="flog-row"><span class="flog-d meas">2026-07</span><div><b>캠프 구축</b><br>장비 반입 · 사무동 컨테이너 설치 · 게르 캠프 (PLATE 02–04)</div></div>
+      <div class="flog-row"><span class="flog-d meas">2026-07</span><div><b>시추 개시</b><br>리그 설치, 시추 로드·자재 배치 (PLATE 01·05)</div></div>
+      <div class="flog-row"><span class="flog-d meas">2026-08</span><div><b>코어 회수</b><br>상자 단위로 코어 적재·기록, 공 번호와 구간을 손으로 표기 (PLATE 08–10 · FOOTAGE 01)</div></div>
+      <div class="flog-row"><span class="flog-d meas">계속</span><div><b>공인 분석</b><br>ALS·SGS에 시료 의뢰, 분석 보고서를 수차례 수령했다고 밝힘</div></div>
+      <div class="flog-row now"><span class="flog-d meas">2026-10</span><div><b>13번째 공 진행 중</b><br>매일경제TV 방송에서 시추공 13개 도달을 밝힘</div></div>
+    </div>
+    <div class="sdata fade-in d2">
+      <div class="loc-header"><span class="loc-header-label">현장 제원 — SITE DATA</span></div>
+      <div class="meas-row"><span class="meas-k">위치</span><span class="meas-v2">몽골 불간 아이막 바양누르 솜</span></div>
+      <div class="meas-row"><span class="meas-k">접근</span><span class="meas-v2">울란바토르에서 약 190km · 포장도로 직결</span></div>
+      <div class="meas-row"><span class="meas-k">면적</span><span class="meas-v2">6,481ha (라이센스 XV-022460)</span></div>
+      <div class="meas-row"><span class="meas-k">인프라</span><span class="meas-v2">도로·전기·용수 구축 — "탐사·개발에 최적"이라고 회사는 밝힘</span></div>
+      <div class="meas-row"><span class="meas-k">검증</span><span class="meas-v2">ALS·SGS 국제 공인기관 분석</span></div>
+    </div>
+  </div>
+
+  <div class="field-row">
   <figure class="field-clip fade-in">
     <video src="../assets/field-clip-01.mp4" poster="../assets/field-clip-01-poster.jpg" muted loop autoplay playsinline preload="metadata"></video>
     <figcaption><span class="meas">FOOTAGE 01</span> 시추 리그 가동 · 코어 회수 — 현장 촬영, 2026-08</figcaption>
   </figure>
+  <figure class="core-read fade-in d2">
+    <div class="core-read-img">
+      <img src="../assets/site-0046.jpg" alt="코어 상자 근접 — 공 번호와 구간이 손으로 기록된 라벨" width="1051" height="1686" loading="lazy">
+      <span class="anno" style="left:6%;top:40%"><i></i>손글씨 라벨 — 공 번호·구간(m) 기록</span>
+      <span class="anno anno-r" style="right:5%;bottom:14%"><i></i>회수된 암심(코어)</span>
+    </div>
+    <figcaption><span class="meas">PLATE 09-A</span> 코어는 상자마다 번호·깊이를 적어 보관 — 기록이 곧 증거</figcaption>
+  </figure>
+  </div>
 
   <div class="site-stage fade-in">
     <div class="site-stage-row">
