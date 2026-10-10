@@ -642,7 +642,7 @@ summary::-webkit-details-marker{display:none;}
 .rig3d-pv{position:absolute;inset:0;perspective:1100px;display:flex;align-items:center;justify-content:center;}
 .rig3d-sp{position:relative;width:0;height:0;transform-style:preserve-3d;animation:rigspin 26s linear infinite;}
 .rig3d-sp i{position:absolute;left:-1px;top:0;width:2px;transform-origin:1px 0;background:linear-gradient(180deg,#E8A268,#C2773F);box-shadow:0 0 7px rgba(194,119,63,.55);transform-style:preserve-3d;}
-@keyframes rigspin{from{transform:rotateX(13deg) rotateY(0deg)}to{transform:rotateX(13deg) rotateY(360deg)}}
+@keyframes rigspin{from{transform:scale(1.42) rotateX(13deg) rotateY(0deg)}to{transform:scale(1.42) rotateX(13deg) rotateY(360deg)}}
 .rig-dust{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--cop);opacity:.35;}
 @media (prefers-reduced-motion:reduce){.rig3d-sp{animation-duration:200s;}}
 @media (min-width:1240px){.rig3d{display:block;}}
