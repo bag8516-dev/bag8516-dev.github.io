@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /preview/
-Sitemap: https://bag8516-dev.github.io/sitemap.xml
+Sitemap: https://mpcescrow.com/sitemap.xml
