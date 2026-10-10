@@ -1618,7 +1618,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
   // 커뮤니티 시세 티커 (market.json — 아침 점검이 발행)
   try {
-    fetch('https://bag8516-dev.github.io/market.json?t=' + Math.floor(Date.now() / 3600000))
+    false && fetch('https://bag8516-dev.github.io/market.json?t=' + Math.floor(Date.now() / 3600000)) // 2026-10-11 시세 티커 숨김 (false&& 제거로 복구)
       .then(function(r){ return r.ok ? r.json() : null; })
       .then(function(m){
         if (!m || !m.recent || !m.recent.length) return;
