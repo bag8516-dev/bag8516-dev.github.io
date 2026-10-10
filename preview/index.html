@@ -456,6 +456,10 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;o
 #page-escrow{--folio:'제5장 · 안전거래';}
 .page.on{animation:pageIn .55s cubic-bezier(.22,.61,.36,1);transform-origin:50% 0;}
 html,body{overflow-x:clip;} /* 전환 중 3D 투영폭이 가로 스크롤을 만들지 않게 */
+.field-clip{margin:1.6rem 0 0;}
+.field-clip video{display:block;width:100%;max-width:340px;margin:0;border:1px solid var(--line);background:#000;}
+.field-clip figcaption{font-size:12px;color:var(--mut);padding:8px 0;display:flex;gap:12px;align-items:baseline;}
+.field-clip .meas{font-size:10.5px;color:var(--cop);letter-spacing:.14em;}
 @keyframes pageIn{from{opacity:0;transform:perspective(1100px) rotateX(1.6deg) translateY(12px)}to{opacity:1;transform:none}}
 @media (min-width:1000px){
   .page:not(#page-home)::before{top:86px;right:40px;}
@@ -768,6 +772,11 @@ summary::-webkit-details-marker{display:none;}
     </div>
     <div class="swiper-pagination site-pag"></div>
   </div>
+
+  <figure class="field-clip fade-in">
+    <video src="../assets/field-clip-01.mp4" poster="../assets/field-clip-01-poster.jpg" muted loop autoplay playsinline preload="metadata"></video>
+    <figcaption><span class="meas">FOOTAGE 01</span> 시추 리그 가동 · 코어 회수 — 현장 촬영, 2026-08</figcaption>
+  </figure>
 
   <div class="site-stage fade-in">
     <div class="site-stage-row">
