@@ -617,6 +617,10 @@ summary::-webkit-details-marker{display:none;}
 .film-strip button.on{opacity:1;border-color:var(--cop);}
 .film-strip button:hover{opacity:.85;}
 
+/* 초광폭 교정: margin 단축이 .sec>* 자동 가운데 정렬을 덮어쓰던 것 복원 */
+@media (min-width:1000px){
+  .film-strip,.field-clip,.esc-visual,.gnt-wrap,.page-plate,.ent-fig{margin-left:auto;margin-right:auto;max-width:1160px;}
+}
 </style>
 </head>
 <body>
