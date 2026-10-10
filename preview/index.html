@@ -366,7 +366,7 @@ body{background:
   .hero .hc{padding:120px 60px 40px;max-width:860px;}
   .h-title{font-size:66px;}
   #hero3d{display:none;} /* 1000~1239px: 본문 기둥과 겹쳐서 숨김 */
-  .stamp{right:24px;bottom:10%;width:132px;height:132px;} /* 본문 기둥(860px) 밖으로 */
+  .stamp{right:28px;top:120px;bottom:auto;width:132px;height:132px;} /* 표제 오른쪽 여백(문서 우상단 직인 자리) */
   .stamp span{font-size:16px;}
   .cover-strip{height:46dvh;min-height:380px;}
 }
@@ -567,8 +567,8 @@ summary::-webkit-details-marker{display:none;}
 }
 /* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 보석 + 그 아래 직인 */
 @media (min-width:1240px){
-  #hero3d{display:block;inset:auto;left:940px;right:4%;width:auto;top:8%;height:52%;opacity:.85;}
-  .stamp{right:4.5%;top:56%;bottom:auto;}
+  #hero3d{display:block;inset:auto;left:940px;width:min(480px,calc(100vw - 1060px));height:52%;top:8%;opacity:.85;}
+  .stamp{right:-250px;top:58%;bottom:auto;} /* 본문 기둥 밖, 보석 아래 */
 }
 
 </style>
