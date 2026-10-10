@@ -7,421 +7,576 @@
 <meta name="description" content="몽골 불간 아이막 차간톨고이 광산. 희토류·텅스텐·구리 핵심광물 RWA 프로젝트. MPC 코인.">
 <meta property="og:title" content="MPC RWA 리포트">
 <meta property="og:description" content="전기차·AI 반도체가 폭발적으로 늘수록 희토류·텅스텐·구리 수요는 함께 급등합니다.">
+<meta property="og:image" content="https://bag8516-dev.github.io/assets/og-card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="https://bag8516-dev.github.io/assets/favicon.svg">
+<link rel="apple-touch-icon" href="https://bag8516-dev.github.io/assets/favicon.svg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Marcellus&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&family=Song+Myung&family=Spline+Sans+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.css">
 <style>
-@keyframes glow{0%,100%{text-shadow:0 0 10px #C9A84C55}50%{text-shadow:0 0 22px #C9A84Ccc,0 0 44px #C9A84C66}}
-@keyframes glowB{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 14px #C9A84C66}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@keyframes scan{0%{transform:translateY(-100%)}100%{transform:translateY(500%)}}
-@keyframes pulse2{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
-@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 4px #C9A84C33)}50%{filter:drop-shadow(0 0 12px #C9A84C88)}}
-@keyframes pulseSym{0%,100%{opacity:.06}50%{opacity:.13}}
+/* MPC RWA - 리포트 에디토리얼 v5 (전면 신규) */
+:root{
+  --bg:#070807; --bg2:#0C0D0C; --panel:#101110;
+  --ink:#EAE5D8; --mut:#A09A8C; --dim:#8A8478;
+  --cop:#C2773F; --cop2:#E09A62; --gold:#C9A84C; --gold2:#E8C96A;
+  --line:rgba(194,119,63,.25); --line2:rgba(194,119,63,.12);
+  --serif:'Noto Serif KR',serif; --sans:'Noto Sans KR',sans-serif;
+}
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:#07090F;color:#E8E8E8;font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-size:14px;-webkit-font-smoothing:antialiased;}
-.lp{width:100%;max-width:480px;margin:0 auto;overflow-x:hidden;}
+html{scroll-behavior:smooth;scroll-padding-top:76px;}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
-
-/* HERO */
-.hero{position:relative;padding:2.4rem 1.1rem 3.2rem;text-align:center;overflow:hidden;}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(#C9A84C07 1px,transparent 1px),linear-gradient(90deg,#C9A84C07 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 80%);}
-.hero-radial{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 60%,#1C2E0E44 0%,transparent 60%),linear-gradient(175deg,#0D1830 0%,#08101C 55%,#050810 100%);}
-.hero-scan{position:absolute;left:0;right:0;height:60px;background:linear-gradient(180deg,transparent,#C9A84C05,transparent);animation:scan 7s linear infinite;pointer-events:none;}
-#star-c{position:absolute;inset:0;pointer-events:none;}
-.hero-mtn{position:absolute;bottom:0;left:0;right:0;height:70px;pointer-events:none;}
-.ring-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:1;opacity:.08;}
-.hc{position:relative;z-index:3;}
-.h-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;letter-spacing:.15em;color:#C9A84C;border:1px solid #C9A84C44;padding:5px 14px;border-radius:14px;margin-bottom:1.1rem;background:#C9A84C0A;animation:glowB 3s ease-in-out infinite;}
-.h-badge-dot{width:5px;height:5px;border-radius:50%;background:#C9A84C;animation:pulse2 2s ease-in-out infinite;}
-.h-sym{margin:0 auto .9rem;animation:float 4s ease-in-out infinite;}
-.h-sym svg{animation:logoGlow 3s ease-in-out infinite;}
-.h-title{font-size:30px;font-weight:700;color:#C9A84C;line-height:1.1;margin-bottom:.3rem;animation:glow 3s ease-in-out infinite;}
-.h-en{font-size:10px;letter-spacing:.22em;color:#C9A84C55;margin-bottom:1rem;}
-.h-line{width:60px;height:1px;margin:.1rem auto 1rem;background:linear-gradient(90deg,transparent,#C9A84C,transparent);}
-.h-sub{font-size:13px;color:#8A9BBF;line-height:1.75;margin-bottom:.4rem;}
-.h-hook{background:#C9A84C0E;border:1px solid #C9A84C33;border-radius:10px;padding:1rem 1.1rem;margin:.9rem 0 1.5rem;text-align:left;position:relative;overflow:hidden;}
-.h-hook::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#C9A84C;}
-.h-hook-label{font-size:10px;letter-spacing:.12em;color:#C9A84C88;margin-bottom:6px;}
-.h-hook-text{font-size:14px;color:#D0C8A8;line-height:1.7;font-weight:700;}
-.h-hook-sub{font-size:12px;color:#5A6A7A;margin-top:7px;line-height:1.65;}
-.h-fullname{font-size:11px;color:#C9A84C55;letter-spacing:.04em;margin-bottom:1.5rem;}
-.btns{display:flex;flex-direction:column;gap:10px;}
-.btn-g{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#B8922A,#E8C96A,#C9A84C,#B8922A);background-size:200%;color:#06080C;padding:14px 18px;border-radius:9px;font-size:14px;font-weight:700;text-decoration:none;animation:glowB 3s ease-in-out infinite;transition:background-position .4s,transform .15s;}
-.btn-g:hover{background-position:right center;transform:translateY(-2px);}
-.btn-o{display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#C9A84C;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid #C9A84C44;transition:border-color .25s,background .25s;}
-.btn-o:hover{border-color:#C9A84C;background:#C9A84C0D;}
-
-/* SOCIAL */
-.social{background:#05070C;padding:1.1rem 1rem;}
-.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
-.sp-card{background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;padding:.9rem .8rem;text-align:center;position:relative;overflow:hidden;}
-.sp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#C9A84C66,transparent);}
-.sp-num{font-size:26px;font-weight:700;color:#C9A84C;line-height:1;}
-.sp-unit{font-size:12px;color:#C9A84C77;}
-.sp-label{font-size:10px;color:#2A3A50;margin-top:5px;line-height:1.4;}
-.media-row{margin-top:10px;display:flex;align-items:center;gap:9px;padding:.7rem .9rem;background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;}
-.media-badge{font-size:11px;font-weight:700;color:#060810;background:#C9A84C;padding:2px 8px;border-radius:4px;flex-shrink:0;}
-.media-text{font-size:12px;color:#3A4A5E;line-height:1.4;}
-.qbanner{background:#09101E;border-top:1px solid #C9A84C1A;border-bottom:1px solid #C9A84C1A;padding:.8rem 1rem;display:flex;align-items:center;gap:10px;position:relative;}
-.qbanner::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#C9A84C;}
-.qb-txt{font-size:13px;color:#5A6A80;line-height:1.5;}
-.qb-txt strong{color:#C9A84C;}
-
-/* STATS */
-.stats{padding:1.3rem 1rem;}
-.s-head{display:flex;align-items:center;gap:8px;margin-bottom:.8rem;}
-.s-kicker{font-size:10px;letter-spacing:.16em;color:#C9A84C55;}
-.s-hline{flex:1;height:1px;background:linear-gradient(90deg,#C9A84C22,transparent);}
-.s-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
-.s-card{background:#0A0E18;border:1px solid #C9A84C1A;border-radius:10px;padding:.9rem .8rem;text-align:center;position:relative;overflow:hidden;transition:border-color .3s,transform .2s;}
-.s-card:hover{border-color:#C9A84C44;transform:translateY(-2px);}
-.s-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);}
-.s-num{font-size:32px;font-weight:700;color:#C9A84C;line-height:1;}
-.s-unit{font-size:14px;color:#C9A84C77;}
-.s-desc{font-size:11px;color:#2E3E55;margin-top:4px;line-height:1.35;}
-.s-context{font-size:10px;color:#C9A84C66;margin-top:4px;line-height:1.3;font-style:italic;}
-.s-bar-wrap{height:2px;background:#0F1825;border-radius:1px;margin-top:7px;overflow:hidden;}
-.s-bar{height:100%;width:0;border-radius:1px;background:linear-gradient(90deg,#C9A84C66,#C9A84C);transition:width 1.2s cubic-bezier(.22,.61,.36,1);}
-
-/* SECTIONS */
-.sec{padding:1.5rem 1rem;}
-.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:1.1rem;}
-.sec-kicker2{font-size:10px;letter-spacing:.16em;color:#C9A84C55;white-space:nowrap;}
-.sec-hline{flex:1;height:1px;background:linear-gradient(90deg,#C9A84C18,transparent);}
-.sec-ttl{font-size:16px;font-weight:700;color:#D8D0B8;display:inline-flex;align-items:center;gap:8px;margin-bottom:1.1rem;}
-.sec-ttl::before{content:'';display:inline-block;width:3px;height:15px;background:#C9A84C;border-radius:1px;flex-shrink:0;}
-.divider{height:1px;background:linear-gradient(90deg,transparent,#C9A84C1A,transparent);}
-.fade-in{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease;}
-.fade-in.vis{opacity:1;transform:translateY(0);}
-.d1{transition-delay:.05s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}
-.d4{transition-delay:.24s}.d5{transition-delay:.3s}.d6{transition-delay:.36s}
-.d7{transition-delay:.42s}.d8{transition-delay:.48s}
-
-/* TIMELINE */
-.tl-wrap{position:relative;padding-left:30px;}
-.tl-track{position:absolute;left:9px;top:8px;width:2px;height:0;background:linear-gradient(180deg,#C9A84C 55%,#1A2235 100%);border-radius:1px;transition:height 1.5s ease;}
-.tl-track.vis{height:calc(100% - 16px);}
-.tl-row{position:relative;padding:0 0 1.1rem 18px;opacity:0;transform:translateX(-10px);transition:opacity .4s ease,transform .4s ease;}
-.tl-row.vis{opacity:1;transform:translateX(0);}
-.tl-row:last-child{padding-bottom:0;}
-.tl-dot{position:absolute;left:-30px;top:1px;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;z-index:2;}
-.done .tl-dot{background:#C9A84C1A;border:1.5px solid #C9A84C;color:#C9A84C;animation:glowB 2.5s ease-in-out infinite;}
-.pend .tl-dot{background:#0C1120;border:1.5px solid #1A2235;color:#1A2235;}
-.tl-txt{font-size:14px;font-weight:600;color:#C0B898;}
-.pend .tl-txt{color:#1E2A3A;}
-.chip{display:inline-block;font-size:10px;padding:1px 8px;border-radius:7px;margin-left:6px;vertical-align:middle;}
-.c-done{background:#C9A84C12;color:#C9A84C;border:1px solid #C9A84C33;}
-.c-pend{background:#0C1018;color:#1A2235;border:1px solid #141D2A;}
-.c-now{background:linear-gradient(135deg,#E8C96A,#C9A84C);color:#0A0C12;border:1px solid transparent;font-weight:700;}
-
-/* LOCATION */
-.loc-card{background:#09101E;border:1px solid #C9A84C1A;border-radius:12px;overflow:hidden;margin-bottom:9px;}
-.loc-card:last-child{margin-bottom:0;}
-.loc-header{background:linear-gradient(90deg,#C9A84C0A,transparent);padding:.8rem 1rem;border-bottom:1px solid #C9A84C15;display:flex;align-items:center;gap:8px;}
-.loc-header-icon{font-size:15px;}
-.loc-header-label{font-size:10px;letter-spacing:.1em;color:#C9A84C88;font-weight:600;}
-.loc-body{padding:.9rem 1rem;}
-.loc-row{display:flex;align-items:flex-start;gap:11px;margin-bottom:9px;}
-.loc-row:last-child{margin-bottom:0;}
-.loc-key{font-size:11px;color:#2A3A50;width:76px;flex-shrink:0;line-height:1.5;padding-top:1px;}
-.loc-val{font-size:13px;color:#A8B4C8;line-height:1.55;flex:1;}
-.loc-val strong{color:#C9A84C;}
-.loc-val .badge{display:inline-block;font-size:10px;font-family:'Courier New',monospace;font-weight:700;color:#C9A84C;background:#C9A84C12;border:1px solid #C9A84C33;padding:3px 10px;border-radius:5px;letter-spacing:.05em;}
-.loc-note{font-size:11px;color:#1E2E40;margin-top:3px;}
-
-/* HISTORY */
-.hist-row{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #0C1320;}
-.hist-row:last-child{border-bottom:none;padding-bottom:0;}
-.hist-era{flex-shrink:0;width:66px;}
-.hist-era-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;display:inline-block;line-height:1.4;}
-.era-ussr{background:#1A3050;color:#5A90C8;}
-.era-cn{background:#501818;color:#C87050;}
-.era-sgs{background:#C9A84C12;color:#C9A84C;border:1px solid #C9A84C33;}
-.hist-body{flex:1;}
-.hist-title{font-size:13px;font-weight:700;color:#A0A888;margin-bottom:3px;}
-.hist-desc{font-size:12px;color:#2A3A50;line-height:1.55;}
-.hist-highlight{font-size:12px;color:#C9A84C88;margin-top:4px;}
-
-/* ELEMENTS */
-.el-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
-.el{background:#09101E;border:1px solid #C9A84C22;border-radius:9px;padding:9px 4px;text-align:center;position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s;cursor:pointer;-webkit-tap-highlight-color:transparent;}
-.el:hover,.el.active-el{border-color:#C9A84C;transform:translateY(-3px);box-shadow:0 6px 20px #C9A84C22;}
-.el::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,#C9A84C88,transparent);}
-.el-num{font-size:8px;color:#C9A84C44;position:absolute;top:4px;left:5px;}
-.el-sym{font-size:20px;font-weight:700;color:#C9A84C;line-height:1;}
-.el-name{font-size:8px;color:#3E5060;margin-top:2px;line-height:1.2;}
-.el-cat{font-size:7px;padding:1px 4px;border-radius:3px;margin-top:3px;display:inline-block;}
-.cr{background:#C9A84C12;color:#C9A84C88;}.cm{background:#142030;color:#2A4A6A;}
-.el-foot{font-size:11px;color:#1A2530;margin-top:10px;}
+.lp{width:100%;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;gap:20px;height:62px;padding:0 18px;background:rgba(7,8,7,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line2);}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--disp);font-size:14px;letter-spacing:.18em;}
+.nav-links{display:none;gap:30px;margin-left:auto;}
+.nav-links a{color:var(--mut);text-decoration:none;font-size:13.5px;transition:color .25s;display:flex;align-items:baseline;gap:7px;}
+.nav-links a i{font-style:normal;font-family:var(--disp);font-size:10px;color:var(--cop);opacity:.8;}
+.nav-links a:hover,.nav-links a.on{color:var(--ink);}
+.nav-cta{display:none;border:1px solid var(--cop);color:var(--cop2);font-weight:700;font-size:13px;padding:9px 20px;border-radius:2px;text-decoration:none;letter-spacing:.04em;transition:background .25s,color .25s;}
+.nav-cta:hover{background:var(--cop);color:#0B0C0B;}
+.nav-burger{margin-left:auto;background:none;border:0;width:44px;height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;cursor:pointer;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--cop2);transition:transform .3s;}
+.nav-burger.open span:nth-child(1){transform:translateY(3.8px) rotate(45deg);}
+.nav-burger.open span:nth-child(2){transform:translateY(-3.8px) rotate(-45deg);}
+.menu-ov[hidden]{display:none;}
+.menu-ov{position:fixed;inset:0;z-index:999;background:rgba(7,8,7,.97);display:flex;align-items:center;justify-content:center;}
+.menu-ov-links{display:flex;flex-direction:column;gap:24px;text-align:center;}
+.menu-ov-links a{font-family:var(--serif);font-weight:600;font-size:27px;color:var(--ink);text-decoration:none;}
+.menu-ov-links a.on{color:var(--cop2);}
+.menu-ov-cta{margin-top:12px;font-family:var(--sans) !important;font-size:15px !important;border:1px solid var(--cop);color:var(--cop2) !important;padding:13px 28px;border-radius:2px;font-weight:700;}
+.page{display:none;}
+.page.on{display:block;animation:pageIn .5s cubic-bezier(.22,.61,.36,1);}
+.page:not(#page-home).on{padding-top:62px;}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero{position:relative;display:grid;grid-template-rows:auto 300px;min-height:100dvh;background:var(--bg);}
+.hero-l{position:relative;display:flex;flex-direction:column;justify-content:center;padding:92px 22px 40px;overflow:hidden;}
+#star-c{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none;}
+.hero-r{position:relative;overflow:hidden;border-top:1px solid var(--line);}
+.hero-photo{position:absolute;inset:0;background:url(assets/site-0038.jpg) 35% center/cover no-repeat;}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,8,7,.1),rgba(7,8,7,.55)),linear-gradient(90deg,rgba(194,119,63,.16),transparent 55%);}
+#hero3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9;}
+.hc{position:relative;}
+.h-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-size:10px;letter-spacing:.3em;color:var(--cop2);margin-bottom:2rem;}
+.h-badge-dot{width:22px;height:1px;background:var(--cop);}
+.h-sym{display:flex;align-items:center;gap:12px;margin-bottom:1.6rem;}
+.h-sym svg{width:40px;height:50px;}
+.mark-glow{filter:drop-shadow(0 0 10px rgba(194,119,63,.3));}
+.h-markword{font-family:var(--disp);font-size:13px;letter-spacing:.5em;color:var(--cop);}
+.h-title{font-family:var(--serif);font-weight:900;font-size:44px;line-height:1.14;letter-spacing:-.02em;color:var(--ink);margin-bottom:.8rem;}
+.h-en{font-family:var(--disp);font-size:10.5px;letter-spacing:.34em;color:var(--dim);margin-bottom:1.6rem;}
+.h-line{display:none;}
+.h-sub{font-size:14px;color:var(--mut);margin-bottom:1.6rem;}
+.h-hook{margin-bottom:2rem;}
+.h-hook-label{font-family:var(--disp);font-size:10px;letter-spacing:.26em;color:var(--cop);margin-bottom:.6rem;}
+.h-hook-text{font-family:var(--serif);font-weight:600;font-size:17.5px;line-height:1.65;color:var(--ink);}
+.h-hook-sub{font-size:13px;color:var(--mut);margin-top:.8rem;line-height:1.85;}
+.h-fullname{display:none;}
+.btns{display:flex;flex-direction:column;gap:11px;}
+.btn-g,.btn-o,.btn-cta,.btn-yt{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-size:14.5px;padding:13px 20px;border-radius:2px;transition:background .25s,color .25s,border-color .25s;}
+.btn-g,.btn-cta{background:var(--cop);color:#0B0C0B;font-weight:700;}
+.btn-g:hover,.btn-cta:hover{background:var(--cop2);}
+.btn-o,.btn-yt{border:1px solid rgba(194,119,63,.4);color:var(--ink);}
+.btn-o:hover,.btn-yt:hover{border-color:var(--cop2);color:var(--cop2);}
+.sec,.stats,.social{padding:3.4rem 22px;}
+.sec-hd{display:flex;align-items:center;gap:12px;margin-bottom:.9rem;position:relative;}
+.sec-kicker2,.s-kicker{font-family:var(--disp);font-size:10px;letter-spacing:.3em;color:var(--cop);white-space:nowrap;}
+.sec-hline,.s-hline{flex:1;height:1px;background:var(--line2);}
+.sec-ttl{font-family:var(--serif);font-weight:900;font-size:30px;letter-spacing:-.02em;color:var(--ink);margin-bottom:1.6rem;line-height:1.25;}
+.page:not(#page-home) .sec:first-child{padding-top:3.6rem;}
+.divider{display:none;}
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.sp-card{border-top:1px solid var(--line);padding-top:.9rem;}
+.sp-num{font-family:var(--disp);font-size:34px;color:var(--cop2);}
+.sp-unit{font-size:12px;color:var(--dim);margin-left:3px;}
+.sp-label{font-size:12px;color:var(--mut);margin-top:.4rem;line-height:1.6;}
+.media-row{display:flex;gap:10px;align-items:center;border-top:1px solid var(--line2);margin-top:18px;padding-top:1rem;}
+.media-badge{font-size:11px;font-weight:700;color:#0C0B09;background:var(--cop);padding:3px 9px;border-radius:2px;white-space:nowrap;}
+.media-text{font-size:12.5px;color:var(--mut);}
+.s-head{display:flex;align-items:center;gap:12px;margin-bottom:1.4rem;}
+.s-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;}
+.s-card{border-top:1px solid var(--line);padding-top:1rem;}
+.s-num{font-family:var(--disp);font-size:42px;color:var(--cop2);line-height:1;}
+.s-unit{font-size:13px;color:var(--dim);margin-left:3px;}
+.s-desc{font-size:12.5px;color:var(--mut);margin-top:.55rem;line-height:1.6;}
+.s-context{font-size:12px;color:var(--cop);margin-top:.35rem;}
+.s-bar-wrap,.s-bar{display:none;}
+.loc-card{border-top:1px solid var(--line);padding:1.5rem 0 1.7rem;}
+.loc-header{margin-bottom:1.1rem;}
+.loc-header-icon{display:none;}
+.loc-header-label{font-family:var(--disp);font-size:12.5px;letter-spacing:.12em;color:var(--cop);}
+.loc-row{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:.8rem 0;border-bottom:1px solid var(--line2);}
+.loc-row:last-child{border-bottom:0;}
+.loc-key{font-size:12px;color:var(--dim);padding-top:2px;}
+.loc-val{font-size:14.5px;color:var(--ink);line-height:1.65;}
+.loc-note{font-size:12px;color:var(--mut);margin-top:3px;}
+.badge{display:inline-block;font-family:var(--disp);font-size:13px;letter-spacing:.1em;color:var(--cop2);border:1px solid var(--line);padding:3px 10px;border-radius:2px;}
+.hist-row{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:1rem 0;border-bottom:1px solid var(--line2);}
+.hist-row:last-child{border-bottom:0;}
+.hist-era-badge{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:2px;}
+.era-ussr{background:rgba(194,119,63,.18);color:var(--cop2);}
+.era-cn{background:rgba(138,59,42,.25);color:#D98A74;}
+.era-sgs{background:rgba(46,107,82,.25);color:#7FBFA3;}
+.hist-title{font-weight:700;font-size:14.5px;color:var(--ink);margin-bottom:.3rem;}
+.hist-desc{font-size:13px;color:var(--mut);line-height:1.75;}
+.hist-highlight{color:var(--cop2);}
+.el-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;}
+.el{border:1px solid var(--line2);border-radius:2px;padding:11px 4px;text-align:center;cursor:pointer;transition:border-color .25s,background .25s;-webkit-tap-highlight-color:transparent;}
+.el:hover{border-color:var(--cop);background:rgba(194,119,63,.05);}
 .el-wide{grid-column:span 2;}
-.use-section{margin-top:14px;display:none;}
-
-/* ELEMENT VISUAL */
-.el-vis-hero{width:100%;height:190px;border-radius:10px;overflow:hidden;position:relative;margin-bottom:11px;border:1px solid #C9A84C22;}
+.el-num{font-family:var(--disp);font-size:11px;color:var(--dim);}
+.el-sym{font-family:var(--disp);font-size:21px;color:var(--cop2);line-height:1.2;}
+.el-name{font-size:11.5px;color:var(--mut);margin-top:2px;}
+.el-cat{display:inline-block;font-size:11px;padding:2px 8px;border-radius:2px;margin-top:4px;}
+.el-cat.cr{background:rgba(46,107,82,.25);color:#7FBFA3;}
+.el-cat.cm{background:rgba(184,178,166,.18);color:#B8B2A6;}
+.el-foot{font-size:11.5px;color:var(--dim);margin-top:.9rem;}
+.use-section{margin-top:1.2rem;}
+.el-vis-hero{position:relative;border:1px solid var(--line2);border-radius:2px;overflow:hidden;min-height:210px;margin-bottom:1rem;}
 .el-vis-bg{position:absolute;inset:0;}
-.el-vis-deco{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
-.el-vis-sym-bg{font-size:120px;font-weight:900;font-family:Georgia,serif;line-height:1;opacity:.07;animation:pulseSym 3s ease-in-out infinite;user-select:none;}
-.el-vis-ring{position:absolute;border-radius:50%;border:1px solid;}
-.el-vis-overlay{position:absolute;inset:0;background:linear-gradient(to top,#07090F 0%,#07090F55 40%,transparent 100%);}
-.el-vis-grid{position:absolute;inset:0;background-image:linear-gradient(#C9A84C07 1px,transparent 1px),linear-gradient(90deg,#C9A84C07 1px,transparent 1px);background-size:20px 20px;}
-.el-vis-scan{position:absolute;left:0;right:0;height:40px;background:linear-gradient(180deg,transparent,#C9A84C07,transparent);animation:scan 5s linear infinite;}
-.el-vis-info{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1.1rem;}
-.el-vis-sym{font-size:32px;font-weight:700;font-family:Georgia,serif;line-height:1;margin-right:9px;vertical-align:middle;}
-.el-vis-name{font-size:15px;font-weight:700;color:#E8E0C8;vertical-align:middle;}
-.el-vis-num{font-size:10px;color:#C9A84C44;vertical-align:middle;margin-left:5px;}
-.el-vis-cat{display:inline-block;font-size:10px;padding:2px 7px;border-radius:5px;margin-left:7px;vertical-align:middle;}
-.el-vis-desc{font-size:12px;color:#7A8A9A;margin-top:6px;line-height:1.55;}
-.el-vis-tags{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:4px;align-items:flex-end;}
-.el-vis-tag{font-size:9px;color:#C9A84C66;border:1px solid #C9A84C22;padding:2px 7px;border-radius:4px;background:#07090F88;}
-
-/* USE CASES */
-.use-list{display:flex;flex-direction:column;gap:7px;margin-bottom:11px;}
-.use-item{background:#09101E;border:1px solid #C9A84C15;border-radius:9px;padding:.7rem .9rem;display:flex;gap:10px;align-items:flex-start;}
-.use-dot{width:6px;height:6px;border-radius:50%;background:#C9A84C;flex-shrink:0;margin-top:5px;}
-.use-title{font-size:13px;font-weight:700;color:#B0A888;margin-bottom:2px;}
-.use-desc{font-size:12px;color:#2A3A50;line-height:1.5;}
-.use-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px;}
-.use-tag{font-size:9px;color:#C9A84C55;border:1px solid #C9A84C18;padding:2px 6px;border-radius:4px;}
-.demand-wrap{background:#09101E;border:1px solid #C9A84C18;border-radius:9px;padding:.8rem .9rem;}
-.demand-title{font-size:10px;color:#C9A84C55;letter-spacing:.06em;margin-bottom:9px;}
-.demand-row{display:flex;align-items:center;gap:9px;margin-bottom:7px;}
-.demand-row:last-child{margin-bottom:0;}
-.demand-label{font-size:11px;color:#3A4A5E;width:78px;flex-shrink:0;}
-.demand-bar-bg{flex:1;height:5px;background:#0F1825;border-radius:3px;overflow:hidden;}
-.demand-bar{height:100%;border-radius:3px;background:linear-gradient(90deg,#C9A84C66,#C9A84C);width:0;transition:width .9s cubic-bezier(.22,.61,.36,1);}
-.demand-pct{font-size:11px;color:#C9A84C88;width:30px;text-align:right;flex-shrink:0;}
-
-/* MPC COIN */
-.mc{background:#09101E;border:1px solid #C9A84C1A;border-radius:11px;padding:1.1rem;margin-bottom:9px;position:relative;overflow:hidden;}
-.mc:last-child{margin-bottom:0;}
-.mc::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);}
-.mc-top{display:flex;align-items:center;gap:11px;margin-bottom:10px;}
-.mc-icon{width:34px;height:34px;border-radius:8px;background:#C9A84C12;border:1px solid #C9A84C33;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
-.mc-ttl{font-size:13px;font-weight:700;color:#C9A84C;line-height:1.4;}
-.mc-body{font-size:13px;color:#4A5A72;line-height:1.75;}
-.df-row{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #0C1320;font-size:13px;color:#4A5A72;line-height:1.55;}
-.df-row:last-child{border-bottom:none;padding-bottom:0;}
-.df-arrow{color:#C9A84C;flex-shrink:0;font-size:11px;margin-top:3px;}
-
-/* NEWS */
-.nc{background:#09101E;border:1px solid #141E2E;border-radius:11px;padding:1.1rem;margin-bottom:9px;position:relative;overflow:hidden;transition:border-color .25s,transform .2s;}
-.nc:last-child{margin-bottom:0;}
-.nc:hover{border-color:#C9A84C33;transform:translateY(-2px);}
-.nc::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,#C9A84C,#E8C96A44,transparent);}
-.nc-meta{display:flex;align-items:center;gap:8px;margin-bottom:9px;}
-.nc-src{font-size:11px;font-weight:700;color:#060810;background:#C9A84C;padding:2px 9px;border-radius:4px;}
-.nc-src2{background:#1A3A5A;color:#5A90BE;}
-.nc-date{font-size:11px;color:#1C2A3A;}
-.nc-ttl{font-size:15px;font-weight:700;color:#D0C8B0;margin-bottom:6px;line-height:1.35;}
-.nc-body{font-size:12px;color:#2E3E52;line-height:1.6;}
-.nc-tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap;}
-.nc-tag{font-size:10px;color:#C9A84C66;border:1px solid #C9A84C22;padding:2px 8px;border-radius:7px;}
-
-/* CTA */
-.cta{padding:2.2rem 1rem;text-align:center;position:relative;overflow:hidden;}
-.cta-bg-grid{position:absolute;inset:0;background-image:linear-gradient(#C9A84C06 1px,transparent 1px),linear-gradient(90deg,#C9A84C06 1px,transparent 1px);background-size:24px 24px;}
-.cta-bg-rad{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,#C9A84C0A 0%,transparent 55%),linear-gradient(170deg,#0A1208 0%,#07090F 50%,#05070A 100%);}
-.cta-border{position:absolute;inset:0;border-top:1px solid #C9A84C22;pointer-events:none;}
-.cta-inner{position:relative;z-index:1;}
-.cta-ey{font-size:10px;letter-spacing:.18em;color:#C9A84C44;margin-bottom:.5rem;}
-.cta-ttl{font-size:20px;font-weight:700;color:#E0D8C0;line-height:1.3;margin-bottom:.5rem;}
-.cta-sub{font-size:12px;color:#253040;line-height:1.7;margin-bottom:1.5rem;}
-.btn-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#B8922A,#E8C96A,#C9A84C,#B8922A);background-size:200%;color:#06080C;padding:14px 18px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;margin-bottom:10px;box-shadow:0 4px 20px #C9A84C2A;transition:background-position .4s,transform .15s;}
-.btn-cta:hover{background-position:right center;transform:translateY(-2px);}
-.btn-yt{display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#C9A84C;padding:11px 16px;border-radius:9px;font-size:13px;font-weight:600;text-decoration:none;border:1.5px solid #C9A84C33;transition:all .25s;}
-.btn-yt:hover{border-color:#C9A84C;background:#C9A84C0D;}
-.disc{margin-top:1.2rem;padding:.8rem;background:#030508;border:1px solid #0C1420;border-radius:9px;font-size:11px;color:#182030;line-height:1.65;}
-.cta-close{margin-top:1.2rem;font-size:13px;color:#C9A84C66;line-height:1.7;font-style:italic;}
-.cta-close strong{color:#C9A84C;font-style:normal;}
-
-/* FOOTER */
-.footer{padding:1.2rem 1rem;text-align:center;background:#030407;border-top:1px solid #0C1018;}
-.f-logo{font-size:13px;font-weight:700;color:#C9A84C;letter-spacing:.12em;}
-.f-sub{font-size:10px;color:#121A24;margin-top:3px;line-height:1.5;}
-/* ESCROW 안전거래 섹션 */
-.esc-sub{font-size:13px;color:#8A93A3;line-height:1.8;text-align:center;margin-bottom:1.3rem;}
-.esc-swiper{padding-bottom:30px;margin-bottom:1.1rem;}
-/* Swiper 미로딩 시 폴백: 가로 스크롤로라도 전부 보이게 */
+.el-vis-grid,.el-vis-scan{display:none;}
+.el-vis-deco{position:absolute;inset:0;}
+.el-vis-sym-bg{position:absolute;right:8px;top:4px;font-family:var(--disp);font-size:110px;line-height:1;opacity:.08;}
+.el-vis-ring{position:absolute;border:1px solid;border-radius:50%;opacity:.25;}
+.el-vis-overlay{position:relative;padding:1.3rem 1.1rem;}
+.el-vis-num{font-family:var(--disp);font-size:11px;color:var(--mut);}
+.el-vis-sym{font-family:var(--disp);font-size:44px;line-height:1.1;}
+.el-vis-name{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--ink);}
+.el-vis-cat{display:inline-block;font-size:10px;padding:2px 8px;border-radius:2px;margin:6px 0 10px;}
+.el-vis-desc{font-size:13px;color:#D8D2C4;line-height:1.75;max-width:520px;}
+.el-vis-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.el-vis-tag{font-size:10.5px;color:var(--cop2);border:1px solid var(--line);padding:2px 9px;border-radius:2px;}
+.el-vis-info{border:1px solid var(--line2);border-radius:2px;padding:1.1rem;margin-top:10px;}
+.use-list{display:flex;flex-direction:column;gap:12px;margin-top:.6rem;}
+.use-item{display:grid;grid-template-columns:12px 1fr;gap:10px;}
+.use-dot{width:7px;height:7px;border-radius:50%;background:var(--cop);margin-top:7px;}
+.use-title{font-weight:700;font-size:13.5px;color:var(--ink);}
+.use-desc{font-size:12.5px;color:var(--mut);line-height:1.7;margin-top:2px;}
+.use-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px;}
+.use-tag{font-size:10px;color:var(--dim);border:1px solid var(--line2);padding:1px 7px;border-radius:2px;}
+.demand-wrap{margin-top:1rem;border-top:1px solid var(--line2);padding-top:.9rem;}
+.demand-title{font-size:11px;letter-spacing:.14em;color:var(--dim);margin-bottom:.6rem;}
+.demand-row{display:grid;grid-template-columns:86px 1fr 36px;gap:9px;align-items:center;margin-bottom:7px;}
+.demand-label{font-size:11.5px;color:var(--mut);}
+.demand-bar-bg{height:3px;background:#1A1B1A;border-radius:2px;overflow:hidden;}
+.demand-bar{height:100%;border-radius:2px;}
+.demand-pct{font-family:var(--disp);font-size:11px;color:var(--mut);text-align:right;}
+.df-row{display:flex;align-items:center;gap:8px;}
+.df-arrow{color:var(--dim);}
+.tl-wrap{position:relative;padding-left:4px;}
+.tl-track{position:absolute;left:9px;top:8px;width:1.5px;height:0;background:linear-gradient(180deg,var(--cop) 60%,#1A1B1A 100%);transition:height 1.5s ease;}
+.tl-track.vis{height:calc(100% - 16px);}
+.tl-row{position:relative;padding:0 0 1.25rem 30px;opacity:0;transform:translateX(-10px);transition:opacity .4s,transform .4s;}
+.tl-row.vis{opacity:1;transform:none;}
+.tl-dot{position:absolute;left:0;top:1px;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;background:var(--bg2);border:1.5px solid #2A2B2A;color:var(--dim);}
+.done .tl-dot{border-color:var(--cop);color:var(--cop2);background:rgba(194,119,63,.1);}
+.tl-txt{font-size:15px;color:var(--ink);}
+.pend .tl-txt{color:var(--dim);}
+.chip{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:2px;margin-left:7px;vertical-align:middle;}
+.c-done{color:var(--cop2);border:1px solid var(--line);}
+.c-pend{color:var(--dim);border:1px solid #1E1F1E;}
+.c-now{background:var(--cop);color:#0B0C0B;font-weight:700;}
+.nc{border-top:1px solid var(--line);padding:1.6rem 0 1.8rem;}
+.nc-meta{display:flex;align-items:center;gap:10px;margin-bottom:.8rem;}
+.nc-src{font-size:11px;font-weight:700;color:#0B0C0B;background:var(--gold);padding:3px 9px;border-radius:2px;}
+.nc-src2{background:rgba(46,107,82,.3);color:#7FBFA3;}
+.nc-src3{background:rgba(138,59,42,.3);color:#D98A74;}
+.nc-date{font-family:var(--disp);font-size:12px;letter-spacing:.08em;color:var(--dim);}
+.nc-ttl{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.45;color:var(--ink);margin-bottom:.6rem;}
+.nc-body{font-size:13.5px;color:var(--mut);line-height:1.8;}
+.nc-list{margin:.7rem 0 0;padding-left:1.1rem;display:flex;flex-direction:column;gap:8px;}
+.nc-list li{font-size:13px;color:var(--mut);line-height:1.75;}
+.nc-list strong{color:var(--cop2);font-weight:600;}
+.nc-tags{display:flex;gap:12px;margin-top:.8rem;}
+.nc-tag{font-size:12px;color:var(--dim);}
+.nc-link{display:inline-flex;align-items:center;gap:8px;margin-top:.9rem;font-size:13px;font-weight:700;color:var(--cop2);text-decoration:none;border:1px solid var(--line);padding:9px 16px;border-radius:2px;transition:background .25s;}
+.nc-link:hover{background:rgba(194,119,63,.08);}
+.esc-sub{font-size:14px;color:var(--mut);line-height:1.85;margin-bottom:1.6rem;}
+.esc-swiper{padding-bottom:26px;margin-bottom:1.4rem;}
 .esc-swiper .swiper-wrapper{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
-.esc-swiper .swiper-slide{flex:0 0 78%;scroll-snap-align:center;margin-right:10px;}
+.esc-swiper .swiper-slide{flex:0 0 80%;scroll-snap-align:center;margin-right:12px;}
 .esc-swiper.swiper-initialized .swiper-wrapper{overflow-x:visible;}
 .esc-swiper.swiper-initialized .swiper-slide{margin-right:0;flex:0 0 auto;}
-.esc-card{background:linear-gradient(170deg,#0C111C 0%,#0A0E16 100%);border:1px solid #C9A84C22;border-radius:12px;padding:1.1rem 1rem;min-height:148px;}
-.esc-step{font-size:10px;letter-spacing:.16em;color:#C9A84C88;margin-bottom:.4rem;}
-.esc-ct{font-size:16px;font-weight:700;color:#E0D8C0;margin-bottom:.45rem;}
-.esc-cd{font-size:12.5px;color:#8A93A3;line-height:1.7;}
-.esc-pag{bottom:0 !important;}
-.esc-pag .swiper-pagination-bullet{background:#C9A84C55;opacity:1;}
-.esc-pag .swiper-pagination-bullet-active{background:#C9A84C;}
-.esc-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1.2rem;}
-.esc-stat{background:#0A0E16;border:1px solid #C9A84C1A;border-radius:10px;padding:.9rem .4rem;text-align:center;}
-.esc-num{font-size:21px;font-weight:700;color:#E8C96A;font-variant-numeric:tabular-nums;}
-.esc-lbl{font-size:10.5px;color:#5A6376;margin-top:.3rem;}
-.esc-btn{max-width:420px;margin:0 auto;}
-.esc-note{font-size:11px;color:#3A4456;line-height:1.7;text-align:center;margin-top:.9rem;}
-
-/* 고급화: 영문 세리프 포인트 + 유리 질감 카드 + 3D 캔버스 */
-.sec-kicker2,.s-kicker,.cta-ey,.h-fullname{font-family:'Marcellus',Georgia,serif;}
-.s-num,.esc-num,.el-num,.el-sym{font-family:'Marcellus',Georgia,serif;}
-.nc{background:rgba(13,19,33,.55);border:1px solid #C9A84C1C;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);}
-.nc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#C9A84C55,transparent);}
-.nc-src3{background:#2A1F3F;color:#B088E8;}
-.nc-link{display:inline-block;margin-top:.7rem;font-size:12px;font-weight:600;color:#E8C96A;text-decoration:none;border:1px solid #C9A84C3A;border-radius:7px;padding:7px 12px;transition:background .25s,border-color .25s;}
-.nc-link:hover{background:#C9A84C14;border-color:#C9A84C66;}
-.s-card,.esc-card,.esc-stat{background:rgba(12,17,28,.55);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);}
-.esc-card{border:1px solid #C9A84C26;}
-.f-links{display:flex;justify-content:center;align-items:center;gap:8px;margin:.6rem 0 .5rem;font-size:11px;}
-.f-links a{color:#C9A84C88;text-decoration:none;transition:color .25s;}
-.f-links a:hover{color:#E8C96A;}
-.f-links span{color:#1A2230;}
-#hero3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.85;}
-
-/* ── 리디자인 v2: 미니멀 고급화 — 여백·타입 위계·대비 교정·장식 절제 ── */
-body{font-size:15px;color:#EDECE6;}
-.sec{padding:2.7rem 1.15rem;}
-.hero{padding:3.1rem 1.15rem 3.5rem;}
-.stats{padding:2.4rem 1rem;}
-.cta{padding:3.1rem 1rem 2.7rem;}
-.sec-hd{margin-bottom:1.2rem;}
-.sec-kicker2{letter-spacing:.24em;color:#C9A84C7A;}
-.sec-ttl{font-size:21px;letter-spacing:-.01em;color:#EAE3CC;margin-bottom:1.35rem;}
-.divider{background:linear-gradient(90deg,transparent,#C9A84C24,transparent);}
-/* 본문 대비 교정 (어두운 남회색 → 읽히는 밝기, 4.5:1 이상) */
-.nc-ttl{font-size:16px;color:#E8E0C6;}
-.nc-body{font-size:13px;color:#939DB0;line-height:1.75;}
-.s-desc{color:#8E99AC;font-size:11.5px;}
-.cta-sub{color:#8591A6;}
-.h-hook-sub{color:#939DB0;}
-.esc-note{color:#5E6878;}
-.f-sub{color:#39424F;}
-/* 장식 절제: 의미 없는 게이지 막대 제거, 카드 결 통일 */
-.s-bar-wrap{display:none;}
-.nc,.s-card,.esc-card,.esc-stat,.el,.h-hook{border-radius:12px;}
-.nc{padding:1.25rem 1.2rem;margin-bottom:12px;}
-.s-card{padding:1.15rem .8rem;}
-.h-hook{background:rgba(201,168,76,.05);}
-/* 버튼: 아이콘 정렬, 테두리 정돈 */
-.btn-g svg,.btn-o svg,.btn-cta svg,.btn-yt svg,.nc-link svg{flex-shrink:0;display:inline-block;vertical-align:-2px;}
-.btn-o,.btn-yt{border-color:#C9A84C33;color:#DCCB92;}
-.nc-link{display:inline-flex;align-items:center;gap:7px;}
-.nc-list{margin:.6rem 0 0;padding-left:1.05rem;display:flex;flex-direction:column;gap:7px;}
-.nc-list li{font-size:12.5px;color:#9AA4B6;line-height:1.7;}
-.nc-list strong{color:#E2CF93;font-weight:600;}
-/* ── v3: 인상 자체를 바꾸는 층 — 대형 금빛 타이포·알약 버튼·에디토리얼 번호·지면형 통계 ── */
-.hero{min-height:86vh;min-height:86dvh;display:flex;flex-direction:column;justify-content:center;}
-.h-title{font-size:38px;letter-spacing:-.02em;line-height:1.15;background:linear-gradient(135deg,#F4E3AE 0%,#C9A84C 48%,#937832 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.h-en{font-family:'Marcellus',serif;font-size:10px;letter-spacing:.32em;color:#C9A84C99;}
-.h-hook{border:0;background:transparent;padding:0 .2rem;text-align:center;}
-.h-hook::before{display:none;}
-.h-hook-label{display:none;}
-.h-hook-text{font-size:15.5px;color:#E6DBB9;line-height:1.85;}
-/* 알약 버튼 */
-.btn-g,.btn-cta{border-radius:999px;padding:15px 22px;}
-.btn-o,.btn-yt,.nc-link{border-radius:999px;}
-/* 섹션 에디토리얼 번호 (자동 매김) */
-.lp{counter-reset:secn;}
-section.sec{counter-increment:secn;}
-section.sec .sec-hd{position:relative;}
-section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-family:'Marcellus',serif;font-size:46px;line-height:1;color:#C9A84C17;position:absolute;right:0;top:-16px;pointer-events:none;}
-/* 통계: 박스 대신 지면(에디토리얼) 결 */
-.s-card{background:transparent;border:0;border-top:1px solid #C9A84C30;border-radius:0;text-align:left;padding:1rem .15rem .4rem;backdrop-filter:none;-webkit-backdrop-filter:none;}
-.s-num{font-size:40px;}
-.esc-stat{background:transparent;border:0;border-top:1px solid #C9A84C30;border-radius:0;text-align:left;padding:.95rem .15rem .3rem;backdrop-filter:none;-webkit-backdrop-filter:none;}
-.esc-num{font-size:24px;}
-/* 차간톨고이 현장 갤러리 */
-.site-swiper{padding-bottom:30px;margin-bottom:1.1rem;}
+.esc-card{border-top:1px solid var(--line);padding:1.1rem .2rem .4rem;}
+.esc-step{font-family:var(--disp);font-size:11px;letter-spacing:.2em;color:var(--cop);margin-bottom:.4rem;}
+.esc-ct{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--ink);margin-bottom:.4rem;}
+.esc-cd{font-size:13px;color:var(--mut);line-height:1.75;}
+.esc-pag,.site-pag{bottom:0 !important;}
+.esc-pag .swiper-pagination-bullet,.site-pag .swiper-pagination-bullet{background:rgba(194,119,63,.4);opacity:1;}
+.esc-pag .swiper-pagination-bullet-active,.site-pag .swiper-pagination-bullet-active{background:var(--cop2);}
+.esc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:1.6rem;}
+.esc-stat{border-top:1px solid var(--line);padding-top:.85rem;}
+.esc-num{font-family:var(--disp);font-size:25px;color:var(--cop2);}
+.esc-lbl{font-size:12px;color:var(--mut);margin-top:.3rem;}
+.esc-note{font-size:12px;color:var(--dim);line-height:1.75;}
+.site-swiper{padding-bottom:28px;margin-bottom:1.2rem;}
 .site-swiper .swiper-wrapper{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
-.site-swiper .swiper-slide{flex:0 0 86%;scroll-snap-align:center;margin-right:10px;}
+.site-swiper .swiper-slide{flex:0 0 88%;scroll-snap-align:center;margin-right:12px;}
 .site-swiper.swiper-initialized .swiper-wrapper{overflow-x:visible;}
 .site-swiper.swiper-initialized .swiper-slide{margin-right:0;flex:0 0 auto;}
-.site-fig{margin:0;border-radius:14px;overflow:hidden;border:1px solid #C9A84C26;background:#0A0E16;}
-.site-fig img{display:block;width:100%;height:auto;}
-.site-fig figcaption{font-size:11.5px;color:#8E99AC;padding:9px 12px;line-height:1.5;}
-.site-pag{bottom:0 !important;}
-.site-pag .swiper-pagination-bullet{background:#C9A84C55;opacity:1;}
-.site-pag .swiper-pagination-bullet-active{background:#C9A84C;}
-.site-stage{margin-top:.4rem;}
-.site-stage-row{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-bottom:.7rem;}
-.site-stage-chip{font-size:11px;color:#5E6878;border:1px solid #1C2432;border-radius:999px;padding:5px 12px;}
-.site-stage-chip.on{color:#0A0C12;background:linear-gradient(135deg,#E8C96A,#C9A84C);border-color:transparent;font-weight:700;}
-.site-stage-chip.on small{font-weight:400;}
-.site-stage-note{font-size:12.5px;color:#939DB0;line-height:1.75;text-align:center;}
-/* 마무리 대형화 */
-.cta-ttl{font-size:27px;letter-spacing:-.01em;line-height:1.3;color:#EAE0C2;}
-.cta-ey{letter-spacing:.3em;}
-@media (prefers-reduced-motion: reduce){
-  .el-vis-scan{display:none;}
-  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
-}
-
-/* ── 스튜디오 감성: 공식 심볼 글로우·금빛 흐름 티커·제목 광택·카드 호버 ── */
-.mark-glow{filter:drop-shadow(0 0 14px #C2773F55);animation:markPulse 4.5s ease-in-out infinite;}
-@keyframes markPulse{0%,100%{filter:drop-shadow(0 0 8px #C2773F44)}50%{filter:drop-shadow(0 0 22px #C2773F88)}}
-.h-markword{font-family:'Marcellus',serif;font-size:15px;letter-spacing:.5em;color:#C2773F;margin:10px 0 2px;text-indent:.5em;}
-/* 정적 고급화: 상시 깜빡임 전부 제거 — 움직임은 3D 결정과 마우스 반응에만 남긴다 */
-.h-badge,.h-badge-dot,.h-sym,.h-sym svg,.h-title,.btn-g,.done .tl-dot,.el-vis-sym-bg{animation:none;}
-.mark-glow{animation:none;filter:drop-shadow(0 0 10px #C2773F40);}
-.hero-scan,.el-vis-scan{display:none;}
-@media (hover:hover){
-  .nc:hover{transform:translateY(-4px);border-color:#C9A84C44;}
-  .esc-card:hover,.site-fig:hover{border-color:#C9A84C55;}
-  .el:hover{transform:translateY(-3px);}
-  .site-fig img{transition:transform .6s cubic-bezier(.22,.61,.36,1);}
-  .site-fig:hover img{transform:scale(1.04);}
-}
-.f-ghost{font-family:'Marcellus',serif;font-size:96px;line-height:1;letter-spacing:.14em;color:#C9A84C0E;text-align:center;user-select:none;margin-bottom:-14px;}
-@media (min-width:1000px){.f-ghost{font-size:180px;margin-bottom:-28px;}}
-@media (prefers-reduced-motion: reduce){
-  .h-title{animation:none;}
-  .mark-glow{animation:none;}
-}
-
-/* ── PC 레이아웃: 태블릿(768+)과 데스크톱(1100+)에서 넓게 펼침 — 모바일은 기존 그대로 ── */
-@media (min-width:768px){
-  .lp{max-width:740px;}
-  .btns{flex-direction:row;justify-content:center;flex-wrap:wrap;gap:12px;}
-  .btns a{min-width:280px;}
-}
+.site-fig{margin:0;}
+.site-fig img{width:100%;height:auto;}
+.site-fig figcaption{font-size:12px;color:var(--mut);padding:10px 2px;border-bottom:1px solid var(--line2);}
+.site-stage{margin-top:1.4rem;}
+.site-stage-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:.8rem;}
+.site-stage-chip{font-size:11.5px;color:var(--dim);border:1px solid #1E1F1E;border-radius:2px;padding:5px 12px;}
+.site-stage-chip.on{background:var(--cop);color:#0B0C0B;border-color:transparent;font-weight:700;}
+.site-stage-note{font-size:13px;color:var(--mut);line-height:1.8;}
+.cta{position:relative;padding:3.6rem 22px;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(194,119,63,.06),transparent 60%);}
+.cta-bg-grid,.cta-bg-rad,.cta-border{display:none;}
+.cta-inner{position:relative;}
+.cta-ey{font-family:var(--disp);font-size:11.5px;letter-spacing:.2em;color:var(--cop);margin-bottom:.8rem;}
+.cta-ttl{font-family:var(--serif);font-weight:900;font-size:30px;line-height:1.3;color:var(--ink);margin-bottom:.9rem;}
+.cta-sub{font-size:13.5px;color:var(--mut);line-height:1.85;margin-bottom:1.6rem;}
+.cta .btn-cta{margin-bottom:10px;}
+.disc{font-size:12px;color:var(--dim);margin-top:1.4rem;line-height:1.7;}
+.cta-close{margin-top:1.1rem;font-size:13.5px;color:var(--mut);line-height:1.8;}
+.cta-close strong{color:var(--cop2);}
+.footer{padding:2rem 22px 2.4rem;border-top:1px solid var(--line2);text-align:center;overflow:hidden;}
+.f-ghost{font-family:var(--disp);font-size:88px;line-height:1;letter-spacing:.12em;color:rgba(194,119,63,.07);user-select:none;margin-bottom:-10px;}
+.f-logo{font-family:var(--disp);font-size:12px;letter-spacing:.22em;color:var(--mut);}
+.f-links{display:flex;justify-content:center;gap:9px;margin:.7rem 0 .6rem;font-size:12px;}
+.f-links a{color:var(--cop);text-decoration:none;}
+.f-links a:hover{color:var(--cop2);}
+.f-links span{color:#4A4B45;}
+.f-sub{font-size:12px;color:#8A857A;line-height:1.6;}
+.h-title,.sec-ttl,.cta-ttl,.nc-ttl{text-wrap:balance;}
+.fade-in{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+.fade-in.vis{opacity:1;transform:none;}
+.d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}.d4{transition-delay:.2s}
+.d5{transition-delay:.25s}.d6{transition-delay:.3s}.d7{transition-delay:.35s}.d8{transition-delay:.4s}
 @media (min-width:1000px){
-  body{font-size:16px;}
-  .lp{max-width:1080px;}
-  .hero{min-height:0;padding:5.5rem 3rem 5rem;}
-  .h-title{font-size:64px;}
-  .h-en{font-size:12px;}
-  .h-sub{font-size:16px;}
-  .h-hook{max-width:760px;margin-left:auto;margin-right:auto;}
-  .h-hook-text{font-size:19px;}
-  .h-hook-sub{font-size:14.5px;}
-  .sec{padding:4.6rem 3rem;}
-  .stats{padding:3.6rem 3rem;}
-  .cta{padding:4.6rem 3rem 3.8rem;}
-  .sec-ttl{font-size:30px;}
-  section.sec .sec-hd::after{font-size:76px;top:-28px;}
-  .social-grid{max-width:680px;margin:0 auto;gap:14px;}
-  .media-row{max-width:680px;margin:14px auto 0;}
-  .s-grid{grid-template-columns:repeat(4,1fr);gap:26px;max-width:1000px;margin:0 auto;}
-  .s-num{font-size:46px;}
-  .esc-sub{font-size:15.5px;}
-  .esc-stats{grid-template-columns:repeat(3,1fr);max-width:780px;margin:0 auto 1.4rem;gap:26px;}
-  .esc-num{font-size:30px;}
-  .nc{max-width:820px;margin-left:auto;margin-right:auto;}
-  .nc-ttl{font-size:18px;}
-  .nc-body,.nc-list li{font-size:14px;}
-  .tl-wrap{max-width:720px;margin:0 auto;}
-  .el-grid{grid-template-columns:repeat(7,1fr);gap:12px;max-width:1000px;margin:0 auto;}
+  html{scroll-padding-top:90px;}
+  .nav{height:72px;padding:0 40px;}
+  .nav-links{display:flex;}
+  .nav-cta{display:inline-block;}
+  .nav-burger{display:none;}
+  .page:not(#page-home).on{padding-top:72px;}
+  .hero{grid-template-rows:none;grid-template-columns:minmax(0,46fr) minmax(0,54fr);}
+  .hero-l{padding:120px 56px 60px 60px;}
+  .hero-r{border-top:0;border-left:1px solid var(--line);}
+  .h-title{font-size:72px;}
+  .h-hook-text{font-size:20px;}
+  .btns{flex-direction:row;flex-wrap:wrap;}
+  .btns a{min-width:250px;}
+      .sec,.stats,.social,.cta{padding:5rem 60px;}
+  .sec>*,.stats>*,.social>*,.cta>*{max-width:1160px;margin-left:auto;margin-right:auto;}
+  .sec-ttl{font-size:44px;margin-bottom:2.2rem;}
+  .page:not(#page-home) .sec:first-child .sec-ttl{font-size:56px;}
+  .s-grid{grid-template-columns:repeat(4,1fr);gap:40px;}
+  .s-num{font-size:54px;}
+  .el-grid{grid-template-columns:repeat(7,1fr);gap:12px;}
   .el-wide{grid-column:auto;}
-  .el-foot{text-align:center;}
-  .use-section{max-width:820px;margin:0 auto;}
-  .site-stage-note,.esc-note{max-width:720px;margin-left:auto;margin-right:auto;}
-  .cta-ttl{font-size:42px;}
-  .cta-sub{font-size:15px;}
-  .btn-cta,.btn-yt{max-width:440px;margin-left:auto;margin-right:auto;}
-  .footer{padding:1.8rem 1rem;}
+  .nc{display:grid;grid-template-columns:150px 1fr;column-gap:3rem;align-items:start;}
+  .nc > *{grid-column:2;}
+  .nc-meta{grid-column:1;grid-row:1 / span 12;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:0;}
+  .nc-tags{margin-top:.4rem;}
+  .nc-ttl{font-size:23px;}
+  .loc-row{grid-template-columns:150px 1fr;}
+  .hist-row{grid-template-columns:80px 1fr;}
+  .esc-stats{max-width:760px;margin-left:0;}
+  .cta-ttl{font-size:44px;}
+  .cta .btn-cta,.cta .btn-yt{max-width:420px;}
+  .f-ghost{font-size:200px;margin-bottom:-26px;}
+  .tl-wrap{max-width:760px;}
 }
+
+/* impeccable 바닥선 반영 */
+.sec-kicker2,.s-kicker,.h-badge,.h-en{display:none;}
+.sec-hd{margin-bottom:1.1rem;}
+.h-hook-label{display:none;}
+.esc-step{color:var(--dim);}
+::selection{background:rgba(194,119,63,.35);color:#F4EFE3;}
+input,textarea{caret-color:var(--cop2);}
+*::-webkit-scrollbar{width:11px;height:11px;}
+*::-webkit-scrollbar-track{background:#0A0B0A;}
+*::-webkit-scrollbar-thumb{background:#262722;border-radius:6px;border:2px solid #0A0B0A;}
+*::-webkit-scrollbar-thumb:hover{background:#3A3B32;}
+:focus-visible{outline:2px solid var(--cop2);outline-offset:2px;}
+@media (hover:hover){
+  .site-fig img{transition:transform .6s cubic-bezier(.22,.61,.36,1);}
+  .site-fig:hover img{transform:scale(1.03);}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
+  .page.on{animation:none;}
+}
+
+/* ═══ v6: 시추 코어 로그 세계 (방향 계약 커밋) ═══ */
+:root{
+  --bg:#0C0B09; --bg2:#12100D; --ink:#EDE7DA; --mut:#A49C8D; --dim:#8A8478;
+  --cop:#C2773F; --cop2:#E09A62;
+  --st-g:#2E6B52; --st-q:#B8B2A6; --st-r:#8A3B2A;
+  --line:rgba(194,119,63,.3); --line2:rgba(194,119,63,.14);
+  --mono:'Spline Sans Mono',ui-monospace,monospace; --disp:'Spline Sans Mono',ui-monospace,monospace;
+}
+body{background:
+  linear-gradient(rgba(194,119,63,.045) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(194,119,63,.045) 1px,transparent 1px),
+  linear-gradient(rgba(194,119,63,.02) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(194,119,63,.02) 1px,transparent 1px),
+  var(--bg);
+  background-size:96px 96px,96px 96px,24px 24px,24px 24px;}
+.meas,.nc-date,.s-num,.sp-num,.esc-num,.el-num,.el-sym{font-family:var(--mono);}
+.s-num,.sp-num,.esc-num,.nc-date{font-variant-numeric:tabular-nums;}
+/* 로그북 표지 히어로 */
+.hero{position:relative;display:flex;flex-direction:column;min-height:100dvh;overflow:hidden;background:transparent;}
+.hero .hc{position:relative;padding:78px 22px 20px;flex:1;display:flex;flex-direction:column;justify-content:center;}
+#star-c{position:absolute;inset:0;width:100%;height:100%;opacity:.35;pointer-events:none;}
+#hero3d{display:none;position:absolute;pointer-events:none;} /* 모바일: 글 뒤 겹침 제거 */
+.log-head{display:flex;align-items:center;gap:12px;margin-bottom:1.1rem;padding-bottom:.8rem;border-bottom:1px solid var(--line);}
+.log-head-id{display:flex;flex-direction:column;gap:3px;}
+.log-head-id .meas{font-size:11.5px;letter-spacing:.12em;color:var(--cop2);}
+.h-title{font-family:var(--serif);font-weight:900;font-size:37px;line-height:1.16;letter-spacing:-.02em;margin-bottom:.6rem;}
+.h-sub{font-size:13.5px;color:var(--mut);margin-bottom:1.1rem;}
+.log-meas{border-top:1px solid var(--line);margin-bottom:1.1rem;}
+.meas-row{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:.48rem 0;border-bottom:1px solid var(--line2);align-items:baseline;}
+.meas-k{font-size:12px;color:var(--dim);}
+.meas-v{font-family:var(--mono);font-size:19px;color:var(--cop2);}
+.meas-v i{font-style:normal;font-family:var(--sans);font-size:12px;color:var(--mut);margin-left:7px;}
+.stamp{position:absolute;right:18px;bottom:36%;width:116px;height:116px;padding:10px;border:2px solid rgba(194,119,63,.75);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;transform:rotate(-9deg);box-shadow:inset 0 0 0 4px rgba(194,119,63,.14);color:var(--cop2);pointer-events:none;}
+.stamp::before{content:'';position:absolute;inset:7px;border:1px solid rgba(194,119,63,.45);border-radius:50%;}
+.stamp span{font-weight:700;font-size:14px;letter-spacing:.08em;}
+.stamp small{font-family:var(--mono);font-size:11px;color:var(--cop);}
+.cover-strip{margin:0;position:relative;height:30dvh;min-height:190px;border-top:1px solid var(--line);}
+.cover-strip img{width:100%;height:100%;object-fit:cover;object-position:center 60%;filter:saturate(.9) contrast(1.02);}
+.cover-strip::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),transparent 35%);pointer-events:none;}
+.cover-strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:9px 22px;background:rgba(12,11,9,.82);border-top:1px solid var(--line2);font-size:12px;color:var(--mut);display:flex;gap:12px;align-items:baseline;}
+.cover-strip .meas{font-size:11px;color:var(--cop);letter-spacing:.14em;}
+
+/* 표지 도판 슬라이더 */
+.cover-swiper{overflow:hidden;}
+.cover-swiper .swiper-wrapper{display:flex;height:100%;}
+.cover-swiper .swiper-slide{flex:0 0 100%;position:relative;}
+.cover-swiper figure{margin:0;height:100%;}
+.cover-pag{position:absolute;right:14px;top:10px;left:auto !important;bottom:auto !important;width:auto !important;z-index:5;}
+.cover-pag .swiper-pagination-bullet{background:rgba(234,229,216,.5);opacity:1;width:7px;height:7px;}
+.cover-pag .swiper-pagination-bullet-active{background:var(--cop2);}
+/* 깊이 눈금 레일 */
+.depth-rail{display:none;}
+@media (min-width:1000px){
+  .depth-rail{display:block;position:fixed;left:0;top:0;bottom:0;width:58px;z-index:900;border-right:1px solid var(--line2);
+    background:repeating-linear-gradient(180deg,var(--line) 0 1px,transparent 1px 24px) 46px 0/8px 100% no-repeat,
+               repeating-linear-gradient(180deg,var(--line) 0 1px,transparent 1px 120px) 38px 0/16px 100% no-repeat;}
+  .depth-cur{position:absolute;left:4px;top:0;transform:translateY(80px);transition:transform .15s linear;font-family:var(--mono);font-size:10.5px;color:var(--cop2);border-top:1.5px solid var(--cop);padding-top:3px;width:46px;}
+  .depth-cur b{font-size:14px;font-weight:600;}
+  .lp,.nav{padding-left:58px;}
+  .nav{padding-left:92px;}
+  .hero .hc{padding:120px 60px 40px;max-width:860px;}
+  .h-title{font-size:66px;}
+  #hero3d{display:none;} /* 1000~1239px: 본문 기둥과 겹쳐서 숨김 */
+  .stamp{right:28px;top:120px;bottom:auto;width:132px;height:132px;} /* 표제 오른쪽 여백(문서 우상단 직인 자리) */
+  .stamp span{font-size:16px;}
+  .cover-strip{height:46dvh;min-height:380px;}
+}
+/* 지층 밴드: 섹션 머리 구분 */
+.page .sec:nth-of-type(3n+1){border-top:4px solid var(--st-g);}
+.page .sec:nth-of-type(3n+2){border-top:4px solid var(--st-q);}
+.page .sec:nth-of-type(3n){border-top:4px solid var(--st-r);}
+.page .sec{border-top-width:4px;}
+/* 주상도형 타임라인 */
+.tl-wrap{padding-left:0;}
+.tl-track{left:64px;background:linear-gradient(180deg,var(--cop) 60%,#242018 100%);width:2px;}
+.tl-row{padding:0 0 1.3rem 88px;}
+.tl-row::before{content:attr(data-depth);position:absolute;left:0;top:2px;font-family:var(--mono);font-size:11px;color:var(--dim);width:52px;text-align:right;}
+.tl-dot{left:56px;}
+/* 뉴스·표 월드 톤 */
+.nc-src{background:var(--cop);color:#0C0B09;}
+.sec-ttl{font-size:28px;}
+@media (min-width:1000px){.sec-ttl{font-size:40px;}.page:not(#page-home) .sec:first-child .sec-ttl{font-size:52px;}}
+
+
+/* 검수 fix 반영 */
+.cta-ey{display:none;}
+.mc-icon{display:none;}
+.tl-dot{font-size:0;}
+.done .tl-dot::after{content:'';width:7px;height:7px;border-radius:50%;background:var(--cop2);display:block;margin:auto;}
+.prog-line{font-size:13px;color:var(--cop2);margin-bottom:1.2rem;border-top:1px solid var(--line);padding-top:.8rem;}
+.f-disc{font-size:12px;color:#8F897C;margin-top:.6rem;}
+.depth-mobile-wrap{position:fixed;top:62px;left:0;right:0;height:2px;z-index:999;background:rgba(194,119,63,.12);}
+.depth-mobile-wrap i{display:block;height:100%;width:0;background:var(--cop);}
+@media (min-width:1000px){.depth-mobile-wrap{display:none;}}
+@media (max-width:480px){
+  .stamp{position:static;transform:rotate(-6deg) scale(.88);margin:.1rem 0 .6rem auto;}
+}
+
+/* 고급화 10종 */
+.h-title,.sec-ttl,.cta-ttl{font-family:'Song Myung','Noto Serif KR',serif;font-weight:400;}
+.anno{position:absolute;z-index:4;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#F0E8D6;text-shadow:0 1px 3px rgba(0,0,0,.8);display:flex;align-items:center;gap:7px;pointer-events:none;}
+.anno i{width:44px;height:1px;background:var(--cop2);position:relative;flex:none;}
+.anno i::before{content:'';position:absolute;left:-3px;top:-2.5px;width:6px;height:6px;border-radius:50%;background:var(--cop2);}
+.anno-r{flex-direction:row-reverse;}
+.anno-r i::before{left:auto;right:-3px;}
+.core-strip{margin:1.6rem 0 2rem;}
+.core-row{display:grid;grid-template-columns:repeat(13,1fr);gap:7px;align-items:end;height:150px;}
+.core-col{display:flex;flex-direction:column;height:86%;border:1px solid var(--line2);background:rgba(194,119,63,.04);}
+.core i{display:block;width:100%;}
+.core i.sg{background:rgba(46,107,82,.75);}
+.core i.sq{background:rgba(184,178,166,.55);}
+.core i.sr{background:rgba(138,59,42,.75);}
+.core{display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:5px;}
+.core b{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--dim);text-align:center;letter-spacing:0;}
+.core-now .core-col{border-color:var(--cop);box-shadow:0 0 0 1px rgba(194,119,63,.35);}
+.core-now b{color:var(--cop2);}
+.core-legend{display:flex;gap:16px;margin-top:.8rem;flex-wrap:wrap;}
+.core-legend span{font-size:11.5px;color:var(--mut);display:flex;align-items:center;gap:6px;}
+.core-legend i{width:12px;height:8px;display:inline-block;}
+.core-legend .sg{background:rgba(46,107,82,.75);} .core-legend .sq{background:rgba(184,178,166,.55);} .core-legend .sr{background:rgba(138,59,42,.75);}
+.core-note{display:block;font-size:11px;color:var(--dim);margin-top:.5rem;letter-spacing:0;}
+.rm{border-top:1px solid var(--line);}
+.rm-row{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:.75rem 0;border-bottom:1px solid var(--line2);}
+.rm-q{font-size:12px;color:var(--dim);padding-top:2px;}
+.rm-t{font-size:13.5px;color:var(--mut);line-height:1.7;}
+.rm-now .rm-t{color:var(--ink);}
+.rm-now .rm-q{color:var(--cop2);}
+.rm-now b{color:var(--cop2);margin-left:6px;font-size:11px;}
+.loc-map{border-top:1px solid var(--line2);padding:1.2rem 0 .4rem;margin-bottom:.4rem;}
+.wp-list{padding-left:1.1rem;display:flex;flex-direction:column;gap:9px;}
+.wp-list li{font-size:13.5px;color:var(--mut);line-height:1.8;}
+.wp-list strong{color:var(--cop2);font-weight:600;}
+.nc-full{margin-top:.9rem;border:1px solid var(--line2);border-radius:2px;}
+.nc-full summary{cursor:pointer;padding:11px 14px;font-size:13px;font-weight:700;color:var(--cop2);list-style:none;}
+.nc-full summary::before{content:'+ ';font-family:var(--mono);}
+.nc-full[open] summary::before{content:'− ';}
+.nc-full-body{padding:4px 14px 14px;border-top:1px solid var(--line2);}
+.nc-full-body p{font-size:13px;color:var(--mut);line-height:1.85;margin-bottom:.8rem;}
+.faq{border-top:1px solid var(--line2);}
+.faq summary{cursor:pointer;padding:.95rem 0;font-size:14.5px;font-weight:700;color:var(--ink);list-style:none;display:flex;gap:10px;}
+.faq summary::before{content:'Q';font-family:var(--mono);color:var(--cop);flex:none;}
+.faq p{padding:0 0 1rem 24px;font-size:13.5px;color:var(--mut);line-height:1.8;}
+/* 종이 그레인 + 폴리오 + 장 넘김 */
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");}
+.page{position:relative;}
+.page:not(#page-home)::before{content:var(--folio,'');position:absolute;top:74px;right:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--dim);z-index:5;}
+#page-project{--folio:'제1장 · 프로젝트';}
+#page-field{--folio:'제2장 · 현장';}
+#page-progress{--folio:'제3장 · 진행';}
+#page-news{--folio:'제4장 · 소식';}
+#page-escrow{--folio:'제5장 · 안전거래';}
+#page-guide{--folio:'제6장 · 이용 안내';}
+#page-docs{--folio:'제7장 · 자료실';}
+#page-team{--folio:'제8장 · 팀·회사';}
+.page.on{animation:pageIn .55s cubic-bezier(.22,.61,.36,1);transform-origin:50% 0;}
+html,body{overflow-x:clip;} /* 전환 중 3D 투영폭이 가로 스크롤을 만들지 않게 */
+.field-clip{margin:1.6rem 0 0;}
+.field-clip video{display:block;width:100%;max-width:340px;margin:0;border:1px solid var(--line);background:#000;}
+.field-clip figcaption{font-size:12px;color:var(--mut);padding:8px 0;display:flex;gap:12px;align-items:baseline;}
+.field-clip .meas{font-size:10.5px;color:var(--cop);letter-spacing:.14em;}
+@keyframes pageIn{from{opacity:0;transform:perspective(1100px) rotateX(1.6deg) translateY(12px)}to{opacity:1;transform:none}}
+@media (min-width:1000px){
+  .page:not(#page-home)::before{top:86px;right:40px;}
+  .core-row{gap:12px;height:190px;max-width:820px;}
+  .core b{font-size:11.5px;}
+}
+
+/* 폴리싱 2차 */
+.page-plate{margin:0 0 2rem;position:relative;border:1px solid var(--line2);}
+.page-plate img{width:100%;height:220px;object-fit:cover;object-position:center 55%;}
+.page-plate figcaption{padding:9px 12px;border-top:1px solid var(--line2);font-size:12px;color:var(--mut);display:flex;gap:10px;}
+.page-plate .meas{font-size:11px;color:var(--cop);letter-spacing:.14em;}
+@media (min-width:1000px){.page-plate img{height:300px;}}
+/* 주상도: 모바일 가로 스크롤 */
+.core-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+.core-row{min-width:560px;}
+@media (min-width:1000px){.core-row{min-width:0;}}
+/* 펼침 삼각형 완전 제거(iOS) */
+summary::-webkit-details-marker{display:none;}
+/* 뉴스 좌열 마감 */
+@media (min-width:1000px){
+  .nc-meta{border-left:2px solid var(--line);padding-left:12px;}
+  .nc-src,.nc-src2,.nc-src3{border-radius:0;}
+}
+/* 에스크로 수치 키우기 */
+.esc-num{font-size:30px;}
+@media (min-width:1000px){.esc-num{font-size:40px;}}
+/* 버튼 마감 */
+.btn-g:active,.btn-cta:active{transform:translateY(1px);}
+.site-fig figcaption .meas{color:var(--cop);letter-spacing:.14em;font-size:11px;margin-right:8px;}
+
+/* ═══ 파인 프린트 마감 — 고급 인쇄본 디테일 ═══ */
+::selection{background:rgba(194,119,63,.4);color:var(--ink);}
+/* 1) 사진 톤 통일: 따뜻한 아카이브 그레이드 */
+.cover-strip img,.site-fig img,.page-plate img{filter:sepia(.13) saturate(.84) contrast(1.06) brightness(.97);}
+/* 2) 현장 도판 액자화: 매트 + 헤어라인 프레임 */
+.site-fig{background:#14110C;border:1px solid var(--line2);padding:10px;}
+.site-fig img{border:1px solid rgba(194,119,63,.22);display:block;}
+.site-fig figcaption{padding:10px 2px 2px;}
+/* 3) 섹션 표제: 이중 괘선 + 장식 */
+.sec-ttl{position:relative;padding-bottom:1rem;}
+.sec-ttl::after{content:'';position:absolute;left:0;bottom:0;width:76px;border-top:1px solid var(--cop);box-shadow:0 3px 0 rgba(194,119,63,.3);}
+.sec-kicker2::before{content:'◆';font-size:7px;color:var(--cop);margin-right:9px;vertical-align:2px;}
+/* 4) 메뉴: 밑줄이 그어지는 호버 */
+.nav-links a{position:relative;padding-bottom:4px;letter-spacing:.02em;}
+.nav-links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;border-bottom:1px solid var(--cop2);transition:right .32s cubic-bezier(.22,.61,.36,1);}
+.nav-links a:hover::after,.nav-links a.on::after{right:0;}
+/* 5) 버튼: 각 없애고 은은한 채움 스윕 */
+.btn-g,.btn-o,.btn-cta,.btn-yt{border-radius:0;letter-spacing:.03em;}
+.btn-o,.btn-yt{background-image:linear-gradient(rgba(194,119,63,.16),rgba(194,119,63,.16));background-size:0% 100%;background-repeat:no-repeat;background-position:left center;transition:background-size .35s cubic-bezier(.22,.61,.36,1),border-color .25s,color .25s;}
+.btn-o:hover,.btn-yt:hover{background-size:100% 100%;}
+/* 6) 직인: 눌린 자국 느낌 */
+.stamp{box-shadow:inset 0 0 0 4px rgba(194,119,63,.14),0 0 22px rgba(194,119,63,.1);}
+/* 7) 도판 캡션 숨결 */
+.cover-strip figcaption,.site-fig figcaption,.page-plate figcaption{letter-spacing:.02em;}
+/* 8) PC: 표제 더 크게, 측정표 행 공기 */
+@media (min-width:1000px){
+  .h-title{font-size:84px;letter-spacing:-.03em;}
+  .meas-row{padding:.85rem 0;}
+  .sec-ttl{font-size:46px;}
+  .page:not(#page-home) .sec:first-child .sec-ttl{font-size:60px;}
+  .page-plate img{height:340px;}
+}
+/* ═══ 새 페이지(안내·자료실·팀) + 공정표 ═══ */
+.hero-note{margin-top:.9rem;font-size:12.5px;color:var(--dim);}
+.hero-note a{color:var(--cop2);text-decoration:none;border-bottom:1px solid rgba(224,154,98,.4);}
+.gnt-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 2rem;padding-bottom:6px;}
+.gnt{display:grid;grid-template-columns:repeat(9,minmax(96px,1fr));gap:0;min-width:880px;border:1px solid var(--line2);border-left:none;}
+.gnt-q{position:relative;border-left:1px solid var(--line2);padding:12px 10px 14px;display:flex;flex-direction:column;gap:5px;background:rgba(194,119,63,.03);}
+.gnt-q b{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--dim);letter-spacing:.06em;}
+.gnt-q span{font-size:12px;color:var(--mut);line-height:1.5;}
+.gnt-q::before{content:'';height:4px;margin-bottom:4px;background:rgba(194,119,63,.14);}
+.gnt-q.done::before{background:var(--cop);}
+.gnt-q.done b{color:var(--cop2);}
+.gnt-q.now{background:rgba(194,119,63,.1);}
+.gnt-q.now::before{background:linear-gradient(90deg,var(--cop) 55%,rgba(194,119,63,.2) 55%);}
+.gnt-q.now b,.gnt-q.now span{color:var(--ink);}
+.gnt-q.now i{position:absolute;top:8px;right:8px;font-style:normal;font-family:var(--mono);font-size:9.5px;color:#0C0B09;background:var(--cop);padding:2px 6px;letter-spacing:.1em;}
+.gstep-grid{display:flex;flex-direction:column;gap:14px;margin-bottom:1.6rem;}
+.gstep{border:1px solid var(--line2);border-top:3px solid var(--cop);padding:18px 18px 20px;background:rgba(194,119,63,.03);}
+.gstep-n{font-size:12px;color:var(--cop);letter-spacing:.16em;margin-bottom:.5rem;display:block;}
+.gstep-t{font-family:var(--serif);font-weight:900;font-size:19px;margin-bottom:.5rem;}
+.gstep-b{font-size:13.5px;color:var(--mut);line-height:1.8;}
+.doc-grid{display:flex;flex-direction:column;gap:12px;margin-bottom:1.4rem;}
+.doc-card{display:flex;flex-direction:column;gap:5px;border:1px solid var(--line2);padding:16px 18px;text-decoration:none;background:rgba(194,119,63,.03);transition:border-color .25s,background .25s;}
+.doc-card:hover{border-color:var(--cop);background:rgba(194,119,63,.08);}
+.doc-kind{font-size:10px;color:var(--cop);letter-spacing:.18em;}
+.doc-t{font-family:var(--serif);font-weight:900;font-size:17.5px;color:var(--ink);}
+.doc-b{font-size:12.5px;color:var(--mut);line-height:1.6;}
+.tm-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+.tm{border:1px solid var(--line2);padding:14px 16px;display:flex;flex-direction:column;gap:3px;background:rgba(194,119,63,.03);}
+.tm-role{font-size:10px;color:var(--cop);letter-spacing:.16em;}
+.tm b{font-size:15.5px;color:var(--ink);}
+.tm-sub{font-size:12px;color:var(--dim);}
+@media (min-width:1000px){
+  .gstep-grid{flex-direction:row;}
+  .gstep{flex:1;}
+  .doc-grid{display:grid;grid-template-columns:1fr 1fr;}
+  .tm-grid{grid-template-columns:repeat(3,1fr);}
+  .nav-links{gap:22px;}
+  .doc-grid .doc-card:last-child{grid-column:1/-1;}
+}
+/* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 보석 + 그 아래 직인 */
+@media (min-width:1240px){
+  #hero3d{display:block;inset:auto;left:940px;width:min(480px,calc(100vw - 1060px));height:52%;top:8%;opacity:.85;}
+  .stamp{right:-250px;top:58%;bottom:auto;} /* 본문 기둥 밖, 보석 아래 */
+}
+
 </style>
 </head>
 <body>
@@ -444,174 +599,88 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
   </defs>
 </svg>
 
-<div class="lp">
-<h1 class="sr-only">MPC RWA 리포트 — 몽골 차간톨고이 광산 프로젝트</h1>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <canvas id="hero3d"></canvas>
-  <div class="hero-radial"></div>
-  <div class="hero-scan"></div>
-  <canvas id="star-c"></canvas>
-  <div class="ring-bg">
-    <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
-      <circle cx="150" cy="150" r="145" stroke="#C9A84C" stroke-width=".7" stroke-dasharray="5 10"/>
-      <circle cx="150" cy="150" r="110" stroke="#C9A84C" stroke-width=".4" stroke-dasharray="3 14"/>
-    </svg>
-  </div>
-  <svg class="hero-mtn" viewBox="0 0 400 70" preserveAspectRatio="none">
-    <path d="M0,70 L0,38 L30,22 L58,36 L90,10 L120,32 L150,6 L178,28 L205,16 L232,32 L258,20 L285,38 L312,18 L340,34 L370,24 L400,32 L400,70Z" fill="#0A1205" opacity=".6"/>
-    <path d="M0,70 L0,52 L45,40 L80,54 L118,36 L155,52 L192,40 L228,54 L265,36 L300,52 L340,44 L400,50 L400,70Z" fill="#07090F"/>
-  </svg>
-  <div class="hc">
-    <div class="h-badge"><div class="h-badge-dot"></div>MONGOLIA · RWA · MINING<div class="h-badge-dot"></div></div>
-    <div class="h-sym">
-      <svg width="76" height="96" viewBox="0 0 50.74 64" class="mark-glow" role="img" aria-label="MPC 공식 심볼"><use href="#mpc-mark"/></svg>
-      <div class="h-markword">MPC</div>
-    </div>
-    <div class="h-title">MPC RWA 리포트</div>
-    <div class="h-en">MINERAL PROJECT COIN · RWA REPORT</div>
-    <div class="h-line"></div>
-    <div class="h-sub">몽골 차간톨고이 광산 프로젝트 | 핵심광물 | MPC 코인</div>
-    <div class="h-hook">
-      <div class="h-hook-label">왜 지금인가</div>
-      <div class="h-hook-text">전기차·AI 반도체가 폭발적으로 늘수록<br>희토류·텅스텐·구리 수요는 함께 급등합니다.</div>
-      <div class="h-hook-sub">구소련·중국 탐사로 44종 원소가 확인된 광산.<br>현재 시추가 진행 중 — 지금까지 13개 공을 시추했고,<br>ALS·SGS 국제 공인기관의 분석 보고서로 검증이 이어지고 있습니다.</div>
-    </div>
-    <div class="h-fullname">MPC — Mineral Project Coin</div>
-    <div class="btns">
-      <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-g"><svg width="17" height="17" aria-hidden="true"><use href="#i-shield"/></svg>MPC 에스크로 안전거래 앱</a>
-      <a href="https://www.youtube.com/@MPC.RWA%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" class="btn-o"><svg width="15" height="15" aria-hidden="true"><use href="#i-play"/></svg>유튜브 채널 구독</a>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF -->
-<section class="social">
-  <div class="social-grid">
-    <div class="sp-card fade-in d1">
-      <div><span class="sp-num" data-t="13">0</span><span class="sp-unit">공</span></div>
-      <div class="sp-label">현재까지<br>시추한 시추공</div>
-    </div>
-    <div class="sp-card fade-in d2">
-      <div><span class="sp-num" data-t="44">0</span><span class="sp-unit">종</span></div>
-      <div class="sp-label">구소련·중국 탐사<br>확인 원소</div>
-    </div>
-  </div>
-  <div class="media-row fade-in d3">
-    <span class="media-badge">아주경제</span>
-    <span class="media-text">볼로르지오-ALS 탐사 계약 체결 보도 · 2026.07.01</span>
-  </div>
-</section>
-<div class="qbanner fade-in">
-  <span style="color:#C9A84C;font-size:16px;flex-shrink:0;">"</span>
-  <div class="qb-txt">실물 자산 없는 대다수 코인과 다릅니다. <strong>단계별 검증, 하나씩 공개.</strong></div>
+<header class="nav" id="siteNav">
+  <a class="nav-brand" href="#home"><svg width="20" height="25" viewBox="0 0 50.74 64" aria-hidden="true"><use href="#mpc-mark"/></svg><span>MPC RWA</span></a>
+  <nav class="nav-links" aria-label="주요 메뉴">
+    <a href="#project">프로젝트</a><a href="#field">현장</a><a href="#progress">진행 현황</a><a href="#news">뉴스</a><a href="#escrow">에스크로</a><a href="#guide">이용 안내</a><a href="#docs">자료실</a><a href="#team">팀·회사</a>
+  </nav>
+  <a class="nav-cta" href="https://bag8516-dev.github.io/mpc-escrow/">앱 열기</a>
+  <button class="nav-burger" id="navBurger" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span></button>
+</header>
+<div class="menu-ov" id="menuOv" hidden>
+  <nav class="menu-ov-links" aria-label="전체 메뉴">
+    <a href="#home" onclick="toggleMenu()">홈</a>
+    <a href="#project" onclick="toggleMenu()">프로젝트</a>
+    <a href="#field" onclick="toggleMenu()">현장</a>
+    <a href="#progress" onclick="toggleMenu()">진행 현황</a>
+    <a href="#news" onclick="toggleMenu()">뉴스</a>
+    <a href="#escrow" onclick="toggleMenu()">에스크로</a>
+    <a href="#guide" onclick="toggleMenu()">이용 안내</a>
+    <a href="#docs" onclick="toggleMenu()">자료실</a>
+    <a href="#team" onclick="toggleMenu()">팀·회사</a>
+    <a class="menu-ov-cta" href="https://bag8516-dev.github.io/mpc-escrow/">에스크로 앱 열기</a>
+  </nav>
 </div>
 
-<!-- KEY NUMBERS -->
-<section class="stats" style="background:#07090F;">
-  <div class="s-head fade-in"><span class="s-kicker">KEY NUMBERS</span><div class="s-hline"></div></div>
-  <div class="s-grid">
-    <div class="s-card fade-in d1">
-      <div><span class="s-num" data-t="190">0</span><span class="s-unit">km</span></div>
-      <div class="s-desc">울란바토르~광산<br>포장도로 직결</div>
-      <div class="s-context">물류 인프라 이미 확보</div>
-      <div class="s-bar-wrap"><div class="s-bar" data-w="96"></div></div>
+<div class="depth-mobile-wrap" aria-hidden="true"><i id="depthMobile"></i></div>
+<aside class="depth-rail" aria-hidden="true"><div class="depth-cur" id="depthCur"><b id="depthNum">0</b>m</div></aside>
+<div class="lp" id="top">
+<div class="page" id="page-home">
+<section class="hero">
+  <canvas id="star-c"></canvas>
+  <canvas id="hero3d"></canvas>
+  <div class="hc">
+    <div class="log-head">
+      <svg width="34" height="43" viewBox="0 0 50.74 64" class="mark-glow" role="img" aria-label="MPC 공식 심볼"><use href="#mpc-mark"/></svg>
+      <div class="log-head-id"><span class="meas">LOG No.MPC-2026</span><span class="meas">TSAGAAN TOLGOI · MONGOLIA</span></div>
     </div>
-    <div class="s-card fade-in d2">
-      <div><span class="s-num" data-t="10">0</span><span class="s-unit">km</span></div>
-      <div class="s-desc">페그마타이트<br>노두 연장</div>
-      <div class="s-context">희토류 광화 가능성 높은 규모</div>
-      <div class="s-bar-wrap"><div class="s-bar" data-w="70"></div></div>
+    <h1 class="h-title">차간톨고이<br>시추 탐사 기록</h1>
+    <div class="h-sub">MPC — Mineral Project Coin · 핵심광물 RWA 리포트</div>
+    <div class="log-meas">
+      <div class="meas-row"><span class="meas-k">시추공</span><span class="meas-v">13<i>공 · 진행 중</i></span></div>
+      <div class="meas-row"><span class="meas-k">확인 원소</span><span class="meas-v">44<i>종 (구소련·중국 탐사)</i></span></div>
+      <div class="meas-row"><span class="meas-k">광구 면적</span><span class="meas-v">6,481<i>ha · 라이선스 XV-022460</i></span></div>
+      <div class="meas-row"><span class="meas-k">검증 기관</span><span class="meas-v">ALS · SGS<i> 분석 보고서 수령</i></span></div>
     </div>
-    <div class="s-card fade-in d3">
-      <div><span class="s-num" data-t="44">0</span><span class="s-unit">종</span></div>
-      <div class="s-desc">구소련·중국 탐사<br>확인 원소</div>
-      <div class="s-context">희토류·텅스텐·구리 포함</div>
-      <div class="s-bar-wrap"><div class="s-bar" data-w="88"></div></div>
+    <div class="stamp" aria-hidden="true"><span>시추 진행 중</span><small>2026 · 제13공</small></div>
+    <div class="btns">
+      <a href="https://bag8516-dev.github.io/mpc-escrow/" class="btn-g"><svg width="17" height="17" aria-hidden="true"><use href="#i-shield"/></svg>MPC 에스크로 안전거래 앱</a>
+      <a href="#project" class="btn-o">기록 열람 — 프로젝트</a>
     </div>
-    <div class="s-card fade-in d4">
-      <div><span class="s-num" data-t="13">0</span><span class="s-unit">공</span></div>
-      <div class="s-desc">현재까지 시추한<br>시추공</div>
-      <div class="s-context">ALS·SGS 분석 보고서 수령 중</div>
-      <div class="s-bar-wrap"><div class="s-bar" data-w="55"></div></div>
-    </div>
+    <div class="hero-note">에스크로가 처음이신가요? <a href="#guide">이용 안내 보기</a></div>
   </div>
-</section>
-<div class="divider"></div>
-
-<!-- 차간톨고이 현장 -->
-<section class="sec" style="background:#05070C;">
-  <div class="sec-hd"><span class="sec-kicker2 fade-in">FIELD · TSAGAAN TOLGOI</span><div class="sec-hline"></div></div>
-  <div class="sec-ttl fade-in">차간톨고이 현장</div>
-  <div class="esc-sub fade-in">2026년 7월 캠프를 세우고 탐사를 시작해, 현재 시추가 진행 중입니다.<br>지금까지 13개 공을 시추했고 ALS·SGS 분석 보고서를 받으며 검증하고 있습니다.<br>아래는 공식 홈페이지에 공개된 실제 현장 사진입니다.</div>
-
-  <div class="swiper site-swiper fade-in">
+  <div class="cover-strip swiper cover-swiper" aria-label="차간톨고이 현장 도판">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0038.jpg" width="960" height="720" loading="lazy" alt="차간톨고이 탐사 캠프 — 트럭, 굴착기, 현장 사무소와 게르"><figcaption>탐사 캠프 구축 — 장비 반입과 현장 사무소 설치</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0039.jpg" width="960" height="720" loading="lazy" alt="초원 위 탐사 캠프 전경"><figcaption>초원 위에 세워진 캠프 전경</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0040.jpg" width="960" height="720" loading="lazy" alt="현장 작업 모습"><figcaption>현장 설치 작업</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0042.jpg" width="960" height="720" loading="lazy" alt="시추 자재와 장비"><figcaption>시추 파이프와 자재 — 탐사 준비</figcaption></figure></div>
-      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0043.jpg" width="960" height="720" loading="lazy" alt="현장 장비"><figcaption>현장에 배치된 장비</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0038.jpg" alt="탐사 캠프 전경 — 트럭, 굴착기, 게르" width="960" height="720" loading="eager"><figcaption><span class="meas">PLATE 02</span> 캠프 구축 — 장비 반입</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0042.jpg" alt="시추 파이프와 자재" width="960" height="720" loading="lazy">
+        <span class="anno" style="left:8%;bottom:34%"><i></i>시추 로드 (드릴 파이프)</span>
+        <span class="anno anno-r" style="right:4%;top:16%"><i></i>시추 리그</span><figcaption><span class="meas">PLATE 01</span> 시추 파이프 · 탐사 캠프, 2026-07</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0039.jpg" alt="크레인으로 사무동 컨테이너를 설치하는 모습" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 03</span> 사무동 컨테이너 설치</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0040.jpg" alt="현장 설치 작업" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 04</span> 현장 설치 작업</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0043.jpg" alt="현장 장비" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 05</span> 배치된 장비</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0044.jpg" alt="일몰 무렵의 시추 현장 — 리그와 코어 박스" width="1280" height="960" loading="lazy"><figcaption><span class="meas">PLATE 07</span> 일몰의 시추 현장 — 리그 가동</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0045.jpg" alt="코어 박스를 기록·측정하는 작업자들" width="1280" height="960" loading="lazy"><figcaption><span class="meas">PLATE 08</span> 코어 박스 기록·측정</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0046.jpg" alt="코어 박스에 담긴 시추 코어" width="1051" height="1686" loading="lazy"><figcaption><span class="meas">PLATE 09</span> 회수된 시추 코어</figcaption></figure></div>
+      <div class="swiper-slide"><figure><img src="assets/site-0047.jpg" alt="시추 로드를 다루는 작업자들" width="1080" height="1687" loading="lazy"><figcaption><span class="meas">PLATE 10</span> 시추 로드 작업</figcaption></figure></div>
     </div>
-    <div class="swiper-pagination site-pag"></div>
-  </div>
-
-  <div class="site-stage fade-in">
-    <div class="site-stage-row">
-      <span class="site-stage-chip on">탐사 <small>진행 중</small></span>
-      <span class="site-stage-chip">개발·채굴</span>
-      <span class="site-stage-chip">가공·정제</span>
-      <span class="site-stage-chip">유통·인도</span>
-    </div>
-    <div class="site-stage-note">광산 생애주기 중 첫 단계인 탐사(시추·분석)가 진행 중입니다. 매장 규모 등 세부 수치는 공인기관 검증이 확정되는 대로 공식 채널에 공개된다고 밝히고 있습니다.</div>
-  </div>
-  <div class="esc-note fade-in">사진 출처: MPC 공식 홈페이지 현장 소식 (globalmpc.tech/operations) · © Bolor Geo MPC Corp.</div>
-</section>
-<div class="divider"></div>
-
-<!-- TIMELINE -->
-<section class="sec" style="background:#07090F;">
-  <div class="sec-hd"><span class="sec-kicker2 fade-in">PROJECT PROGRESS</span><div class="sec-hline"></div></div>
-  <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
-  <div style="background:#0A0E18;border:1px solid #C9A84C1A;border-radius:9px;padding:.8rem;margin-bottom:1.2rem;" class="fade-in d1">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
-      <span style="font-size:11px;color:#C9A84C55;">진행 현황</span>
-      <span style="font-size:12px;font-weight:700;color:#C9A84C;">완료 5 · 진행 중 2 / 8단계</span>
-    </div>
-    <div style="height:5px;background:#0F1825;border-radius:3px;overflow:hidden;">
-      <div id="prog-bar" style="height:100%;width:0;background:linear-gradient(90deg,#C9A84C,#E8C96A);border-radius:3px;transition:width 1.2s cubic-bezier(.22,.61,.36,1);"></div>
-    </div>
-    <div style="display:flex;gap:4px;margin-top:8px;">
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C66;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#C9A84C66;border-radius:2px;"></div>
-      <div style="flex:1;height:3px;background:#1A2438;border-radius:2px;"></div>
-    </div>
-  </div>
-  <div class="tl-wrap">
-    <div class="tl-track" id="tl-track"></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">광구 확보</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">환경영향평가 승인</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">페그마타이트 노두 확인</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">SGS 지표 노두 성분분석 완료</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">ALS 정밀 탐사 계약 체결</span><span class="chip c-done">완료</span></div>
-    <div class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">시추</span><span class="chip c-now">진행 중 · 13공 시추</span></div>
-    <div class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">ALS·SGS 정밀 분석</span><span class="chip c-now">진행 중 · 보고서 수령</span></div>
-    <div class="tl-row pend"><div class="tl-dot">○</div><span class="tl-txt">JORC 자원 평가</span><span class="chip c-pend">예정</span></div>
+    <div class="swiper-pagination cover-pag"></div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- LOCATION & LICENSE -->
-<section class="sec" style="background:#05070C;">
+
+</div>
+
+<div class="page" id="page-project">
+<section id="sec-project" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LOCATION & LICENSE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">차간톨고이 광산 소개</div>
+
+  <figure class="page-plate fade-in" aria-label="탐사 캠프 파노라마">
+    <img src="assets/site-0039.jpg" alt="초원 위 탐사 캠프 파노라마" width="960" height="720" loading="lazy">
+    <span class="anno" style="left:10%;bottom:26%"><i></i>현장 사무소</span>
+    <span class="anno anno-r" style="right:6%;bottom:40%"><i></i>게르 숙영지</span>
+    <figcaption><span class="meas">PLATE 06</span> 캠프 구축 — 사무동 설치 · 2026-07</figcaption>
+  </figure>
 
   <div class="loc-card fade-in d1">
     <div class="loc-header"><span class="loc-header-icon">📍</span><span class="loc-header-label">광산 위치</span></div>
@@ -637,6 +706,22 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
         </div>
       </div>
     </div>
+  </div>
+
+  
+  <div class="loc-map fade-in" role="img" aria-label="광구 위치 약도 — 울란바토르에서 서쪽 190km">
+    <svg viewBox="0 0 640 150" width="100%">
+      <line x1="60" y1="92" x2="520" y2="92" stroke="#C2773F" stroke-width="1" stroke-dasharray="6 5" opacity=".8"/>
+      <circle cx="520" cy="92" r="5" fill="none" stroke="#C2773F" stroke-width="1.4"/>
+      <circle cx="520" cy="92" r="1.8" fill="#C2773F"/>
+      <path d="M60 84 L67 92 L60 104 L53 92 Z" fill="#C2773F" fill-opacity=".15" stroke="#C2773F" stroke-width="1.4"/>
+      <text x="520" y="122" text-anchor="middle" fill="#A49C8D" font-size="13" font-family="Noto Sans KR">울란바토르</text>
+      <text x="60" y="122" text-anchor="middle" fill="#EDE7DA" font-size="13" font-weight="700" font-family="Noto Sans KR">차간톨고이 광구</text>
+      <text x="290" y="80" text-anchor="middle" fill="#C2773F" font-size="12" font-family="Spline Sans Mono">← 서쪽 약 190km · 포장도로</text>
+      <text x="60" y="60" text-anchor="middle" fill="#8A8478" font-size="10.5" font-family="Spline Sans Mono">LICENSE XV-022460</text>
+      <path d="M600 52 L600 28 M600 28 L594 38 M600 28 L606 38" stroke="#8A8478" stroke-width="1.2" fill="none"/>
+      <text x="600" y="66" text-anchor="middle" fill="#8A8478" font-size="10" font-family="Spline Sans Mono">N</text>
+    </svg>
   </div>
 
   <div class="loc-card fade-in d2">
@@ -666,11 +751,61 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
       </div>
     </div>
   </div>
-</section>
-<div class="divider"></div>
 
-<!-- ELEMENTS -->
-<section class="sec" style="background:#07090F;">
+  <div class="loc-card fade-in d3">
+    <div class="loc-header"><span class="loc-header-label">백서 핵심 요약</span></div>
+    <ul class="wp-list">
+      <li>MPC는 단일 코인 사업이 아니라 <strong>광산 RWA 발행 표준 인프라</strong>를 표방합니다 — 자원(L1) → 구조화(L2) → 토큰화(L3) → 유통(L4)의 4계층 구조.</li>
+      <li>첫 자산은 차간톨고이 전략광물 광구 — 규소·리튬·희토류를 담고 있다고 회사는 밝히고 있습니다.</li>
+      <li>매장량·품위 수치는 <strong>JORC / NI 43-101 공인 보고서 확정 전에는 공개하지 않는 원칙</strong>을 명시하고 있습니다.</li>
+      <li>레지스트리·오라클 등 핵심 설계는 국가 중립이며, 몽골은 첫 번째 관할 프로파일입니다.</li>
+      <li>참여 보상 체계(My Mine)는 2026년 9월 opBNB 체인의 Crew 지급으로 전환 완료됐습니다.</li>
+    </ul>
+  </div>
+  <div class="loc-card fade-in d3">
+    <div class="loc-header"><span class="loc-header-label">운영 주체 — 법인 3곳, 역할 3가지</span></div>
+    <ul class="wp-list">
+      <li><strong>Bolor Geo MPC Corp.</strong> — $MPC 토큰 발행사. MPC 생태계의 공식 발행 주체.</li>
+      <li><strong>Bolor Geo SG Pte. Ltd.</strong> — 플랫폼 소프트웨어·Web3 기술 개발 담당.</li>
+      <li><strong>Bolor Geo LLC</strong> — 몽골 현지 광산 법인. 탐사 라이선스 XV-022460 보유, 차간톨고이 프로젝트 수행.</li>
+      <li>발행·개발·광산을 별도 법인이 나눠 맡고, 각 법인의 책임을 명시한다고 공식 홈페이지에 밝히고 있습니다. 경영진은 CEO Bayo Okusanya(프린스턴대), COO Quentin Ho(시카고 부스 MBA), 광산총괄 Altankhuyag Gankhuyag(몽골국립대 광화학) 등 6인 공동창업 체제입니다.</li>
+    </ul>
+  </div>
+  <div class="loc-card fade-in d4">
+    <div class="loc-header"><span class="loc-header-label">체인 전환 안내</span></div>
+    <div class="hist-desc">회사는 BSC 체인 기반 신규 토큰 체계와 <strong class="hist-highlight">40개월에 걸친 교환 일정</strong>을 공지했다고 밝혔습니다. 세부 비율과 절차는 공식 공지 원문을 기준으로 확인하시기 바랍니다. 현재 폴리곤 체인의 MPC는 기존대로 보유·거래가 가능하며, 회원 간 거래는 아래 에스크로를 이용하면 교환 시점까지 안전하게 이동할 수 있습니다.</div>
+  </div>
+</section>
+<section class="stats">
+  <div class="s-head fade-in"><span class="s-kicker">KEY NUMBERS</span><div class="s-hline"></div></div>
+  <div class="s-grid">
+    <div class="s-card fade-in d1">
+      <div><span class="s-num" data-t="190">0</span><span class="s-unit">km</span></div>
+      <div class="s-desc">울란바토르~광산<br>포장도로 직결</div>
+      <div class="s-context">물류 인프라 이미 확보</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="96"></div></div>
+    </div>
+    <div class="s-card fade-in d2">
+      <div><span class="s-num" data-t="10">0</span><span class="s-unit">km</span></div>
+      <div class="s-desc">페그마타이트<br>노두 연장</div>
+      <div class="s-context">희토류 광화 가능성 높은 규모</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="70"></div></div>
+    </div>
+    <div class="s-card fade-in d3">
+      <div><span class="s-num" data-t="44">0</span><span class="s-unit">종</span></div>
+      <div class="s-desc">구소련·중국 탐사<br>확인 원소</div>
+      <div class="s-context">희토류·텅스텐·구리 포함</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="88"></div></div>
+    </div>
+    <div class="s-card fade-in d4">
+      <div><span class="s-num" data-t="13">0</span><span class="s-unit">공</span></div>
+      <div class="s-desc">현재까지 시추한<br>시추공</div>
+      <div class="s-context">ALS·SGS 분석 보고서 수령 중</div>
+      <div class="s-bar-wrap"><div class="s-bar" data-w="55"></div></div>
+    </div>
+  </div>
+</section>
+<section class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">KEY ELEMENTS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">확인된 핵심 원소</div>
   <div class="el-grid">
@@ -685,10 +820,7 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
   <div class="el-foot fade-in d8">* 원소 클릭 시 주요 산업 용도 확인</div>
   <div class="use-section" id="use-section"><div id="el-detail-wrap"></div></div>
 </section>
-<div class="divider"></div>
-
-<!-- MPC COIN -->
-<section class="sec" style="background:#05070C;">
+<section class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">UTILITY TOKEN</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">MPC 코인 소개</div>
   <div class="mc fade-in d1">
@@ -702,12 +834,121 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
     <div class="df-row"><span class="df-arrow">▸</span>바이백 · 계약 대금 결제 · 파생 프로젝트 연계</div>
   </div>
 </section>
-<div class="divider"></div>
+</div>
 
-<!-- NEWS -->
-<section class="sec" style="background:#07090F;">
+<div class="page" id="page-field">
+<section class="social">
+  <div class="social-grid">
+    <div class="sp-card fade-in d1">
+      <div><span class="sp-num" data-t="13">0</span><span class="sp-unit">공</span></div>
+      <div class="sp-label">현재까지<br>시추한 시추공</div>
+    </div>
+    <div class="sp-card fade-in d2">
+      <div><span class="sp-num" data-t="44">0</span><span class="sp-unit">종</span></div>
+      <div class="sp-label">구소련·중국 탐사<br>확인 원소</div>
+    </div>
+  </div>
+  <div class="media-row fade-in d3">
+    <span class="media-badge">아주경제</span>
+    <span class="media-text">볼로르지오-ALS 탐사 계약 체결 보도 · 2026.07.01</span>
+  </div>
+</section>
+<section id="sec-field" class="sec">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">FIELD · TSAGAAN TOLGOI</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">차간톨고이 현장</div>
+  <div class="esc-sub fade-in">2026년 7월 캠프를 세우고 탐사를 시작해, 현재 시추가 진행 중입니다.<br>지금까지 13개 공을 시추했고 ALS·SGS 분석 보고서를 받으며 검증하고 있습니다.<br>아래는 공식 홈페이지에 공개된 실제 현장 사진입니다.</div>
+
+  <div class="swiper site-swiper fade-in">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0038.jpg" width="960" height="720" loading="lazy" alt="차간톨고이 탐사 캠프 — 트럭, 굴착기, 현장 사무소와 게르"><figcaption><span class="meas">PLATE 02</span> 탐사 캠프 구축 — 장비 반입</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0039.jpg" width="960" height="720" loading="lazy" alt="캠프 구축 — 사무동 컨테이너 설치"><figcaption><span class="meas">PLATE 03</span> 사무동 컨테이너 설치</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0040.jpg" width="960" height="720" loading="lazy" alt="현장 작업 모습"><figcaption><span class="meas">PLATE 04</span> 현장 설치 작업</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0042.jpg" width="960" height="720" loading="lazy" alt="시추 자재와 장비"><figcaption><span class="meas">PLATE 01</span> 시추 파이프와 자재</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0043.jpg" width="960" height="720" loading="lazy" alt="현장 장비"><figcaption><span class="meas">PLATE 05</span> 배치된 장비</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0044.jpg" width="1280" height="960" loading="lazy" alt="일몰 무렵의 시추 현장 — 리그와 코어 박스"><figcaption><span class="meas">PLATE 07</span> 일몰의 시추 현장 — 리그 가동</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0045.jpg" width="1280" height="960" loading="lazy" alt="코어 박스를 기록·측정하는 작업자들"><figcaption><span class="meas">PLATE 08</span> 코어 박스 기록·측정</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0046.jpg" width="1051" height="1686" loading="lazy" alt="코어 박스에 담긴 시추 코어"><figcaption><span class="meas">PLATE 09</span> 회수된 시추 코어</figcaption></figure></div>
+      <div class="swiper-slide"><figure class="site-fig"><img src="assets/site-0047.jpg" width="1080" height="1687" loading="lazy" alt="시추 로드를 다루는 작업자들"><figcaption><span class="meas">PLATE 10</span> 시추 로드 작업</figcaption></figure></div>
+    </div>
+    <div class="swiper-pagination site-pag"></div>
+  </div>
+
+  <figure class="field-clip fade-in">
+    <video src="assets/field-clip-01.mp4" poster="assets/field-clip-01-poster.jpg" muted loop autoplay playsinline preload="metadata"></video>
+    <figcaption><span class="meas">FOOTAGE 01</span> 시추 리그 가동 · 코어 회수 — 현장 촬영, 2026-08</figcaption>
+  </figure>
+
+  <div class="site-stage fade-in">
+    <div class="site-stage-row">
+      <span class="site-stage-chip on">탐사 <small>진행 중</small></span>
+      <span class="site-stage-chip">개발·채굴</span>
+      <span class="site-stage-chip">가공·정제</span>
+      <span class="site-stage-chip">유통·인도</span>
+    </div>
+    <div class="site-stage-note">광산 생애주기 중 첫 단계인 탐사(시추·분석)가 진행 중입니다. 매장 규모 등 세부 수치는 공인기관 검증이 확정되는 대로 공식 채널에 공개된다고 밝히고 있습니다.</div>
+  </div>
+  <div class="esc-note fade-in">사진 출처: MPC 공식 홈페이지 현장 소식 (globalmpc.tech/operations) · © Bolor Geo MPC Corp.</div>
+</section>
+</div>
+
+<div class="page" id="page-progress">
+<section id="sec-progress" class="sec">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">PROJECT PROGRESS</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
+  <div class="meas prog-line fade-in">진행 현황 — 완료 5 · 진행 중 2 / 전체 8구간</div>
+  <div class="gnt-wrap fade-in"><div class="gnt">
+    <div class="gnt-q done"><b>2026 Q1</b><span>탐사 착수</span></div>
+    <div class="gnt-q done"><b>2026 Q2</b><span>백서·웹 공개</span></div>
+    <div class="gnt-q done"><b>2026 Q3</b><span>지갑·퀘스트 출시</span></div>
+    <div class="gnt-q now"><b>2026 Q4</b><span>TGE 준비 · 감사</span><i>현재</i></div>
+    <div class="gnt-q"><b>2027 Q1</b><span>라이선스 갱신</span></div>
+    <div class="gnt-q"><b>2027 Q2</b><span>참조 프로젝트</span></div>
+    <div class="gnt-q"><b>2027 Q3</b><span>API·확장</span></div>
+    <div class="gnt-q"><b>2027 Q4</b><span>거버넌스 개방</span></div>
+    <div class="gnt-q"><b>2028 Q1</b><span>글로벌 확장</span></div>
+  </div></div>
+
+  <div class="core-strip fade-in" aria-label="시추 주상도 모식도">
+    <div class="core-wrap"><div class="core-row"><div class="core"><div class="core-col"><i class="sq" style="height:20%"></i><i class="sg" style="height:39%"></i><i class="sr" style="height:16%"></i><i class="sg" style="height:25%"></i></div><b>D-01</b></div><div class="core"><div class="core-col"><i class="sg" style="height:35%"></i><i class="sq" style="height:28%"></i><i class="sg" style="height:38%"></i></div><b>D-02</b></div><div class="core"><div class="core-col"><i class="sq" style="height:17%"></i><i class="sr" style="height:24%"></i><i class="sg" style="height:44%"></i><i class="sq" style="height:15%"></i></div><b>D-03</b></div><div class="core"><div class="core-col"><i class="sg" style="height:54%"></i><i class="sq" style="height:24%"></i><i class="sr" style="height:22%"></i></div><b>D-04</b></div><div class="core"><div class="core-col"><i class="sq" style="height:29%"></i><i class="sg" style="height:32%"></i><i class="sq" style="height:24%"></i><i class="sg" style="height:15%"></i></div><b>D-05</b></div><div class="core"><div class="core-col"><i class="sr" style="height:16%"></i><i class="sg" style="height:51%"></i><i class="sq" style="height:32%"></i></div><b>D-06</b></div><div class="core"><div class="core-col"><i class="sg" style="height:30%"></i><i class="sq" style="height:41%"></i><i class="sg" style="height:30%"></i></div><b>D-07</b></div><div class="core"><div class="core-col"><i class="sq" style="height:21%"></i><i class="sg" style="height:38%"></i><i class="sr" style="height:23%"></i><i class="sq" style="height:18%"></i></div><b>D-08</b></div><div class="core"><div class="core-col"><i class="sg" style="height:46%"></i><i class="sq" style="height:35%"></i><i class="sg" style="height:19%"></i></div><b>D-09</b></div><div class="core"><div class="core-col"><i class="sq" style="height:26%"></i><i class="sr" style="height:18%"></i><i class="sg" style="height:42%"></i><i class="sq" style="height:13%"></i></div><b>D-10</b></div><div class="core"><div class="core-col"><i class="sg" style="height:35%"></i><i class="sq" style="height:30%"></i><i class="sg" style="height:35%"></i></div><b>D-11</b></div><div class="core"><div class="core-col"><i class="sq" style="height:26%"></i><i class="sg" style="height:57%"></i><i class="sr" style="height:17%"></i></div><b>D-12</b></div><div class="core core-now"><div class="core-col" style="height:62%"><i class="sg" style="height:57%"></i><i class="sq" style="height:43%"></i></div><b>D-13</b></div></div></div>
+    <div class="core-legend"><span><i class="sg"></i>페그마타이트대</span><span><i class="sq"></i>석영·규석대</span><span><i class="sr"></i>산화대</span></div>
+    <div class="core-note meas">모식도 — 구간 색은 상징 표기입니다. 실제 주상도·품위는 공인기관 검증 확정 후 공식 공개됩니다.</div>
+  </div>
+
+  <div class="tl-wrap">
+    <div class="tl-track" id="tl-track"></div>
+    <div data-depth="00m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">광구 확보</span><span class="chip c-done">완료</span></div>
+    <div data-depth="12m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">환경영향평가 승인</span><span class="chip c-done">완료</span></div>
+    <div data-depth="28m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">페그마타이트 노두 확인</span><span class="chip c-done">완료</span></div>
+    <div data-depth="41m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">SGS 지표 노두 성분분석 완료</span><span class="chip c-done">완료</span></div>
+    <div data-depth="57m" class="tl-row done"><div class="tl-dot">✓</div><span class="tl-txt">ALS 정밀 탐사 계약 체결</span><span class="chip c-done">완료</span></div>
+    <div data-depth="72m" class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">시추</span><span class="chip c-now">진행 중 · 13공 시추</span></div>
+    <div data-depth="88m" class="tl-row done"><div class="tl-dot">●</div><span class="tl-txt">ALS·SGS 정밀 분석</span><span class="chip c-now">진행 중 · 보고서 수령</span></div>
+    <div data-depth="104m" class="tl-row pend"><div class="tl-dot">○</div><span class="tl-txt">JORC 자원 평가</span><span class="chip c-pend">예정</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-hd"><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">회사 공식 로드맵 2026 → 2028</div>
+  <div class="rm fade-in">
+    <div class="rm-row"><span class="rm-q meas">2026 Q1</span><span class="rm-t">차간톨고이 탐사 착수 준비 · 핵심 팀 구성 · 법률 기반 마련</span></div>
+    <div class="rm-row"><span class="rm-q meas">2026 Q2</span><span class="rm-t">탐사 지속 · 백서/웹사이트 공개 · opBNB 배포 준비</span></div>
+    <div class="rm-row"><span class="rm-q meas">2026 Q3</span><span class="rm-t">지갑 연결·퀘스트·투표·체크인 출시 · 토큰 출시 준비</span></div>
+    <div class="rm-row rm-now"><span class="rm-q meas">2026 Q4</span><span class="rm-t">TGE 준비 · 생태계 파트너십 · 스마트컨트랙트 감사 <b class="meas">← 현재</b></span></div>
+    <div class="rm-row"><span class="rm-q meas">2027 Q1</span><span class="rm-t">탐사 라이선스 갱신 · 레지스트리·검증 제공자 통합</span></div>
+    <div class="rm-row"><span class="rm-q meas">2027 Q2</span><span class="rm-t">차간톨고이 참조 프로젝트 적용 · 첫 유료 프로젝트 계약 추진</span></div>
+    <div class="rm-row"><span class="rm-q meas">2027 하반기</span><span class="rm-t">엔터프라이즈·API 확장 · 커뮤니티 거버넌스 개방</span></div>
+    <div class="rm-row"><span class="rm-q meas">2028 Q1</span><span class="rm-t">글로벌 시장 확장 · 기관용 원자재 RWA 인프라</span></div>
+  </div>
+  <div class="esc-note fade-in">출처: 공식 홈페이지 로드맵 (globalmpc.tech/roadmap). 진행 상태는 공식 Operations 페이지에서 보고되며, 향후 계획은 규제·기술 여건에 따라 달라질 수 있다고 명시되어 있습니다.</div>
+</section>
+</div>
+
+<div class="page" id="page-news">
+<section id="sec-news" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">LATEST NEWS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">최신 뉴스</div>
+<div class="nc-grid">
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">매일경제TV</span><span class="nc-date">2026.10.08</span></div>
     <div class="nc-ttl">「이슈&피플」 방송 출연 — 자원 확보 전쟁 속 대안은?</div>
@@ -718,6 +959,8 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
       <li>금은 몽골과학기술대 현미경 분석에서 검출, 희토류·루비듐·리튬은 추가 시추 후 공인기관 검증 예정 — "확인된 것과 확인 중인 것을 구분해 투명하게 공개"</li>
     </ul>
     <div class="nc-tags"><span class="nc-tag"># 방송</span><span class="nc-tag"># 시추 13공</span><span class="nc-tag"># 핵심광물</span></div>
+    
+    <details class="nc-full"><summary>방송 전문 펼쳐 읽기 (자동 자막 기반)</summary><div class="nc-full-body"><p>세계 각국이 핵심 광물의 안정적인 확보와 공급망 다변화를 경제안보의 핵심 과제로 삼고 있습니다. 최근에는 특히 풍부한 광물 자원을 보유한 몽골이 자원 개발 시장으로 주목받고 있습니다. 오늘은 몽골에서 핵심 광물 탐사을 하고 있는 볼로르지오의 최병호 경영 총괄 부사장과 함께 몽골의 자원 개발 가능성과 우리나라의 핵심 광물 공급망 전략을 짚어보도록 하겠습니다. 수사장님 안녕하세요. 안녕하세요.</p><p>최근에 세계 각국에서 몽골를 향해서 로브코를 보내고 있습니다.이 몽골이 자원 개발과 관련해서 주목받고 있는 배경 어디에 있다고 보십니까?</p><p>네. 최근 그 인도와 몽골이 그 광물과 전략물 분야에서 협력을 강화하는 등 어 몽골을 향한 국제 사회에 관심이 굉장히 뜨겁습니다. 어 저희도 몽골을 선택한 이유가 어 이와 맥락이 같은데요. 어 몽골은 국가 경제 규모나 잠재 가치가 약 1400조원에 달하는 80여 중여 광물이 부존된 자원 부국입니다. 광업이 국가 경제의 핵심 산업이기 때문에 어 법과 행정 체계가 비교적 잘 갖춰져 있고 특히 중국과 러시아 사이에서 제3회 이웃 외교를 펼치고 있기 때문에 한국과의 협력 의지도 굉장히 강합니다. 어 서울에서 비행기로 약 3세시간대 거리라 현장 관리도 수월하다는 장점이 있습니다. 어, 특히 저희가 어, 탐사 중인 차간 톨고의 광고의 경우 도로, 교통, 전기, 물 등 어 인프라가 전부 잘 구축되어 있어서 현장 탐사 및 개발을 진행하데 있어서 최적에 인프라를 갖추고 있습니다. 어, 저희는 2023년도에 몽골 법인을 설립하였고 어, 현재 어, 탐사 라이센스도 취득하였습니다. 어 울란바토로 본사와 어 서울의 어 사무소를 두어서 두 거점을 잘 운영해 나가고 있습니다. 지난 7월 이재명 대통령이 몽골를 국빈 방문하고 또 한 몽골 정상 회담을 진행한 바 있습니다. 그리고이어서 지난달 29일에는 일본과 몽골의 정상 회담이 진행됐습니다. 이처럼 몽골에 대한 관심이 뜨거운데이 실제 자원 협력과 관련해서이 주목할 만한 결과로 좀 이어지고 있습니까?</p><p>네. 일본 역시 공급망 다변화가 굉장히 큰 숙제이기 때문에 몽골의 풍부한 희소 금속과 어 핵심 광물에 관심이 많습니다. 어 그 잠재력을 몽골로 지금 지정하면서 어 인프라 지원 및 어 공동 탐사 등 실질적인 외교 협력 방안에 대해서 논의한 것으로 저희는 알고 있고요. 어 글로벌 국가들이이 몽골를 전략적 거점으로 살 삼고 있는 이유가 바로 여기에 있습니다.</p><p>네. 글로벌 지정학적 갈등이 이어지면서 히토리와 리튬 등이 핵심 광물의 안정적인 확보가 국가 경쟁 여으로 떠오르고 있는 상황입니다. 현재 우리나라의 핵심 광물 부존 현황 그리고 자원 개발 가능성 어느 정도라고 보십니까? 아, 네. 어, 솔직히 말씀드리면 우리나라는 그 핵심 광물 보존 여건이 넉넉한 나라는 아닙니다. 어, 에너지 경제 연구원에 따르면 어, 2024년 기준으로 했을 때 정부가 지정한 어, 핵심 강물 33종 가운데 어 30종이 어 전량 수입 의존에에 의존을 하고 있습니다. 어, 다만 그 가능성이 없는 건 아닌데요. 어, 대표적인 예가 그 영월 상동 강산입니다. 지난해 재동을 다시 했고 올해 어 상업적인 텅스텐 생산을 어 진행하고 있는데요. 어 한때 세계 최대 텅스 강산이었던 곳이 이제 다시 제개가 된 거죠. 어 결국 국내 자원은 어 전량 자급이 아니라 어 일부 전략 광물의 거점으로 활용이 돼야 되고 나머지는 어 해외 어 자원개로 개발로 채워져야 하는 그런 구조라고 생각합니다.</p><p>말씀하신 것처럼 우리나라의이 핵심 광물 상당 부분을 수입에 의존하고 있는 상황입니다.이 국내 자원만으로는 공급망을 안정화하기가 굉장히 어려운 상황인데 현실적으로 봤을 때 어떤 대응 전략이 필요하다고 보십니까?네 네. 저는 세 가지 축이 어 동시에 진행돼야 된다고 생각하고 있는데요. 첫 번째는 어 해외 자원 개발을 통한 직접 지분의 확보. 두 번째는 비축 확대. 세 번째는 재자원화입니다. 특히 재자원화는 어 정부도 현재 7%인 핵심광물 재자원화율을 어 2023 2030년까지 20%로 어 끌어 올리겠다는 목표를 설정하였는데요. 어 그러나 비축 어 비축과 재원화는 버티기 전력의 일환으로 볼 수 있고요. 근본적으로는 공급원을 늘리는데 어 해외 해외 자원을 개발하는 것에 중점을 둬야 된다고 생각하고 있습니다. 어 특정 국가 한 곳에 의존하지 않고 어 여러 나라의 공급처를 어 분산시켜서 이것이 가장 현실적인 공급망 안정와 어 전략으로 수립될 수 있도록 노력을 해야 된다고 생각합니다.</p><p>네. 현재 몽골에서 진행 중인이 탐사와 시추 과정에서 주목할 만한 광물이나이 지질학적인 증후가 확인이 됐는지 그리고 또이 전략 광물의 부존 가능성 어떤 기준에 따라서 이렇게 확인이 되는 건가요?네 네. 그 차간 톨구의 광구는 어 몽골 볼가나이막 바양노르솜 어에 위치해 있고요. 6,481의 규모의 어 광고입니다. 어 지금까지 13개의 공을 시초하였고 국제 공인 분석 기관인 ALS와 SGS로부터 수차례 어 분석 보고서를 전달받았으며 투명하게 검증을 진행하고 있습니다. 어 가장 주목하고 있는 첫 번째는 어 배운모입니다. 어 배운모가 풍부한 페그마 타이트 층이 어 여러 광구에서 확인이 됐고 어 여러 공에서 확인이 되었고 일부 공에서는 녹색 배군모도 관찰이 되어서 어 굉장히 기대하는 바가 큽니다. 분석 결과 약 60조원 규모의 가치 평가가 이루어질 것으로 예상을 하고 있고요. 어 두 번째는 금입니다. 어 몽골 과학 기술대학교에서 어 입자를 현미경으로 확인했을 때 어 검출이 되었고요. 어, 아직 시추하지 않은 어, 지역도 있기 때문에 어, 기대감이 높아지고 있습니다. 또한 히토류 발견 및 루비디움 그리고 리튬 확보 이슈에 대한 것도 현재까지 의미 있는 자료가 나왔지만 어, 추가적으로 시출을 진행한 다음에 어, 공제 분석 기간에 어, 의뢰하여서 객관적으로 검증을 받을 계획입니다. 어, 저희는 확인된 것과 확인 중인 것을 어, 명확하게 구분해서 말씀드리는게 에, 맞다고 생각합니다. 히토류나 리튬 같은이 핵심 광물은 반도체와 배터리뿐만이 아니라 방산, 자동차, 화학 등이 다양한 산업들과 또 연결이 되어 있습니다. 국내 기업들이 해외 자원 개발을 통해서이 확보한 광물을 실제 산업 공급망으로 연결하기 위해서 어떤 생태계가 좀 필요하다고 보십니까?</p><p>네. 광산만 있다고 해서 공급망이 되는 것은 아닙니다. 어 원강을 캐는 것과 반도체 배터리 공장에 어 들어가는 소재 사이에는 어 선광, 정재, 어 가공이라는 긴 중간 단계가 있는데 현재이 긴 중간 단계를 중국에서 많이 검머지고 있다는 것이 어 굉장히 핵심 문제인데요.이를 해결하기 위해서는 세 가지가 필요하다고 생각합니다. 어, 첫 번째는 수요 기업이 개발 초기부터 구매 장기적으로 구매 계약을 설정하는 것. 두 번째는 국내 또는 우반국의 중간 가공 거점을 구축하는 것. 그리고 마지막으로 세 번째는 탐사부터 가공까지 어, 장기 자금을 어, 대줄, 금융을 지원하는 것인데요. 어, 광상 개발사와 가공업체, 수요 기업 그리고 금융이 하나의 사술로 묶여야 비로소 진짜 공급망이 완성된다고 생각합니다.</p><p>네.이 이 자원 개발 사실 장기간의 투자와 불확실성을 감수해야 하는 부분입니다. 앞으로 우리나라가 핵심 광물 공급망에서 경쟁력을 확보하기 위해서 가장 먼저 풀어야 할 과제 어디에 있다고 보십니까?</p><p>네. 저는 일관성이라고 생각합니다. 어, 광산 하나가 탐사해서 어, 생산까지 가는데 보통 10년이 넘게 걸립니다. 어, 그 과정에서 정책이 몇 년마다 바뀌면 민간은 아, 장기적으로이 사업을 진행하데 있어서 굉장히 어려움을 겪을 수밖에 없고요. 정부 정책이 정권과 상관없이 꾸준히 이어져야 되고 어, 민간 역시 국제 기준에 맞는 투명한 데이터로 어, 더욱 신뢰를 쌓아야 하겠습니다. 어 또한 정부가 탐사 리스크를 일부 분담하는 부분 그리고 민간은 현장 실행과 어 기술력을 맞는 명확한 역할 분담과 지원이 뒤파침되어야 된다고 생각합니다. 저희도 확인단 결과는 확인된 대로 진행 중인 것은 진행 중이라고 투명하게 공개하여 한 단계씩 나아가도록 하겠습니다. 이런 신뢰가 쌓여야만이 투자도 따라올 수 있고 결국 국가 공급 경쟁력으로 이어진다고 생각합니다.</p><p>네. 마지막으로이 부사장님께서는 현재이 몽골 현지에서 사업을 하시면서이 한국과 몽골의 어떤 가교 역할을 민간에서 하고 계신 것으로 알고 있습니다. 우리나라의 다른 기업들도 몽골 시장에 관심이 많은데 사실 몽골 시장의 중요성에 대해서는 잘 모르는 부분들도 있습니다. 앞으로이 몽골 시장이 더 얼마나 중요해지는지 대해서 저 시청자들께 마지막으로 한 말씀 좀 부탁드리겠습니다.</p><p>네. 저희가 추진하고 있는 차간 톨고 프로젝트 역시 단순히 광물을 개발하는 사업이 아니라 한국과 몽골이 어 함께 성장할 수 있는 자원 협력의 새로운 모델을 만들어 가는 어 과정이라고 생각합니다. 앞으로도 책임 있는 자원 개발과 지속적인 협력을 통해서 어 대한민국의 자원 안보에 기여하고 한몽 경제 협력의 미래를 여러데 있어서 최선을 다하도록 하겠습니다. 감사합니다.네</p><p>여기까지 듣겠습니다. 지금까지 최병호 블로르지 경영 총괄 부사장과 몽골의 자원 개발 우리나라의 핵심 광물 전략까지 짚어봤습니다. 부사장님 오늘 말씀 감사합니다.</p><p class="meas" style="font-size:11px;color:#8A8478">※ 유튜브 자동 생성 자막을 그대로 옮긴 것으로, 일부 음성 인식 오탈자가 있을 수 있습니다.</p></div></details>
     <a href="https://www.youtube.com/watch?v=7iLVbyigC1Q" class="nc-link"><svg width="13" height="13" aria-hidden="true"><use href="#i-play"/></svg>방송 다시 보기</a>
   </div>
   <div class="nc fade-in d1">
@@ -725,13 +968,19 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
     <div class="nc-ttl">MPC 글로벌 라이브 AMA (트위터 스페이스)</div>
     <div class="nc-body">CEO Bayo Okusanya와 COO Quentin Ho가 출연해 마이닝 RWA와 생태계 로드맵을 직접 설명하는 생방송. 한국시간 10월 15일 0시.</div>
     <div class="nc-tags"><span class="nc-tag"># 생방송</span><span class="nc-tag"># AMA</span></div>
-    <a href="https://x.com/MPC_Global_X" class="nc-link">𝕏 공식 계정에서 참여 (팔로워 41만)</a>
+    <a href="https://x.com/MPC_Global_X" class="nc-link">X 공식 계정에서 참여 (팔로워 41만)</a>
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.29</span></div>
     <div class="nc-ttl">My Mine 보상 체계 전환 완료</div>
     <div class="nc-body">출석·퀘스트 보상이 opBNB 체인의 Crew로 직접 지급되는 방식으로 전환. 남은 BSC Energy는 1:1.2 비율로 보상 청구 가능.</div>
     <div class="nc-tags"><span class="nc-tag"># My Mine</span><span class="nc-tag"># opBNB</span></div>
+  </div>
+  <div class="nc fade-in d1">
+    <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.15</span></div>
+    <div class="nc-ttl">My Mine Vote 출시 — 커뮤니티 투표 기능</div>
+    <div class="nc-body">자격을 갖춘 사용자가 제안을 검토하고 투표해 제품 결정에 참여하는 기능. 가스비 없이 참여하며 모든 표가 opBNB 체인에 기록돼 검증 가능하다고 밝혔습니다.</div>
+    <div class="nc-tags"><span class="nc-tag"># 거버넌스</span><span class="nc-tag"># My Mine</span></div>
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.01</span></div>
@@ -745,11 +994,12 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
     <div class="nc-body">희토류·텅스텐·구리 성분 국제공인기관 확인 완료. 16개 샘플 성분분석.</div>
     <div class="nc-tags"><span class="nc-tag"># SGS</span><span class="nc-tag"># 희토류</span></div>
   </div>
+</div>
 </section>
-<div class="divider"></div>
+</div>
 
-<!-- ESCROW 안전거래 -->
-<section class="sec" style="background:#05070C;">
+<div class="page" id="page-escrow">
+<section id="sec-escrow" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">SAFE TRADE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">MPC 에스크로 — 회원 간 안전거래</div>
   <div class="esc-sub fade-in">상장 전에도 회원끼리 MPC를 안전하게 사고팔 수 있습니다.<br>판매자의 MPC를 블록체인 금고가 먼저 보관하고,<br>구매자의 USDT 입금이 확인되는 순간 자동으로 맞교환합니다.</div>
@@ -778,14 +1028,13 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
 
   <div class="esc-stats fade-in">
     <div class="esc-stat"><div class="esc-num" data-end="2206">0</div><div class="esc-lbl">누적 거래 등록</div></div>
-    <div class="esc-stat"><div class="esc-num" id="escLocked" data-end="473464">0</div><div class="esc-lbl">보관 중 MPC</div></div>
+    <div class="esc-stat"><div class="esc-num" id="escLocked" data-end="443464">0</div><div class="esc-lbl">보관 중 MPC</div></div>
     <div class="esc-stat"><div class="esc-num" data-end="0">0</div><div class="esc-lbl">자산 사고</div></div>
   </div>
-  <div class="esc-note fade-in">보관 수량은 매일 자동 장부 대조로 검증되어 앱에 공개됩니다. 모든 기록은 폴리곤 블록체인에서 누구나 확인할 수 있습니다. 앱은 아래 버튼에서 열 수 있습니다.</div>
+  <div class="esc-note fade-in">보관 수량은 매일 자동 장부 대조로 검증되어 앱에 공개됩니다. 모든 기록은 폴리곤 블록체인에서 누구나 확인할 수 있습니다. 앱은 아래 버튼에서 열 수 있습니다. 처음이시라면 <a href="#guide" style="color:var(--cop2)">이용 안내</a>를 먼저 읽어 보세요.</div>
 </section>
-<div class="divider"></div>
 
-<!-- CTA -->
+
 <section class="cta">
   <div class="cta-bg-grid"></div><div class="cta-bg-rad"></div><div class="cta-border"></div>
   <div class="cta-inner">
@@ -799,12 +1048,71 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
     <div class="cta-close">광구 확보, 환경평가, SGS 분석, ALS 계약, 그리고 시추 13공—<br><strong>하나씩 순서대로 증명되고 있습니다.</strong></div>
   </div>
 </section>
-
+</div>
+<div class="page" id="page-guide">
+<section id="sec-guide" class="sec">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">GETTING STARTED</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">처음 오신 분 이용 안내</div>
+  <div class="esc-sub fade-in">에스크로 거래는 세 단계면 시작할 수 있습니다. 아래 순서대로 한 번만 설정해 두면 이후에는 바로 거래됩니다.</div>
+  <div class="gstep-grid">
+    <div class="gstep fade-in d1"><div class="gstep-n meas">01</div><div class="gstep-t">Trust Wallet 설치</div><div class="gstep-b">앱스토어/플레이스토어에서 "Trust Wallet"을 설치하고 지갑을 만듭니다. 복구 문구 12단어는 종이에 적어 안전한 곳에 보관하세요 — 이 문구가 곧 자산입니다.</div></div>
+    <div class="gstep fade-in d2"><div class="gstep-n meas">02</div><div class="gstep-t">앱 접속 · 지갑 연결</div><div class="gstep-b">공지의 링크로 접속해 첫 화면의 [홈 화면에 앱 설치]를 누르면 앱처럼 쓸 수 있습니다. [지갑 연결하기]를 누르고 Trust Wallet에서 승인하면 준비 끝.</div></div>
+    <div class="gstep fade-in d3"><div class="gstep-n meas">03</div><div class="gstep-t">판매 또는 구매</div><div class="gstep-b">판매는 수량·가격 입력 후 지갑에서 2번 서명하면 장터에 올라갑니다. 구매는 장터에서 [구매하기] 후 2번 서명 — 폴리곤 네트워크의 USDT와 가스비용 POL 약간(0.1개면 충분)이 필요합니다.</div></div>
+  </div>
+  <div class="esc-note fade-in">자산은 사람이 아니라 스마트 컨트랙트가 보관하며, 양쪽 조건이 충족되는 순간 동시에 교환됩니다. 먼저 보내고 못 받는 상황이 구조적으로 불가능합니다.</div>
+</section>
+<section class="sec">
+  <div class="sec-hd"><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">자주 묻는 질문</div>
+    <details class="faq fade-in"><summary>어떻게 접속하나요?</summary><p>공지의 링크를 누르면 어떤 브라우저에서든 바로 이용할 수 있습니다. 자주 쓰실 거라면 첫 화면의 [홈 화면에 앱 설치]로 앱처럼 설치해두면 편합니다.</p></details><details class="faq fade-in"><summary>아이폰인데 홈 화면 설치가 안 돼요</summary><p>카카오톡 안에서는 설치가 안 됩니다. 메뉴(…)에서 [Safari로 열기] → 공유 버튼(⬆) → [홈 화면에 추가] 순서로 진행하세요.</p></details><details class="faq fade-in"><summary>Trust Wallet이 꼭 필요한가요?</summary><p>네. 거래 자산(MPC·USDT)이 본인의 Trust Wallet에 있어야 하고, 모든 거래는 본인이 지갑에서 직접 서명해야 실행됩니다.</p></details><details class="faq fade-in"><summary>판매 조건이 있나요?</summary><p>수량 100~100,000 MPC, 1개당 최소 500원(50원 단위), USDT 환율은 실시간 자동 적용됩니다.</p></details><details class="faq fade-in"><summary>판매 글은 얼마나 유지되나요?</summary><p>24시간 유지됩니다. 기간 내 구매자가 없으면 글은 내려가고, [진행 중] 탭의 [만료 처리]를 눌러야 MPC가 지갑으로 돌아옵니다.</p></details><details class="faq fade-in"><summary>지갑에 '승인 완료 −10,000 MPC'가 떠요. 두 번 나간 건가요?</summary><p>아닙니다. '승인'은 코인 이동이 아니라 허락 서명 기록인데 지갑이 마이너스처럼 표시할 뿐입니다. 잔액을 확인하면 실제로는 전송 1건만큼만 줄어 있습니다.</p></details><details class="faq fade-in"><summary>수수료가 있나요?</summary><p>서비스 수수료는 없습니다. 블록체인 가스비로 거래당 몇십 원 상당의 POL만 듭니다. POL은 거래소에서 1~2개 사두면 수십 번 거래할 수 있습니다.</p></details><details class="faq fade-in"><summary>사기당할 위험은 없나요?</summary><p>자산은 사람이 아니라 스마트컨트랙트가 보관하고, 양쪽 조건이 맞는 순간 동시에 교환됩니다. '먼저 보내고 못 받는' 상황이 구조적으로 불가능합니다.</p></details><details class="faq fade-in"><summary>취소했는데 MPC가 안 들어와요</summary><p>블록체인 처리로 최대 10분 걸릴 수 있습니다. 10분이 지나도 안 오면 앱 하단 [문의]로 지갑 주소를 알려주세요. 관리자가 처리 상태를 확인해 드립니다.</p></details>
+<details class="faq fade-in"><summary>지갑 연결을 눌러도 반응이 없어요</summary><p>① Trust Wallet 설치 여부 확인 → ② Trust Wallet을 완전히 종료 후 재시도 → ③ 그래도 안 되면 브라우저를 껐다 켜고 다시 접속하세요.</p></details><details class="faq fade-in"><summary>PC에서도 이용할 수 있나요?</summary><p>보안을 위해 모바일 전용으로 운영됩니다. 휴대폰으로 이용해 주세요.</p></details><details class="faq fade-in"><summary>'지갑 앱의 네트워크 연결이 불안정합니다' 오류가 반복돼요</summary><p>일부 최신 기종(갤럭시 S25, 폴드7 등)의 Trust Wallet 앱 자체 문제로, 자산과는 무관합니다. Trust Wallet을 완전히 종료한 뒤 홈 화면의 에스크로 앱(또는 삼성 인터넷)으로 접속해 [예비 연결 방식] 버튼을 이용하세요. 이 기종은 Trust Wallet 앱 안에서 주소를 열면 같은 오류가 반복됩니다.</p></details><details class="faq fade-in"><summary>오류창이 떴을 때 어떻게 문의하나요?</summary><p>오류창의 [오류 정보 복사] 버튼을 누르면 원인 파악에 필요한 정보가 복사됩니다. 이를 커뮤니티 문의에 붙여넣으면 바로 확인해 드립니다.</p></details>
+</section>
+</div>
+<div class="page" id="page-docs">
+<section id="sec-docs" class="sec">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">DOCUMENTS</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">자료실</div>
+  <div class="esc-sub fade-in">제작물 문서와 공식 자료를 한곳에 모았습니다. PDF는 바로 열람·저장할 수 있습니다.</div>
+  <div class="doc-grid">
+    <a class="doc-card fade-in d1" href="docs/mpc-escrow-intro.pdf" target="_blank" rel="noopener"><span class="doc-kind meas">PDF</span><span class="doc-t">MPC 에스크로 시스템 소개서</span><span class="doc-b">구조·보안·무인 운영 체계와 안내·거절 상황 40종 정리</span></a>
+    <a class="doc-card fade-in d2" href="docs/mpc-escrow-product.pdf" target="_blank" rel="noopener"><span class="doc-kind meas">PDF</span><span class="doc-t">MPC 에스크로 상품설명서</span><span class="doc-b">기능·거래 조건·수수료를 한 장으로 요약</span></a>
+    <a class="doc-card fade-in d3" href="https://www.globalmpc.tech/docs" target="_blank" rel="noopener"><span class="doc-kind meas">LINK</span><span class="doc-t">MPC 공식 백서</span><span class="doc-b">광산 RWA 발행 인프라의 전체 설계 (공식 홈페이지)</span></a>
+    <a class="doc-card fade-in d4" href="https://www.globalmpc.tech/docs/media-kit" target="_blank" rel="noopener"><span class="doc-kind meas">LINK</span><span class="doc-t">공식 미디어 킷</span><span class="doc-b">로고·심볼 등 공식 브랜드 자료</span></a>
+    <a class="doc-card fade-in d5" href="#news"><span class="doc-kind meas">READ</span><span class="doc-t">매일경제TV 인터뷰 전문</span><span class="doc-b">「이슈&피플」 방송 전문 — 뉴스 페이지에서 펼쳐 읽기</span></a>
+  </div>
+  <div class="esc-note fade-in">소개서·설명서는 이 리포트 제작물이며, 백서·미디어 킷은 공식 홈페이지(globalmpc.tech) 자료입니다.</div>
+</section>
+</div>
+<div class="page" id="page-team">
+<section id="sec-team" class="sec">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">TEAM &amp; ENTITIES</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">팀 · 회사</div>
+  <div class="esc-sub fade-in">공식 홈페이지 팀 페이지에 공개된 경영진과 법인 구조입니다. 발행·개발·광산을 별도 법인이 나눠 맡고 책임을 명시한다고 밝히고 있습니다.</div>
+  <div class="tm-grid">
+    <div class="tm fade-in d1"><span class="tm-role meas">CEO</span><b>Bayo Okusanya</b><span class="tm-sub">미국 · 프린스턴대 철학</span></div>
+    <div class="tm fade-in d1"><span class="tm-role meas">COO</span><b>Quentin Ho</b><span class="tm-sub">미국 · 시카고 부스 금융석사</span></div>
+    <div class="tm fade-in d2"><span class="tm-role meas">광산총괄</span><b>Altankhuyag Gankhuyag</b><span class="tm-sub">몽골 · 몽골국립대 광화작용</span></div>
+    <div class="tm fade-in d2"><span class="tm-role meas">CTO</span><b>Tulgaa Enkhbold</b><span class="tm-sub">몽골 · 노스다코타주립대 산업공학</span></div>
+    <div class="tm fade-in d3"><span class="tm-role meas">준법총괄</span><b>Dashnyam Jargalsaikhan</b><span class="tm-sub">몽골 · Quantic EMBA</span></div>
+    <div class="tm fade-in d3"><span class="tm-role meas">마케팅총괄</span><b>Akash Deshmukh</b><span class="tm-sub">인도 · 암베드카르대 MBA</span></div>
+  </div>
+  <div class="loc-card fade-in d3" style="margin-top:1.6rem">
+    <div class="loc-header"><span class="loc-header-label">법인 3곳 — 역할 3가지</span></div>
+    <ul class="wp-list">
+      <li><strong>Bolor Geo MPC Corp.</strong> — $MPC 토큰 발행사. MPC 생태계의 공식 발행 주체.</li>
+      <li><strong>Bolor Geo SG Pte. Ltd.</strong> — 플랫폼 소프트웨어·Web3 기술 개발.</li>
+      <li><strong>Bolor Geo LLC</strong> — 몽골 현지 광산 법인. 탐사 라이선스 XV-022460 보유, 차간톨고이 프로젝트 수행.</li>
+    </ul>
+  </div>
+  <div class="esc-note fade-in">출처: 공식 홈페이지 팀 페이지 (globalmpc.tech/team) · 6인 공동창업 체제</div>
+</section>
+</div>
 <footer class="footer">
   <div class="f-ghost" aria-hidden="true">MPC</div>
   <div class="f-logo">MPC · MINERAL PROJECT COIN</div>
+  <div class="f-disc">이 사이트는 투자 권유가 아닙니다. 투자 판단과 그 결과는 전적으로 본인 책임입니다.</div>
   <div class="f-links">
-    <a href="https://x.com/MPC_Global_X">𝕏 공식 X</a><span>·</span>
+    <a href="https://x.com/MPC_Global_X">X (트위터)</a><span>·</span>
     <a href="https://t.me/official_mpc_global">텔레그램</a><span>·</span>
     <a href="https://medium.com/@globalmpc2026">미디엄</a><span>·</span>
     <a href="https://www.globalmpc.tech/">공식 홈페이지</a>
@@ -815,35 +1123,14 @@ section.sec .sec-hd::after{content:counter(secn,decimal-leading-zero);font-famil
 
 <script>
 const EL_DATA={
-  nd:{num:'60',sym:'Nd',kr:'네오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0A1A2E 0%,#0F2A1A 40%,#1A2E10 100%)',accent:'#3AAA6A',ringColor:'#3AAA6A33',desc:'세계에서 가장 강력한 영구자석(NdFeB) 핵심 소재. 전기차·풍력발전 모터에 필수.',tags:['영구자석','전기차','풍력'],uses:[{title:'전기차 구동 모터',desc:'EV 1대당 약 1~2kg 소요. 테슬라·현대·BMW 전 전기차에 적용.',tags:['Tesla','현대 아이오닉']},{title:'풍력발전 터빈',desc:'대형 터빈 1기당 수백 kg. 해상풍력 직접구동 방식 핵심.',tags:['해상풍력']},{title:'스마트폰 스피커',desc:'초소형 고출력 진동판. 애플·삼성 전 모델 탑재.',tags:['스마트폰']}],demand:[{l:'전기차·모터',w:72},{l:'풍력발전',w:16},{l:'전자기기',w:12}]},
-  pr:{num:'59',sym:'Pr',kr:'프라세오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0D1A2E 0%,#121828 60%,#0E2030 100%)',accent:'#4A8FD4',ringColor:'#4A8FD433',desc:'Nd와 합금화해 더 강력한 NdPr 자석 생성. 항공우주·군수 활용.',tags:['항공우주','NdPr','군수'],uses:[{title:'NdPr 영구자석',desc:'전기차 모터 효율 직접 향상.',tags:['NdFeB','EV 모터']},{title:'항공우주 합금',desc:'마그네슘·알루미늄 합금 첨가로 내열성·강도 향상.',tags:['항공 합금','군수']},{title:'특수 유리·세라믹',desc:'녹황색 발색제로 특수 유리 제조.',tags:['특수 유리']}],demand:[{l:'영구자석',w:68},{l:'항공·군수',w:20},{l:'세라믹',w:12}]},
-  dy:{num:'66',sym:'Dy',kr:'디스프로슘',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#1A0A2E 0%,#220A20 50%,#1A0E28 100%)',accent:'#C060E0',ringColor:'#C060E033',desc:'희토류 중 가장 희소·고가. Nd 자석에 소량 첨가 시 고온에서도 자력 유지.',tags:['최희소','고온내열','원자력'],uses:[{title:'고온 내열 자석',desc:'NdFeB에 2~3% 첨가 시 180°C에서도 자력 유지.',tags:['고온 내열','EV']},{title:'원자로 제어봉',desc:'높은 중성자 흡수 단면적. 원자력 발전소 안전 소재.',tags:['원자로']},{title:'산업 로봇·드론',desc:'고정밀 소형 모터에 필수.',tags:['로봇','드론']}],demand:[{l:'자석 첨가제',w:80},{l:'원자력',w:12},{l:'로봇·드론',w:8}]},
-  la:{num:'57',sym:'La',kr:'란탄',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#0A1E1A 0%,#0E1A10 50%,#0A1818 100%)',accent:'#40C0A0',ringColor:'#40C0A033',desc:'수소저장합금·광학유리·배터리 전극 소재로 광범위하게 활용.',tags:['NiMH배터리','광학','촉매'],uses:[{title:'니켈-수소 배터리',desc:'하이브리드차 배터리 전극. 도요타 프리우스 등 핵심.',tags:['하이브리드','NiMH']},{title:'고굴절률 광학 유리',desc:'카메라 렌즈·현미경 정밀 광학기기.',tags:['카메라 렌즈']},{title:'석유 정제 촉매',desc:'FCC 공정. 전 세계 정유소 필수 소재.',tags:['FCC 촉매']}],demand:[{l:'배터리·합금',w:42},{l:'정유 촉매',w:34},{l:'광학 유리',w:24}]},
-  ce:{num:'58',sym:'Ce',kr:'세륨',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(135deg,#1E1A08 0%,#2A2010 50%,#1E1808 100%)',accent:'#E0B030',ringColor:'#E0B03033',desc:'희토류 중 지각 함유량 최대. 자동차 배기가스 정화·연마제·LED 형광체.',tags:['자동차촉매','LED','반도체'],uses:[{title:'자동차 삼원촉매',desc:'배기가스 정화. 전 세계 내연기관차 촉매변환기.',tags:['배기가스','촉매']},{title:'LED·OLED 형광체',desc:'백색 LED 황색 형광체. TV·스마트폰 디스플레이.',tags:['LED','OLED']},{title:'반도체 웨이퍼 연마',desc:'CeO₂ 슬러리로 반도체 웨이퍼 정밀 연마.',tags:['반도체 CMP']}],demand:[{l:'자동차 촉매',w:45},{l:'연마·반도체',w:30},{l:'LED',w:25}]},
-  w:{num:'74',sym:'W',kr:'텅스텐',cat:'희소금속·전이금속',catClass:'cm',grad:'linear-gradient(135deg,#0E1A22 0%,#0A1830 50%,#0E1C28 100%)',accent:'#60A0D8',ringColor:'#60A0D833',desc:'금속 중 최고 융점(3,422°C). 절삭공구·방산·반도체 전략 소재.',tags:['최고융점','절삭공구','방산'],uses:[{title:'초경합금 절삭공구',desc:'WC 합금으로 드릴·밀링커터 제조. 금속 가공 산업 필수.',tags:['초경합금','절삭']},{title:'방산·관통자',desc:'고밀도(19.3g/cm³) 탄약 관통자·군용 합금.',tags:['방산','전략물자']},{title:'반도체 배선',desc:'DRAM·낸드플래시 텅스텐 플러그 배선 공정.',tags:['반도체']}],demand:[{l:'절삭·초경합금',w:60},{l:'방산·특수합금',w:25},{l:'반도체',w:15}]},
-  cu:{num:'29',sym:'Cu',kr:'구리',cat:'비철금속·전이금속',catClass:'cm',grad:'linear-gradient(135deg,#1E1008 0%,#2A1A0A 50%,#1E1208 100%)',accent:'#E07840',ringColor:'#E0784033',desc:'탁월한 전기·열 전도성. 전동화·신재생 에너지 전환의 기반 소재.',tags:['전기전도','EV배선','신재생'],uses:[{title:'전기차 배선·모터 권선',desc:'EV 1대당 약 80~100kg. 내연기관 대비 3~4배.',tags:['EV','충전 인프라']},{title:'AI 데이터센터 배선',desc:'GPU 서버·냉각 시스템 전력 배선. AI 인프라 급증으로 수요 폭등.',tags:['AI','데이터센터']},{title:'전력 인프라',desc:'변압기·송전 케이블의 기본 소재. 전력망의 근간.',tags:['전력 케이블','변압기']}],demand:[{l:'전기·전자',w:50},{l:'건축·인프라',w:30},{l:'수송·산업',w:20}]}
+  nd:{num:'60',sym:'Nd',kr:'네오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#C2773F',ringColor:'#C2773F33',desc:'세계에서 가장 강력한 영구자석(NdFeB) 핵심 소재. 전기차·풍력발전 모터에 필수.',tags:['영구자석','전기차','풍력'],uses:[{title:'전기차 구동 모터',desc:'EV 1대당 약 1~2kg 소요. 테슬라·현대·BMW 전 전기차에 적용.',tags:['Tesla','현대 아이오닉']},{title:'풍력발전 터빈',desc:'대형 터빈 1기당 수백 kg. 해상풍력 직접구동 방식 핵심.',tags:['해상풍력']},{title:'스마트폰 스피커',desc:'초소형 고출력 진동판. 애플·삼성 전 모델 탑재.',tags:['스마트폰']}],demand:[{l:'전기차·모터',w:72},{l:'풍력발전',w:16},{l:'전자기기',w:12}]},
+  pr:{num:'59',sym:'Pr',kr:'프라세오디뮴',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#2E6B52',ringColor:'#C2773F33',desc:'Nd와 합금화해 더 강력한 NdPr 자석 생성. 항공우주·군수 활용.',tags:['항공우주','NdPr','군수'],uses:[{title:'NdPr 영구자석',desc:'전기차 모터 효율 직접 향상.',tags:['NdFeB','EV 모터']},{title:'항공우주 합금',desc:'마그네슘·알루미늄 합금 첨가로 내열성·강도 향상.',tags:['항공 합금','군수']},{title:'특수 유리·세라믹',desc:'녹황색 발색제로 특수 유리 제조.',tags:['특수 유리']}],demand:[{l:'영구자석',w:68},{l:'항공·군수',w:20},{l:'세라믹',w:12}]},
+  dy:{num:'66',sym:'Dy',kr:'디스프로슘',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#B8B2A6',ringColor:'#C2773F33',desc:'희토류 중 가장 희소·고가. Nd 자석에 소량 첨가 시 고온에서도 자력 유지.',tags:['최희소','고온내열','원자력'],uses:[{title:'고온 내열 자석',desc:'NdFeB에 2~3% 첨가 시 180°C에서도 자력 유지.',tags:['고온 내열','EV']},{title:'원자로 제어봉',desc:'높은 중성자 흡수 단면적. 원자력 발전소 안전 소재.',tags:['원자로']},{title:'산업 로봇·드론',desc:'고정밀 소형 모터에 필수.',tags:['로봇','드론']}],demand:[{l:'자석 첨가제',w:80},{l:'원자력',w:12},{l:'로봇·드론',w:8}]},
+  la:{num:'57',sym:'La',kr:'란탄',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#8A3B2A',ringColor:'#C2773F33',desc:'수소저장합금·광학유리·배터리 전극 소재로 광범위하게 활용.',tags:['NiMH배터리','광학','촉매'],uses:[{title:'니켈-수소 배터리',desc:'하이브리드차 배터리 전극. 도요타 프리우스 등 핵심.',tags:['하이브리드','NiMH']},{title:'고굴절률 광학 유리',desc:'카메라 렌즈·현미경 정밀 광학기기.',tags:['카메라 렌즈']},{title:'석유 정제 촉매',desc:'FCC 공정. 전 세계 정유소 필수 소재.',tags:['FCC 촉매']}],demand:[{l:'배터리·합금',w:42},{l:'정유 촉매',w:34},{l:'광학 유리',w:24}]},
+  ce:{num:'58',sym:'Ce',kr:'세륨',cat:'희토류·란탄족',catClass:'cr',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#E09A62',ringColor:'#C2773F33',desc:'희토류 중 지각 함유량 최대. 자동차 배기가스 정화·연마제·LED 형광체.',tags:['자동차촉매','LED','반도체'],uses:[{title:'자동차 삼원촉매',desc:'배기가스 정화. 전 세계 내연기관차 촉매변환기.',tags:['배기가스','촉매']},{title:'LED·OLED 형광체',desc:'백색 LED 황색 형광체. TV·스마트폰 디스플레이.',tags:['LED','OLED']},{title:'반도체 웨이퍼 연마',desc:'CeO₂ 슬러리로 반도체 웨이퍼 정밀 연마.',tags:['반도체 CMP']}],demand:[{l:'자동차 촉매',w:45},{l:'연마·반도체',w:30},{l:'LED',w:25}]},
+  w:{num:'74',sym:'W',kr:'텅스텐',cat:'희소금속·전이금속',catClass:'cm',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#2E6B52',ringColor:'#C2773F33',desc:'금속 중 최고 융점(3,422°C). 절삭공구·방산·반도체 전략 소재.',tags:['최고융점','절삭공구','방산'],uses:[{title:'초경합금 절삭공구',desc:'WC 합금으로 드릴·밀링커터 제조. 금속 가공 산업 필수.',tags:['초경합금','절삭']},{title:'방산·관통자',desc:'고밀도(19.3g/cm³) 탄약 관통자·군용 합금.',tags:['방산','전략물자']},{title:'반도체 배선',desc:'DRAM·낸드플래시 텅스텐 플러그 배선 공정.',tags:['반도체']}],demand:[{l:'절삭·초경합금',w:60},{l:'방산·특수합금',w:25},{l:'반도체',w:15}]},
+  cu:{num:'29',sym:'Cu',kr:'구리',cat:'비철금속·전이금속',catClass:'cm',grad:'linear-gradient(150deg,#15110D 0%,#1E150E 60%,#241A12 100%)',accent:'#C2773F',ringColor:'#C2773F33',desc:'탁월한 전기·열 전도성. 전동화·신재생 에너지 전환의 기반 소재.',tags:['전기전도','EV배선','신재생'],uses:[{title:'전기차 배선·모터 권선',desc:'EV 1대당 약 80~100kg. 내연기관 대비 3~4배.',tags:['EV','충전 인프라']},{title:'AI 데이터센터 배선',desc:'GPU 서버·냉각 시스템 전력 배선. AI 인프라 급증으로 수요 폭등.',tags:['AI','데이터센터']},{title:'전력 인프라',desc:'변압기·송전 케이블의 기본 소재. 전력망의 근간.',tags:['전력 케이블','변압기']}],demand:[{l:'전기·전자',w:50},{l:'건축·인프라',w:30},{l:'수송·산업',w:20}]}
 };
-
-// 별 파티클
-(function(){
-  const cv=document.getElementById('star-c');if(!cv)return;
-  const cx=cv.getContext('2d');
-  function resize(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
-  resize();window.addEventListener('resize',resize);
-  const ss=Array.from({length:80},()=>({x:Math.random(),y:Math.random(),r:Math.random()<.18?1.3:.5,b:Math.random()*.18+.04,sp:Math.random()*2+1.5,ph:Math.random()*Math.PI*2,g:Math.random()<.4}));
-  let t=0;
-  (function draw(){
-    cx.clearRect(0,0,cv.width,cv.height);
-    const W=cv.width,H=cv.height;
-    ss.forEach(s=>{
-      const a=s.b+(Math.sin(t/s.sp+s.ph)*.5+.5)*(1-s.b)*.7;
-      cx.beginPath();cx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);
-      cx.fillStyle=s.g?`rgba(201,168,76,${a})`:`rgba(160,180,220,${a})`;
-      cx.fill();
-    });
-    t+=.035;requestAnimationFrame(draw);
-  })();
-})();
 
 // IntersectionObserver
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1});
@@ -916,7 +1203,45 @@ function showEl(id,tab){
 <script defer src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 <script>
 // 효과 3종 초기화 — 어느 것이든 로딩 실패 시 해당 효과만 빠지고 내용은 그대로 보인다
+
+
+
+  // 깊이 계기: 스크롤 -> m 환산 (PC 레일 + 모바일 상단 눈금)
+  try {
+    const num = document.getElementById('depthNum'), cur = document.getElementById('depthCur'), mb = document.getElementById('depthMobile');
+    const upd = () => {
+      const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+      const f = Math.min(1, scrollY / max);
+      if (num) num.textContent = Math.round(f * 120);
+      if (cur) cur.style.transform = 'translateY(' + (70 + f * (innerHeight - 140)) + 'px)';
+      if (mb) mb.style.width = (f * 100) + '%';
+    };
+    addEventListener('scroll', upd, { passive: true }); upd();
+  } catch(e){}
+
+// 해시 라우터: 메뉴 = 페이지 전환
+const PAGES = ['home','project','field','progress','news','escrow','guide','docs','team'];
+function showPage(n){
+  if (!PAGES.includes(n)) n = 'home';
+  PAGES.forEach(p => { const el = document.getElementById('page-' + p); if (el) el.classList.toggle('on', p === n); });
+  document.querySelectorAll('.nav-links a, .menu-ov-links a').forEach(a => {
+    const href = a.getAttribute('href') || '';
+    a.classList.toggle('on', href === '#' + n);
+  });
+  window.scrollTo(0, 0);
+  if (window.__sw) setTimeout(() => window.__sw.forEach(s => { try { s.update(); } catch(e){} }), 80);
+}
+window.addEventListener('hashchange', () => showPage(location.hash.slice(1) || 'home'));
+
+// 전체화면 메뉴 토글
+window.toggleMenu = function(){
+  const ov = document.getElementById('menuOv'), b = document.getElementById('navBurger');
+  const open = ov.hasAttribute('hidden');
+  if (open) { ov.removeAttribute('hidden'); b.classList.add('open'); b.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  else { ov.setAttribute('hidden',''); b.classList.remove('open'); b.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+};
 window.addEventListener('DOMContentLoaded', function(){
+  showPage(location.hash.slice(1) || 'home');
   // ⓪-1 anime.js: 첫 화면 등장 연출 + 에스크로 수치 칸 순차 등장
   //      (미로딩·감속모션 설정 시 연출 없이 바로 보임 — 내용 손실 없음)
   try {
@@ -954,17 +1279,33 @@ window.addEventListener('DOMContentLoaded', function(){
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       const scene = new THREE.Scene();
       const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-      cam.position.z = 6;
-      const gold = 0xC9A84C, copper = 0xC2773F;
-      // 공식 심볼과 같은 다이아몬드 결정: 윗면 짧고 아래로 길게 떨어지는 형태
-      const top = new THREE.ConeGeometry(1.35, 0.85, 6, 1, true); top.rotateX(Math.PI); top.translate(0, 0.425, 0);
-      const bot = new THREE.ConeGeometry(1.35, 2.1, 6, 1, true); bot.translate(0, -1.05, 0);
-      const matCore = new THREE.MeshStandardMaterial({ color: copper, metalness: .85, roughness: .3, transparent: true, opacity: .34, side: THREE.DoubleSide });
+      cam.position.z = 8;
+      const gold = 0xC2773F, copper = 0xC2773F; // 금색 제거 — 구리 단일
+      // 공식 MPC 심볼의 3D 보석화: 4면 연꼴 다이아몬드 (위 짧고 아래 긴) — 닫힌 면 + 모서리 선
+      // 심볼 비율: 반폭 7 · 윗높이 6 · 아랫높이 12 → 0.1 배율
+      const HW = .7, HT = .6, HB = 1.2;
+      const verts = [
+        0,  HT, 0,   // 꼭대기
+        HW, 0, 0,    0, 0, HW,   -HW, 0, 0,    0, 0, -HW, // 허리 4점
+        0, -HB, 0,   // 바닥 꼭지
+      ];
+      const idx = [
+        0,2,1, 0,3,2, 0,4,3, 0,1,4,   // 윗면 4
+        5,1,2, 5,2,3, 5,3,4, 5,4,1,   // 아랫면 4
+      ];
+      const gem = new THREE.BufferGeometry();
+      gem.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+      gem.setIndex(idx);
+      gem.computeVertexNormals();
       const grp = new THREE.Group();
-      for (const g of [top, bot]) {
-        grp.add(new THREE.Mesh(g, matCore));
-        grp.add(new THREE.Mesh(g, new THREE.MeshBasicMaterial({ color: gold, wireframe: true, transparent: true, opacity: .55 })));
-      }
+      grp.add(new THREE.Mesh(gem, new THREE.MeshStandardMaterial({
+        color: copper, metalness: .85, roughness: .25, flatShading: true,
+        transparent: true, opacity: .22,
+      })));
+      grp.add(new THREE.LineSegments(new THREE.EdgesGeometry(gem),
+        new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .65 })));
+      grp.scale.setScalar(.85);
+      grp.position.y = .55; // 사진 위쪽에 보석처럼
       scene.add(grp);
       // 금가루 입자 (은하수처럼 떠다니는 먼지)
       const dustGeo = new THREE.BufferGeometry();
@@ -979,12 +1320,13 @@ window.addEventListener('DOMContentLoaded', function(){
       // 주변 입자 고리
       const ringGeo = new THREE.BufferGeometry();
       const pts = [];
-      for (let i = 0; i < 90; i++) { const a = i / 90 * Math.PI * 2; pts.push(Math.cos(a) * 2.6, (Math.random() - .5) * .25, Math.sin(a) * 2.6); }
+      for (let i = 0; i < 90; i++) { const a = i / 90 * Math.PI * 2; pts.push(Math.cos(a) * 1.45, (Math.random() - .5) * .2, Math.sin(a) * 1.45); }
       ringGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
       const ring = new THREE.Points(ringGeo, new THREE.PointsMaterial({ color: gold, size: .03, transparent: true, opacity: .35 }));
       ring.rotation.x = .5; scene.add(ring);
       scene.add(new THREE.AmbientLight(0xffffff, .55));
-      const key = new THREE.PointLight(0xFFE9B0, 1.4); key.position.set(3, 3, 4); scene.add(key);
+      const key = new THREE.PointLight(0xF2D9C4, 1.6); key.position.set(3, 3, 4); scene.add(key);
+      const rim = new THREE.PointLight(0xE09A62, 1.0); rim.position.set(-3, -1, 3); scene.add(rim);
       let tx = 0, ty = 0;
       window.addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5); ty = (e.clientY / innerHeight - .5); }, { passive: true });
       function size() {
@@ -992,16 +1334,21 @@ window.addEventListener('DOMContentLoaded', function(){
         renderer.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
       }
       size(); window.addEventListener('resize', size);
-      (function loop(t) {
-        requestAnimationFrame(loop);
-        if (document.hidden) return; // 백그라운드 탭에서 배터리 절약
-        grp.rotation.y = t * 0.0004 + tx * .6;
-        grp.rotation.x = .12 + ty * .35;
-        grp.position.y = Math.sin(t * 0.0009) * .14 - Math.min(window.scrollY, 600) * 0.0012; // 둥실 + 스크롤 패럴럭스
-        ring.rotation.y = -t * 0.00022;
-        dust.rotation.y = t * 0.00008;
+      let settled = 0;
+      function renderOnce() {
+        grp.rotation.y = .72 + tx * .6;
+        grp.rotation.x = .16 + ty * .35;
+        grp.position.y = .55;
         renderer.render(scene, cam);
+      }
+      (function settle(t) { // 1회 안착 연출 후 정지 — 이후엔 마우스 움직일 때만 다시 그림
+        if (settled > 46) return;
+        settled++;
+        grp.rotation.y = .72 - (46 - settled) * .012;
+        renderer.render(scene, cam);
+        requestAnimationFrame(settle);
       })(0);
+      window.addEventListener('pointermove', () => renderOnce(), { passive: true });
     }
   } catch(e){}
 
@@ -1010,18 +1357,23 @@ window.addEventListener('DOMContentLoaded', function(){
   // ② Swiper: 에스크로 4단계 카드
   try {
     if (window.Swiper) {
-      new Swiper('.esc-swiper', {
+      window.__sw = window.__sw || [];
+      window.__sw.push(new Swiper('.esc-swiper', {
         slidesPerView: 1.18, centeredSlides: true, spaceBetween: 10, loop: false,
         pagination: { el: '.esc-pag', clickable: true },
         breakpoints: { 768: { slidesPerView: 2.2, centeredSlides: false, spaceBetween: 14 },
                        1000: { slidesPerView: 4, centeredSlides: false, spaceBetween: 16 } },
-      });
-      new Swiper('.site-swiper', {
+      }));
+            window.__sw.push(new Swiper('.cover-swiper', {
+        slidesPerView: 1, loop: true, speed: 650,
+        pagination: { el: '.cover-pag', clickable: true },
+      }));
+      window.__sw.push(new Swiper('.site-swiper', {
         slidesPerView: 1.12, centeredSlides: true, spaceBetween: 10, loop: false,
         pagination: { el: '.site-pag', clickable: true },
         breakpoints: { 768: { slidesPerView: 1.6, centeredSlides: true, spaceBetween: 14 },
                        1000: { slidesPerView: 2.2, centeredSlides: true, spaceBetween: 16 } },
-      });
+      }));
     }
   } catch(e){}
 
@@ -1050,6 +1402,12 @@ window.addEventListener('DOMContentLoaded', function(){
     }).then(function(r){ return r.json(); }).then(function(j){
       const locked = j && j[0] && Math.round(j[0].locked);
       if (locked > 0) document.getElementById('escLocked').dataset.end = String(locked);
+    }).catch(function(){});
+    // 방문 집계: 하루 단위 합계만 기록 (개인정보·쿠키 없음, 실패해도 무시)
+    fetch('https://idqnxrwrnisxjbovvpli.supabase.co/rest/v1/rpc/site_hit', {
+      method: 'POST',
+      headers: { apikey: 'sb_publishable_1Pd6p7r3MRyVQ9vZBABNIg_rv7h71Qh', Authorization: 'Bearer sb_publishable_1Pd6p7r3MRyVQ9vZBABNIg_rv7h71Qh', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ p: location.pathname.indexOf('/preview/') >= 0 ? 'preview' : 'home' }),
     }).catch(function(){});
   } catch(e){}
 });
