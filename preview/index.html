@@ -571,10 +571,13 @@ summary::-webkit-details-marker{display:none;}
   .nav-links{gap:22px;}
   .doc-grid .doc-card:last-child{grid-column:1/-1;}
 }
-/* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 보석 + 그 아래 직인 */
+/* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 공식 심볼 + 그 아래 직인 */
+.hero-mark{display:none;}
 @media (min-width:1240px){
-  #hero3d{display:block;inset:auto;left:940px;width:min(480px,calc(100vw - 1060px));height:52%;top:8%;opacity:.85;}
-  .stamp{right:-250px;top:58%;bottom:auto;} /* 본문 기둥 밖, 보석 아래 */
+  #hero3d{display:none;}
+  .hero-mark{display:flex;position:absolute;left:940px;right:3%;top:7%;height:56%;align-items:center;justify-content:center;pointer-events:none;}
+  .hero-mark svg{width:min(430px,calc(100vw - 1100px));height:auto;filter:drop-shadow(0 0 34px rgba(194,119,63,.3));}
+  .stamp{right:-250px;top:60%;bottom:auto;} /* 본문 기둥 밖, 심볼 아래 */
 }
 
 </style>
@@ -629,6 +632,7 @@ summary::-webkit-details-marker{display:none;}
 <section class="hero">
   <canvas id="star-c"></canvas>
   <canvas id="hero3d"></canvas>
+  <div class="hero-mark" aria-hidden="true"><svg viewBox="0 0 50.74 64"><use href="#mpc-mark"/></svg></div>
   <div class="hc">
     <div class="log-head">
       <svg width="34" height="43" viewBox="0 0 50.74 64" class="mark-glow" role="img" aria-label="MPC 공식 심볼"><use href="#mpc-mark"/></svg>
