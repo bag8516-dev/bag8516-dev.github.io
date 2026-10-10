@@ -574,7 +574,7 @@ summary::-webkit-details-marker{display:none;}
 /* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 공식 심볼 + 그 아래 직인 */
 .hero-mark{display:none;}
 @media (min-width:1240px){
-  #hero3d{display:none;}
+  #hero3d{display:none;inset:auto;left:940px;width:min(470px,calc(100vw - 1070px));height:62%;top:4%;opacity:1;}
   .hero-mark{display:flex;position:absolute;left:940px;right:3%;top:6%;height:58%;align-items:center;justify-content:center;pointer-events:none;}
   .hero-mark svg{width:min(430px,calc(100vw - 1100px));height:auto;filter:drop-shadow(0 0 36px rgba(194,119,63,.32));}
   .stamp{right:-230px;top:74%;bottom:auto;} /* 본문 기둥 밖, 심볼 아래 */
@@ -1455,10 +1455,6 @@ window.addEventListener('DOMContentLoaded', function(){
       gem.setIndex(idx);
       gem.computeVertexNormals();
       const grp = new THREE.Group();
-      grp.add(new THREE.Mesh(gem, new THREE.MeshStandardMaterial({
-        color: copper, metalness: .85, roughness: .25, flatShading: true,
-        transparent: true, opacity: .3,
-      })));
       grp.add(new THREE.LineSegments(new THREE.EdgesGeometry(gem),
         new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .9 })));
       grp.scale.setScalar(2.1);
@@ -1491,21 +1487,26 @@ window.addEventListener('DOMContentLoaded', function(){
         renderer.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
       }
       size(); window.addEventListener('resize', size);
-      let settled = 0;
-      function renderOnce() {
-        grp.rotation.y = .72 + tx * .6;
-        grp.rotation.x = .16 + ty * .35;
-        grp.position.y = .15;
-        renderer.render(scene, cam);
+      // PC(1240+)에서만 캔버스를 켜고 평면 폴백을 숨긴다 — 3D가 안 되는 기기는 폴백 유지
+      const mq = window.matchMedia('(min-width:1240px)');
+      const mark = document.querySelector('.hero-mark');
+      function applyMode() {
+        const on = mq.matches;
+        cv.style.display = on ? 'block' : '';
+        if (mark) mark.style.display = on ? 'none' : '';
+        if (on) size();
       }
-      (function settle(t) { // 1회 안착 연출 후 정지 — 이후엔 마우스 움직일 때만 다시 그림
-        if (settled > 46) return;
-        settled++;
-        grp.rotation.y = .72 - (46 - settled) * .012;
+      (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(applyMode);
+      applyMode();
+      let spin = .72;
+      (function loop() { // 느린 상시 회전 (탭이 안 보이면 멈춤)
+        requestAnimationFrame(loop);
+        if (!mq.matches || document.hidden) return;
+        spin += .0036;
+        grp.rotation.y = spin + tx * .5;
+        grp.rotation.x = .12 + ty * .3;
         renderer.render(scene, cam);
-        requestAnimationFrame(settle);
-      })(0);
-      window.addEventListener('pointermove', () => renderOnce(), { passive: true });
+      })();
     }
   } catch(e){}
 
