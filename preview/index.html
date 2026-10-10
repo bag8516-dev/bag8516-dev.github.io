@@ -734,7 +734,7 @@ addEventListener('pointermove', e => {
   const t = document.getElementById('rigTilt');
   if (!t || !matchMedia('(min-width:1240px)').matches) return;
   const tx = e.clientX / innerWidth - .5, ty = e.clientY / innerHeight - .5;
-  t.style.transform = 'rotateY(' + (tx * 22) + 'deg) rotateX(' + (-ty * 14) + 'deg)';
+  t.style.transform = 'rotateY(' + (tx * 55) + 'deg) rotateX(' + (-ty * 32) + 'deg)';
 }, { passive: true });
 </script>
   <div class="hero-mark" aria-hidden="true"><svg viewBox="0 0 200 222" xmlns="http://www.w3.org/2000/svg">
