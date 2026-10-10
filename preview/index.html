@@ -574,11 +574,40 @@ summary::-webkit-details-marker{display:none;}
 /* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 공식 심볼 + 그 아래 직인 */
 .hero-mark{display:none;}
 @media (min-width:1240px){
-  #hero3d{display:none;}
-  .hero-mark{display:flex;position:absolute;left:940px;right:3%;top:7%;height:56%;align-items:center;justify-content:center;pointer-events:none;}
-  .hero-mark svg{width:min(430px,calc(100vw - 1100px));height:auto;filter:drop-shadow(0 0 34px rgba(194,119,63,.3));}
+  .hero-mark{display:none;}
+  #hero3d{display:block;inset:auto;left:940px;width:min(470px,calc(100vw - 1070px));height:60%;top:5%;opacity:1;}
   .stamp{right:-230px;top:74%;bottom:auto;} /* 본문 기둥 밖, 심볼 아래 */
 }
+
+/* ═══ 비주얼 보강 (뉴스·에스크로·안내·자료실·팀) ═══ */
+.nc-visual{margin:0 0 1.1rem;border:1px solid var(--line2);background:#14110C;padding:8px;max-width:460px;}
+.nc-visual img{display:block;width:100%;height:auto;border:1px solid rgba(194,119,63,.22);filter:saturate(.88) contrast(1.03);}
+.nc-visual figcaption{font-size:10.5px;color:var(--cop);padding:7px 2px 0;font-family:var(--mono);letter-spacing:.12em;}
+.nc-ico{width:42px;height:42px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--cop2);margin-bottom:.8rem;background:rgba(194,119,63,.06);}
+.nc-ico svg{width:22px;height:22px;}
+.esc-visual{display:flex;flex-direction:column;gap:22px;margin:1.8rem 0 2.2rem;}
+.flow-fig{border:1px solid var(--line2);background:rgba(194,119,63,.03);padding:16px 12px 10px;}
+.flow-fig svg{width:100%;height:auto;display:block;}
+.flow-fig figcaption{font-size:11px;color:var(--dim);font-family:var(--mono);letter-spacing:.1em;padding:8px 4px 2px;}
+.app-shots{display:flex;gap:12px;}
+.app-shot{flex:1;max-width:220px;border:1px solid var(--line);background:#14110C;padding:7px;margin:0;}
+.app-shot img{display:block;width:100%;height:auto;border:1px solid rgba(194,119,63,.25);}
+.app-shot figcaption{font-size:10.5px;color:var(--mut);padding:7px 2px 0;font-family:var(--mono);letter-spacing:.08em;}
+@media (min-width:1000px){
+  .esc-visual{flex-direction:row;align-items:stretch;gap:30px;}
+  .flow-fig{flex:1.4;display:flex;flex-direction:column;justify-content:center;}
+  .app-shots{flex:1;}
+}
+.gstep .nc-ico{margin-bottom:.9rem;}
+.doc-card{flex-direction:row;gap:16px;align-items:center;}
+.doc-cover{flex:none;width:46px;height:60px;border:1.5px solid var(--cop);position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:7px;font-size:9.5px;letter-spacing:.12em;color:var(--cop2);background:linear-gradient(160deg,rgba(194,119,63,.14),rgba(194,119,63,.03));}
+.doc-cover::before{content:'';position:absolute;top:-1.5px;right:-1.5px;border-style:solid;border-width:0 13px 13px 0;border-color:var(--bg) var(--bg) rgba(194,119,63,.55) var(--bg);}
+.doc-tx{display:flex;flex-direction:column;gap:5px;}
+.tm{padding-left:66px;position:relative;justify-content:center;}
+.tm-mono{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:38px;height:38px;border:1.5px solid rgba(194,119,63,.65);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12.5px;color:var(--cop2);background:rgba(194,119,63,.07);}
+.ent-fig{border:1px solid var(--line2);background:rgba(194,119,63,.03);padding:14px 10px 6px;margin-bottom:1.4rem;}
+.ent-fig svg{width:100%;height:auto;display:block;}
+.ent-fig figcaption{font-size:11px;color:var(--dim);font-family:var(--mono);letter-spacing:.1em;padding:6px 6px 4px;}
 
 </style>
 </head>
@@ -596,6 +625,13 @@ summary::-webkit-details-marker{display:none;}
         <path d="M15.5 9 L12 21" stroke-width="1"/>
       </g>
     </symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8.5 21h7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-vote" viewBox="0 0 24 24"><path d="M4 11h16v9H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 11h6M12 3l4 5h-8l4-5Z M10.5 15h3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 3h4M11 3v6L5.5 19a1.5 1.5 0 0 0 1.3 2.2h10.4a1.5 1.5 0 0 0 1.3-2.2L13 9V3M8 15h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-contract" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z M15 3v4h4 M9 11h7M9 14h7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10.5" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7a2 2 0 0 1 2-2h11v3" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="7" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="13.5" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 1 0-5.7l2.3-2.3a4 4 0 0 1 5.7 5.7l-1.5 1.5M14 10a4 4 0 0 1 0 5.7l-2.3 2.3a4 4 0 0 1-5.7-5.7l1.5-1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5L8 5.5Z" fill="currentColor"/></symbol>
@@ -956,6 +992,7 @@ summary::-webkit-details-marker{display:none;}
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">매일경제TV</span><span class="nc-date">2026.10.08</span></div>
     <div class="nc-ttl">「이슈&피플」 방송 출연 — 자원 확보 전쟁 속 대안은?</div>
+    <figure class="nc-visual"><a href="https://www.youtube.com/watch?v=7iLVbyigC1Q" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/7iLVbyigC1Q/hqdefault.jpg" alt="매일경제TV 이슈앤피플 방송 화면" width="480" height="360" loading="lazy"></a><figcaption>FIG 01 · 방송 화면 — 누르면 다시 보기</figcaption></figure>
     <div class="nc-body">최병호 볼로르지오 경영총괄부사장이 매일경제TV에 출연해 밝힌 핵심 내용:</div>
     <ul class="nc-list">
       <li>차간톨고이 광구(6,481ha)에서 지금까지 <strong>시추공 13개</strong>를 뚫었고, ALS·SGS로부터 분석 보고서를 수차례 받아 검증 진행 중</li>
@@ -969,6 +1006,7 @@ summary::-webkit-details-marker{display:none;}
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src nc-src3">공식 X 예고</span><span class="nc-date">2026.10.14 예정</span></div>
+    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-mic"/></svg></div>
     <div class="nc-ttl">MPC 글로벌 라이브 AMA (트위터 스페이스)</div>
     <div class="nc-body">CEO Bayo Okusanya와 COO Quentin Ho가 출연해 마이닝 RWA와 생태계 로드맵을 직접 설명하는 생방송. 한국시간 10월 15일 0시.</div>
     <div class="nc-tags"><span class="nc-tag"># 생방송</span><span class="nc-tag"># AMA</span></div>
@@ -976,24 +1014,28 @@ summary::-webkit-details-marker{display:none;}
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.29</span></div>
+    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-swap"/></svg></div>
     <div class="nc-ttl">My Mine 보상 체계 전환 완료</div>
     <div class="nc-body">출석·퀘스트 보상이 opBNB 체인의 Crew로 직접 지급되는 방식으로 전환. 남은 BSC Energy는 1:1.2 비율로 보상 청구 가능.</div>
     <div class="nc-tags"><span class="nc-tag"># My Mine</span><span class="nc-tag"># opBNB</span></div>
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.15</span></div>
+    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-vote"/></svg></div>
     <div class="nc-ttl">My Mine Vote 출시 — 커뮤니티 투표 기능</div>
     <div class="nc-body">자격을 갖춘 사용자가 제안을 검토하고 투표해 제품 결정에 참여하는 기능. 가스비 없이 참여하며 모든 표가 opBNB 체인에 기록돼 검증 가능하다고 밝혔습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 거버넌스</span><span class="nc-tag"># My Mine</span></div>
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.01</span></div>
+    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-contract"/></svg></div>
     <div class="nc-ttl">볼로르지오-ALS 탐사 계약 체결</div>
     <div class="nc-body">몽골 차간톨고이 ALS 글로벌 탐사 기관과 공식 계약 완료. 정밀 지질 탐사 및 시추로 이어지는 로드맵 본격 가동.</div>
     <div class="nc-tags"><span class="nc-tag"># ALS 계약</span><span class="nc-tag"># 탐사</span></div>
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026 상반기</span></div>
+    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-flask"/></svg></div>
     <div class="nc-ttl">SGS 지표 노두 성분분석 완료</div>
     <div class="nc-body">희토류·텅스텐·구리 성분 국제공인기관 확인 완료. 16개 샘플 성분분석.</div>
     <div class="nc-tags"><span class="nc-tag"># SGS</span><span class="nc-tag"># 희토류</span></div>
@@ -1007,6 +1049,40 @@ summary::-webkit-details-marker{display:none;}
   <div class="sec-hd"><span class="sec-kicker2 fade-in">SAFE TRADE</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">MPC 에스크로 — 회원 간 안전거래</div>
   <div class="esc-sub fade-in">상장 전에도 회원끼리 MPC를 안전하게 사고팔 수 있습니다.<br>판매자의 MPC를 블록체인 금고가 먼저 보관하고,<br>구매자의 USDT 입금이 확인되는 순간 자동으로 맞교환합니다.</div>
+
+  <div class="esc-visual fade-in">
+    <figure class="flow-fig">
+      <svg viewBox="0 0 560 238" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="에스크로 거래 구조도">
+        <defs><marker id="fa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#C2773F"/></marker></defs>
+        <g font-family="'Spline Sans Mono',monospace" font-size="11">
+          <rect x="14" y="78" width="128" height="58" fill="rgba(194,119,63,.06)" stroke="#C2773F" stroke-opacity=".55"/>
+          <text x="78" y="103" fill="#EDE7DA" text-anchor="middle" font-size="14" font-family="'Noto Sans KR',sans-serif" font-weight="700">판매자</text>
+          <text x="78" y="122" fill="#A49C8D" text-anchor="middle" font-size="10.5">MPC 보유</text>
+          <rect x="418" y="78" width="128" height="58" fill="rgba(194,119,63,.06)" stroke="#C2773F" stroke-opacity=".55"/>
+          <text x="482" y="103" fill="#EDE7DA" text-anchor="middle" font-size="14" font-family="'Noto Sans KR',sans-serif" font-weight="700">구매자</text>
+          <text x="482" y="122" fill="#A49C8D" text-anchor="middle" font-size="10.5">USDT 보유</text>
+          <rect x="216" y="48" width="128" height="118" fill="rgba(194,119,63,.1)" stroke="#E09A62"/>
+          <use href="#mpc-mark" x="257" y="60" width="46" height="58"/>
+          <text x="280" y="140" fill="#E09A62" text-anchor="middle" font-size="12" font-family="'Noto Sans KR',sans-serif" font-weight="700">블록체인 금고</text>
+          <text x="280" y="156" fill="#A49C8D" text-anchor="middle" font-size="9.5">사람 아닌 코드가 보관</text>
+          <path d="M142 92 H212" stroke="#C2773F" stroke-width="1.5" marker-end="url(#fa)"/>
+          <text x="177" y="84" fill="#E09A62" text-anchor="middle">① MPC 예치</text>
+          <path d="M418 92 H348" stroke="#C2773F" stroke-width="1.5" marker-end="url(#fa)"/>
+          <text x="383" y="84" fill="#E09A62" text-anchor="middle">② USDT 입금</text>
+          <path d="M216 152 C 160 152 120 150 86 140" stroke="#2E6B52" stroke-width="1.5" fill="none" marker-end="url(#fa)"/>
+          <path d="M344 152 C 400 152 440 150 474 140" stroke="#2E6B52" stroke-width="1.5" fill="none" marker-end="url(#fa)"/>
+          <text x="148" y="178" fill="#7FBFA3" text-anchor="middle">USDT 수령</text>
+          <text x="412" y="178" fill="#7FBFA3" text-anchor="middle">MPC 수령</text>
+          <text x="280" y="208" fill="#EDE7DA" text-anchor="middle" font-size="12">③ 조건이 맞는 순간 <tspan fill="#E09A62" font-weight="700">동시 맞교환</tspan> — 먼저 보내고 못 받는 상황이 없음</text>
+        </g>
+      </svg>
+      <figcaption>FIG 02 · 에스크로 거래 구조</figcaption>
+    </figure>
+    <div class="app-shots fade-in">
+      <figure class="app-shot"><img src="../assets/app-shot-01.jpg" alt="에스크로 앱 시작 화면" width="780" height="1688" loading="lazy"><figcaption>실제 앱 — 시작 화면</figcaption></figure>
+      <figure class="app-shot"><img src="../assets/app-shot-02.jpg" alt="에스크로 앱 장터 화면 — 신뢰 배지와 판매 글" width="780" height="1688" loading="lazy"><figcaption>장터 — 매일 검증 배지</figcaption></figure>
+    </div>
+  </div>
 
   <div class="swiper esc-swiper fade-in">
     <div class="swiper-wrapper">
@@ -1059,9 +1135,9 @@ summary::-webkit-details-marker{display:none;}
   <div class="sec-ttl fade-in">처음 오신 분 이용 안내</div>
   <div class="esc-sub fade-in">에스크로 거래는 세 단계면 시작할 수 있습니다. 아래 순서대로 한 번만 설정해 두면 이후에는 바로 거래됩니다.</div>
   <div class="gstep-grid">
-    <div class="gstep fade-in d1"><div class="gstep-n meas">01</div><div class="gstep-t">Trust Wallet 설치</div><div class="gstep-b">앱스토어/플레이스토어에서 "Trust Wallet"을 설치하고 지갑을 만듭니다. 복구 문구 12단어는 종이에 적어 안전한 곳에 보관하세요. 이 문구만 있으면 지갑을 되살릴 수 있습니다.</div></div>
-    <div class="gstep fade-in d2"><div class="gstep-n meas">02</div><div class="gstep-t">앱 접속 · 지갑 연결</div><div class="gstep-b">공지의 링크로 접속해 첫 화면의 [홈 화면에 앱 설치]를 누르면 앱처럼 쓸 수 있습니다. [지갑 연결하기]를 누르고 Trust Wallet에서 승인하면 준비 끝.</div></div>
-    <div class="gstep fade-in d3"><div class="gstep-n meas">03</div><div class="gstep-t">판매 또는 구매</div><div class="gstep-b">판매는 수량·가격 입력 후 지갑에서 2번 서명하면 장터에 올라갑니다. 구매는 장터에서 [구매하기] 후 2번 서명 — 폴리곤 네트워크의 USDT와 가스비용 POL 약간(0.1개면 충분)이 필요합니다.</div></div>
+    <div class="gstep fade-in d1"><div class="nc-ico" aria-hidden="true"><svg><use href="#i-wallet"/></svg></div><div class="gstep-n meas">01</div><div class="gstep-t">Trust Wallet 설치</div><div class="gstep-b">앱스토어/플레이스토어에서 "Trust Wallet"을 설치하고 지갑을 만듭니다. 복구 문구 12단어는 종이에 적어 안전한 곳에 보관하세요. 이 문구만 있으면 지갑을 되살릴 수 있습니다.</div></div>
+    <div class="gstep fade-in d2"><div class="nc-ico" aria-hidden="true"><svg><use href="#i-link"/></svg></div><div class="gstep-n meas">02</div><div class="gstep-t">앱 접속 · 지갑 연결</div><div class="gstep-b">공지의 링크로 접속해 첫 화면의 [홈 화면에 앱 설치]를 누르면 앱처럼 쓸 수 있습니다. [지갑 연결하기]를 누르고 Trust Wallet에서 승인하면 준비 끝.</div></div>
+    <div class="gstep fade-in d3"><div class="nc-ico" aria-hidden="true"><svg><use href="#i-swap"/></svg></div><div class="gstep-n meas">03</div><div class="gstep-t">판매 또는 구매</div><div class="gstep-b">판매는 수량·가격 입력 후 지갑에서 2번 서명하면 장터에 올라갑니다. 구매는 장터에서 [구매하기] 후 2번 서명 — 폴리곤 네트워크의 USDT와 가스비용 POL 약간(0.1개면 충분)이 필요합니다.</div></div>
   </div>
   <div class="esc-note fade-in">자산은 사람이 아니라 스마트 컨트랙트가 보관하며, 양쪽 조건이 충족되는 순간 동시에 교환됩니다. 먼저 보내고 못 받는 상황이 구조적으로 불가능합니다.</div>
 </section>
@@ -1078,11 +1154,11 @@ summary::-webkit-details-marker{display:none;}
   <div class="sec-ttl fade-in">자료실</div>
   <div class="esc-sub fade-in">제작물 문서와 공식 자료를 한곳에 모았습니다. PDF는 바로 열람·저장할 수 있습니다.</div>
   <div class="doc-grid">
-    <a class="doc-card fade-in d1" href="../docs/mpc-escrow-intro.pdf" target="_blank" rel="noopener"><span class="doc-kind meas">PDF</span><span class="doc-t">MPC 에스크로 시스템 소개서</span><span class="doc-b">구조·보안·무인 운영 체계와 안내·거절 상황 40종 정리</span></a>
-    <a class="doc-card fade-in d2" href="../docs/mpc-escrow-product.pdf" target="_blank" rel="noopener"><span class="doc-kind meas">PDF</span><span class="doc-t">MPC 에스크로 상품설명서</span><span class="doc-b">기능·거래 조건·수수료를 한 장으로 요약</span></a>
-    <a class="doc-card fade-in d3" href="https://www.globalmpc.tech/docs" target="_blank" rel="noopener"><span class="doc-kind meas">LINK</span><span class="doc-t">MPC 공식 백서</span><span class="doc-b">광산 RWA 발행 인프라의 전체 설계 (공식 홈페이지)</span></a>
-    <a class="doc-card fade-in d4" href="https://www.globalmpc.tech/docs/media-kit" target="_blank" rel="noopener"><span class="doc-kind meas">LINK</span><span class="doc-t">공식 미디어 킷</span><span class="doc-b">로고·심볼 등 공식 브랜드 자료</span></a>
-    <a class="doc-card fade-in d5" href="#news"><span class="doc-kind meas">READ</span><span class="doc-t">매일경제TV 인터뷰 전문</span><span class="doc-b">「이슈&피플」 방송 전문 — 뉴스 페이지에서 펼쳐 읽기</span></a>
+    <a class="doc-card fade-in d1" href="../docs/mpc-escrow-intro.pdf" target="_blank" rel="noopener"><span class="doc-cover" aria-hidden="true">PDF</span><span class="doc-tx"><span class="doc-t">MPC 에스크로 시스템 소개서</span><span class="doc-b">구조·보안·무인 운영 체계와 안내·거절 상황 40종 정리</span></span></a>
+    <a class="doc-card fade-in d2" href="../docs/mpc-escrow-product.pdf" target="_blank" rel="noopener"><span class="doc-cover" aria-hidden="true">PDF</span><span class="doc-tx"><span class="doc-t">MPC 에스크로 상품설명서</span><span class="doc-b">기능·거래 조건·수수료를 한 장으로 요약</span></span></a>
+    <a class="doc-card fade-in d3" href="https://www.globalmpc.tech/docs" target="_blank" rel="noopener"><span class="doc-cover" aria-hidden="true">LINK</span><span class="doc-tx"><span class="doc-t">MPC 공식 백서</span><span class="doc-b">광산 RWA 발행 인프라의 전체 설계 (공식 홈페이지)</span></span></a>
+    <a class="doc-card fade-in d4" href="https://www.globalmpc.tech/docs/media-kit" target="_blank" rel="noopener"><span class="doc-cover" aria-hidden="true">LINK</span><span class="doc-tx"><span class="doc-t">공식 미디어 킷</span><span class="doc-b">로고·심볼 등 공식 브랜드 자료</span></span></a>
+    <a class="doc-card fade-in d5" href="#news"><span class="doc-cover" aria-hidden="true">READ</span><span class="doc-tx"><span class="doc-t">매일경제TV 인터뷰 전문</span><span class="doc-b">「이슈&피플」 방송 전문 — 뉴스 페이지에서 펼쳐 읽기</span></span></a>
   </div>
   <div class="esc-note fade-in">소개서·설명서는 이 리포트 제작물이며, 백서·미디어 킷은 공식 홈페이지(globalmpc.tech) 자료입니다.</div>
 </section>
@@ -1093,13 +1169,35 @@ summary::-webkit-details-marker{display:none;}
   <div class="sec-ttl fade-in">팀 · 회사</div>
   <div class="esc-sub fade-in">공식 홈페이지 팀 페이지에 공개된 경영진과 법인 구조입니다. 발행·개발·광산을 별도 법인이 나눠 맡고 책임을 명시한다고 밝히고 있습니다.</div>
   <div class="tm-grid">
-    <div class="tm fade-in d1"><span class="tm-role meas">CEO</span><b>Bayo Okusanya</b><span class="tm-sub">미국 · 프린스턴대 철학</span></div>
-    <div class="tm fade-in d1"><span class="tm-role meas">COO</span><b>Quentin Ho</b><span class="tm-sub">미국 · 시카고 부스 금융석사</span></div>
-    <div class="tm fade-in d2"><span class="tm-role meas">광산총괄</span><b>Altankhuyag Gankhuyag</b><span class="tm-sub">몽골 · 몽골국립대 광화작용</span></div>
-    <div class="tm fade-in d2"><span class="tm-role meas">CTO</span><b>Tulgaa Enkhbold</b><span class="tm-sub">몽골 · 노스다코타주립대 산업공학</span></div>
-    <div class="tm fade-in d3"><span class="tm-role meas">준법총괄</span><b>Dashnyam Jargalsaikhan</b><span class="tm-sub">몽골 · Quantic EMBA</span></div>
-    <div class="tm fade-in d3"><span class="tm-role meas">마케팅총괄</span><b>Akash Deshmukh</b><span class="tm-sub">인도 · 암베드카르대 MBA</span></div>
+    <div class="tm fade-in d1"><span class="tm-mono" aria-hidden="true">BO</span><span class="tm-role meas">CEO</span><b>Bayo Okusanya</b><span class="tm-sub">미국 · 프린스턴대 철학</span></div>
+    <div class="tm fade-in d1"><span class="tm-mono" aria-hidden="true">QH</span><span class="tm-role meas">COO</span><b>Quentin Ho</b><span class="tm-sub">미국 · 시카고 부스 금융석사</span></div>
+    <div class="tm fade-in d2"><span class="tm-mono" aria-hidden="true">AG</span><span class="tm-role meas">광산총괄</span><b>Altankhuyag Gankhuyag</b><span class="tm-sub">몽골 · 몽골국립대 광화작용</span></div>
+    <div class="tm fade-in d2"><span class="tm-mono" aria-hidden="true">TE</span><span class="tm-role meas">CTO</span><b>Tulgaa Enkhbold</b><span class="tm-sub">몽골 · 노스다코타주립대 산업공학</span></div>
+    <div class="tm fade-in d3"><span class="tm-mono" aria-hidden="true">DJ</span><span class="tm-role meas">준법총괄</span><b>Dashnyam Jargalsaikhan</b><span class="tm-sub">몽골 · Quantic EMBA</span></div>
+    <div class="tm fade-in d3"><span class="tm-mono" aria-hidden="true">AD</span><span class="tm-role meas">마케팅총괄</span><b>Akash Deshmukh</b><span class="tm-sub">인도 · 암베드카르대 MBA</span></div>
   </div>
+
+  <figure class="ent-fig fade-in d2">
+    <svg viewBox="0 0 560 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="법인 구조도">
+      <g font-family="'Spline Sans Mono',monospace" font-size="10">
+        <path d="M105 96 V116 H455 V96 M280 116 V96" stroke="#C2773F" stroke-opacity=".5" fill="none"/>
+        <rect x="20" y="28" width="170" height="68" fill="rgba(194,119,63,.06)" stroke="#C2773F" stroke-opacity=".6"/>
+        <text x="105" y="48" fill="#E09A62" text-anchor="middle" letter-spacing="2">발행</text>
+        <text x="105" y="68" fill="#EDE7DA" text-anchor="middle" font-size="11.5">Bolor Geo MPC Corp.</text>
+        <text x="105" y="84" fill="#A49C8D" text-anchor="middle" font-size="9.5" font-family="'Noto Sans KR',sans-serif">$MPC 토큰 발행사</text>
+        <rect x="195" y="28" width="170" height="68" fill="rgba(194,119,63,.06)" stroke="#C2773F" stroke-opacity=".6"/>
+        <text x="280" y="48" fill="#E09A62" text-anchor="middle" letter-spacing="2">개발</text>
+        <text x="280" y="68" fill="#EDE7DA" text-anchor="middle" font-size="11.5">Bolor Geo SG Pte.</text>
+        <text x="280" y="84" fill="#A49C8D" text-anchor="middle" font-size="9.5" font-family="'Noto Sans KR',sans-serif">플랫폼·Web3 기술</text>
+        <rect x="370" y="28" width="170" height="68" fill="rgba(194,119,63,.06)" stroke="#C2773F" stroke-opacity=".6"/>
+        <text x="455" y="48" fill="#E09A62" text-anchor="middle" letter-spacing="2">광산</text>
+        <text x="455" y="68" fill="#EDE7DA" text-anchor="middle" font-size="11.5">Bolor Geo LLC</text>
+        <text x="455" y="84" fill="#A49C8D" text-anchor="middle" font-size="9.5" font-family="'Noto Sans KR',sans-serif">몽골 현지 · 라이센스 보유</text>
+        <text x="280" y="140" fill="#A49C8D" text-anchor="middle" font-size="10.5" font-family="'Noto Sans KR',sans-serif">한 회사가 다 쥐지 않고, 역할마다 책임질 법인을 나눠 둔 구조</text>
+      </g>
+    </svg>
+    <figcaption>FIG 03 · 법인별 역할 분리</figcaption>
+  </figure>
   <div class="loc-card fade-in d3" style="margin-top:1.6rem">
     <div class="loc-header"><span class="loc-header-label">법인별 역할</span></div>
     <ul class="wp-list">
@@ -1304,12 +1402,12 @@ window.addEventListener('DOMContentLoaded', function(){
       const grp = new THREE.Group();
       grp.add(new THREE.Mesh(gem, new THREE.MeshStandardMaterial({
         color: copper, metalness: .85, roughness: .25, flatShading: true,
-        transparent: true, opacity: .22,
+        transparent: true, opacity: .3,
       })));
       grp.add(new THREE.LineSegments(new THREE.EdgesGeometry(gem),
-        new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .65 })));
-      grp.scale.setScalar(.85);
-      grp.position.y = .55; // 사진 위쪽에 보석처럼
+        new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .9 })));
+      grp.scale.setScalar(2.1);
+      grp.position.y = .15;
       scene.add(grp);
       // 금가루 입자 (은하수처럼 떠다니는 먼지)
       const dustGeo = new THREE.BufferGeometry();
@@ -1324,7 +1422,7 @@ window.addEventListener('DOMContentLoaded', function(){
       // 주변 입자 고리
       const ringGeo = new THREE.BufferGeometry();
       const pts = [];
-      for (let i = 0; i < 90; i++) { const a = i / 90 * Math.PI * 2; pts.push(Math.cos(a) * 1.45, (Math.random() - .5) * .2, Math.sin(a) * 1.45); }
+      for (let i = 0; i < 90; i++) { const a = i / 90 * Math.PI * 2; pts.push(Math.cos(a) * 2.4, (Math.random() - .5) * .25, Math.sin(a) * 2.4); }
       ringGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
       const ring = new THREE.Points(ringGeo, new THREE.PointsMaterial({ color: gold, size: .03, transparent: true, opacity: .35 }));
       ring.rotation.x = .5; scene.add(ring);
@@ -1342,7 +1440,7 @@ window.addEventListener('DOMContentLoaded', function(){
       function renderOnce() {
         grp.rotation.y = .72 + tx * .6;
         grp.rotation.x = .16 + ty * .35;
-        grp.position.y = .55;
+        grp.position.y = .15;
         renderer.render(scene, cam);
       }
       (function settle(t) { // 1회 안착 연출 후 정지 — 이후엔 마우스 움직일 때만 다시 그림
