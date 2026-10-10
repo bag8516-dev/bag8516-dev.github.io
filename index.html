@@ -62,7 +62,6 @@ a{color:inherit;}
 .hero-r{position:relative;overflow:hidden;border-top:1px solid var(--line);}
 .hero-photo{position:absolute;inset:0;background:url(assets/site-0038.jpg) 35% center/cover no-repeat;}
 .hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,8,7,.1),rgba(7,8,7,.55)),linear-gradient(90deg,rgba(194,119,63,.16),transparent 55%);}
-#hero3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9;}
 .hc{position:relative;}
 .h-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-size:10px;letter-spacing:.3em;color:var(--cop2);margin-bottom:2rem;}
 .h-badge-dot{width:22px;height:1px;background:var(--cop);}
@@ -330,7 +329,6 @@ body{background:
 .hero{position:relative;display:flex;flex-direction:column;min-height:100dvh;overflow:hidden;background:transparent;}
 .hero .hc{position:relative;padding:78px 22px 20px;flex:1;display:flex;flex-direction:column;justify-content:center;}
 #star-c{position:absolute;inset:0;width:100%;height:100%;opacity:.35;pointer-events:none;}
-#hero3d{display:none;position:absolute;pointer-events:none;} /* 모바일: 글 뒤 겹침 제거 */
 .log-head{display:flex;align-items:center;gap:12px;margin-bottom:1.1rem;padding-bottom:.8rem;border-bottom:1px solid var(--line);}
 .log-head-id{display:flex;flex-direction:column;gap:3px;}
 .log-head-id .meas{font-size:11.5px;letter-spacing:.12em;color:var(--cop2);}
@@ -371,7 +369,6 @@ body{background:
   .nav{padding-left:92px;}
   .hero .hc{padding:120px 60px 40px;max-width:860px;}
   .h-title{font-size:66px;}
-  #hero3d{display:none;} /* 1000~1239px: 본문 기둥과 겹쳐서 숨김 */
   .stamp{right:28px;top:120px;bottom:auto;width:132px;height:132px;} /* 표제 오른쪽 여백(문서 우상단 직인 자리) */
   .stamp span{font-size:16px;}
   .cover-strip{height:46dvh;min-height:380px;}
@@ -574,8 +571,8 @@ summary::-webkit-details-marker{display:none;}
 /* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 공식 심볼 + 그 아래 직인 */
 .hero-mark{display:none;}
 @media (min-width:1240px){
-  #hero3d{display:none;inset:auto;left:940px;width:min(470px,calc(100vw - 1070px));height:62%;top:4%;opacity:1;}
-  .hero-mark{display:flex;position:absolute;left:940px;right:3%;top:6%;height:58%;align-items:center;justify-content:center;pointer-events:none;}
+  .hero-mark{display:none;}
+  .rig3d{display:block;}
   .hero-mark svg{width:min(430px,calc(100vw - 1100px));height:auto;filter:drop-shadow(0 0 36px rgba(194,119,63,.32));}
   .stamp{right:-230px;top:74%;bottom:auto;} /* 본문 기둥 밖, 심볼 아래 */
 }
@@ -640,6 +637,33 @@ summary::-webkit-details-marker{display:none;}
   .field-row{flex-direction:row;gap:30px;align-items:flex-start;}
 }
 
+/* CSS 3D 와이어 심볼 — WebGL 없이 모든 기기에서 동일 */
+.rig3d{display:none;position:absolute;left:940px;right:3%;top:4%;height:62%;pointer-events:none;}
+.rig3d-pv{position:absolute;inset:0;perspective:1100px;display:flex;align-items:center;justify-content:center;}
+.rig3d-sp{position:relative;width:0;height:0;transform-style:preserve-3d;animation:rigspin 26s linear infinite;}
+.rig3d-sp i{position:absolute;left:0;top:0;width:2px;background:linear-gradient(180deg,#E8A268,#C2773F);box-shadow:0 0 7px rgba(194,119,63,.55);transform-style:preserve-3d;}
+@keyframes rigspin{from{transform:rotateX(13deg) rotateY(0deg)}to{transform:rotateX(13deg) rotateY(360deg)}}
+.rig-dust{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--cop);opacity:.35;}
+@media (prefers-reduced-motion:reduce){.rig3d-sp{animation-duration:200s;}}
+/* 프로젝트 연혁 밴드 */
+.hist-band{border:1px solid var(--line2);background:rgba(194,119,63,.03);padding:18px 16px 14px;margin-bottom:2rem;display:flex;flex-direction:column;gap:14px;}
+.hist-step{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:baseline;}
+.hist-step b{display:block;color:var(--ink);font-size:13.5px;}
+.hist-step span{font-size:12.5px;color:var(--mut);line-height:1.6;}
+.hist-y{font-family:var(--mono);font-size:12px;color:var(--cop);letter-spacing:.06em;}
+@media (min-width:1000px){
+  .hist-band{flex-direction:row;gap:0;padding:22px 10px 18px;}
+  .hist-step{flex:1;grid-template-columns:1fr;gap:8px;text-align:center;padding:0 14px;border-left:1px solid var(--line2);}
+  .hist-step:first-child{border-left:none;}
+}
+/* 진행 게이지 */
+.prog-gauge{margin-bottom:1.6rem;}
+.pg-bar{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;height:14px;margin-bottom:.5rem;}
+.pg-bar i{background:rgba(194,119,63,.14);border:1px solid rgba(194,119,63,.25);}
+.pg-bar i.f{background:var(--cop);border-color:var(--cop);}
+.pg-bar i.h{background:repeating-linear-gradient(135deg,var(--cop) 0 4px,rgba(194,119,63,.2) 4px 8px);border-color:var(--cop);}
+.pg-leg{font-size:11.5px;color:var(--dim);font-family:var(--mono);letter-spacing:.06em;}
+
 /* 초광폭 교정: margin 단축이 .sec>* 자동 가운데 정렬을 덮어쓰던 것 복원 */
 @media (min-width:1000px){
   .film-strip,.field-clip,.esc-visual,.gnt-wrap,.page-plate,.ent-fig,.core-strip,.field-grid,.field-row{margin-left:auto;margin-right:auto;max-width:1160px;}
@@ -702,7 +726,7 @@ summary::-webkit-details-marker{display:none;}
 <div class="page" id="page-home">
 <section class="hero">
   <canvas id="star-c"></canvas>
-  <canvas id="hero3d"></canvas>
+  <div class="rig3d" aria-hidden="true"><div class="rig3d-pv"><div class="rig3d-sp"><i style="height:138.3px;transform:translate3d(52.5px,-45.0px,0.0px) rotate3d(0.0000,0.0000,-1.0000,49.40deg) translate(-50%,-50%)"></i><i style="height:138.3px;transform:translate3d(26.3px,-45.0px,45.5px) rotate3d(0.8660,0.0000,-0.5000,49.40deg) translate(-50%,-50%)"></i><i style="height:138.3px;transform:translate3d(-26.2px,-45.0px,45.5px) rotate3d(0.8660,0.0000,0.5000,49.40deg) translate(-50%,-50%)"></i><i style="height:138.3px;transform:translate3d(-52.5px,-45.0px,0.0px) rotate3d(0.0000,0.0000,1.0000,49.40deg) translate(-50%,-50%)"></i><i style="height:138.3px;transform:translate3d(-26.3px,-45.0px,-45.5px) rotate3d(-0.8660,0.0000,0.5000,49.40deg) translate(-50%,-50%)"></i><i style="height:138.3px;transform:translate3d(26.3px,-45.0px,-45.5px) rotate3d(-0.8660,0.0000,-0.5000,49.40deg) translate(-50%,-50%)"></i><i style="height:208.4px;transform:translate3d(52.5px,90.0px,0.0px) rotate3d(0.0000,0.0000,-1.0000,149.74deg) translate(-50%,-50%)"></i><i style="height:208.4px;transform:translate3d(26.3px,90.0px,45.5px) rotate3d(0.8660,0.0000,-0.5000,149.74deg) translate(-50%,-50%)"></i><i style="height:208.4px;transform:translate3d(-26.2px,90.0px,45.5px) rotate3d(0.8660,0.0000,0.5000,149.74deg) translate(-50%,-50%)"></i><i style="height:208.4px;transform:translate3d(-52.5px,90.0px,0.0px) rotate3d(0.0000,0.0000,1.0000,149.74deg) translate(-50%,-50%)"></i><i style="height:208.4px;transform:translate3d(-26.3px,90.0px,-45.5px) rotate3d(-0.8660,0.0000,0.5000,149.74deg) translate(-50%,-50%)"></i><i style="height:208.4px;transform:translate3d(26.3px,90.0px,-45.5px) rotate3d(-0.8660,0.0000,-0.5000,149.74deg) translate(-50%,-50%)"></i><i style="height:105.0px;transform:translate3d(78.8px,0.0px,45.5px) rotate3d(0.8660,0.0000,0.5000,90.00deg) translate(-50%,-50%)"></i><i style="height:105.0px;transform:translate3d(0.0px,0.0px,90.9px) rotate3d(0.0000,0.0000,1.0000,90.00deg) translate(-50%,-50%)"></i><i style="height:105.0px;transform:translate3d(-78.7px,0.0px,45.5px) rotate3d(-0.8660,0.0000,0.5000,90.00deg) translate(-50%,-50%)"></i><i style="height:105.0px;transform:translate3d(-78.8px,0.0px,-45.5px) rotate3d(-0.8660,0.0000,-0.5000,90.00deg) translate(-50%,-50%)"></i><i style="height:105.0px;transform:translate3d(-0.0px,0.0px,-90.9px) rotate3d(0.0000,0.0000,-1.0000,90.00deg) translate(-50%,-50%)"></i><i style="height:105.0px;transform:translate3d(78.8px,0.0px,-45.5px) rotate3d(0.8660,0.0000,-0.5000,90.00deg) translate(-50%,-50%)"></i></div></div><span class="rig-dust" style="left:8%;top:18%"></span><span class="rig-dust" style="right:6%;top:30%"></span><span class="rig-dust" style="left:14%;bottom:22%"></span><span class="rig-dust" style="right:12%;bottom:12%"></span><span class="rig-dust" style="left:30%;top:6%"></span><span class="rig-dust" style="right:26%;top:8%"></span></div>
   <div class="hero-mark" aria-hidden="true"><svg viewBox="0 0 200 222" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="100" cy="207" rx="52" ry="7" fill="rgba(194,119,63,.14)"/>
     <g stroke-linejoin="round">
@@ -777,6 +801,13 @@ summary::-webkit-details-marker{display:none;}
     <span class="anno anno-r" style="right:6%;bottom:40%"><i></i>게르 숙영지</span>
     <figcaption><span class="meas">PLATE 06</span> 캠프 구축 — 사무동 설치 · 2026-07</figcaption>
   </figure>
+
+  <div class="hist-band fade-in">
+    <div class="hist-step"><span class="hist-y">2023</span><div><b>몽골 법인 설립</b><span>차간톨고이 광구 확보 · 탐사 라이센스(XV-022460) 취득</span></div></div>
+    <div class="hist-step"><span class="hist-y">거점</span><div><b>울란바토르 본사 · 서울 사무소</b><span>두 거점 운영 — 서울에서 비행기 약 3시간</span></div></div>
+    <div class="hist-step"><span class="hist-y">2026-07</span><div><b>캠프 구축 · 시추 개시</b><span>장비 반입, 리그 설치, 본격 시추 돌입</span></div></div>
+    <div class="hist-step"><span class="hist-y">현재</span><div><b>13공 · 공인 검증</b><span>ALS·SGS 분석 보고서 수령하며 진행 중</span></div></div>
+  </div>
 
   <div class="loc-card fade-in d1">
     <div class="loc-header"><span class="loc-header-label">광산 위치</span></div>
@@ -1047,6 +1078,13 @@ summary::-webkit-details-marker{display:none;}
   <div class="sec-hd"><span class="sec-kicker2 fade-in">PROJECT PROGRESS</span><div class="sec-hline"></div></div>
   <div class="sec-ttl fade-in">프로젝트 진행 현황</div>
   <div class="meas prog-line fade-in">진행 현황 — 완료 5 · 진행 중 2 / 전체 8구간</div>
+
+  <div class="prog-gauge fade-in">
+    <div class="pg-bar" role="img" aria-label="8구간 중 5구간 완료, 2구간 진행 중">
+      <i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="h"></i><i class="h"></i><i></i>
+    </div>
+    <div class="pg-leg">■ 완료 5 &nbsp;▨ 진행 중 2 &nbsp;□ 예정 1 — 전체 8구간</div>
+  </div>
   <div class="gnt-wrap fade-in"><div class="gnt">
     <div class="gnt-q done"><b>2026 Q1</b><span>탐사 착수</span></div>
     <div class="gnt-q done"><b>2026 Q2</b><span>백서·웹 공개</span></div>
@@ -1411,7 +1449,6 @@ function showEl(id,tab){
 }
 </script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 <script>
@@ -1481,90 +1518,6 @@ window.addEventListener('DOMContentLoaded', function(){
         }, { threshold: 0.25 });
         io2.observe(stats[0]);
       }
-    }
-  } catch(e){}
-
-  // ⓪ Three.js: 히어로 3D 금빛 결정체 (미로딩 시 효과만 빠짐)
-  try {
-    const cv = document.getElementById('hero3d');
-    if (window.THREE && cv) {
-      const renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      const scene = new THREE.Scene();
-      const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-      cam.position.z = 8;
-      const gold = 0xC2773F, copper = 0xC2773F; // 금색 제거 — 구리 단일
-      // 공식 MPC 심볼의 3D 보석화: 4면 연꼴 다이아몬드 (위 짧고 아래 긴) — 닫힌 면 + 모서리 선
-      // 심볼 비율: 반폭 7 · 윗높이 6 · 아랫높이 12 → 0.1 배율
-      const HW = .7, HT = .6, HB = 1.2;
-      // 허리 6각: 정면 투영에서 바깥 모서리(±7)와 안쪽 면 선(±3.5)이 공식 도안과 일치
-      const verts = [
-        0,  HT, 0,                                   // 꼭대기
-        HW, 0, 0,    .35, 0, .606,   -.35, 0, .606,  // 허리 6점 (60도 간격)
-        -HW, 0, 0,   -.35, 0, -.606,  .35, 0, -.606,
-        0, -HB, 0,                                   // 바닥 꼭지
-      ];
-      const idx = [
-        0,2,1, 0,3,2, 0,4,3, 0,5,4, 0,6,5, 0,1,6,    // 윗면 6
-        7,1,2, 7,2,3, 7,3,4, 7,4,5, 7,5,6, 7,6,1,    // 아랫면 6
-      ];
-      const gem = new THREE.BufferGeometry();
-      gem.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
-      gem.setIndex(idx);
-      gem.computeVertexNormals();
-      const grp = new THREE.Group();
-      grp.add(new THREE.LineSegments(new THREE.EdgesGeometry(gem),
-        new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: .9 })));
-      grp.scale.setScalar(2.1);
-      grp.position.y = .15;
-      scene.add(grp);
-      // 금가루 입자 (은하수처럼 떠다니는 먼지)
-      const dustGeo = new THREE.BufferGeometry();
-      const dpts = [];
-      for (let i = 0; i < 160; i++) {
-        const r = 2.2 + Math.random() * 2.8, a = Math.random() * Math.PI * 2, y = (Math.random() - .5) * 3.4;
-        dpts.push(Math.cos(a) * r, y, Math.sin(a) * r);
-      }
-      dustGeo.setAttribute('position', new THREE.Float32BufferAttribute(dpts, 3));
-      const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: gold, size: .017, transparent: true, opacity: .38 }));
-      scene.add(dust);
-      // 주변 입자 고리
-      const ringGeo = new THREE.BufferGeometry();
-      const pts = [];
-      for (let i = 0; i < 90; i++) { const a = i / 90 * Math.PI * 2; pts.push(Math.cos(a) * 2.4, (Math.random() - .5) * .25, Math.sin(a) * 2.4); }
-      ringGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
-      const ring = new THREE.Points(ringGeo, new THREE.PointsMaterial({ color: gold, size: .03, transparent: true, opacity: .35 }));
-      ring.rotation.x = .5; scene.add(ring);
-      scene.add(new THREE.AmbientLight(0xffffff, .55));
-      const key = new THREE.PointLight(0xF2D9C4, 1.6); key.position.set(3, 3, 4); scene.add(key);
-      const rim = new THREE.PointLight(0xE09A62, 1.0); rim.position.set(-3, -1, 3); scene.add(rim);
-      let tx = 0, ty = 0;
-      window.addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5); ty = (e.clientY / innerHeight - .5); }, { passive: true });
-      function size() {
-        const w = cv.clientWidth || 1, h = cv.clientHeight || 1;
-        renderer.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
-      }
-      size(); window.addEventListener('resize', size);
-      // PC(1240+)에서만 캔버스를 켜고 평면 폴백을 숨긴다 — 3D가 안 되는 기기는 폴백 유지
-      const mq = window.matchMedia('(min-width:1240px)');
-      const mark = document.querySelector('.hero-mark');
-      function applyMode() {
-        const on = mq.matches;
-        cv.style.display = on ? 'block' : '';
-        if (mark) mark.style.display = on ? 'none' : '';
-        if (on) size();
-      }
-      (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(applyMode);
-      applyMode();
-      let spin = .72;
-      (function loop() { // 느린 상시 회전 (탭이 안 보이면 멈춤)
-        requestAnimationFrame(loop);
-        if (!mq.matches || document.hidden) return;
-        spin += .0036;
-        grp.rotation.y = spin + tx * .5;
-        grp.rotation.x = .12 + ty * .3;
-        renderer.render(scene, cam);
-      })();
     }
   } catch(e){}
 
