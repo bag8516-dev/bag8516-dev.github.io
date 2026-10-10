@@ -1,0 +1,11 @@
+# gitleaks 설정 — 공개여도 되는 값(오탐) 허용 목록
+# 진짜 비밀값 검사는 금고 대조(secretscan.py)가 함께 담당한다.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "공개 설계값: 공개용 수파베이스 키, 컨트랙트 주소"
+regexes = [
+  '''sb_publishable_[A-Za-z0-9_]+''',
+  '''0x[a-fA-F0-9]{40}''',
+]
