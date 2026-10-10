@@ -574,8 +574,9 @@ summary::-webkit-details-marker{display:none;}
 /* 넓은 PC(1240px~): 본문 기둥 오른쪽 빈 영역에 공식 심볼 + 그 아래 직인 */
 .hero-mark{display:none;}
 @media (min-width:1240px){
-  .hero-mark{display:none;}
-  #hero3d{display:block;inset:auto;left:940px;width:min(470px,calc(100vw - 1070px));height:60%;top:5%;opacity:1;}
+  #hero3d{display:none;}
+  .hero-mark{display:flex;position:absolute;left:940px;right:3%;top:6%;height:58%;align-items:center;justify-content:center;pointer-events:none;}
+  .hero-mark svg{width:min(430px,calc(100vw - 1100px));height:auto;filter:drop-shadow(0 0 36px rgba(194,119,63,.32));}
   .stamp{right:-230px;top:74%;bottom:auto;} /* 본문 기둥 밖, 심볼 아래 */
 }
 
@@ -608,6 +609,13 @@ summary::-webkit-details-marker{display:none;}
 .ent-fig{border:1px solid var(--line2);background:rgba(194,119,63,.03);padding:14px 10px 6px;margin-bottom:1.4rem;}
 .ent-fig svg{width:100%;height:auto;display:block;}
 .ent-fig figcaption{font-size:11px;color:var(--dim);font-family:var(--mono);letter-spacing:.1em;padding:6px 6px 4px;}
+
+/* 현장 필름 스트립 */
+.film-strip{display:flex;gap:7px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:2px 0 10px;margin:-2px 0 1.6rem;}
+.film-strip button{flex:none;padding:0;border:1px solid var(--line2);background:none;cursor:pointer;opacity:.45;transition:opacity .25s,border-color .25s;}
+.film-strip button img{display:block;width:84px;height:56px;object-fit:cover;filter:saturate(.85);}
+.film-strip button.on{opacity:1;border-color:var(--cop);}
+.film-strip button:hover{opacity:.85;}
 
 </style>
 </head>
@@ -668,7 +676,28 @@ summary::-webkit-details-marker{display:none;}
 <section class="hero">
   <canvas id="star-c"></canvas>
   <canvas id="hero3d"></canvas>
-  <div class="hero-mark" aria-hidden="true"><svg viewBox="0 0 50.74 64"><use href="#mpc-mark"/></svg></div>
+  <div class="hero-mark" aria-hidden="true"><svg viewBox="0 0 200 222" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="100" cy="207" rx="52" ry="7" fill="rgba(194,119,63,.14)"/>
+    <g stroke-linejoin="round">
+      <g stroke="rgba(224,154,98,.4)" stroke-width="1" stroke-dasharray="3 3" fill="none">
+        <path d="M100 38 L81.9 103.4 M81.9 103.4 L100 200.2 M81.9 103.4 L43.4 88.8 M81.9 103.4 L156.6 101.2"/>
+      </g>
+      <polygon points="100,200.2 156.6,101.2 118.1,86.6" fill="#5F3A20" fill-opacity=".92"/>
+      <polygon points="100,200.2 118.1,86.6 43.4,88.8" fill="#9A5C30" fill-opacity=".92"/>
+      <polygon points="100,38 118.1,86.6 156.6,101.2" fill="#C2773F" fill-opacity=".93"/>
+      <polygon points="100,38 43.4,88.8 118.1,86.6" fill="#E8A268" fill-opacity=".93"/>
+      <g stroke="rgba(240,220,200,.5)" stroke-width="1" fill="none">
+        <path d="M100 38 L118.1 86.6 L100 200.2 M43.4 88.8 L118.1 86.6 L156.6 101.2"/>
+      </g>
+      <polygon points="100,38 156.6,101.2 100,200.2 43.4,88.8" fill="none" stroke="#E09A62" stroke-width="2"/>
+    </g>
+    <g fill="#C2773F">
+      <circle cx="33" cy="52" r="1.4" opacity=".4"/><circle cx="168" cy="63" r="1.1" opacity=".35"/>
+      <circle cx="182" cy="128" r="1.5" opacity=".3"/><circle cx="24" cy="140" r="1.2" opacity=".35"/>
+      <circle cx="55" cy="23" r="1" opacity=".3"/><circle cx="148" cy="28" r="1.3" opacity=".35"/>
+      <circle cx="173" cy="178" r="1.1" opacity=".3"/><circle cx="36" cy="186" r="1.4" opacity=".3"/>
+    </g>
+  </svg></div>
   <div class="hc">
     <div class="log-head">
       <svg width="34" height="43" viewBox="0 0 50.74 64" class="mark-glow" role="img" aria-label="MPC 공식 심볼"><use href="#mpc-mark"/></svg>
@@ -912,6 +941,32 @@ summary::-webkit-details-marker{display:none;}
     </div>
     <div class="swiper-pagination site-pag"></div>
   </div>
+
+  <div class="film-strip fade-in" aria-label="도판 바로가기">
+    <button type="button" aria-label="PLATE 02 보기"><img src="../assets/site-0038.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 03 보기"><img src="../assets/site-0039.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 04 보기"><img src="../assets/site-0040.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 01 보기"><img src="../assets/site-0042.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 05 보기"><img src="../assets/site-0043.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 07 보기"><img src="../assets/site-0044.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 08 보기"><img src="../assets/site-0045.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 09 보기"><img src="../assets/site-0046.jpg" alt="" loading="lazy" width="96" height="64"></button>
+    <button type="button" aria-label="PLATE 10 보기"><img src="../assets/site-0047.jpg" alt="" loading="lazy" width="96" height="64"></button>
+  </div>
+  <script>
+  addEventListener('load', () => {
+    let tries = 0;
+    const t = setInterval(() => {
+      const s = (window.__sw || []).find(x => x && x.el && x.el.classList.contains('site-swiper'));
+      if (!s) { if (++tries > 25) clearInterval(t); return; }
+      clearInterval(t);
+      const bs = document.querySelectorAll('.film-strip button');
+      const u = () => bs.forEach((b, i) => b.classList.toggle('on', i === s.realIndex));
+      bs.forEach((b, i) => b.addEventListener('click', () => s.slideTo(i)));
+      s.on('slideChange', u); u();
+    }, 300);
+  });
+  </script>
 
   <figure class="field-clip fade-in">
     <video src="../assets/field-clip-01.mp4" poster="../assets/field-clip-01-poster.jpg" muted loop autoplay playsinline preload="metadata"></video>
