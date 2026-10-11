@@ -465,6 +465,25 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;o
 #page-guide{--folio:'제6장 · 이용 안내';}
 #page-docs{--folio:'제7장 · 자료실';}
 #page-team{--folio:'제8장 · 팀·회사';}
+#page-faq{--folio:'부록 · 질문과 답';}
+/* 질문과 답 + 용어 풀이 */
+.faq-list{margin-top:1.6rem;}
+.faq-list details{border-top:1px solid var(--line);}
+.faq-list details:last-of-type{border-bottom:1px solid var(--line);}
+.faq-list summary{cursor:pointer;list-style:none;display:flex;gap:12px;align-items:baseline;padding:16px 4px;font-weight:600;color:var(--ink);font-size:16px;}
+.faq-list summary::before{content:'Q';font-family:var(--disp);color:var(--cop2);font-size:13px;flex:none;}
+.faq-list summary::-webkit-details-marker{display:none;}
+.faq-a{padding:0 4px 18px 27px;color:var(--mut);font-size:14.5px;line-height:1.75;}
+.gls{margin-top:1.6rem;}
+.gls dt{font-weight:700;color:var(--cop2);padding-top:15px;border-top:1px solid var(--line);font-size:15px;}
+.gls dd{color:var(--mut);font-size:14.5px;line-height:1.72;padding:5px 0 15px;}
+/* 자료실 영상 */
+.yt-grid{display:grid;gap:16px;margin-top:1.2rem;}
+@media (min-width:760px){.yt-grid{grid-template-columns:1fr 1fr;}}
+.yt-embed{position:relative;aspect-ratio:16/9;border:1px solid var(--line);background:#000;}
+.yt-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.yt-cap{font-size:12.5px;color:var(--mut);margin-top:7px;}
+@media (min-width:1000px) and (max-width:1319px){.nav-links{gap:17px;}.nav-links a{font-size:12.5px;}}
 .page.on{animation:pageIn .55s cubic-bezier(.22,.61,.36,1);transform-origin:50% 0;}
 html,body{overflow-x:clip;} /* 전환 중 3D 투영폭이 가로 스크롤을 만들지 않게 */
 .field-clip{margin:1.6rem 0 0;}
@@ -719,7 +738,7 @@ summary::-webkit-details-marker{display:none;}
 <header class="nav" id="siteNav">
   <a class="nav-brand" href="#home"><svg width="20" height="25" viewBox="0 0 50.74 64" aria-hidden="true"><use href="#mpc-mark"/></svg><span>MPC RWA</span></a>
   <nav class="nav-links" aria-label="주요 메뉴">
-    <a href="#project">프로젝트</a><a href="#field">현장</a><a href="#progress">진행 현황</a><a href="#news">뉴스</a><a href="#escrow">에스크로</a><a href="#guide">이용 안내</a><a href="#docs">자료실</a><a href="#team">팀·회사</a><a href="https://www.youtube.com/@MPC.RWA%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noopener"><svg width="12" height="12" aria-hidden="true" style="align-self:center"><use href="#i-play"/></svg>유튜브</a>
+    <a href="#project">프로젝트</a><a href="#field">현장</a><a href="#progress">진행 현황</a><a href="#news">뉴스</a><a href="#escrow">에스크로</a><a href="#guide">이용 안내</a><a href="#faq">질문과 답</a><a href="#docs">자료실</a><a href="#team">팀·회사</a><a href="https://www.youtube.com/@MPC.RWA%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noopener"><svg width="12" height="12" aria-hidden="true" style="align-self:center"><use href="#i-play"/></svg>유튜브</a>
   </nav>
   <a class="nav-cta" href="https://mpcescrow.com/mpc-escrow/">앱 열기</a>
   <button class="nav-burger" id="navBurger" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span></button>
@@ -733,6 +752,7 @@ summary::-webkit-details-marker{display:none;}
     <a href="#news" onclick="toggleMenu()">뉴스</a>
     <a href="#escrow" onclick="toggleMenu()">에스크로</a>
     <a href="#guide" onclick="toggleMenu()">이용 안내</a>
+    <a href="#faq" onclick="toggleMenu()">질문과 답</a>
     <a href="#docs" onclick="toggleMenu()">자료실</a>
     <a href="#team" onclick="toggleMenu()">팀·회사</a>
     <a href="https://www.youtube.com/@MPC.RWA%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noopener">유튜브 채널 ↗</a>
@@ -1353,6 +1373,45 @@ addEventListener('pointermove', e => {
 <details class="faq fade-in"><summary>지갑 연결을 눌러도 반응이 없어요</summary><p>① Trust Wallet 설치 여부 확인 → ② Trust Wallet을 완전히 종료 후 재시도 → ③ 그래도 안 되면 브라우저를 껐다 켜고 다시 접속하세요.</p></details><details class="faq fade-in"><summary>PC에서도 이용할 수 있나요?</summary><p>보안을 위해 모바일 전용으로 운영됩니다. 휴대폰으로 이용해 주세요.</p></details><details class="faq fade-in"><summary>'지갑 앱의 네트워크 연결이 불안정합니다' 오류가 반복돼요</summary><p>일부 최신 기종(갤럭시 S25, 폴드7 등)의 Trust Wallet 앱 자체 문제로, 자산과는 무관합니다. Trust Wallet을 완전히 종료한 뒤 홈 화면의 에스크로 앱(또는 삼성 인터넷)으로 접속해 [예비 연결 방식] 버튼을 이용하세요. 이 기종은 Trust Wallet 앱 안에서 주소를 열면 같은 오류가 반복됩니다.</p></details><details class="faq fade-in"><summary>오류창이 떴을 때 어떻게 문의하나요?</summary><p>오류창의 [오류 정보 복사] 버튼을 누르면 원인 파악에 필요한 정보가 복사됩니다. 이를 커뮤니티 문의에 붙여넣으면 바로 확인해 드립니다.</p></details>
 </section>
 </div>
+<div class="page" id="page-faq">
+<section class="sec">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">Q &amp; A</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">자주 묻는 질문</div>
+  <div class="esc-sub fade-in">에스크로 앱을 쓰다가 막히는 것들, 커뮤니티에서 실제로 많이 나온 질문을 모았습니다. 질문을 누르면 답이 펼쳐집니다.</div>
+  <div class="faq-list fade-in">
+    <details><summary>어떻게 접속하나요?</summary><div class="faq-a">공지의 링크를 누르면 어떤 브라우저에서든 바로 이용할 수 있습니다. 자주 쓰실 거라면 첫 화면의 [홈 화면에 앱 설치]로 앱처럼 설치해두면 편합니다.</div></details>
+    <details><summary>아이폰인데 홈 화면 설치가 안 돼요</summary><div class="faq-a">카카오톡 안에서는 설치가 안 됩니다. 메뉴(…)에서 [Safari로 열기] → 공유 버튼(⬆) → [홈 화면에 추가] 순서로 진행하세요.</div></details>
+    <details><summary>Trust Wallet이 꼭 필요한가요?</summary><div class="faq-a">네. 거래 자산(MPC·USDT)이 본인의 Trust Wallet에 있어야 하고, 모든 거래는 본인이 지갑에서 직접 서명해야 실행됩니다.</div></details>
+    <details><summary>판매 조건이 있나요?</summary><div class="faq-a">수량 100~100,000 MPC, 1개당 최소 500원(50원 단위), USDT 환율은 실시간 자동 적용됩니다.</div></details>
+    <details><summary>판매 글은 얼마나 유지되나요?</summary><div class="faq-a">24시간 유지됩니다. 기간 내 구매자가 없으면 글은 내려가고, [진행 중] 탭의 [만료 처리]를 눌러야 MPC가 지갑으로 돌아옵니다.</div></details>
+    <details><summary>지갑에 '승인 완료 −10,000 MPC'가 떠요. 두 번 나간 건가요?</summary><div class="faq-a">아닙니다. '승인'은 코인 이동이 아니라 허락 서명 기록인데 지갑이 마이너스처럼 표시할 뿐입니다. 잔액을 확인하면 실제로는 전송 1건만큼만 줄어 있습니다.</div></details>
+    <details><summary>수수료가 있나요?</summary><div class="faq-a">서비스 수수료는 없습니다. 블록체인 가스비로 거래당 몇십 원 상당의 POL만 듭니다. POL은 거래소에서 1~2개 사두면 수십 번 거래할 수 있습니다.</div></details>
+    <details><summary>사기당할 위험은 없나요?</summary><div class="faq-a">자산은 사람이 아니라 스마트컨트랙트가 보관하고, 양쪽 조건이 맞는 순간 동시에 교환됩니다. '먼저 보내고 못 받는' 상황이 구조적으로 불가능합니다.</div></details>
+    <details><summary>취소했는데 MPC가 안 들어와요</summary><div class="faq-a">블록체인 처리로 최대 10분 걸릴 수 있습니다. 10분이 지나도 안 오면 앱 하단 [문의]로 지갑 주소를 알려주세요. 관리자가 처리 상태를 확인해 드립니다.</div></details>
+    <details><summary>지갑 연결을 눌러도 반응이 없어요</summary><div class="faq-a">① Trust Wallet 설치 여부 확인 → ② Trust Wallet을 완전히 종료 후 재시도 → ③ 그래도 안 되면 브라우저를 껐다 켜고 다시 접속하세요.</div></details>
+    <details><summary>PC에서도 이용할 수 있나요?</summary><div class="faq-a">보안을 위해 모바일 전용으로 운영됩니다. 휴대폰으로 이용해 주세요.</div></details>
+    <details><summary>'지갑 앱의 네트워크 연결이 불안정합니다' 오류가 반복돼요</summary><div class="faq-a">일부 최신 기종(갤럭시 S25, 폴드7 등)의 Trust Wallet 앱 자체 문제로, 자산과는 무관합니다. Trust Wallet을 완전히 종료한 뒤 홈 화면의 에스크로 앱(또는 삼성 인터넷)으로 접속해 [예비 연결 방식] 버튼을 이용하세요. 이 기종은 Trust Wallet 앱 안에서 주소를 열면 같은 오류가 반복됩니다.</div></details>
+    <details><summary>오류창이 떴을 때 어떻게 문의하나요?</summary><div class="faq-a">오류창의 [오류 정보 복사] 버튼을 누르면 원인 파악에 필요한 정보가 복사됩니다. 이를 커뮤니티 문의에 붙여넣으면 바로 확인해 드립니다.</div></details>
+  </div>
+</section>
+<section class="sec">
+  <div class="sec-hd"><span class="sec-kicker2 fade-in">GLOSSARY</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in">용어 풀이</div>
+  <div class="esc-sub fade-in">이 사이트와 뉴스에 자주 나오는 말을 쉽게 풀었습니다.</div>
+  <dl class="gls fade-in">
+    <dt>MPC (미네랄 프로젝트 코인)</dt><dd>몽골 차간톨고이 광산 프로젝트와 연결된 코인입니다. 이 사이트가 다루는 주인공입니다.</dd>
+    <dt>RWA</dt><dd>Real World Asset의 줄임말. 광산이나 부동산처럼 실제로 존재하는 자산을 블록체인 위의 토큰으로 만든 것입니다. "실물 연계 자산"이라고 생각하시면 됩니다.</dd>
+    <dt>에스크로</dt><dd>거래가 끝날 때까지 돈이나 물건을 중간에서 맡아 주는 장치입니다. 우리 앱에서는 사람이 아니라 프로그램(스마트 컨트랙트)이 그 역할을 해서, 맡긴 코인을 운영자도 건드릴 수 없습니다.</dd>
+    <dt>스마트 컨트랙트</dt><dd>블록체인 위에서 정해진 조건이 되면 자동으로 실행되는 프로그램. 한번 올려두면 내용이 공개되고 마음대로 바꿀 수 없습니다.</dd>
+    <dt>멀티시그</dt><dd>중요한 권한을 지갑 하나가 아니라 여러 지갑이 함께 서명해야 쓸 수 있게 하는 방식. 우리 에스크로의 설정 변경은 지갑 2개가 모두 서명해야 합니다.</dd>
+    <dt>홀더 · 보유 지갑</dt><dd>코인을 1개라도 갖고 있는 지갑. 홈 화면의 "보유 지갑 수"가 이 숫자입니다.</dd>
+    <dt>온체인</dt><dd>블록체인에 기록돼 있어서 누구나 열어볼 수 있는 상태. "온체인 현황"은 블록체인에서 직접 세어 온 숫자라는 뜻입니다.</dd>
+    <dt>가스비 · POL</dt><dd>블록체인에 기록을 남길 때 내는 작은 수수료. 폴리곤에서는 POL이라는 코인으로 내며, 거래 한 번에 몇십 원 정도입니다.</dd>
+    <dt>USDT</dt><dd>1개 가격이 1달러에 맞춰 움직이도록 만든 코인. 에스크로에서 MPC의 거래 대금으로 쓰입니다.</dd>
+    <dt>시추 코어</dt><dd>땅속 깊이 파이프를 박아 뽑아 올린 원통 모양의 암석 표본. 이것을 ALS·SGS 같은 분석 기관에 보내 광물 성분을 확인합니다.</dd>
+  </dl>
+</section>
+</div>
 <div class="page" id="page-docs">
 <section id="sec-docs" class="sec">
   <div class="sec-hd"><span class="sec-kicker2 fade-in">DOCUMENTS</span><div class="sec-hline"></div></div>
@@ -1366,6 +1425,13 @@ addEventListener('pointermove', e => {
     <a class="doc-card fade-in d5" href="#news"><span class="doc-cover" aria-hidden="true">READ</span><span class="doc-tx"><span class="doc-t">매일경제TV 인터뷰 전문</span><span class="doc-b">「이슈&피플」 방송 전문 — 뉴스 페이지에서 펼쳐 읽기</span></span></a>
   </div>
   <div class="esc-note fade-in">소개서·설명서는 이 리포트 제작물이며, 백서·미디어 킷은 공식 홈페이지(globalmpc.tech) 자료입니다.</div>
+
+  <div class="sec-hd" style="margin-top:3rem"><span class="sec-kicker2 fade-in">VIDEO</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl fade-in" style="font-size:30px">영상 자료</div>
+  <div class="yt-grid fade-in">
+    <div><div class="yt-embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLEAM0ETA_brk" title="MPC 코인 완전정복 시리즈" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><div class="yt-cap">MPC 코인 완전정복 시리즈 (14편) — 재생 버튼을 누르면 1편부터 이어집니다</div></div>
+    <div><div class="yt-embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/7iLVbyigC1Q" title="매일경제TV 이슈앤피플 방송" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><div class="yt-cap">매일경제TV 「이슈&amp;피플」 방송 — 전문은 뉴스 페이지에서</div></div>
+  </div>
 </section>
 </div>
 <div class="page" id="page-team">
@@ -1527,7 +1593,7 @@ function showEl(id,tab){
   } catch(e){}
 
 // 해시 라우터: 메뉴 = 페이지 전환
-const PAGES = ['home','project','field','progress','news','escrow','guide','docs','team'];
+const PAGES = ['home','project','field','progress','news','escrow','guide','faq','docs','team'];
 function showPage(n){
   if (!PAGES.includes(n)) n = 'home';
   PAGES.forEach(p => { const el = document.getElementById('page-' + p); if (el) el.classList.toggle('on', p === n); });
