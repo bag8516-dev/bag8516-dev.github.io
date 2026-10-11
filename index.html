@@ -814,6 +814,17 @@ addEventListener('pointermove', e => {
   </div>
 </section>
 
+<section class="sec" id="chainStatsWrap" style="display:none;padding-top:2.2rem;padding-bottom:1.2rem">
+  <div class="sec-hd"><span class="sec-kicker2">ON-CHAIN</span><div class="sec-hline"></div></div>
+  <div class="sec-ttl">MPC 온체인 현황</div>
+  <div id="chainStats" class="esc-stats" style="grid-template-columns:repeat(2,1fr);margin-top:1.1rem">
+    <div class="esc-stat"><div class="esc-num" id="csMoved">–</div><div class="esc-lbl">24시간 이동량 (MPC)</div></div>
+    <div class="esc-stat"><div class="esc-num" id="csTx">–</div><div class="esc-lbl">24시간 전송 건수</div></div>
+    <div class="esc-stat"><div class="esc-num" id="csHolders">–</div><div class="esc-lbl">보유 지갑 수</div></div>
+    <div class="esc-stat"><div class="esc-num" id="csSupply">–</div><div class="esc-lbl">총 발행량 (MPC)</div></div>
+  </div>
+  <div id="chainStatsNote" class="esc-note"></div>
+</section>
 
 </div>
 
@@ -1304,13 +1315,6 @@ addEventListener('pointermove', e => {
     <div class="esc-stat"><div class="esc-num" data-end="0">0</div><div class="esc-lbl">자산 사고</div></div>
   </div>
   <div id="homeTicker" class="esc-note fade-in" style="display:none;color:var(--cop2)"></div>
-  <div id="chainStats" class="esc-stats fade-in" style="display:none;grid-template-columns:repeat(2,1fr)">
-    <div class="esc-stat"><div class="esc-num" id="csMoved">–</div><div class="esc-lbl">24시간 이동량 (MPC)</div></div>
-    <div class="esc-stat"><div class="esc-num" id="csTx">–</div><div class="esc-lbl">24시간 전송 건수</div></div>
-    <div class="esc-stat"><div class="esc-num" id="csHolders">–</div><div class="esc-lbl">보유 지갑 수</div></div>
-    <div class="esc-stat"><div class="esc-num" id="csSupply">–</div><div class="esc-lbl">총 발행량 (MPC)</div></div>
-  </div>
-  <div id="chainStatsNote" class="esc-note fade-in" style="display:none"></div>
   <div class="esc-note fade-in">보관 수량은 매일 자동 장부 대조로 검증되어 앱에 공개됩니다. 모든 기록은 폴리곤 블록체인에서 누구나 확인할 수 있습니다. 앱은 아래 버튼에서 열 수 있습니다. 처음이시라면 <a href="#guide" style="color:var(--cop2)">이용 안내</a>를 먼저 읽어 보세요.</div>
 </section>
 
@@ -1635,10 +1639,8 @@ window.addEventListener('DOMContentLoaded', function(){
         var hd = s.holdersDelta > 0 ? ' (+' + s.holdersDelta + ')' : '';
         document.getElementById('csHolders').textContent = (+s.holders).toLocaleString() + hd;
         document.getElementById('csSupply').textContent = (+s.totalSupply).toLocaleString();
-        document.getElementById('chainStats').style.display = '';
-        var n = document.getElementById('chainStatsNote');
-        n.textContent = '폴리곤 블록체인에서 자동 집계 · ' + s.updated + ' 갱신';
-        n.style.display = '';
+        document.getElementById('chainStatsNote').textContent = '폴리곤 블록체인에서 자동 집계 · ' + s.updated + ' 갱신';
+        document.getElementById('chainStatsWrap').style.display = '';
       }).catch(function(){});
   } catch(e){}
 
