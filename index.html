@@ -1634,11 +1634,10 @@ window.addEventListener('DOMContentLoaded', function(){
       .then(function(r){ return r.ok ? r.json() : null; })
       .then(function(s){
         if (!s || !s.updated) return;
-        document.getElementById('csMoved').textContent = (+s.moved24h).toLocaleString();
-        document.getElementById('csTx').textContent = (+s.tx24h).toLocaleString();
-        var hd = s.holdersDelta > 0 ? ' (+' + s.holdersDelta + ')' : '';
-        document.getElementById('csHolders').textContent = (+s.holders).toLocaleString() + hd;
-        document.getElementById('csSupply').textContent = (+s.totalSupply).toLocaleString();
+        // 숫자 세기 연출(data-end)과 겹쳐도 최종값이 맞도록 둘 다 기록
+        [['csMoved', s.moved24h], ['csTx', s.tx24h], ['csHolders', s.holders], ['csSupply', s.totalSupply]]
+          .forEach(function(p){ var el = document.getElementById(p[0]); el.dataset.end = String(p[1]); el.textContent = (+p[1]).toLocaleString(); });
+        if (s.holdersDelta > 0) document.getElementById('csHolders').nextElementSibling.textContent = '보유 지갑 수 (어제보다 +' + s.holdersDelta + ')';
         document.getElementById('chainStatsNote').textContent = '폴리곤 블록체인에서 자동 집계 · ' + s.updated + ' 갱신';
         document.getElementById('chainStatsWrap').style.display = '';
       }).catch(function(){});
