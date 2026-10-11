@@ -485,7 +485,12 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;o
 .yt-cap{font-size:12.5px;color:var(--mut);margin-top:7px;}
 @media (min-width:1000px) and (max-width:1319px){.nav-links{gap:17px;}.nav-links a{font-size:12.5px;}}
 /* 마이 마인 특집 */
-.mmf{border:1px solid var(--line);padding:22px 20px;margin:1.6rem 0 2.2rem;position:relative;}
+.mmf{border:1px solid var(--line);padding:22px 20px;margin:1.6rem auto 2.2rem;position:relative;}
+.mmf-hero{margin-top:1.1rem;border:1px solid var(--line);}
+.mmf-hero img{width:100%;display:block;aspect-ratio:16/7;object-fit:cover;}
+.mmf-hero figcaption{font-size:11px;color:var(--dim);padding:6px 2px 0;}
+.mmf-sbt{flex:none;width:88px;height:88px;border:1px solid var(--line);object-fit:cover;display:none;}
+@media (min-width:760px){.mmf-how{display:flex;gap:18px;align-items:center;}.mmf-sbt{display:block;}}
 .mmf-k{font-family:var(--disp);font-size:10.5px;letter-spacing:.16em;color:var(--cop2);}
 .mmf-t{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--ink);margin:.35rem 0 .5rem;}
 .mmf-d{font-size:14.5px;color:var(--mut);line-height:1.75;max-width:620px;}
@@ -1229,13 +1234,14 @@ addEventListener('pointermove', e => {
     <span class="mmf-k">ECOSYSTEM · 2026.08.31 공식 출시</span>
     <div class="mmf-t">마이 마인(My Mine) — 광산을 손안의 게임으로</div>
     <div class="mmf-d">차간톨고이에서 실제로 벌어지는 광산의 한살이를 그대로 게임으로 옮겼습니다. 리튬·규소·희토류를 캐고, 제련하고, 검증받아 출하하는 과정을 직접 해 보면서 MPC가 하는 일을 몸으로 이해하게 됩니다.</div>
+    <figure class="mmf-hero"><img src="../assets/mymine/my-mine-1.webp" alt="마이 마인 공식 배너 — 곡괭이가 광맥을 내리치는 장면" width="1600" height="900" loading="lazy"><figcaption>이미지: MPC 공식 출시 글 (globalmpc.tech/operations/my-mine) · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="mmf-grid">
       <div class="mmf-c"><b><i>01</i>캐기 (DIG)</b><span>세 광맥 중 하나를 골라 하루 최대 20번 채굴. 에너지는 출석·퀘스트로 모읍니다.</span></div>
       <div class="mmf-c"><b><i>02</i>제련·검증</b><span>같은 등급 5개를 모아 윗 등급 1개로 제련하고, 검증(Assay)을 거쳐야 다음으로 넘어갑니다.</span></div>
       <div class="mmf-c"><b><i>03</i>장터 (MARKET)</b><span>완성품을 등록하면 가치가 15일에 나눠 Credit으로 지급됩니다.</span></div>
       <div class="mmf-c"><b><i>04</i>수집 (COLLECTION)</b><span>37칸짜리 수집첩. 얻은 물건은 지갑에 영구히 묶여(SBT) 내 기록이 됩니다.</span></div>
     </div>
-    <div class="mmf-how"><strong>시작 방법</strong> — app.globalmpc.tech 에서 대기열에 등록하면 첫 곡괭이(SBT)가 지갑으로 들어옵니다. 커뮤니티 투표(My Mine Vote)도 여기서 참여합니다: 첫 입장 때 3문항 인증 시험을 통과하면 자격이 생기고, 보유 Crew에 따라 투표력 1.00~3.00이 정해지며, 가스비 없이 투표하고 모든 표가 opBNB 체인에 기록됩니다.</div>
+    <div class="mmf-how"><img class="mmf-sbt" src="../assets/mymine/my-mine-2.webp" alt="첫 곡괭이 — 2026 대기열 SBT" loading="lazy"><div><strong>시작 방법</strong> — app.globalmpc.tech 에서 대기열에 등록하면 첫 곡괭이(SBT)가 지갑으로 들어옵니다. 커뮤니티 투표(My Mine Vote)도 여기서 참여합니다: 첫 입장 때 3문항 인증 시험을 통과하면 자격이 생기고, 보유 Crew에 따라 투표력 1.00~3.00이 정해지며, 가스비 없이 투표하고 모든 표가 opBNB 체인에 기록됩니다.</div></div>
     <div class="mmf-links">
       <a href="https://app.globalmpc.tech" target="_blank" rel="noopener">마이 마인 바로가기 ↗</a>
       <a href="https://www.globalmpc.tech/operations/my-mine" target="_blank" rel="noopener">출시 소개 원문</a>
