@@ -735,6 +735,7 @@ summary::-webkit-details-marker{display:none;}
     <a href="#guide" onclick="toggleMenu()">이용 안내</a>
     <a href="#docs" onclick="toggleMenu()">자료실</a>
     <a href="#team" onclick="toggleMenu()">팀·회사</a>
+    <a href="https://www.youtube.com/@MPC.RWA%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" rel="noopener">유튜브 채널 ↗</a>
     <a class="menu-ov-cta" href="https://mpcescrow.com/mpc-escrow/">에스크로 앱 열기</a>
   </nav>
 </div>
@@ -1421,6 +1422,7 @@ addEventListener('pointermove', e => {
     <a href="https://x.com/MPC_Global_X">X (트위터)</a><span>·</span>
     <a href="https://t.me/official_mpc_global">텔레그램</a><span>·</span>
     <a href="https://medium.com/@globalmpc2026">미디엄</a><span>·</span>
+    <a href="https://www.youtube.com/@MPC.RWA%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">유튜브</a><span>·</span>
     <a href="https://www.globalmpc.tech/">공식 홈페이지</a>
   </div>
   <div class="f-sub">몽골 불간 아이막 바양누르 솜 · 탐사 라이센스 XV-022460<br>© 2026 MPC RWA Report</div>
@@ -1609,6 +1611,7 @@ window.addEventListener('DOMContentLoaded', function(){
     function fire(){
       if (fired) return; fired = true;
       els.forEach(function(el){
+        if (el.dataset.end === undefined) return; // data-end 없는 칸은 연출 제외 (값 덮어쓰기 방지)
         const end = parseInt(el.dataset.end, 10) || 0;
         if (CU) { const c = new CU(el, end, { duration: 1.6, separator: ',' }); c.error ? el.textContent = end.toLocaleString() : c.start(); }
         else el.textContent = end.toLocaleString();
@@ -1635,8 +1638,11 @@ window.addEventListener('DOMContentLoaded', function(){
       .then(function(s){
         if (!s || !s.updated) return;
         // 숫자 세기 연출(data-end)과 겹쳐도 최종값이 맞도록 둘 다 기록
-        [['csMoved', s.moved24h], ['csTx', s.tx24h], ['csHolders', s.holders], ['csSupply', s.totalSupply]]
+        [['csMoved', s.moved24h], ['csTx', s.tx24h], ['csHolders', s.holders]]
           .forEach(function(p){ var el = document.getElementById(p[0]); el.dataset.end = String(p[1]); el.textContent = (+p[1]).toLocaleString(); });
+        // 총 발행량은 자리가 좁아 억 단위로 (연출 제외)
+        var sup = +s.totalSupply;
+        document.getElementById('csSupply').textContent = sup >= 1e8 ? (Math.round(sup / 1e7) / 10).toLocaleString() + '억' : sup.toLocaleString();
         if (s.holdersDelta > 0) document.getElementById('csHolders').nextElementSibling.textContent = '보유 지갑 수 (어제보다 +' + s.holdersDelta + ')';
         document.getElementById('chainStatsNote').textContent = '폴리곤 블록체인에서 자동 집계 · ' + s.updated + ' 갱신';
         document.getElementById('chainStatsWrap').style.display = '';
