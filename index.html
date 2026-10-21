@@ -643,6 +643,7 @@ summary::-webkit-details-marker{display:none;}
 /* ═══ 비주얼 보강 (뉴스·에스크로·안내·자료실·팀) ═══ */
 .nc-visual{margin:0 0 1.1rem;border:1px solid var(--line2);background:#14110C;padding:8px;max-width:460px;}
 .nc-visual img{display:block;width:100%;height:auto;border:1px solid rgba(194,119,63,.22);filter:saturate(.88) contrast(1.03);}
+.nc-visual.crop img{aspect-ratio:16/10;object-fit:cover;}
 .nc-visual figcaption{font-size:10.5px;color:var(--cop);padding:7px 2px 0;font-family:var(--mono);letter-spacing:.12em;}
 .nc-ico{width:42px;height:42px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--cop2);margin-bottom:.8rem;background:rgba(194,119,63,.06);}
 .nc-ico svg{width:22px;height:22px;}
@@ -1303,8 +1304,8 @@ addEventListener('pointermove', e => {
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src3">볼로르지오 유튜브</span><span class="nc-date">2026.10.17 공개</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-mic"/></svg></div>
     <div class="nc-ttl">현장 인터뷰 쇼츠 — 백운모, 3번 시추공, 무덤 16기</div>
+    <figure class="nc-visual crop"><img src="assets/news/yt-interview.jpg" alt="볼로르지오 현장 인터뷰 쇼츠 화면" width="640" height="400" loading="lazy"><figcaption>이미지: 볼로르지오 공식 유튜브 쇼츠 화면</figcaption></figure>
     <div class="nc-body">광산 법인 볼로르지오가 유튜브에 현장 인터뷰 쇼츠를 한꺼번에 올렸습니다. 날짜는 올린 날이고 말한 날이 아닙니다. 아래는 영상을 직접 보고 실제 말(몽골어는 화면 한국어 자막)을 옮긴 것이며, 회사 사람의 발언이지 공인 기관의 보고서가 아닙니다.</div>
     <ul class="nc-list">
       <li><strong>탐사 단계:</strong> 7월에 시작해 약 두 달이 지난 지금 1차 탐사의 중간 단계이고, 2차·3차 탐사로 이어질 가능성이 높다는 전망.</li>
@@ -1319,16 +1320,16 @@ addEventListener('pointermove', e => {
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 현장 보고</span><span class="nc-date">2026.10.16</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-flask"/></svg></div>
     <div class="nc-ttl">차간톨고이 탐사 기록 추가 공개</div>
+    <figure class="nc-visual crop"><img src="assets/news/doc-core-logging.jpg" alt="시추 코어를 상자에 놓고 구간을 기록하는 현장" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">현장 작업자들이 드러난 암석과 흙을 살피고 장비로 지질 특성을 기록하는 과정, 시료를 캐서 분석으로 넘기는 과정, 시추로 뽑은 코어를 나무 상자에 담아 현장에서 검사·기록하는 과정을 사진과 함께 공개했습니다. 시료가 어디서, 몇 m 깊이에서, 어떤 지층 사이에서 나왔는지를 함께 남겨야 의미 있는 자료가 된다는 설명입니다. 회사는 차간톨고이가 아직 탐사 단계라고 다시 밝혔고, 규모와 일정은 '공개 예정'으로 두었습니다. 이번 글에는 새로운 분석 수치가 없습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 탐사</span><span class="nc-tag"># 시추 코어</span></div>
     <a href="https://www.globalmpc.tech/operations/tsagaan-tolgoi-documentation" class="nc-link">공식 현장 보고 원문 보기</a>
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 개발 소식</span><span class="nc-date">2026.10.16</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-pick"/></svg></div>
     <div class="nc-ttl">개발 소식 2건 — 거래 결과 표시가 빨라짐, 로그 수집 도구 공개</div>
+    <figure class="nc-visual crop"><img src="assets/news/dev-faster-feedback.jpg" alt="거래 결과 표시가 빨라짐 개발 소식 표지" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <ul class="nc-list">
       <li><strong>opBNB 거래 결과 표시:</strong> 거래가 블록에 들어간 것이 확인되면 최종 정산 전이라도 '성공'으로 먼저 보여 줍니다. 전에는 블록에 들어가는 데 약 2초면 됐는데 성공 표시까지 20초 넘게 기다린 경우가 있었다고 합니다. 체크인, 퀘스트 보상, My Mine, 투표에 적용되고, 먼저 보이는 잔액도 최종 정산이 끝나야 쓸 수 있는 금액이 정해집니다.</li>
       <li><strong>EVM Log Walker:</strong> 블록체인의 지난 거래 기록을 나눠서 모으는 개발자용 오픈소스 도구를 npm(@globalmpc/evm-log-walker)과 깃허브(globalmpc/rwa-kit-js)에 공개했습니다. 회사는 블록체인 기록만으로 실물 자산의 소유권을 증명할 수는 없다고 함께 적었습니다.</li>
@@ -1339,8 +1340,8 @@ addEventListener('pointermove', e => {
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src nc-src3">공식 X 라이브</span><span class="nc-date">2026.10.15</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-mic"/></svg></div>
     <div class="nc-ttl">글로벌 라이브 AMA 정리 — "토큰은 광산 지분이 아니다"</div>
+    <figure class="nc-visual crop"><img src="assets/og-card.png" alt="MPC 글로벌 라이브 AMA 정리" width="640" height="400" loading="lazy"><figcaption>이미지: 본 사이트 대표 카드</figcaption></figure>
     <div class="nc-body">CEO Bayo Okusanya와 COO Quentin Ho가 X 스페이스에서 진행자 질문 6개에 답했습니다(청취 728명, 청취자 질문 시간은 없었음). 녹음을 받아 적은 내용입니다.</div>
     <ul class="nc-list">
       <li>사업 순서는 검증 → 구조화 → 토큰화 → 관리이고, 토큰화는 검증과 구조화 뒤에 온다고 했습니다.</li>
@@ -1353,8 +1354,8 @@ addEventListener('pointermove', e => {
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 출시</span><span class="nc-date">2026.10.09</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-pick"/></svg></div>
     <div class="nc-ttl">MPC Unity 출시 — My Mine 화면 개편</div>
+    <figure class="nc-visual crop"><img src="assets/news/unity.jpg" alt="MPC Unity 공식 표지" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">퀘스트, 채굴(Digging), 재료(Materials), 제련(Forge), 순위(Rank)를 하단 메뉴로 묶어 오갈 수 있게 한 개편입니다. 퀘스트로 Crew를 얻고, Crew로 채굴하고, 모은 재료를 이어서 쓰는 흐름이 한눈에 보이도록 안내와 FAQ도 늘렸다고 합니다. 텔레그램 연결과 가입 진행에서 어려움을 겪는 보고가 있어 조사 중이라는 내용도 함께 적혀 있습니다. My Mine은 MPC를 체험하는 시뮬레이션이며 투자·증권·금융상품이 아닙니다.</div>
     <div class="nc-tags"><span class="nc-tag"># My Mine</span><span class="nc-tag"># 개편</span></div>
     <a href="https://www.globalmpc.tech/operations/mpc-unity" class="nc-link">공식 출시 글 원문 보기</a>
@@ -1376,40 +1377,40 @@ addEventListener('pointermove', e => {
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 현장 보고</span><span class="nc-date">2026.09.30</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-flask"/></svg></div>
     <div class="nc-ttl">차간톨고이 TDH-03 시추공에서 금 확인</div>
+    <figure class="nc-visual crop"><img src="assets/news/gold-drill-site.jpg" alt="시추공 케이싱이 세워진 시추 현장" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">공식 현장 보고에 따르면 캠프에서 북동쪽으로 약 4km 떨어진 TDH-03 시추공에서 두께 50m의 산화대가 나왔고, 그 안에 금이 들어 있었습니다. 109m 깊이 시료를 몽골과학기술대에서 현미경과 SEM-EDX로 분석했더니 황철석 안에서 금 알갱이가 보였고 황동석·코벨라이트 같은 구리 광물도 확인됐습니다. 금이 든 구간은 길이 약 700m로 파악됐습니다. TDH-07 공에서는 같은 변질대에서 두께 30m의 산화철 변질대를 만났고, 시료는 SGS로 보내 분석 중입니다. 회사는 아직 탐사 단계이며 더 깊은 곳의 금 근원 가능성을 포함해 추가 시추와 분석이 필요하다고 밝혔습니다. 매장량과 금 함량은 공개되지 않았습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 금</span><span class="nc-tag"># 시추</span><span class="nc-tag"># 탐사</span></div>
     <a href="https://www.globalmpc.tech/operations/tsagaan-tolgoi-gold" class="nc-link">공식 현장 보고 원문 보기</a>
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 개발 소식</span><span class="nc-date">2026.09.30</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-wallet"/></svg></div>
     <div class="nc-ttl">MPC 지갑 개발 소식 — 출시 전, 시험 중</div>
+    <figure class="nc-visual crop"><img src="assets/news/wallet.jpg" alt="MPC 지갑 개발 소식 표지" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">공식 설명으로는 키를 사용자 기기 안에서만 만들고 서버에는 사본을 두지 않는 지갑입니다. 첫 버전은 BNB 스마트체인의 MPC를 보관하고 보내고 받는 기능만 담습니다. 복구 문구는 12단어이고, 앱 접근은 6자리 PIN과 지문·얼굴 인식으로 막습니다. 코드는 깃허브에 공개할 예정이라고 합니다. 아직 출시 전이며 시험과 출시 준비 중이고, 구글 플레이와 앱스토어 승인이 끝나면 알리겠다고 했습니다. 기기와 복구 문구를 모두 잃으면 회사도 되살려 줄 수 없다고 안내하고 있습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 지갑</span><span class="nc-tag"># BNB 스마트체인</span></div>
     <a href="https://www.globalmpc.tech/operations/mpc-wallet" class="nc-link">공식 개발 소식 원문 보기</a>
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.29</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-swap"/></svg></div>
     <div class="nc-ttl">My Mine 보상 체계 전환 완료</div>
+    <figure class="nc-visual crop"><img src="assets/news/crew-rewards.jpg" alt="에너지 시스템 전환 공식 표지" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">출석·퀘스트 보상이 opBNB 체인의 Crew로 직접 지급되는 방식으로 바뀌었습니다. 기존 BSC 에너지 적립은 종료됐고, 남은 에너지는 1개당 1.2 Crew로 쳐서 지갑당 1회 청구할 수 있습니다. 에너지가 남아 있다면 잊지 말고 청구하세요.</div>
     <div class="nc-tags"><span class="nc-tag"># My Mine</span><span class="nc-tag"># opBNB</span></div>
     <a href="https://www.globalmpc.tech/operations/my-mine-crew-rewards" class="nc-link">공식 안내 원문 보기</a>
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.17</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-link"/></svg></div>
     <div class="nc-ttl">My Mine 텔레그램 인증 방식 변경</div>
+    <figure class="nc-visual crop"><img src="assets/news/telegram.jpg" alt="텔레그램 인증 개발 소식 표지" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">텔레그램 봇 링크로 인증하던 방식이 없어지고, My Mine 사이트 안에서 텔레그램 계정을 바로 연결하는 방식으로 바뀌었습니다. 봇에서 확인이 안 와서 빈 화면에 멈추던 문제를 고친 것이라고 밝혔습니다. 이미 인증을 마친 계정은 그대로 유지되니 다시 할 필요 없습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># My Mine</span><span class="nc-tag"># 텔레그램</span></div>
     <a href="https://www.globalmpc.tech/operations/my-mine-telegram-verification" class="nc-link">공식 안내 원문 보기</a>
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026.09.15</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-vote"/></svg></div>
     <div class="nc-ttl">My Mine Vote 출시 — 커뮤니티 투표 기능</div>
+    <figure class="nc-visual crop"><img src="assets/news/vote.jpg" alt="My Mine Vote 공식 표지" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">무엇을 만들지 커뮤니티가 투표로 참여하는 기능입니다. 첫 입장 때 3문항 인증 시험을 통과하면 자격이 생기고, 투표력은 보유 Crew에 따라 1.00~3.00으로 정해집니다. 가스비 없이 참여하며, 투표 영수증의 거래 번호를 opBNB 조회기에 넣으면 내 표가 기록된 걸 직접 확인할 수 있습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 거버넌스</span><span class="nc-tag"># My Mine</span></div>
     <a href="https://www.globalmpc.tech/operations/my-mine-vote" class="nc-link">공식 소개 원문 보기</a>
@@ -1438,8 +1439,8 @@ addEventListener('pointermove', e => {
 <div class="nc-grid">
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">중앙일보</span><span class="nc-date">2026.08.18</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-pick"/></svg></div>
     <div class="nc-ttl">중앙일보 현장 취재 — 몽골 초원의 시추 현장</div>
+    <figure class="nc-visual crop"><img src="assets/news/yt-drill-site.jpg" alt="시추 장비 옆에서 일하는 작업자들" width="640" height="400" loading="lazy"><figcaption>이미지: 볼로르지오 공식 유튜브 현장 쇼츠 — 기사·방송 화면이 아닌 현장 참고 이미지</figcaption></figure>
     <div class="nc-body">중앙일보 기자가 8월 6일(현지시간) 바양노르솜 탐사 현장을 찾아 시추 과정을 취재했습니다. 현장소장은 지질조사와 자기장·전기탐사 결과로 고른 지점을 시추하고 있고, 광물이 있는지와 경제성은 시추 코어의 성분 분석 결과가 나와야 판단할 수 있다고 설명했습니다. 기사는 탐사권(6,481ha)이 채굴권과 다르며 실제 채굴에는 별도 허가가 필요하다는 점, 첫 조사지에서 채취한 암석·토양 시료 1,400여 개를 ALS·SGS 등에 분석 의뢰했다는 점도 전합니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 언론 보도</span><span class="nc-tag"># 시추 현장</span><span class="nc-tag"># 탐사권</span></div>
     <a href="https://www.joongang.co.kr/article/25454014" class="nc-link" target="_blank" rel="noopener">기사 원문 보기</a>
@@ -1454,8 +1455,8 @@ addEventListener('pointermove', e => {
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.31</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-contract"/></svg></div>
     <div class="nc-ttl">아주경제 현지 취재 — 바양노르 광상과 몽골 광산·관광업</div>
+    <figure class="nc-visual crop"><img src="assets/news/yt-aerial.jpg" alt="하늘에서 내려다본 시추 현장" width="640" height="400" loading="lazy"><figcaption>이미지: 볼로르지오 공식 유튜브 현장 쇼츠 — 기사·방송 화면이 아닌 현장 참고 이미지</figcaption></figure>
     <div class="nc-body">아주경제가 몽골 현지에서 쓴 기획 기사입니다. 볼로르지오가 볼간아이막 바양노르솜 인근 약 6,481ha 광구의 독점 탐사권을 갖고 있고, 환경영향평가를 통과한 뒤 ALS(호주)·SGS(스위스)와 계약해 본격 탐사에 들어갔다고 전합니다. 울란바토르에서 서쪽으로 약 190km, 시내에서 차량으로 1시간 30분 이내라는 접근성도 짚었습니다. 채산성 평가를 위한 JORC 기준 보고서는 아직 준비 중이라고 적었습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 언론 보도</span><span class="nc-tag"># 환경영향평가</span><span class="nc-tag"># JORC 준비 중</span></div>
     <a href="https://www.ajunews.com/view/20260730083902343" class="nc-link" target="_blank" rel="noopener">기사 원문 보기</a>
@@ -1463,21 +1464,22 @@ addEventListener('pointermove', e => {
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.31</span></div>
     <div class="nc-ttl">몽골 전 총리 인터뷰 — 책임 있는 한국 기업의 조건</div>
+    <figure class="nc-visual crop"><img src="assets/news/yt-road.jpg" alt="몽골 현장으로 가는 길의 트럭" width="640" height="400" loading="lazy"><figcaption>이미지: 볼로르지오 공식 유튜브 현장 쇼츠 — 기사·방송 화면이 아닌 현장 참고 이미지</figcaption></figure>
     <div class="nc-body">아주경제가 곰보자브 잔단샤타르 전 몽골 총리와 한 인터뷰입니다. 광산업·관광업을 함께 높여야 한다는 이야기를 다루고, 기사는 사업 첫날부터 환경·사회 기준을 반영해야 한다는 발언을 볼로르지오의 현지화 전략과 연결해 소개합니다. 기사가 전하는 볼로르지오의 활동은 수자원 사용 계약, 지역 주민 채용, 유치원 설립 기부입니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 언론 보도</span><span class="nc-tag"># 인터뷰</span><span class="nc-tag"># 현지화</span></div>
     <a href="https://www.ajunews.com/view/20260730091210438" class="nc-link" target="_blank" rel="noopener">기사 원문 보기</a>
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.01</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-contract"/></svg></div>
     <div class="nc-ttl">볼로르지오-ALS 탐사 계약 체결</div>
+    <figure class="nc-visual crop"><img src="assets/news/yt-rig.jpg" alt="푸른 하늘 아래 시추기" width="640" height="400" loading="lazy"><figcaption>이미지: 볼로르지오 공식 유튜브 현장 쇼츠 — 기사·방송 화면이 아닌 현장 참고 이미지</figcaption></figure>
     <div class="nc-body">국제 공인 분석기관 ALS와 정밀 탐사 계약을 맺었습니다. ALS는 호주에 본사를 둔 세계적 시험·분석 그룹으로, 이 계약이 회사가 방송에서 밝힌 13공 시추 → 분석 보고서 수령 흐름의 출발점입니다. 분석을 회사 스스로 하지 않고 외부 공인기관에 맡긴다는 것이 핵심입니다.</div>
     <div class="nc-tags"><span class="nc-tag"># ALS 계약</span><span class="nc-tag"># 탐사</span></div>
   </div>
   <div class="nc fade-in d2">
     <div class="nc-meta"><span class="nc-src nc-src2">공식 업데이트</span><span class="nc-date">2026 상반기</span></div>
-    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-flask"/></svg></div>
     <div class="nc-ttl">SGS 지표 노두 성분분석 완료</div>
+    <figure class="nc-visual crop"><img src="assets/news/outcrop-samples.jpg" alt="지표 노두에서 채취한 암석 샘플" width="640" height="400" loading="lazy"><figcaption>이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption></figure>
     <div class="nc-body">땅 위에 드러난 암석(노두) 16개 샘플을 국제 검사·인증 기관 SGS(스위스)가 분석해 희토류·텅스텐·구리 성분을 확인했습니다. 시추에 앞서 지표 암석부터 검증한 단계였고, 회사는 방송에서 13공 시추와 ALS·SGS 분석 보고서 수령이 이어지고 있다고 밝혔습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># SGS</span><span class="nc-tag"># 희토류</span></div>
   </div>
