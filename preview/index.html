@@ -677,6 +677,17 @@ summary::-webkit-details-marker{display:none;}
 .film-strip button.on{opacity:1;border-color:var(--cop);}
 .film-strip button:hover{opacity:.85;}
 
+
+/* 공식 채널 현장 영상 */
+.vid-strip{margin:1.8rem 0 0;}
+.vid-strip-h{font-size:11px;letter-spacing:.1em;color:var(--cop);margin:0 0 .6rem;}
+.vid-grid{display:flex;gap:10px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:2px 0 10px;}
+.vid-grid a{flex:none;width:132px;display:block;border:1px solid var(--line2);text-decoration:none;color:var(--mut);background:rgba(194,119,63,.03);}
+.vid-grid a img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;filter:saturate(.9);}
+.vid-grid a span{display:block;padding:7px 8px 9px;font-size:12px;line-height:1.5;color:var(--ink);}
+.vid-grid a:hover{border-color:var(--cop);}
+.vid-note{font-size:11.5px;color:var(--mut);line-height:1.7;margin:.7rem 0 0;}
+
 /* 현장 탭 보강 */
 .field-grid{display:flex;flex-direction:column;gap:22px;margin:0 0 2rem;}
 .flog,.sdata{border:1px solid var(--line2);background:rgba(194,119,63,.03);padding:16px 16px 10px;}
@@ -1190,6 +1201,11 @@ addEventListener('pointermove', e => {
     </div>
     <div class="site-stage-note">광산 생애주기 중 첫 단계인 탐사(시추·분석)가 진행 중입니다. 매장 규모 등 세부 수치는 공인기관 검증이 확정되는 대로 공식 채널에 공개된다고 밝히고 있습니다.</div>
   </div>
+  <div class="vid-strip fade-in">
+    <div class="vid-strip-h">현장 영상 · 볼로르지오 공식 유튜브 (@Bolor_Geo)</div>
+    <div class="vid-grid"><a href="https://www.youtube.com/shorts/gJbBodyL6B4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/gJbBodyL6B4/oar2.jpg" alt="하늘에서 내려다본 몽골 광물 탐사 현장" width="270" height="480" loading="lazy"><span>하늘에서 내려다본 몽골 광물 탐사 현장</span></a><a href="https://www.youtube.com/shorts/56aSrTZPaiI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/56aSrTZPaiI/oar2.jpg" alt="시추 현장은 땅 위에서 보면 이렇습니다" width="270" height="480" loading="lazy"><span>시추 현장은 땅 위에서 보면 이렇습니다</span></a><a href="https://www.youtube.com/shorts/aoS5Z24zE90" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/aoS5Z24zE90/oar2.jpg" alt="탐사 현장의 하루는 이렇게 저뭅니다" width="270" height="480" loading="lazy"><span>탐사 현장의 하루는 이렇게 저뭅니다</span></a><a href="https://www.youtube.com/shorts/WresqjxAXf0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WresqjxAXf0/oar2.jpg" alt="끝없이 곧은 도로, 몽골 현장까지 가는 길" width="270" height="480" loading="lazy"><span>끝없이 곧은 도로, 몽골 현장까지 가는 길</span></a><a href="https://www.youtube.com/shorts/HKnXwvJTl8s" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/HKnXwvJTl8s/oar2.jpg" alt="같은 현장, 함께하는 사람들의 식사 시간" width="270" height="480" loading="lazy"><span>같은 현장, 함께하는 사람들의 식사 시간</span></a><a href="https://www.youtube.com/shorts/j7kzAehv_DI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/j7kzAehv_DI/oar2.jpg" alt="몽골 탐사 현장에서 들은 백운모 이야기" width="270" height="480" loading="lazy"><span>몽골 탐사 현장에서 들은 백운모 이야기</span></a></div>
+    <div class="vid-note">광산 법인 볼로르지오가 직접 올린 현장 쇼츠입니다. 몽골 현장 드론·시추·식사 장면과 현장 인터뷰가 더 있습니다. 올린 날은 2026-10-17(일괄 업로드)이라 촬영한 날과 다릅니다. 영상을 누르면 유튜브에서 열립니다.</div>
+  </div>
   <div class="esc-note fade-in">사진 출처: MPC 공식 홈페이지 현장 소식 (globalmpc.tech/operations) · © Bolor Geo MPC Corp.</div>
 </section>
 </div>
@@ -1408,12 +1424,35 @@ addEventListener('pointermove', e => {
     <a href="https://www.globalmpc.tech/operations/my-mine" class="nc-link">공식 출시 글 원문 보기</a>
   </div>
   <div class="nc fade-in d1">
+    <div class="nc-meta"><span class="nc-src">중앙일보</span><span class="nc-date">2026.08.18</span></div>
+    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-pick"/></svg></div>
+    <div class="nc-ttl">중앙일보 현장 취재 — 몽골 초원의 시추 현장</div>
+    <div class="nc-body">중앙일보 기자가 8월 6일(현지시간) 바양노르솜 탐사 현장을 찾아 시추 과정을 취재했습니다. 현장소장은 지질조사와 자기장·전기탐사 결과로 고른 지점을 시추하고 있고, 광물이 있는지와 경제성은 시추 코어의 성분 분석 결과가 나와야 판단할 수 있다고 설명했습니다. 기사는 탐사권(6,481ha)이 채굴권과 다르며 실제 채굴에는 별도 허가가 필요하다는 점, 첫 조사지에서 채취한 암석·토양 시료 1,400여 개를 ALS·SGS 등에 분석 의뢰했다는 점도 전합니다.</div>
+    <div class="nc-tags"><span class="nc-tag"># 언론 보도</span><span class="nc-tag"># 시추 현장</span><span class="nc-tag"># 탐사권</span></div>
+    <a href="https://www.joongang.co.kr/article/25454014" class="nc-link" target="_blank" rel="noopener">기사 원문 보기</a>
+  </div>
+  <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">채널A</span><span class="nc-date">2026.08.09</span></div>
     <div class="nc-ttl">채널A 「브랜딩코리아」 — 차간톨고이 현장 방송</div>
     <figure class="nc-visual"><a href="https://www.youtube.com/watch?v=QwaxoaFqlbQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QwaxoaFqlbQ/hqdefault.jpg" alt="채널A 브랜딩코리아 몽골편 방송 화면" width="480" height="360" loading="lazy"></a><figcaption>FIG 02 · 방송 화면 — 누르면 다시 보기</figcaption></figure>
     <div class="nc-body">채널A 「브랜딩코리아」 14회가 차간톨고이 탐사 현장을 직접 찾았습니다. 몽골이 왜 새로운 광물 공급망으로 주목받는지, 한국 기업이 왜 몽골을 선택했는지를 초원 위 탐사 현장 화면과 함께 다뤘습니다.</div>
     <div class="nc-tags"><span class="nc-tag"># 방송</span><span class="nc-tag"># 한몽 협력</span></div>
     <a href="https://www.youtube.com/watch?v=TnMERoi9L-Y" class="nc-link"><svg width="13" height="13" aria-hidden="true"><use href="#i-play"/></svg>이어지는 클립 — 자원과 기술의 연결</a>
+  </div>
+  <div class="nc fade-in d2">
+    <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.31</span></div>
+    <div class="nc-ico" aria-hidden="true"><svg><use href="#i-contract"/></svg></div>
+    <div class="nc-ttl">아주경제 현지 취재 — 바양노르 광상과 몽골 광산·관광업</div>
+    <div class="nc-body">아주경제가 몽골 현지에서 쓴 기획 기사입니다. 볼로르지오가 볼간아이막 바양노르솜 인근 약 6,481ha 광구의 독점 탐사권을 갖고 있고, 환경영향평가를 통과한 뒤 ALS(호주)·SGS(스위스)와 계약해 본격 탐사에 들어갔다고 전합니다. 울란바토르에서 서쪽으로 약 190km, 시내에서 차량으로 1시간 30분 이내라는 접근성도 짚었습니다. 채산성 평가를 위한 JORC 기준 보고서는 아직 준비 중이라고 적었습니다.</div>
+    <div class="nc-tags"><span class="nc-tag"># 언론 보도</span><span class="nc-tag"># 환경영향평가</span><span class="nc-tag"># JORC 준비 중</span></div>
+    <a href="https://www.ajunews.com/view/20260730083902343" class="nc-link" target="_blank" rel="noopener">기사 원문 보기</a>
+  </div>
+  <div class="nc fade-in d1">
+    <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.31</span></div>
+    <div class="nc-ttl">몽골 전 총리 인터뷰 — 책임 있는 한국 기업의 조건</div>
+    <div class="nc-body">아주경제가 곰보자브 잔단샤타르 전 몽골 총리와 한 인터뷰입니다. 광산업·관광업을 함께 높여야 한다는 이야기를 다루고, 기사는 사업 첫날부터 환경·사회 기준을 반영해야 한다는 발언을 볼로르지오의 현지화 전략과 연결해 소개합니다. 기사가 전하는 볼로르지오의 활동은 수자원 사용 계약, 지역 주민 채용, 유치원 설립 기부입니다.</div>
+    <div class="nc-tags"><span class="nc-tag"># 언론 보도</span><span class="nc-tag"># 인터뷰</span><span class="nc-tag"># 현지화</span></div>
+    <a href="https://www.ajunews.com/view/20260730091210438" class="nc-link" target="_blank" rel="noopener">기사 원문 보기</a>
   </div>
   <div class="nc fade-in d1">
     <div class="nc-meta"><span class="nc-src">아주경제</span><span class="nc-date">2026.07.01</span></div>
