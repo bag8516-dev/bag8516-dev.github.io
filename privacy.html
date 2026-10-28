@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>개인정보 처리방침 — MPC 에스크로</title>
+<meta name="description" content="MPC 에스크로 앱이 어떤 정보를 왜 받고, 얼마 동안 보관하며, 누구에게 맡기는지 적은 문서입니다.">
+<link rel="canonical" href="https://mpcescrow.com/privacy.html">
+<link rel="icon" type="image/svg+xml" href="https://mpcescrow.com/assets/favicon.svg">
+<style>
+*{margin:0;box-sizing:border-box}
+body{background:#0C0B09;color:#EDE7DA;font-family:'Noto Sans KR',system-ui,sans-serif;line-height:1.8;padding:40px 16px 64px}
+main{max-width:720px;margin:0 auto}
+h1{font-size:26px;margin-bottom:6px}
+.date{color:#A49C8D;font-size:13px;margin-bottom:28px}
+h2{font-size:18px;color:#E09A62;margin:32px 0 10px}
+p,li{font-size:15px;color:#D6CFC1}
+ul{padding-left:20px}
+li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+th,td{border:1px solid rgba(194,119,63,.3);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:rgba(194,119,63,.12);color:#EDE7DA}
+.wrap{overflow-x:auto}
+a{color:#E09A62}
+.back{display:inline-block;margin-top:36px;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>개인정보 처리방침</h1>
+<p class="date">대상: MPC 에스크로 앱(mpcescrow.com/mpc-escrow) · 시행일 2026년 10월 28일</p>
+
+<p>MPC 에스크로는 회원끼리 MPC 코인을 사고팔 때 스마트 컨트랙트가 코인을 맡아 두는 앱입니다. 회원가입이 없고 이름·전화번호·이메일을 받지 않습니다. 아래는 앱을 쓰면서 남는 정보를 빠짐없이 적은 것입니다.</p>
+
+<h2>1. 받는 정보와 목적, 보관 기간</h2>
+<div class="wrap">
+<table>
+<tr><th>언제</th><th>받는 정보</th><th>목적</th><th>보관 기간</th></tr>
+<tr><td>거래 알림을 켤 때</td><td>지갑 주소, 브라우저 알림 주소와 암호 키, 등록 시각</td><td>입금·판매 완료·만료 반환 알림을 보내기 위해</td><td>알림을 끄거나, 브라우저가 알림 주소를 없앨 때까지</td></tr>
+<tr><td>매수 희망 글을 올릴 때</td><td>지갑 주소, 희망 수량과 가격, 연락처(적은 경우만, 오픈채팅 링크 등)</td><td>판매하려는 회원에게 보여 주고, 맞는 판매 글이 올라오면 알리기 위해. <strong>다른 회원에게 공개됩니다.</strong></td><td>올린 뒤 30일, 또는 직접 지울 때까지</td></tr>
+<tr><td>앱에서 오류가 날 때 (자동)</td><td>앱 버전, 지갑 주소(연결 전이면 이 기기에서 만든 무작위 6자 태그), 오류 내용, 접속 환경(브라우저 종류, 연결 방식, 사용한 조회 서버)</td><td>오류 원인을 찾아 고치기 위해</td><td>90일</td></tr>
+<tr><td>앱·홈페이지를 열 때</td><td>하루 단위 방문 합계 숫자만</td><td>얼마나 쓰이는지 보기 위해</td><td>기간 없음 (누구인지 알 수 있는 정보가 없음)</td></tr>
+</table>
+</div>
+<p style="margin-top:10px">쿠키와 광고 추적 도구는 쓰지 않습니다. 화면 설정(알림을 물어봤는지, 마지막 환율 등)은 회원의 기기 안에만 저장되고 우리에게 오지 않습니다.</p>
+
+<h2>2. 블록체인에 남는 기록</h2>
+<p>판매 등록, 입금, 반환 같은 거래는 폴리곤 블록체인에 기록됩니다. 블록체인 기록은 누구나 볼 수 있고, 우리를 포함해 아무도 지우거나 고칠 수 없습니다.</p>
+
+<h2>3. 정보를 맡기거나 거치는 곳</h2>
+<ul>
+<li>Supabase: 위 표의 정보를 저장하는 데이터베이스</li>
+<li>블록체인 조회 서버(Infura, QuickNode, PublicNode, dRPC): 잔액과 거래를 조회할 때 지갑 주소와 접속 IP가 전달됩니다</li>
+<li>WalletConnect: 예비 연결 방식으로 지갑을 연결할 때 연결 신호를 중계합니다</li>
+<li>애플·구글 등 브라우저 회사의 알림 서버: 알림을 기기까지 전달합니다</li>
+<li>업비트, CoinGecko: 환율만 받아 오고 회원 정보는 보내지 않습니다</li>
+</ul>
+<p>이 밖에는 정보를 팔거나 다른 곳에 넘기지 않습니다. 법에 따라 수사기관이 요청하는 경우는 예외입니다.</p>
+
+<h2>4. 회원이 할 수 있는 것</h2>
+<ul>
+<li>알림 끄기: 앱의 [🔔 알림 켜짐] 버튼을 눌러 끄면 알림 정보가 바로 지워집니다.</li>
+<li>매수 희망 글 지우기: 앱에서 직접 지울 수 있습니다.</li>
+<li>그 밖의 정보(오류 기록 등)를 보여 달라거나 지워 달라는 요청: 아래 문의처로 지갑 주소 앞자리와 함께 알려 주시면 확인 후 처리합니다.</li>
+</ul>
+
+<h2>5. 안전하게 지키는 방법</h2>
+<ul>
+<li>저장된 정보는 운영자만 열 수 있는 열쇠로 잠겨 있고, 앱에서는 정해진 기능으로만 읽고 쓸 수 있습니다.</li>
+<li>오류 기록을 볼 때도 지갑 주소는 앞자리만 표시합니다.</li>
+<li>코인은 우리 서버가 아니라 스마트 컨트랙트가 보관합니다. 운영자는 회원의 지갑이나 비밀 문구에 접근할 수 없고, 비밀 문구를 묻지 않습니다.</li>
+</ul>
+
+<h2>6. 문의</h2>
+<p>개인정보 관련 문의와 요청: <a href="https://pf.kakao.com/_HCKbX">카카오 채널</a> (앱 아래 [문의] 탭과 같은 곳)</p>
+
+<h2>7. 바뀔 때</h2>
+<p>이 방침이 바뀌면 시행일을 고치고 앱 공지로 알립니다.</p>
+
+<a class="back" href="https://mpcescrow.com/mpc-escrow/">← 에스크로 앱으로</a>
+</main>
+</body>
+</html>
