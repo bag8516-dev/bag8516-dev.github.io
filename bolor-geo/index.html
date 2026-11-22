@@ -16,319 +16,551 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"볼로르지오 광산 — 몽골 차간톨고이 탐사 현황 정리","inLanguage":"ko","datePublished":"2026-11-22","dateModified":"2026-11-22","image":"https://mpcescrow.com/assets/site-0044.jpg","mainEntityOfPage":"https://mpcescrow.com/bolor-geo/","author":{"@type":"Organization","name":"MPC RWA 리포트","url":"https://mpcescrow.com/"},"publisher":{"@type":"Organization","name":"MPC RWA 리포트","url":"https://mpcescrow.com/"},"about":{"@type":"Organization","name":"Bolor Geo LLC","alternateName":"볼로르지오"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MPC RWA 리포트","item":"https://mpcescrow.com/"},{"@type":"ListItem","position":2,"name":"볼로르지오 광산","item":"https://mpcescrow.com/bolor-geo/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"볼로르지오 광산은 어디에 있나요?","acceptedAnswer":{"@type":"Answer","text":"몽골 불간 아이막 바양누르 솜의 차간톨고이 광구입니다. 울란바토르에서 서쪽으로 약 190km 떨어져 있고 포장도로로 이어져 있습니다. 광구 면적은 6,481ha로 여의도의 약 20배입니다."}},{"@type":"Question","name":"볼로르지오 광산은 지금 채굴 중인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 2026년 7월 시추를 시작한 탐사 단계입니다. 갖고 있는 것은 탐사권(XV-022460)이고, 채굴하려면 별도의 채굴 허가가 필요합니다."}},{"@type":"Question","name":"매장량은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"공인 매장량은 아직 없습니다. JORC 기준 보고서는 준비 중이고, 회사는 공인 보고서가 확정되기 전에는 매장량·품위 수치를 공개하지 않는다는 원칙을 밝혔습니다. 방송에서 말한 약 60조원은 지질학적 추정치입니다."}},{"@type":"Question","name":"시료 분석은 누가 하나요?","acceptedAnswer":{"@type":"Answer","text":"국제 분석기관 ALS(호주)와 SGS(스위스)에 맡기고 있습니다. 회사는 방송에서 시료 232개를 보내 금을 포함한 61개 원소를 측정했다고 밝혔고, 일부 시료는 몽골과학기술대에서 현미경 분석을 했습니다."}},{"@type":"Question","name":"볼로르지오와 MPC 코인은 무슨 관계인가요?","acceptedAnswer":{"@type":"Answer","text":"MPC(Mineral Project Coin)는 파나마 법인 Bolor Geo MPC Corp.가 발행하는 토큰이고, 볼로르지오(Bolor Geo LLC)는 몽골에서 차간톨고이 탐사를 맡은 광산 법인입니다. 회사는 MPC 토큰이 광산 지분·광업권·로열티가 아니라고 밝혔습니다."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&family=Spline+Sans+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&family=Song+Myung&family=Spline+Sans+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
+/* 홈페이지(preview/index.html) 디자인 부품을 그대로 따온 것. 홈 색·글꼴을 바꾸면 여기도 같이 바꾼다 */
 :root{
-  --bg:#070807; --panel:#101110;
+  --bg:#070807; --bg2:#0C0D0C; --panel:#101110;
   --ink:#EAE5D8; --mut:#A09A8C; --dim:#8A8478;
-  --cop:#C2773F; --cop2:#E09A62; --ok:#9DB58A;
+  --cop:#C2773F; --cop2:#E09A62; --gold:#C9A84C;
   --line:rgba(194,119,63,.25); --line2:rgba(194,119,63,.12);
-  --serif:'Noto Serif KR',serif; --sans:'Noto Sans KR',sans-serif; --mono:'Spline Sans Mono',monospace;
+  --serif:'Noto Serif KR',serif; --sans:'Noto Sans KR',sans-serif; --mono:'Spline Sans Mono',ui-monospace,monospace; --disp:var(--mono);
+  --title:'Song Myung','Noto Serif KR',serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.8;-webkit-font-smoothing:antialiased;word-break:keep-all;}
+html{scroll-behavior:smooth;scroll-padding-top:70px;}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");}
 img{max-width:100%;height:auto;display:block;}
-a{color:var(--cop2);}
-.nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;height:58px;padding:0 16px;background:rgba(7,8,7,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line2);}
-.nav-brand{color:var(--ink);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.16em;}
-.nav-cta{margin-left:auto;border:1px solid var(--cop);color:var(--cop2);font-weight:700;font-size:13px;padding:7px 14px;border-radius:2px;text-decoration:none;}
-main{max-width:760px;margin:0 auto;padding:0 16px 64px;}
-.crumb{font-size:12.5px;color:var(--dim);padding:18px 0 0;}
+a{color:inherit;}
+.meas{font-family:var(--mono);}
+/* 상단 */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;gap:18px;height:62px;padding:0 18px;background:rgba(7,8,7,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line2);}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--disp);font-size:14px;letter-spacing:.18em;}
+.nav-links{display:none;gap:26px;margin-left:auto;}
+.nav-links a{color:var(--mut);text-decoration:none;font-size:13.5px;}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{margin-left:auto;border:1px solid var(--cop);color:var(--cop2);font-weight:700;font-size:13px;padding:8px 16px;text-decoration:none;letter-spacing:.04em;}
+.nav-cta:hover{background:var(--cop);color:#0B0C0B;}
+/* 첫 화면 — 측정 기록지 */
+.hero{position:relative;display:flex;flex-direction:column;overflow:hidden;}
+.hc{position:relative;padding:92px 22px 26px;}
+.log-head{display:flex;align-items:center;gap:12px;margin-bottom:1.1rem;padding-bottom:.8rem;border-bottom:1px solid var(--line);}
+.log-head-id{display:flex;flex-direction:column;gap:3px;}
+.log-head-id .meas{font-size:11.5px;letter-spacing:.12em;color:var(--cop2);}
+.mark-glow{filter:drop-shadow(0 0 10px rgba(194,119,63,.35));}
+.crumb{font-size:12px;color:var(--dim);margin-bottom:.4rem;}
 .crumb a{color:var(--mut);text-decoration:none;}
-.kicker{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--cop);margin-top:22px;}
-h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,8vw,44px);line-height:1.25;margin:8px 0 10px;}
-.asof{font-size:13px;color:var(--dim);}
-.lead{font-size:16.5px;margin:20px 0 8px;}
-.toc{margin:18px 0 6px;padding:12px 14px;border:1px solid var(--line2);font-size:14px;}
-.toc b{display:block;font-size:12px;color:var(--dim);font-weight:500;margin-bottom:4px;}
-.toc a{color:var(--mut);text-decoration:none;display:inline-block;margin:2px 12px 2px 0;}
-.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0;}
-.num{border:1px solid var(--line2);background:var(--panel);padding:12px 14px;}
-.num b{display:block;font-family:var(--mono);font-size:26px;color:var(--cop2);font-weight:600;line-height:1.2;}
-.num b small{font-size:13px;color:var(--mut);margin-left:3px;}
-.num span{font-size:13px;color:var(--mut);}
-.plate{margin:22px 0;border:1px solid var(--line2);}
-.plate figcaption,.cap{font-size:12.5px;color:var(--dim);padding:8px 10px;}
-h2{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.4;margin:46px 0 14px;padding-top:14px;border-top:1px solid var(--line2);scroll-margin-top:70px;}
-h3{font-size:16px;margin:22px 0 6px;color:var(--ink);}
-p{margin:10px 0;}
-.facts{width:100%;border-collapse:collapse;font-size:14.5px;}
-.facts th,.facts td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--line2);}
-.facts th{width:30%;color:var(--mut);font-weight:500;}
-.map{margin:16px 0;border:1px solid var(--line2);background:var(--panel);padding:8px;}
-.tl{list-style:none;border-left:1px solid var(--line);margin-left:6px;}
-.tl li{position:relative;padding:0 0 18px 18px;}
-.tl li::before{content:"";position:absolute;left:-4px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--cop);}
-.tl .d{display:block;font-family:var(--mono);font-size:12px;color:var(--cop2);}
-.src{font-size:12.5px;color:var(--dim);}
-.card{background:var(--panel);border:1px solid var(--line2);padding:14px 16px;margin:12px 0;}
-.card h3{margin-top:0;}
-.card ul{padding-left:18px;font-size:14.5px;}
-.card li{margin:6px 0;}
-.els{display:grid;grid-template-columns:1fr;gap:10px;}
-.el{display:flex;gap:12px;align-items:flex-start;background:var(--panel);border:1px solid var(--line2);padding:12px 14px;}
-.el .sym{flex:0 0 52px;height:52px;border:1px solid var(--cop);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);color:var(--cop2);font-size:19px;line-height:1;}
-.el .sym small{font-size:9.5px;color:var(--dim);margin-top:3px;}
-.el b{display:block;font-size:15px;}
-.el b i{font-style:normal;font-size:12px;color:var(--dim);font-weight:400;margin-left:6px;}
-.el p{margin:2px 0 0;font-size:14px;color:var(--mut);}
-.steps{list-style:none;counter-reset:s;}
-.steps li{counter-increment:s;position:relative;padding:10px 0 10px 40px;border-bottom:1px solid var(--line2);}
-.steps li::before{content:counter(s);position:absolute;left:0;top:10px;width:26px;height:26px;border:1px solid var(--cop);color:var(--cop2);font-family:var(--mono);font-size:13px;display:flex;align-items:center;justify-content:center;}
-.steps li.now{color:var(--cop2);}
-.gal{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0;}
-.gal figure{border:1px solid var(--line2);}
-.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;}
-.gal figcaption{font-size:12px;color:var(--dim);padding:6px 8px;}
-.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0;}
-.vids a{text-decoration:none;color:var(--mut);font-size:12px;line-height:1.45;}
-.vids img{width:100%;aspect-ratio:9/16;object-fit:cover;border:1px solid var(--line2);margin-bottom:5px;}
-.two{display:grid;gap:12px;}
-.ok h3{color:var(--ok);} .not h3{color:var(--cop2);}
-details{border-bottom:1px solid var(--line2);padding:12px 0;}
-summary{cursor:pointer;font-weight:700;font-size:15px;}
-details p{color:var(--mut);font-size:14.5px;}
-.links{padding-left:18px;}
-.links li{margin:8px 0;}
-.note{font-size:13px;color:var(--dim);}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;}
-.cta a{flex:1 1 220px;text-align:center;text-decoration:none;font-weight:700;padding:13px 16px;border-radius:2px;}
-.cta .a1{background:var(--cop);color:#0B0C0B;}
-.cta .a2{border:1px solid var(--cop);color:var(--cop2);}
-footer{border-top:1px solid var(--line2);padding:28px 16px 40px;text-align:center;font-size:12.5px;color:var(--dim);}
-footer a{color:var(--mut);}
-@media (min-width:640px){.two{grid-template-columns:1fr 1fr;}.nums{grid-template-columns:repeat(4,1fr);}.els{grid-template-columns:1fr 1fr;}.gal{grid-template-columns:repeat(3,1fr);}.vids{grid-template-columns:repeat(6,1fr);}}
+.h-title{font-family:var(--title);font-weight:400;font-size:44px;line-height:1.16;letter-spacing:-.02em;margin-bottom:.6rem;text-wrap:balance;}
+.h-sub{font-size:14px;color:var(--mut);margin-bottom:1.2rem;max-width:620px;}
+.log-meas{border-top:1px solid var(--line);margin-bottom:1.2rem;max-width:620px;}
+.meas-row{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:.5rem 0;border-bottom:1px solid var(--line2);align-items:baseline;}
+.meas-k{font-size:12px;color:var(--dim);}
+.meas-v{font-family:var(--mono);font-size:19px;color:var(--cop2);}
+.meas-v i{font-style:normal;font-family:var(--sans);font-size:12px;color:var(--mut);margin-left:7px;}
+.stamp{position:static;width:112px;height:112px;margin:.2rem 0 1rem auto;padding:10px;border:2px solid rgba(194,119,63,.75);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;transform:rotate(-7deg);box-shadow:inset 0 0 0 4px rgba(194,119,63,.14),0 0 22px rgba(194,119,63,.1);color:var(--cop2);pointer-events:none;position:relative;}
+.stamp::before{content:'';position:absolute;inset:7px;border:1px solid rgba(194,119,63,.45);border-radius:50%;}
+.stamp span{font-weight:700;font-size:14px;letter-spacing:.08em;}
+.stamp small{font-family:var(--mono);font-size:11px;color:var(--cop);}
+.btns{display:flex;flex-direction:column;gap:11px;max-width:620px;}
+.btn-g,.btn-o{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-size:14.5px;padding:13px 20px;letter-spacing:.03em;transition:background .25s,color .25s,border-color .25s;}
+.btn-g{background:var(--cop);color:#0B0C0B;font-weight:700;}
+.btn-g:hover{background:var(--cop2);}
+.btn-o{border:1px solid rgba(194,119,63,.4);color:var(--ink);}
+.btn-o:hover{border-color:var(--cop2);color:var(--cop2);}
+.cover-strip{margin:0;position:relative;height:34vh;min-height:210px;border-top:1px solid var(--line);}
+.cover-strip img{width:100%;height:100%;object-fit:cover;object-position:center 60%;filter:sepia(.13) saturate(.84) contrast(1.06) brightness(.97);}
+.cover-strip::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),transparent 35%);pointer-events:none;}
+.cover-strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:9px 22px;background:rgba(12,11,9,.82);border-top:1px solid var(--line2);font-size:12px;color:var(--mut);display:flex;gap:12px;align-items:baseline;}
+.cover-strip .meas{font-size:11px;color:var(--cop);letter-spacing:.14em;flex:none;}
+/* 구역 */
+.sec,.stats{padding:3.4rem 22px;}
+.sec:nth-of-type(even){background:var(--bg2);}
+.inner{max-width:980px;margin:0 auto;}
+.sec-hd{display:flex;align-items:center;gap:12px;margin-bottom:.9rem;}
+.sec-kicker2,.s-kicker{font-family:var(--disp);font-size:10px;letter-spacing:.3em;color:var(--cop);white-space:nowrap;}
+.sec-kicker2::before{content:'◆';font-size:7px;color:var(--cop);margin-right:9px;vertical-align:2px;}
+.sec-hline,.s-hline{flex:1;height:1px;background:var(--line2);}
+.sec-ttl{position:relative;font-family:var(--title);font-weight:400;font-size:28px;letter-spacing:-.02em;color:var(--ink);margin-bottom:1.6rem;padding-bottom:1rem;line-height:1.25;text-wrap:balance;}
+.sec-ttl::after{content:'';position:absolute;left:0;bottom:0;width:76px;border-top:1px solid var(--cop);box-shadow:0 3px 0 rgba(194,119,63,.3);}
+.esc-sub{font-size:14px;color:var(--mut);line-height:1.85;margin-bottom:1.6rem;}
+.esc-note{font-size:12px;color:var(--dim);line-height:1.75;margin-top:1rem;}
+/* 큰 숫자 */
+.s-head{display:flex;align-items:center;gap:12px;margin-bottom:1.4rem;}
+.s-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;}
+.s-card{border-top:1px solid var(--line);padding-top:1rem;}
+.s-num{font-family:var(--mono);font-size:42px;color:var(--cop2);line-height:1;font-variant-numeric:tabular-nums;}
+.s-unit{font-size:13px;color:var(--dim);margin-left:3px;}
+.s-desc{font-size:12.5px;color:var(--mut);margin-top:.55rem;line-height:1.6;}
+.s-context{font-size:12px;color:var(--cop);margin-top:.35rem;}
+/* 기본 정보 표 */
+.loc-card{border-top:1px solid var(--line);padding:1.5rem 0 1.7rem;}
+.loc-header{margin-bottom:1.1rem;font-family:var(--disp);font-size:12.5px;letter-spacing:.12em;color:var(--cop);}
+.loc-row{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:.8rem 0;border-bottom:1px solid var(--line2);}
+.loc-row:last-child{border-bottom:0;}
+.loc-key{font-size:12px;color:var(--dim);padding-top:2px;}
+.loc-val{font-size:14.5px;color:var(--ink);line-height:1.65;}
+.loc-note{font-size:12px;color:var(--mut);margin-top:3px;}
+.badge{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--cop2);border:1px solid var(--line);padding:3px 10px;}
+.loc-map{border-top:1px solid var(--line2);padding:1.2rem 0 .4rem;}
+.hist-band{border:1px solid var(--line2);background:rgba(194,119,63,.03);padding:18px 16px 14px;margin:1.6rem 0 0;display:flex;flex-direction:column;gap:14px;}
+.hist-step{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:baseline;}
+.hist-step b{display:block;color:var(--ink);font-size:13.5px;}
+.hist-step span{font-size:12.5px;color:var(--mut);line-height:1.6;}
+.hist-y{font-family:var(--mono);font-size:12px;color:var(--cop);letter-spacing:.06em;}
+/* 일지 */
+.rm{border-top:1px solid var(--line);}
+.rm-row{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:.85rem 0;border-bottom:1px solid var(--line2);}
+.rm-q{font-family:var(--mono);font-size:12px;color:var(--dim);padding-top:3px;}
+.rm-t{font-size:13.5px;color:var(--mut);line-height:1.75;}
+.rm-t b{color:var(--ink);font-weight:600;}
+.rm-t small{display:block;font-size:11.5px;color:var(--dim);margin-top:2px;}
+.rm-now .rm-q{color:var(--cop2);}
+.rm-now .rm-t{color:var(--ink);}
+.rm-now .rm-t b{color:var(--cop2);}
+/* 결과 카드 (홈 뉴스 카드) */
+.nc{border-top:1px solid var(--line);padding:1.6rem 0 1.8rem;}
+.nc-meta{display:flex;align-items:center;gap:10px;margin-bottom:.8rem;flex-wrap:wrap;}
+.nc-src{font-size:11px;font-weight:700;color:#0C0B09;background:var(--cop);padding:3px 9px;}
+.nc-src2{background:rgba(46,107,82,.3);color:#7FBFA3;}
+.nc-src3{background:rgba(138,59,42,.3);color:#D98A74;}
+.nc-date{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--dim);}
+.nc-ttl{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.45;color:var(--ink);margin-bottom:.8rem;text-wrap:balance;}
+.nc-visual{margin:0 0 1.1rem;border:1px solid var(--line2);background:#14110C;padding:8px;max-width:520px;}
+.nc-visual img{width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid rgba(194,119,63,.22);filter:saturate(.88) contrast(1.03);}
+.nc-visual figcaption{font-size:10.5px;color:var(--cop);padding:7px 2px 0;font-family:var(--mono);letter-spacing:.08em;}
+.nc-list{margin:.2rem 0 0;padding-left:1.1rem;display:flex;flex-direction:column;gap:8px;}
+.nc-list li{font-size:13.5px;color:var(--mut);line-height:1.8;}
+.nc-list strong{color:var(--cop2);font-weight:600;}
+.nc-quote{margin-top:1rem;padding:12px 14px;border-left:2px solid var(--cop);background:rgba(194,119,63,.05);font-size:13.5px;color:var(--ink);line-height:1.75;}
+.nc-link{display:inline-flex;align-items:center;gap:8px;margin:.9rem 8px 0 0;font-size:13px;font-weight:700;color:var(--cop2);text-decoration:none;border:1px solid var(--line);padding:9px 16px;}
+.nc-link:hover{background:rgba(194,119,63,.08);}
+/* 원소 */
+.el-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;}
+.el{border:1px solid var(--line2);padding:11px 4px;text-align:center;}
+.el-wide{grid-column:span 2;}
+.el-num{font-family:var(--mono);font-size:11px;color:var(--dim);}
+.el-sym{font-family:var(--mono);font-size:21px;color:var(--cop2);line-height:1.2;}
+.el-name{font-size:11.5px;color:var(--mut);margin-top:2px;}
+.el-cat{display:inline-block;font-size:11px;padding:2px 8px;margin-top:4px;}
+.el-cat.cr{background:rgba(46,107,82,.25);color:#7FBFA3;}
+.el-cat.cm{background:rgba(184,178,166,.18);color:#B8B2A6;}
+.wp-list{padding-left:1.1rem;display:flex;flex-direction:column;gap:9px;margin-top:1.4rem;}
+.wp-list li{font-size:13.5px;color:var(--mut);line-height:1.8;}
+.wp-list strong{color:var(--cop2);font-weight:600;}
+/* 현장 사진 액자 */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.site-fig{margin:0;background:#14110C;border:1px solid var(--line2);padding:8px;}
+.site-fig img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid rgba(194,119,63,.22);filter:sepia(.13) saturate(.84) contrast(1.06) brightness(.97);}
+.site-fig figcaption{font-size:12px;color:var(--mut);padding:8px 2px 2px;line-height:1.5;}
+.site-fig figcaption .meas{display:block;color:var(--cop);letter-spacing:.14em;font-size:10.5px;}
+/* 영상 칸 */
+.vid-strip{margin:2rem 0 0;}
+.vid-strip-h{font-size:11px;letter-spacing:.1em;color:var(--cop);margin:0 0 .6rem;}
+.vid-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.vid-grid a{position:relative;display:block;border:1px solid var(--line2);text-decoration:none;color:var(--mut);background:rgba(194,119,63,.03);overflow:hidden;transition:border-color .2s,transform .2s;}
+.vid-grid a img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 46%;filter:saturate(.92);}
+.vid-grid a::after{content:"";position:absolute;left:12px;top:12px;width:34px;height:34px;border-radius:50%;background:rgba(10,12,16,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l9 5-9 5z' fill='%23e6a46a'/%3E%3C/svg%3E") center/20px no-repeat;border:1px solid rgba(194,119,63,.55);}
+.vid-grid a span{display:block;padding:9px 10px 11px;font-size:12.5px;line-height:1.55;color:var(--ink);}
+.vid-grid a:hover{border-color:var(--cop);transform:translateY(-2px);}
+.vid-note{font-size:11.5px;color:var(--mut);line-height:1.7;margin:.7rem 0 0;}
+/* 확인 비교 */
+.cmp{display:flex;flex-direction:column;gap:14px;}
+.cmp-col{border:1px solid var(--line2);padding:16px 16px 6px;}
+.cmp-col h3{font-size:13px;letter-spacing:.12em;font-family:var(--mono);margin-bottom:.4rem;}
+.cmp-ok h3{color:#7FBFA3;} .cmp-not h3{color:var(--cop2);}
+.cmp-col .wp-list{margin-top:.4rem;}
+/* 질문과 답 */
+.faq-list details{border-top:1px solid var(--line);}
+.faq-list details:last-of-type{border-bottom:1px solid var(--line);}
+.faq-list summary{cursor:pointer;list-style:none;display:flex;gap:12px;align-items:baseline;padding:16px 4px;font-weight:600;color:var(--ink);font-size:16px;}
+.faq-list summary::before{content:'Q';font-family:var(--mono);color:var(--cop2);font-size:13px;flex:none;}
+.faq-list summary::-webkit-details-marker{display:none;}
+.faq-a{padding:0 4px 18px 27px;color:var(--mut);font-size:14.5px;line-height:1.75;}
+/* 바닥 */
+.footer{padding:2rem 22px 2.4rem;border-top:1px solid var(--line2);text-align:center;overflow:hidden;}
+.f-ghost{font-family:var(--mono);font-size:88px;line-height:1;letter-spacing:.12em;color:rgba(194,119,63,.07);user-select:none;margin-bottom:-10px;}
+.f-logo{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--mut);}
+.f-disc{font-size:12px;color:#8F897C;margin-top:.6rem;}
+.f-links{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:.7rem 0 .6rem;font-size:12px;}
+.f-links a{color:var(--cop);text-decoration:none;}
+.f-links span{color:#4A4B45;}
+.f-sub{font-size:12px;color:#8A857A;line-height:1.6;}
+.fade-in{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+.fade-in.vis{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.fade-in{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+@media (min-width:700px){
+  .gal{grid-template-columns:repeat(3,1fr);}
+  .vid-grid{grid-template-columns:repeat(3,1fr);gap:14px;}
+  .cmp{flex-direction:row;}.cmp-col{flex:1;}
+}
+@media (min-width:1000px){
+  .nav-links{display:flex;}.nav-cta{margin-left:0;}
+  .hc{padding:130px 60px 40px;max-width:1100px;margin:0 auto;width:100%;}
+  .h-title{font-size:84px;letter-spacing:-.03em;}
+  .meas-row{padding:.8rem 0;}
+  .stamp{position:absolute;right:70px;top:150px;margin:0;width:132px;height:132px;}
+  .stamp span{font-size:16px;}
+  .btns{flex-direction:row;}.btns a{min-width:250px;}
+  .cover-strip{height:52vh;min-height:380px;}
+  .sec,.stats{padding:5rem 60px;}
+  .sec-ttl{font-size:46px;margin-bottom:2.2rem;}
+  .s-grid{grid-template-columns:repeat(4,1fr);gap:40px;}
+  .s-num{font-size:54px;}
+  .loc-row{grid-template-columns:150px 1fr;}
+  .hist-band{flex-direction:row;gap:0;padding:22px 10px 18px;}
+  .hist-step{flex:1;grid-template-columns:1fr;gap:8px;text-align:center;padding:0 14px;border-left:1px solid var(--line2);}
+  .hist-step:first-child{border-left:none;}
+  .rm-row{grid-template-columns:130px 1fr;}
+  .nc{display:grid;grid-template-columns:150px 1fr;column-gap:3rem;align-items:start;}
+  .nc > *{grid-column:2;}
+  .nc-meta{grid-column:1;grid-row:1 / span 12;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:0;border-left:2px solid var(--line);padding-left:12px;}
+  .nc-ttl{font-size:23px;}
+  .el-grid{grid-template-columns:repeat(7,1fr);gap:12px;}
+  .el-wide{grid-column:auto;}
+  .f-ghost{font-size:200px;margin-bottom:-26px;}
+}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mpc-mark" viewBox="0 0 50.74 64">
+    <g transform="translate(-14.42 -7.79) scale(3.3161)" fill="none" stroke="#C2773F" stroke-linejoin="round">
+      <path d="M12 3 L19 9 L12 21 L5 9 Z" stroke-width="1.3" fill="#C2773F" fill-opacity="0.12"/>
+      <path d="M5 9 H19" stroke-width="1"/>
+      <path d="M12 3 L8.5 9" stroke-width="1"/>
+      <path d="M12 3 L15.5 9" stroke-width="1"/>
+      <path d="M8.5 9 L12 21" stroke-width="1"/>
+      <path d="M15.5 9 L12 21" stroke-width="1"/>
+    </g>
+  </symbol>
+</svg>
+
 <header class="nav">
-  <a class="nav-brand" href="https://mpcescrow.com/">MPC RWA</a>
-  <a class="nav-cta" href="https://mpcescrow.com/mpc-escrow/">에스크로 앱</a>
-</header>
-<main>
-  <nav class="crumb" aria-label="현재 위치"><a href="https://mpcescrow.com/">MPC RWA 리포트</a> › 볼로르지오 광산</nav>
-  <span class="kicker">BOLOR GEO · TSAGAAN TOLGOI</span>
-  <h1>볼로르지오 광산</h1>
-  <div class="asof">몽골 차간톨고이 탐사 현황 정리 · 2026년 11월 22일 기준</div>
-
-  <p class="lead">볼로르지오(Bolor Geo LLC)는 몽골 불간 아이막 바양누르 솜의 차간톨고이 광구에서 탐사를 진행하는 몽골 현지 광산 법인입니다. 광구 면적은 6,481ha이고 탐사권 번호는 XV-022460입니다. 2026년 7월부터 시추를 시작했고, 회사는 지금까지 시추공 13개를 뚫었다고 방송에서 밝혔습니다. 시추에서 금 광화대와 백운모층이 나왔다는 보고가 있지만, 아직은 탐사 단계라 채굴 허가나 공인 매장량 보고서는 나오지 않았습니다.</p>
-
-  <div class="nums">
-    <div class="num"><b>6,481<small>ha</small></b><span>광구 면적 (여의도의 약 20배)</span></div>
-    <div class="num"><b>190<small>km</small></b><span>울란바토르에서 서쪽, 포장도로</span></div>
-    <div class="num"><b>13<small>공</small></b><span>지금까지 시추 (회사 방송 발언)</span></div>
-    <div class="num"><b>44<small>종</small></b><span>구소련·중국 탐사 확인 원소</span></div>
-  </div>
-
-  <nav class="toc" aria-label="목차"><b>목차</b>
-    <a href="#info">기본 정보</a><a href="#history">탐사 일지</a><a href="#found">시추로 나온 것</a><a href="#elements">원소와 쓰임</a><a href="#next">다음 단계</a><a href="#field">현장 운영</a><a href="#photos">사진·영상</a><a href="#check">확인된 것</a><a href="#mpc">MPC 광산 코인</a><a href="#faq">자주 묻는 질문</a>
+  <a class="nav-brand" href="https://mpcescrow.com/"><svg width="20" height="25" viewBox="0 0 50.74 64" aria-hidden="true"><use href="#mpc-mark"/></svg><span>MPC RWA</span></a>
+  <nav class="nav-links" aria-label="이 페이지 목차">
+    <a href="#info">기본 정보</a><a href="#log">탐사 일지</a><a href="#found">시추 결과</a><a href="#elements">원소</a><a href="#field">현장</a><a href="#faq">질문과 답</a>
   </nav>
+  <a class="nav-cta" href="https://mpcescrow.com/mpc-escrow/">앱 열기</a>
+</header>
 
-  <figure class="plate">
+<main>
+<section class="hero">
+  <div class="hc">
+    <div class="log-head">
+      <svg width="34" height="43" viewBox="0 0 50.74 64" class="mark-glow" role="img" aria-label="MPC 심볼"><use href="#mpc-mark"/></svg>
+      <div class="log-head-id"><span class="meas">FIELD FILE · BOLOR GEO LLC</span><span class="meas">BAYANNUUR · BULGAN · MONGOLIA</span></div>
+    </div>
+    <nav class="crumb" aria-label="현재 위치"><a href="https://mpcescrow.com/">MPC RWA 리포트</a> › 볼로르지오 광산</nav>
+    <h1 class="h-title">볼로르지오<br>광산</h1>
+    <p class="h-sub">몽골 차간톨고이 광구에서 탐사 중인 현지 광산 법인 볼로르지오(Bolor Geo LLC)의 위치, 탐사권, 시추 결과, 분석, 현장 기록을 한 장에 모았습니다. 2026년 11월 22일 기준입니다.</p>
+    <div class="stamp" aria-hidden="true"><span>탐사 진행 중</span><small>2026 · 13공</small></div>
+    <div class="log-meas">
+      <div class="meas-row"><span class="meas-k">광구 면적</span><span class="meas-v">6,481<i>ha · 여의도의 약 20배</i></span></div>
+      <div class="meas-row"><span class="meas-k">탐사권</span><span class="meas-v">XV-022460<i>몽골 광업부 등록</i></span></div>
+      <div class="meas-row"><span class="meas-k">시추공</span><span class="meas-v">13<i>공 · 회사 방송 발언</i></span></div>
+      <div class="meas-row"><span class="meas-k">분석 기관</span><span class="meas-v">ALS · SGS<i>호주 · 스위스</i></span></div>
+    </div>
+    <div class="btns">
+      <a href="#found" class="btn-g">시추로 나온 것 보기</a>
+      <a href="https://mpcescrow.com/" class="btn-o">MPC RWA 리포트 홈</a>
+    </div>
+  </div>
+  <figure class="cover-strip">
     <img src="https://mpcescrow.com/assets/site-0044.jpg" alt="일몰 무렵 볼로르지오 광산 차간톨고이 시추 현장 — 리그와 코어 박스" width="1280" height="960">
-    <figcaption>차간톨고이 시추 현장, 리그 가동 중 · 사진 출처: MPC 공식 홈페이지 현장 소식 · © Bolor Geo MPC Corp.</figcaption>
+    <figcaption><span class="meas">PLATE 07</span>일몰의 시추 현장 — 리그 가동 · © Bolor Geo MPC Corp.</figcaption>
   </figure>
+</section>
 
-  <h2 id="info">볼로르지오 광산 기본 정보</h2>
-  <table class="facts">
-    <tr><th>운영 법인</th><td>Bolor Geo LLC (볼로르지오), 몽골 현지 광산 법인. 울란바토르 본사와 서울 사무소 두 거점</td></tr>
-    <tr><th>광구</th><td>차간톨고이 광구, 몽골 불간 아이막(Bulgan Aimag) 바양누르 솜(Bayannuur Sum)</td></tr>
-    <tr><th>거리</th><td>울란바토르에서 서쪽으로 약 190km, 포장도로로 연결. 서울에서 울란바토르까지 비행기로 약 3시간</td></tr>
-    <tr><th>면적</th><td>6,481ha</td></tr>
-    <tr><th>탐사권</th><td>XV-022460 (탐사권은 채굴권과 다르며, 실제 채굴에는 별도 허가가 필요)</td></tr>
-    <tr><th>인허가</th><td>환경영향평가 통과 (아주경제 보도)</td></tr>
-    <tr><th>단계</th><td>탐사 단계. 시추 13공(회사 방송 발언), ALS·SGS 분석 진행 중</td></tr>
-    <tr><th>분석 기관</th><td>ALS(호주), SGS(스위스), 몽골과학기술대</td></tr>
-    <tr><th>지질</th><td>페그마타이트 노두가 약 10km 이어짐. 석영·규석대, 산화대</td></tr>
-  </table>
-
-  <div class="map" role="img" aria-label="광구 위치 약도 — 울란바토르에서 서쪽 190km">
-    <svg viewBox="0 0 640 150" width="100%">
-      <line x1="60" y1="92" x2="520" y2="92" stroke="#C2773F" stroke-width="1" stroke-dasharray="6 5" opacity=".8"/>
-      <circle cx="520" cy="92" r="5" fill="none" stroke="#C2773F" stroke-width="1.4"/>
-      <circle cx="520" cy="92" r="1.8" fill="#C2773F"/>
-      <path d="M60 84 L67 92 L60 104 L53 92 Z" fill="#C2773F" fill-opacity=".15" stroke="#C2773F" stroke-width="1.4"/>
-      <text x="520" y="122" text-anchor="middle" fill="#A49C8D" font-size="13" font-family="Noto Sans KR">울란바토르</text>
-      <text x="60" y="122" text-anchor="middle" fill="#EDE7DA" font-size="13" font-weight="700" font-family="Noto Sans KR">차간톨고이 광구</text>
-      <text x="290" y="80" text-anchor="middle" fill="#C2773F" font-size="12" font-family="Spline Sans Mono">← 서쪽 약 190km · 포장도로</text>
-      <text x="60" y="60" text-anchor="middle" fill="#8A8478" font-size="10.5" font-family="Spline Sans Mono">LICENSE XV-022460</text>
-      <path d="M600 52 L600 28 M600 28 L594 38 M600 28 L606 38" stroke="#8A8478" stroke-width="1.2" fill="none"/>
-      <text x="600" y="66" text-anchor="middle" fill="#8A8478" font-size="10" font-family="Spline Sans Mono">N</text>
-    </svg>
+<section class="stats">
+  <div class="inner">
+    <div class="s-head fade-in"><span class="s-kicker">KEY NUMBERS</span><div class="s-hline"></div></div>
+    <div class="s-grid">
+      <div class="s-card fade-in"><div><span class="s-num">190</span><span class="s-unit">km</span></div><div class="s-desc">울란바토르에서 서쪽<br>포장도로로 연결</div><div class="s-context">물류 길 확보</div></div>
+      <div class="s-card fade-in"><div><span class="s-num">10</span><span class="s-unit">km</span></div><div class="s-desc">페그마타이트<br>노두가 이어진 길이</div><div class="s-context">희토류 광화 후보 지대</div></div>
+      <div class="s-card fade-in"><div><span class="s-num">44</span><span class="s-unit">종</span></div><div class="s-desc">구소련·중국 탐사<br>확인 원소</div><div class="s-context">희토류·텅스텐·구리 포함</div></div>
+      <div class="s-card fade-in"><div><span class="s-num">232</span><span class="s-unit">개</span></div><div class="s-desc">ALS·SGS로 보낸 시료<br>61개 원소 측정</div><div class="s-context">SBS Biz 방송 발언</div></div>
+    </div>
   </div>
+</section>
 
-  <h2 id="history">탐사 일지</h2>
-  <ol class="tl">
-    <li><span class="d">구소련 시기</span>광역 지질조사와 원소 탐사로 희토류·텅스텐·구리 등 44종 원소를 확인한 기록이 남음.</li>
-    <li><span class="d">이후</span>중국 탐사팀이 구소련 자료를 바탕으로 현장을 다시 확인.</li>
-    <li><span class="d">2023</span>몽골 법인 설립, 차간톨고이 광구 확보와 탐사권(XV-022460) 취득.</li>
-    <li><span class="d">2026 상반기</span>땅 위에 드러난 암석(노두) 16개 샘플을 SGS가 분석해 희토류·텅스텐·구리 성분을 확인. <span class="src">출처: 공식 업데이트</span></li>
-    <li><span class="d">2026.07.01</span>국제 분석기관 ALS와 정밀 탐사 계약. <span class="src">출처: 아주경제</span></li>
-    <li><span class="d">2026.07</span>캠프 구축, 장비 반입, 리그 설치 뒤 시추 시작. 아주경제는 환경영향평가를 통과한 뒤 ALS·SGS와 계약해 본격 탐사에 들어갔다고 전함. <span class="src">출처: 아주경제 7월 31일</span></li>
-    <li><span class="d">2026.08.06</span>중앙일보 기자가 바양노르솜 현장 취재. 지질조사와 자기장·전기탐사 결과로 시추 지점을 고르고 있고, 첫 조사지에서 채취한 암석·토양 시료 1,400여 개를 ALS·SGS 등에 분석 의뢰했다고 보도. <span class="src">출처: 중앙일보 8월 18일</span></li>
-    <li><span class="d">2026.09.30</span>TDH-03 시추공에서 금이 든 산화대를 확인했다고 공식 현장 보고. <span class="src">출처: 공식 현장 보고</span></li>
-    <li><span class="d">2026.10.08</span>최병호 볼로르지오 경영총괄부사장이 매일경제TV에 출연해 시추공 13개, ALS·SGS 분석 보고서를 여러 차례 받아 검증 중이라고 설명. <span class="src">출처: 매일경제TV 「이슈&amp;피플」</span></li>
-    <li><span class="d">2026.10.16</span>시추 코어를 상자에 담아 검사·기록하는 과정을 사진으로 공개. 규모와 일정은 '공개 예정'. <span class="src">출처: 공식 현장 보고</span></li>
-    <li><span class="d">2026.10.17</span>볼로르지오 유튜브에 현장 드론·시추·인터뷰 쇼츠를 한꺼번에 올림.</li>
-    <li><span class="d">2026.10.18</span>같은 부사장이 SBS Biz에 출연해 금 광화대, 백운모층, 시료 분석 현황을 설명. <span class="src">출처: SBS Biz 「오! 굿데이」</span></li>
-  </ol>
+<section class="sec" id="info">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">LOCATION &amp; LICENSE</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">볼로르지오 광산 기본 정보</h2>
+    <div class="loc-card fade-in">
+      <div class="loc-header">광산과 법인</div>
+      <div class="loc-row"><span class="loc-key">운영 법인</span><div><div class="loc-val"><strong>Bolor Geo LLC (볼로르지오)</strong></div><div class="loc-note">몽골 현지 광산 법인 · 울란바토르 본사와 서울 사무소</div></div></div>
+      <div class="loc-row"><span class="loc-key">행정구역</span><div><div class="loc-val">몽골 불간 아이막(Bulgan Aimag)<br>바양누르 솜(Bayannuur Sum)</div></div></div>
+      <div class="loc-row"><span class="loc-key">접근성</span><div><div class="loc-val">울란바토르에서 서쪽으로 약 <strong>190km</strong></div><div class="loc-note">포장도로 직결 · 서울에서 울란바토르까지 비행기 약 3시간</div></div></div>
+      <div class="loc-row"><span class="loc-key">탐사권</span><div><div class="loc-val"><span class="badge">XV-022460</span></div><div class="loc-note">탐사권은 채굴권과 다르며, 실제 채굴에는 별도 허가가 필요</div></div></div>
+      <div class="loc-row"><span class="loc-key">인허가</span><div><div class="loc-val">환경영향평가 통과</div><div class="loc-note">아주경제 2026.07.31 보도</div></div></div>
+      <div class="loc-row"><span class="loc-key">지질</span><div><div class="loc-val">페그마타이트대 · 석영·규석대 · 산화대</div><div class="loc-note">페그마타이트 노두 약 10km</div></div></div>
+    </div>
+    <div class="loc-map fade-in" role="img" aria-label="광구 위치 약도 — 울란바토르에서 서쪽 190km">
+      <svg viewBox="0 0 640 150" width="100%">
+        <line x1="60" y1="92" x2="520" y2="92" stroke="#C2773F" stroke-width="1" stroke-dasharray="6 5" opacity=".8"/>
+        <circle cx="520" cy="92" r="5" fill="none" stroke="#C2773F" stroke-width="1.4"/>
+        <circle cx="520" cy="92" r="1.8" fill="#C2773F"/>
+        <path d="M60 84 L67 92 L60 104 L53 92 Z" fill="#C2773F" fill-opacity=".15" stroke="#C2773F" stroke-width="1.4"/>
+        <text x="520" y="122" text-anchor="middle" fill="#A49C8D" font-size="13" font-family="Noto Sans KR">울란바토르</text>
+        <text x="60" y="122" text-anchor="middle" fill="#EDE7DA" font-size="13" font-weight="700" font-family="Noto Sans KR">차간톨고이 광구</text>
+        <text x="290" y="80" text-anchor="middle" fill="#C2773F" font-size="12" font-family="Spline Sans Mono">← 서쪽 약 190km · 포장도로</text>
+        <text x="60" y="60" text-anchor="middle" fill="#8A8478" font-size="10.5" font-family="Spline Sans Mono">LICENSE XV-022460</text>
+        <path d="M600 52 L600 28 M600 28 L594 38 M600 28 L606 38" stroke="#8A8478" stroke-width="1.2" fill="none"/>
+        <text x="600" y="66" text-anchor="middle" fill="#8A8478" font-size="10" font-family="Spline Sans Mono">N</text>
+      </svg>
+    </div>
+    <div class="hist-band fade-in">
+      <div class="hist-step"><span class="hist-y">구소련</span><div><b>광역 지질조사</b><span>희토류·텅스텐·구리 등 44종 원소 확인 기록</span></div></div>
+      <div class="hist-step"><span class="hist-y">2023</span><div><b>법인 설립 · 탐사권 취득</b><span>차간톨고이 광구 확보</span></div></div>
+      <div class="hist-step"><span class="hist-y">2026-07</span><div><b>캠프 구축 · 시추 시작</b><span>장비 반입, 리그 설치</span></div></div>
+      <div class="hist-step"><span class="hist-y">현재</span><div><b>13공 · 분석 중</b><span>ALS·SGS 보고서를 받으며 검증 중이라고 밝힘</span></div></div>
+    </div>
+  </div>
+</section>
 
-  <h2 id="found">시추로 나온 것</h2>
-  <p>아래는 공식 현장 보고와 방송에서 회사 쪽이 밝힌 내용입니다. 공인 기관의 매장량 보고서가 아니라 탐사 중간 결과입니다.</p>
+<section class="sec" id="log">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">EXPLORATION LOG</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">탐사 일지</h2>
+    <div class="rm fade-in">
+      <div class="rm-row"><span class="rm-q">구소련</span><div class="rm-t"><b>소련 지질 탐사</b> — 광역 지질조사와 원소 탐사로 희토류·텅스텐·구리 등 44종 원소를 확인한 기록.</div></div>
+      <div class="rm-row"><span class="rm-q">이후</span><div class="rm-t"><b>중국 탐사팀 재확인</b> — 구소련 자료를 바탕으로 현장을 다시 확인.</div></div>
+      <div class="rm-row"><span class="rm-q">2023</span><div class="rm-t"><b>몽골 법인 설립</b> — 차간톨고이 광구 확보, 탐사권(XV-022460) 취득.</div></div>
+      <div class="rm-row"><span class="rm-q">2026 상반기</span><div class="rm-t"><b>SGS 지표 노두 분석</b> — 땅 위에 드러난 암석 16개 샘플에서 희토류·텅스텐·구리 성분 확인.<small>공식 업데이트</small></div></div>
+      <div class="rm-row"><span class="rm-q">2026.07.01</span><div class="rm-t"><b>ALS 정밀 탐사 계약</b> — 분석을 회사가 아닌 외부 공인기관에 맡김.<small>아주경제</small></div></div>
+      <div class="rm-row"><span class="rm-q">2026.07</span><div class="rm-t"><b>캠프 구축 · 시추 시작</b> — 환경영향평가를 통과한 뒤 ALS·SGS와 계약해 본격 탐사에 들어갔다고 보도.<small>아주경제 7월 31일</small></div></div>
+      <div class="rm-row"><span class="rm-q">2026.08.06</span><div class="rm-t"><b>중앙일보 현장 취재</b> — 지질조사와 자기장·전기탐사 결과로 시추 지점을 고르고, 첫 조사지 시료 1,400여 개를 ALS·SGS 등에 분석 의뢰.<small>중앙일보 8월 18일</small></div></div>
+      <div class="rm-row"><span class="rm-q">2026.09.30</span><div class="rm-t"><b>TDH-03 시추공에서 금 확인</b> — 공식 현장 보고.<small>공식 현장 보고</small></div></div>
+      <div class="rm-row"><span class="rm-q">2026.10.08</span><div class="rm-t"><b>매일경제TV 출연</b> — 최병호 경영총괄부사장, 시추공 13개와 ALS·SGS 보고서 검증 현황 설명.<small>「이슈&amp;피플」</small></div></div>
+      <div class="rm-row"><span class="rm-q">2026.10.16</span><div class="rm-t"><b>코어 기록 과정 공개</b> — 시추 코어를 상자에 담아 검사·기록하는 과정. 규모와 일정은 '공개 예정'.<small>공식 현장 보고</small></div></div>
+      <div class="rm-row"><span class="rm-q">2026.10.18</span><div class="rm-t"><b>SBS Biz 출연</b> — 금 광화대, 백운모층, 시료 232개 분석 현황 설명.<small>「오! 굿데이」</small></div></div>
+      <div class="rm-row rm-now"><span class="rm-q">지금</span><div class="rm-t"><b>1차 탐사 진행 중</b> — 시추와 ALS·SGS 정밀 분석. 2차·3차 탐사로 이어질 가능성이 높다는 현장 설명.</div></div>
+    </div>
+  </div>
+</section>
 
-  <div class="card">
-    <h3>금 광화대 (TDH-03 시추공)</h3>
-    <ul>
-      <li>캠프에서 북동쪽으로 약 4km 떨어진 TDH-03 시추공에서 두께 50m의 산화대가 나왔고 그 안에 금이 들어 있었다고 보고.</li>
-      <li>109m 깊이 시료를 몽골과학기술대에서 현미경과 SEM-EDX로 분석해 황철석 안의 금 알갱이를 확인. 황동석·코벨라이트 같은 구리 광물도 함께 나옴.</li>
-      <li>SBS Biz 방송에서는 최대 0.1mm 자연금 알갱이를 관찰했고, 금이 든 구간이 남북으로 약 700m 이어진다고 설명.</li>
-      <li>금이 어디서 왔는지 찾으려고 주변 하천 퇴적물 38곳을 채취하는 조사를 시작.</li>
-      <li>TDH-07 공에서는 같은 변질대에서 두께 30m의 산화철 변질대를 만났고, 시료는 SGS로 보내 분석 중.</li>
+<section class="sec" id="found">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">DRILLING RESULTS</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">시추로 나온 것</h2>
+    <p class="esc-sub fade-in">공식 현장 보고와 방송에서 회사 쪽이 밝힌 탐사 중간 결과입니다. 공인 기관의 매장량 보고서는 아닙니다.</p>
+
+    <article class="nc fade-in">
+      <div class="nc-meta"><span class="nc-src">공식 현장 보고</span><span class="nc-date">2026.09.30</span></div>
+      <h3 class="nc-ttl">TDH-03 시추공 — 두께 50m 산화대에서 금 확인</h3>
+      <figure class="nc-visual"><img src="https://mpcescrow.com/assets/news/gold-drill-site.jpg" alt="볼로르지오 광산 시추공 케이싱이 세워진 시추 현장" width="960" height="720" loading="lazy"><figcaption>9월 30일 금 확인 보고에 실린 현장 · © Bolor Geo MPC Corp.</figcaption></figure>
+      <ul class="nc-list">
+        <li>캠프에서 북동쪽 약 4km, TDH-03 시추공에서 <strong>두께 50m 산화대</strong>가 나왔고 그 안에 금이 들어 있었다고 보고.</li>
+        <li>109m 깊이 시료를 몽골과학기술대에서 현미경과 SEM-EDX로 분석해 <strong>황철석 안의 금 알갱이</strong> 확인. 황동석·코벨라이트 같은 구리 광물도 함께 나옴.</li>
+        <li>SBS Biz에서는 <strong>최대 0.1mm 자연금</strong>을 관찰했고 금이 든 구간이 남북으로 <strong>약 700m</strong> 이어진다고 설명. 금의 출처를 찾으려고 주변 하천 퇴적물 38곳을 채취하는 조사를 시작.</li>
+        <li>TDH-07 공에서는 같은 변질대에서 두께 30m의 산화철 변질대를 만났고, 시료는 SGS에서 분석 중.</li>
+      </ul>
+      <div class="nc-quote">"금광을 발견해 당장 캔다는 뜻은 아니고 유망 구간과 금 입자의 존재를 확인한 단계" — SBS Biz 방송에서 회사가 단 단서</div>
+      <a class="nc-link" href="https://www.globalmpc.tech/operations/tsagaan-tolgoi-gold" target="_blank" rel="noopener">공식 현장 보고 원문 보기</a>
+    </article>
+
+    <article class="nc fade-in">
+      <div class="nc-meta"><span class="nc-src nc-src2">방송 · 현장 인터뷰</span><span class="nc-date">2026.10</span></div>
+      <h3 class="nc-ttl">백운모 페그마타이트층 — 여러 시추공에서 연속 확인</h3>
+      <figure class="nc-visual"><img src="https://mpcescrow.com/assets/site-0046.jpg" alt="볼로르지오 광산 코어 박스에 담긴 시추 코어" width="1051" height="1686" loading="lazy"><figcaption>코어 박스에 담긴 시추 코어 · © Bolor Geo MPC Corp.</figcaption></figure>
+      <ul class="nc-list">
+        <li>백운모가 풍부한 페그마타이트층이 <strong>여러 시추공</strong>에서 확인됐다고 매일경제TV에서 설명.</li>
+        <li>SBS Biz에서는 백운모층이 연속으로 확인됐고 다른 지점에서도 <strong>44m, 34m</strong> 구간이 나왔다고 설명. 끌어올린 코어의 회수율은 <strong>거의 100%</strong>.</li>
+        <li>현장 인터뷰 쇼츠에서는 TDH-06으로 표시된 시추공에서 <strong>20m부터 200m까지</strong> 백운모가 든 편마암이 이어졌고, 백운모가 세 종류 정도 나왔다고 말함.</li>
+      </ul>
+      <a class="nc-link" href="https://www.youtube.com/watch?v=yTMHVYNyM8s" target="_blank" rel="noopener">SBS Biz 방송 클립 보기</a>
+      <a class="nc-link" href="https://www.youtube.com/shorts/j7kzAehv_DI" target="_blank" rel="noopener">백운모 현장 인터뷰 보기</a>
+    </article>
+
+    <article class="nc fade-in">
+      <div class="nc-meta"><span class="nc-src nc-src3">방송 발언</span><span class="nc-date">2026.10.08 · 10.18</span></div>
+      <h3 class="nc-ttl">시료 232개, 61개 원소 측정 — 희토류·리튬·루비듐</h3>
+      <figure class="nc-visual"><img src="https://i.ytimg.com/vi/7iLVbyigC1Q/hqdefault.jpg" alt="매일경제TV 이슈&amp;피플 볼로르지오 출연 화면" width="480" height="360" loading="lazy"><figcaption>매일경제TV 「이슈&amp;피플」 방송 화면</figcaption></figure>
+      <ul class="nc-list">
+        <li>국제 공인기관 SGS·ALS에 <strong>시료 232개</strong>를 보내 금을 포함한 <strong>61개 원소</strong>를 정밀 측정했다고 밝힘.</li>
+        <li>희토류·리튬·루비듐에서도 의미 있는 수치가 나왔지만, 규모는 추가 시추와 국제 분석기관 의뢰로 검증할 계획.</li>
+        <li>방송에서 말한 <strong>약 60조원</strong> 규모는 지질학적 추정치이고, 국제 기준(JORC) 정식 인증은 준비 중이라고 함께 말함.</li>
+      </ul>
+      <a class="nc-link" href="https://www.youtube.com/watch?v=7iLVbyigC1Q" target="_blank" rel="noopener">매일경제TV 방송 보기</a>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="elements">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">KEY ELEMENTS</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">확인된 핵심 원소와 쓰임</h2>
+    <div class="el-grid fade-in">
+      <div class="el"><div class="el-num">60</div><div class="el-sym">Nd</div><div class="el-name">네오디뮴</div><div class="el-cat cr">희토류</div></div>
+      <div class="el"><div class="el-num">59</div><div class="el-sym">Pr</div><div class="el-name">프라세오디뮴</div><div class="el-cat cr">희토류</div></div>
+      <div class="el"><div class="el-num">66</div><div class="el-sym">Dy</div><div class="el-name">디스프로슘</div><div class="el-cat cr">희토류</div></div>
+      <div class="el"><div class="el-num">57</div><div class="el-sym">La</div><div class="el-name">란탄</div><div class="el-cat cr">희토류</div></div>
+      <div class="el"><div class="el-num">58</div><div class="el-sym">Ce</div><div class="el-name">세륨</div><div class="el-cat cr">희토류</div></div>
+      <div class="el"><div class="el-num">74</div><div class="el-sym">W</div><div class="el-name">텅스텐</div><div class="el-cat cm">희소금속</div></div>
+      <div class="el el-wide"><div class="el-num">29</div><div class="el-sym">Cu</div><div class="el-name">구리</div><div class="el-cat cm">비철금속</div></div>
+    </div>
+    <ul class="wp-list fade-in">
+      <li><strong>네오디뮴</strong> — 가장 강한 영구자석(NdFeB)의 핵심 소재. 전기차와 풍력발전 모터에 들어갑니다.</li>
+      <li><strong>프라세오디뮴</strong> — 네오디뮴과 합금해 더 강한 NdPr 자석을 만듭니다. 항공우주·방산에 쓰입니다.</li>
+      <li><strong>디스프로슘</strong> — 희토류 중 가장 드물고 비싼 편. 자석에 조금 넣으면 높은 온도에서도 자력이 유지됩니다.</li>
+      <li><strong>란탄</strong> — 수소저장합금, 광학유리, 배터리 전극 소재.</li>
+      <li><strong>세륨</strong> — 자동차 배기가스 정화 촉매, 연마제, LED 형광체.</li>
+      <li><strong>텅스텐</strong> — 금속 중 녹는점이 가장 높습니다(3,422°C). 절삭공구, 방산, 반도체 소재.</li>
+      <li><strong>구리</strong> — 전기와 열을 잘 전달해 전기차 배선과 신재생 에너지 설비에 들어갑니다.</li>
     </ul>
-    <p class="src">회사는 "금광을 발견해 당장 캔다는 뜻은 아니고 유망 구간과 금 입자의 존재를 확인한 단계"라고 단서를 달았습니다.</p>
+    <p class="esc-note">구소련·중국 탐사와 SGS 노두 분석에서 확인된 원소 가운데 주요 7가지입니다. 품위와 양은 공인 보고서가 나와야 알 수 있습니다.</p>
   </div>
+</section>
 
-  <div class="card">
-    <h3>백운모 페그마타이트층</h3>
-    <ul>
-      <li>백운모가 풍부한 페그마타이트층이 여러 시추공에서 확인됐다고 매일경제TV에서 설명.</li>
-      <li>SBS Biz에서는 백운모층이 연속으로 확인됐고 다른 지점에서도 44m, 34m 구간이 나왔다고 설명.</li>
-      <li>현장 인터뷰 쇼츠에서는 TDH-06으로 표시된 시추공에서 20m 지점부터 200m까지 백운모가 든 편마암이 이어졌고, 백운모가 세 종류 정도 나왔다고 말함.</li>
-      <li>끌어올린 암석 코어의 회수율이 거의 100%라고 설명.</li>
+<section class="sec" id="next">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">NEXT STEPS</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">볼로르지오 광산의 다음 단계</h2>
+    <p class="esc-sub fade-in">SBS Biz 방송에서 회사가 밝힌 순서입니다. 지금은 "무엇이 얼마나 있는지 파악하는 탐사 단계"라고 설명했습니다.</p>
+    <div class="rm fade-in">
+      <div class="rm-row rm-now"><span class="rm-q">STEP 1</span><div class="rm-t"><b>시추와 ALS·SGS 정밀 분석</b> — 지금 여기</div></div>
+      <div class="rm-row"><span class="rm-q">STEP 2</span><div class="rm-t"><b>백운모 품질 시험</b></div></div>
+      <div class="rm-row"><span class="rm-q">STEP 3</span><div class="rm-t"><b>JORC 기준 자원량 인증</b></div></div>
+      <div class="rm-row"><span class="rm-q">STEP 4</span><div class="rm-t"><b>탐사 라이선스를 채굴 라이선스로 전환</b></div></div>
+      <div class="rm-row"><span class="rm-q">STEP 5</span><div class="rm-t"><b>공급 협의와 상업 생산</b></div></div>
+    </div>
+    <p class="esc-note">회사 공식 로드맵에는 2027년 1분기 탐사 라이센스 갱신이 들어 있습니다.</p>
+  </div>
+</section>
+
+<section class="sec" id="field">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">FIELD · TSAGAAN TOLGOI</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">현장 기록</h2>
+    <div class="gal fade-in">
+      <figure class="site-fig"><img src="https://mpcescrow.com/assets/site-0038.jpg" alt="볼로르지오 광산 탐사 캠프 — 트럭, 굴착기, 현장 사무소와 게르" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 02</span>탐사 캠프 구축</figcaption></figure>
+      <figure class="site-fig"><img src="https://mpcescrow.com/assets/site-0042.jpg" alt="차간톨고이 시추 파이프와 자재" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 01</span>시추 파이프 · 탐사 캠프</figcaption></figure>
+      <figure class="site-fig"><img src="https://mpcescrow.com/assets/site-0045.jpg" alt="코어 박스를 기록·측정하는 작업자들" width="1280" height="960" loading="lazy"><figcaption><span class="meas">PLATE 08</span>코어 박스 기록·측정</figcaption></figure>
+      <figure class="site-fig"><img src="https://mpcescrow.com/assets/site-0047.jpg" alt="시추 로드를 다루는 작업자들" width="1080" height="1687" loading="lazy"><figcaption><span class="meas">PLATE 10</span>시추 로드 작업</figcaption></figure>
+      <figure class="site-fig"><img src="https://mpcescrow.com/assets/site-0040.jpg" alt="현장 설치 작업" width="960" height="720" loading="lazy"><figcaption><span class="meas">PLATE 04</span>현장 설치 작업</figcaption></figure>
+      <figure class="site-fig"><img src="https://mpcescrow.com/assets/news/outcrop-samples.jpg" alt="지표 노두에서 채취한 암석 샘플" width="640" height="1138" loading="lazy"><figcaption><span class="meas">SAMPLE</span>지표 노두 샘플</figcaption></figure>
+    </div>
+    <p class="esc-note">사진 출처: MPC 공식 홈페이지 현장 소식 (globalmpc.tech/operations) · © Bolor Geo MPC Corp.</p>
+
+    <div class="vid-strip fade-in">
+      <div class="vid-strip-h">현장 영상 · 볼로르지오 공식 유튜브 (@Bolor_Geo)</div>
+      <div class="vid-grid">
+        <a href="https://www.youtube.com/shorts/gJbBodyL6B4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/gJbBodyL6B4/oar2.jpg" alt="하늘에서 내려다본 몽골 광물 탐사 현장" width="270" height="480" loading="lazy"><span>하늘에서 내려다본 탐사 현장</span></a>
+        <a href="https://www.youtube.com/shorts/56aSrTZPaiI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/56aSrTZPaiI/oar2.jpg" alt="땅 위에서 본 시추 현장" width="270" height="480" loading="lazy"><span>시추 현장은 땅 위에서 보면 이렇습니다</span></a>
+        <a href="https://www.youtube.com/shorts/j7kzAehv_DI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/j7kzAehv_DI/oar2.jpg" alt="몽골 탐사 현장에서 들은 백운모 이야기" width="270" height="480" loading="lazy"><span>현장에서 들은 백운모 이야기</span></a>
+        <a href="https://www.youtube.com/shorts/aoS5Z24zE90" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/aoS5Z24zE90/oar2.jpg" alt="탐사 현장의 하루가 저무는 모습" width="270" height="480" loading="lazy"><span>탐사 현장의 하루는 이렇게 저뭅니다</span></a>
+        <a href="https://www.youtube.com/shorts/WresqjxAXf0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WresqjxAXf0/oar2.jpg" alt="몽골 현장까지 가는 곧은 도로" width="270" height="480" loading="lazy"><span>몽골 현장까지 가는 길</span></a>
+        <a href="https://www.youtube.com/shorts/HKnXwvJTl8s" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/HKnXwvJTl8s/oar2.jpg" alt="현장 사람들의 식사 시간" width="270" height="480" loading="lazy"><span>함께하는 사람들의 식사 시간</span></a>
+      </div>
+      <p class="vid-note">올린 날은 2026년 10월 17일(한꺼번에 올림)이라 찍은 날과 다를 수 있습니다. 누르면 유튜브로 이동합니다.</p>
+    </div>
+
+    <ul class="wp-list fade-in">
+      <li><strong>24시간 시추</strong> — 주간·야간 두 팀이 24시간 시추하고, 밤 소음이 주변 동물에게 스트레스를 준다는 민원이 있어 조용히 작업한다고 설명했습니다.</li>
+      <li><strong>무덤 16기 보호 조사</strong> — 탐사 지역에서 무덤 16기가 확인돼 광물자원법에 따라 보호 조사를 해야 하고, 그래서 시추 위치를 더 떨어진 곳으로 옮겼다고 했습니다.</li>
+      <li><strong>지역과 함께</strong> — 아주경제는 볼로르지오의 현지 활동으로 수자원 사용 계약, 지역 주민 채용, 유치원 설립 기부를 소개했습니다.</li>
     </ul>
   </div>
+</section>
 
-  <div class="card">
-    <h3>희토류·리튬·루비듐과 시료 분석</h3>
-    <ul>
-      <li>SGS·ALS에 시료 232개를 보내 금을 포함한 61개 원소를 정밀 측정했다고 방송에서 밝힘.</li>
-      <li>희토류·리튬·루비듐에서도 의미 있는 수치가 나왔지만, 규모는 추가 시추와 국제 분석기관 의뢰로 검증할 계획.</li>
-      <li>방송에서 말한 약 60조원 규모는 지질학적 추정치이고, 국제 기준(JORC) 정식 인증은 준비 중이라고 함께 말함.</li>
-    </ul>
-    <p class="src">출처: 공식 현장 보고(2026.09.30), 매일경제TV(2026.10.08), SBS Biz(2026.10.18), 볼로르지오 유튜브 현장 인터뷰</p>
-  </div>
-
-  <figure class="plate">
-    <img src="https://mpcescrow.com/assets/news/gold-drill-site.jpg" alt="볼로르지오 광산 시추공 케이싱이 세워진 시추 현장" width="960" height="720" loading="lazy">
-    <figcaption>9월 30일 금 확인 보고에 실린 시추 현장 · 이미지: MPC 공식 홈페이지 운영 소식 · © Bolor Geo MPC Corp.</figcaption>
-  </figure>
-
-  <h2 id="elements">이 광구에서 확인된 핵심 원소와 쓰임</h2>
-  <p>구소련·중국 탐사와 SGS 노두 분석에서 확인된 원소 가운데 주요 7가지입니다. 품위와 양은 공인 보고서가 나와야 알 수 있습니다.</p>
-  <div class="els">
-    <div class="el"><div class="sym">Nd<small>60</small></div><div><b>네오디뮴<i>희토류</i></b><p>가장 강한 영구자석(NdFeB)의 핵심 소재. 전기차와 풍력발전 모터에 들어갑니다.</p></div></div>
-    <div class="el"><div class="sym">Pr<small>59</small></div><div><b>프라세오디뮴<i>희토류</i></b><p>네오디뮴과 합금해 더 강한 NdPr 자석을 만듭니다. 항공우주·방산에 쓰입니다.</p></div></div>
-    <div class="el"><div class="sym">Dy<small>66</small></div><div><b>디스프로슘<i>희토류</i></b><p>희토류 중 가장 드물고 비싼 편. 자석에 조금 넣으면 높은 온도에서도 자력이 유지됩니다.</p></div></div>
-    <div class="el"><div class="sym">La<small>57</small></div><div><b>란탄<i>희토류</i></b><p>수소저장합금, 광학유리, 배터리 전극 소재로 쓰입니다.</p></div></div>
-    <div class="el"><div class="sym">Ce<small>58</small></div><div><b>세륨<i>희토류</i></b><p>자동차 배기가스 정화 촉매, 연마제, LED 형광체에 쓰입니다.</p></div></div>
-    <div class="el"><div class="sym">W<small>74</small></div><div><b>텅스텐<i>희소금속</i></b><p>금속 중 녹는점이 가장 높습니다(3,422°C). 절삭공구, 방산, 반도체 소재.</p></div></div>
-    <div class="el"><div class="sym">Cu<small>29</small></div><div><b>구리<i>비철금속</i></b><p>전기와 열을 잘 전달해 전기차 배선과 신재생 에너지 설비에 들어갑니다.</p></div></div>
-  </div>
-
-  <h2 id="next">볼로르지오 광산의 다음 단계</h2>
-  <p>SBS Biz 방송에서 회사가 밝힌 순서입니다. 지금은 "무엇이 얼마나 있는지 파악하는 탐사 단계"라고 설명했습니다.</p>
-  <ol class="steps">
-    <li class="now">시추와 ALS·SGS 정밀 분석 (지금)</li>
-    <li>백운모 품질 시험</li>
-    <li>JORC 기준 자원량 인증</li>
-    <li>탐사 라이선스를 채굴 라이선스로 전환</li>
-    <li>공급 협의와 상업 생산</li>
-  </ol>
-  <p class="note">현장 인터뷰에서는 7월에 시작한 지금이 1차 탐사의 중간 단계이고, 2차·3차 탐사로 이어질 가능성이 높다고 말했습니다. 회사 공식 로드맵에는 2027년 1분기 탐사 라이센스 갱신이 들어 있습니다.</p>
-
-  <h2 id="field">현장 운영</h2>
-  <ul class="links">
-    <li><b>24시간 시추</b> — 주간·야간 두 팀이 24시간 시추하고, 밤 소음이 주변 동물에게 스트레스를 준다는 민원이 있어 조용히 작업한다고 설명했습니다.</li>
-    <li><b>무덤 16기 보호 조사</b> — 탐사 지역에서 무덤 16기가 확인돼 광물자원법에 따라 보호 조사를 해야 하고, 그래서 시추 위치를 더 떨어진 곳으로 옮겼다고 했습니다.</li>
-    <li><b>지역과 함께</b> — 아주경제는 볼로르지오의 현지 활동으로 수자원 사용 계약, 지역 주민 채용, 유치원 설립 기부를 소개했습니다.</li>
-    <li><b>시료 기록</b> — 시료가 어디서, 몇 m 깊이에서, 어떤 지층 사이에서 나왔는지 함께 남겨야 의미 있는 자료가 된다며 코어 기록 과정을 공개했습니다.</li>
-  </ul>
-
-  <h2 id="photos">현장 사진과 영상</h2>
-  <div class="gal">
-    <figure><img src="https://mpcescrow.com/assets/site-0038.jpg" alt="볼로르지오 광산 탐사 캠프 — 트럭, 굴착기, 현장 사무소와 게르" width="960" height="720" loading="lazy"><figcaption>탐사 캠프 구축</figcaption></figure>
-    <figure><img src="https://mpcescrow.com/assets/site-0042.jpg" alt="차간톨고이 시추 파이프와 자재" width="960" height="720" loading="lazy"><figcaption>시추 파이프와 자재</figcaption></figure>
-    <figure><img src="https://mpcescrow.com/assets/site-0045.jpg" alt="코어 박스를 기록·측정하는 작업자들" width="1280" height="960" loading="lazy"><figcaption>코어 박스 기록·측정</figcaption></figure>
-    <figure class="tall"><img src="https://mpcescrow.com/assets/site-0046.jpg" alt="볼로르지오 광산 코어 박스에 담긴 시추 코어" width="1051" height="1686" loading="lazy"><figcaption>코어 박스에 담긴 시추 코어</figcaption></figure>
-    <figure class="tall"><img src="https://mpcescrow.com/assets/site-0047.jpg" alt="시추 로드를 다루는 작업자들" width="1080" height="1687" loading="lazy"><figcaption>시추 로드 작업</figcaption></figure>
-    <figure class="tall"><img src="https://mpcescrow.com/assets/news/outcrop-samples.jpg" alt="지표 노두에서 채취한 암석 샘플" width="640" height="1138" loading="lazy"><figcaption>지표 노두 샘플</figcaption></figure>
-  </div>
-  <p class="cap">사진 출처: MPC 공식 홈페이지 현장 소식 (globalmpc.tech/operations) · © Bolor Geo MPC Corp.</p>
-
-  <h3>볼로르지오 공식 유튜브 현장 쇼츠</h3>
-  <div class="vids">
-    <a href="https://www.youtube.com/shorts/gJbBodyL6B4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/gJbBodyL6B4/oar2.jpg" alt="하늘에서 내려다본 몽골 광물 탐사 현장" width="270" height="480" loading="lazy">하늘에서 본 탐사 현장</a>
-    <a href="https://www.youtube.com/shorts/56aSrTZPaiI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/56aSrTZPaiI/oar2.jpg" alt="땅 위에서 본 시추 현장" width="270" height="480" loading="lazy">땅 위에서 본 시추 현장</a>
-    <a href="https://www.youtube.com/shorts/j7kzAehv_DI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/j7kzAehv_DI/oar2.jpg" alt="몽골 탐사 현장에서 들은 백운모 이야기" width="270" height="480" loading="lazy">현장에서 들은 백운모 이야기</a>
-    <a href="https://www.youtube.com/shorts/aoS5Z24zE90" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/aoS5Z24zE90/oar2.jpg" alt="탐사 현장의 저녁" width="270" height="480" loading="lazy">탐사 현장의 저녁</a>
-    <a href="https://www.youtube.com/shorts/WresqjxAXf0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WresqjxAXf0/oar2.jpg" alt="몽골 현장까지 가는 길" width="270" height="480" loading="lazy">현장까지 가는 길</a>
-    <a href="https://www.youtube.com/shorts/HKnXwvJTl8s" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/HKnXwvJTl8s/oar2.jpg" alt="현장 사람들의 식사 시간" width="270" height="480" loading="lazy">현장 식사 시간</a>
-  </div>
-  <p class="note">영상을 누르면 유튜브로 이동합니다. 올린 날은 2026년 10월 17일(한꺼번에 올림)이라 찍은 날과 다를 수 있습니다.</p>
-
-  <h2 id="check">확인된 것과 아직 확인되지 않은 것</h2>
-  <div class="two">
-    <div class="card ok">
-      <h3>확인된 것</h3>
-      <ul>
+<section class="sec" id="check">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">VERIFIED · PENDING</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">확인된 것과 아직 아닌 것</h2>
+    <div class="cmp fade-in">
+      <div class="cmp-col cmp-ok"><h3>✓ 확인된 것</h3><ul class="wp-list">
         <li>탐사권 XV-022460, 광구 6,481ha</li>
         <li>환경영향평가 통과 (아주경제)</li>
         <li>2026년 7월 시추 시작, 시추공 13개 (회사 방송 발언)</li>
         <li>SGS 노두 16개 샘플 성분 분석</li>
         <li>TDH-03 시료에서 현미경으로 금 알갱이 관찰 (몽골과학기술대)</li>
-      </ul>
-    </div>
-    <div class="card not">
-      <h3>아직 아닌 것</h3>
-      <ul>
+      </ul></div>
+      <div class="cmp-col cmp-not"><h3>○ 아직 아닌 것</h3><ul class="wp-list">
         <li>JORC·NI 43-101 기준 공인 매장량 보고서 (준비 중)</li>
         <li>매장량·품위 수치 (회사는 공인 보고서 전에는 공개하지 않는다는 원칙)</li>
         <li>채굴 허가 (탐사권과 별도)</li>
         <li>희토류·루비듐·리튬은 추가 시추 뒤 공인기관 검증 예정</li>
-      </ul>
+      </ul></div>
     </div>
   </div>
+</section>
 
-  <h2 id="mpc">볼로르지오 광산과 MPC 광산 코인</h2>
-  <p>MPC(Mineral Project Coin, 미네랄 프로젝트 코인)는 파나마 법인 Bolor Geo MPC Corp.가 발행하는 토큰입니다. 2026년 11월 21일 기준 공식 팀·공시 페이지에 적힌 법인은 이 발행사 하나이고, 볼로르지오(Bolor Geo LLC)는 몽골 현장에서 차간톨고이 탐사를 맡은 광산 법인으로 소개됩니다.</p>
-  <p>2026년 10월 15일 공식 X 라이브에서 COO는 MPC 토큰이 광산 지분, 광업권, 로열티가 아니며 특정 광산의 소유권을 나타내지 않는다고 말했습니다. 차간톨고이는 광산 자산을 블록체인에 기록하는 틀을 실제 광산에 적용해 보이는 참조 사례라는 설명입니다. 회사는 기록 체인을 BNB 스마트체인으로 정했고 새 토큰은 아직 발행 전이라고 공식 홈페이지에 밝히고 있습니다.</p>
-  <p>MPC 코인 소개, 뉴스 전체, 경영진은 <a href="https://mpcescrow.com/#project">MPC RWA 리포트 프로젝트 탭</a>에 있고, 회원끼리 MPC를 안전하게 사고파는 방법은 <a href="https://mpcescrow.com/mpc-escrow/">MPC 에스크로 앱</a>에서 볼 수 있습니다.</p>
-
-  <h2 id="faq">볼로르지오 광산 자주 묻는 질문</h2>
-  <details><summary>볼로르지오 광산은 어디에 있나요?</summary><p>몽골 불간 아이막 바양누르 솜의 차간톨고이 광구입니다. 울란바토르에서 서쪽으로 약 190km 떨어져 있고 포장도로로 이어져 있습니다. 광구 면적은 6,481ha로 여의도의 약 20배입니다.</p></details>
-  <details><summary>볼로르지오 광산은 지금 채굴 중인가요?</summary><p>아닙니다. 2026년 7월 시추를 시작한 탐사 단계입니다. 갖고 있는 것은 탐사권(XV-022460)이고, 채굴하려면 별도의 채굴 허가가 필요합니다.</p></details>
-  <details><summary>매장량은 얼마인가요?</summary><p>공인 매장량은 아직 없습니다. JORC 기준 보고서는 준비 중이고, 회사는 공인 보고서가 확정되기 전에는 매장량·품위 수치를 공개하지 않는다는 원칙을 밝혔습니다. 방송에서 말한 약 60조원은 지질학적 추정치입니다.</p></details>
-  <details><summary>시료 분석은 누가 하나요?</summary><p>국제 분석기관 ALS(호주)와 SGS(스위스)에 맡기고 있습니다. 회사는 방송에서 시료 232개를 보내 금을 포함한 61개 원소를 측정했다고 밝혔고, 일부 시료는 몽골과학기술대에서 현미경 분석을 했습니다.</p></details>
-  <details><summary>볼로르지오와 MPC 코인은 무슨 관계인가요?</summary><p>MPC(Mineral Project Coin)는 파나마 법인 Bolor Geo MPC Corp.가 발행하는 토큰이고, 볼로르지오(Bolor Geo LLC)는 몽골에서 차간톨고이 탐사를 맡은 광산 법인입니다. 회사는 MPC 토큰이 광산 지분·광업권·로열티가 아니라고 밝혔습니다.</p></details>
-
-  <h2>볼로르지오 언론·방송 보도</h2>
-  <ul class="links">
-    <li><a href="https://www.ajunews.com/view/20260730083902343" target="_blank" rel="noopener">아주경제 (2026.07.31) — 바양노르 광상과 몽골 광산·관광업</a></li>
-    <li><a href="https://www.ajunews.com/view/20260730091210438" target="_blank" rel="noopener">아주경제 (2026.07.31) — 몽골 전 총리 인터뷰, 책임 있는 한국 기업의 조건</a></li>
-    <li><a href="https://www.joongang.co.kr/article/25454014" target="_blank" rel="noopener">중앙일보 (2026.08.18) — 몽골 초원의 시추 현장</a></li>
-    <li><a href="https://www.youtube.com/watch?v=7iLVbyigC1Q" target="_blank" rel="noopener">매일경제TV 「이슈&amp;피플」 (2026.10.08) — 자원 확보 전쟁 속 대안은?</a></li>
-    <li><a href="https://www.youtube.com/watch?v=yTMHVYNyM8s" target="_blank" rel="noopener">SBS Biz 「세상의 모든 정보 오! 굿데이」 (2026.10.18)</a></li>
-    <li><a href="https://www.globalmpc.tech/operations/tsagaan-tolgoi-gold" target="_blank" rel="noopener">공식 현장 보고 (2026.09.30) — TDH-03 시추공에서 금 확인</a></li>
-    <li><a href="https://www.globalmpc.tech/operations/tsagaan-tolgoi-documentation" target="_blank" rel="noopener">공식 현장 보고 (2026.10.16) — 차간톨고이 탐사 기록 추가 공개</a></li>
-  </ul>
-  <p class="note">방송과 현장 보고의 내용은 회사 측 발언이며, 공인 기관의 매장량 보고서가 아닙니다.</p>
-
-  <h2>볼로르지오 공식 채널</h2>
-  <ul class="links">
-    <li><a href="https://www.youtube.com/@Bolor_Geo" target="_blank" rel="noopener">유튜브 @Bolor_Geo</a> — 현장 드론·시추·인터뷰 쇼츠</li>
-    <li><a href="https://www.instagram.com/bolor_geo" target="_blank" rel="noopener">인스타그램 @bolor_geo</a></li>
-    <li><a href="https://www.facebook.com/Bolor.Geo/" target="_blank" rel="noopener">페이스북 Bolor.Geo</a></li>
-  </ul>
-
-  <div class="cta">
-    <a class="a1" href="https://mpcescrow.com/">MPC RWA 리포트 홈으로</a>
-    <a class="a2" href="https://mpcescrow.com/mpc-escrow/">MPC 에스크로 안전거래 앱</a>
+<section class="sec" id="mpc">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">MINERAL PROJECT COIN</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">볼로르지오 광산과 MPC 광산 코인</h2>
+    <ul class="wp-list fade-in">
+      <li><strong>Bolor Geo MPC Corp.</strong> — 파나마 법인, MPC(Mineral Project Coin, 미네랄 프로젝트 코인) 토큰 발행사. 2026년 11월 21일 기준 공식 팀·공시 페이지에 적힌 법인은 이 발행사 하나입니다.</li>
+      <li><strong>Bolor Geo LLC (볼로르지오)</strong> — 몽골 현장에서 차간톨고이 탐사를 맡은 광산 법인으로 소개됩니다.</li>
+      <li>2026년 10월 15일 공식 X 라이브에서 COO는 MPC 토큰이 <strong>광산 지분, 광업권, 로열티가 아니며</strong> 특정 광산의 소유권을 나타내지 않는다고 말했습니다. 차간톨고이는 광산 자산을 블록체인에 기록하는 틀을 실제 광산에 적용해 보이는 참조 사례라는 설명입니다.</li>
+      <li>회사는 기록 체인을 BNB 스마트체인으로 정했고 새 토큰은 아직 발행 전이라고 공식 홈페이지에 밝히고 있습니다.</li>
+    </ul>
+    <div class="btns" style="margin-top:1.6rem">
+      <a href="https://mpcescrow.com/#project" class="btn-o">MPC 프로젝트 전체 보기</a>
+      <a href="https://mpcescrow.com/mpc-escrow/" class="btn-g">MPC 에스크로 안전거래 앱</a>
+    </div>
   </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">Q &amp; A</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">볼로르지오 광산 자주 묻는 질문</h2>
+    <div class="faq-list fade-in">
+      <details><summary>볼로르지오 광산은 어디에 있나요?</summary><div class="faq-a">몽골 불간 아이막 바양누르 솜의 차간톨고이 광구입니다. 울란바토르에서 서쪽으로 약 190km 떨어져 있고 포장도로로 이어져 있습니다. 광구 면적은 6,481ha로 여의도의 약 20배입니다.</div></details>
+      <details><summary>볼로르지오 광산은 지금 채굴 중인가요?</summary><div class="faq-a">아닙니다. 2026년 7월 시추를 시작한 탐사 단계입니다. 갖고 있는 것은 탐사권(XV-022460)이고, 채굴하려면 별도의 채굴 허가가 필요합니다.</div></details>
+      <details><summary>매장량은 얼마인가요?</summary><div class="faq-a">공인 매장량은 아직 없습니다. JORC 기준 보고서는 준비 중이고, 회사는 공인 보고서가 확정되기 전에는 매장량·품위 수치를 공개하지 않는다는 원칙을 밝혔습니다. 방송에서 말한 약 60조원은 지질학적 추정치입니다.</div></details>
+      <details><summary>시료 분석은 누가 하나요?</summary><div class="faq-a">국제 분석기관 ALS(호주)와 SGS(스위스)에 맡기고 있습니다. 회사는 방송에서 시료 232개를 보내 금을 포함한 61개 원소를 측정했다고 밝혔고, 일부 시료는 몽골과학기술대에서 현미경 분석을 했습니다.</div></details>
+      <details><summary>볼로르지오와 MPC 코인은 무슨 관계인가요?</summary><div class="faq-a">MPC(Mineral Project Coin)는 파나마 법인 Bolor Geo MPC Corp.가 발행하는 토큰이고, 볼로르지오(Bolor Geo LLC)는 몽골에서 차간톨고이 탐사를 맡은 광산 법인입니다. 회사는 MPC 토큰이 광산 지분·광업권·로열티가 아니라고 밝혔습니다.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="press">
+  <div class="inner">
+    <div class="sec-hd fade-in"><span class="sec-kicker2">PRESS · CHANNELS</span><div class="sec-hline"></div></div>
+    <h2 class="sec-ttl fade-in">언론 보도와 공식 채널</h2>
+    <div class="rm fade-in">
+      <div class="rm-row"><span class="rm-q">07.31</span><div class="rm-t"><a href="https://www.ajunews.com/view/20260730083902343" target="_blank" rel="noopener"><b>아주경제</b> — 바양노르 광상과 몽골 광산·관광업</a></div></div>
+      <div class="rm-row"><span class="rm-q">07.31</span><div class="rm-t"><a href="https://www.ajunews.com/view/20260730091210438" target="_blank" rel="noopener"><b>아주경제</b> — 몽골 전 총리 인터뷰, 책임 있는 한국 기업의 조건</a></div></div>
+      <div class="rm-row"><span class="rm-q">08.18</span><div class="rm-t"><a href="https://www.joongang.co.kr/article/25454014" target="_blank" rel="noopener"><b>중앙일보</b> — 몽골 초원의 시추 현장</a></div></div>
+      <div class="rm-row"><span class="rm-q">10.08</span><div class="rm-t"><a href="https://www.youtube.com/watch?v=7iLVbyigC1Q" target="_blank" rel="noopener"><b>매일경제TV 「이슈&amp;피플」</b> — 자원 확보 전쟁 속 대안은?</a></div></div>
+      <div class="rm-row"><span class="rm-q">10.16</span><div class="rm-t"><a href="https://www.globalmpc.tech/operations/tsagaan-tolgoi-documentation" target="_blank" rel="noopener"><b>공식 현장 보고</b> — 차간톨고이 탐사 기록 추가 공개</a></div></div>
+      <div class="rm-row"><span class="rm-q">10.18</span><div class="rm-t"><a href="https://www.youtube.com/watch?v=yTMHVYNyM8s" target="_blank" rel="noopener"><b>SBS Biz 「오! 굿데이」</b> — 몽골에서 찾는 미래 먹거리</a></div></div>
+    </div>
+    <p class="esc-note">방송과 현장 보고의 내용은 회사 측 발언이며, 공인 기관의 매장량 보고서가 아닙니다.</p>
+    <div class="btns" style="margin-top:1.4rem">
+      <a href="https://www.youtube.com/@Bolor_Geo" target="_blank" rel="noopener" class="btn-o">볼로르지오 유튜브</a>
+      <a href="https://www.instagram.com/bolor_geo" target="_blank" rel="noopener" class="btn-o">볼로르지오 인스타그램</a>
+    </div>
+  </div>
+</section>
 </main>
-<footer>
-  <p>이 사이트는 투자 권유가 아닙니다. 투자 판단과 그 결과는 전적으로 본인 책임입니다.</p>
-  <p><a href="https://mpcescrow.com/">MPC RWA 리포트</a> · <a href="https://mpcescrow.com/privacy.html">개인정보 처리방침</a></p>
-  <p>몽골 불간 아이막 바양누르 솜 · 탐사 라이센스 XV-022460 · © 2026 MPC RWA Report</p>
+
+<footer class="footer">
+  <div class="f-ghost" aria-hidden="true">MPC</div>
+  <div class="f-logo">MPC · MINERAL PROJECT COIN</div>
+  <div class="f-disc">이 사이트는 투자 권유가 아닙니다. 투자 판단과 그 결과는 전적으로 본인 책임입니다.</div>
+  <div class="f-links">
+    <a href="https://mpcescrow.com/">MPC RWA 리포트</a><span>·</span>
+    <a href="https://mpcescrow.com/mpc-escrow/">에스크로 앱</a><span>·</span>
+    <a href="https://www.globalmpc.tech/">공식 홈페이지</a>
+  </div>
+  <div class="f-links">
+    <span>광산 법인 볼로르지오</span><span>·</span>
+    <a href="https://www.youtube.com/@Bolor_Geo">유튜브</a><span>·</span>
+    <a href="https://www.instagram.com/bolor_geo">인스타그램</a><span>·</span>
+    <a href="https://www.facebook.com/Bolor.Geo/">페이스북</a>
+  </div>
+  <div class="f-links"><a href="https://mpcescrow.com/privacy.html">개인정보 처리방침</a></div>
+  <div class="f-sub">몽골 불간 아이막 바양누르 솜 · 탐사 라이센스 XV-022460<br>© 2026 MPC RWA Report</div>
 </footer>
+<script>
+(function(){var els=document.querySelectorAll('.fade-in');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:.08});
+els.forEach(function(e){io.observe(e)});})();
+</script>
 </body>
 </html>
