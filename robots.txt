@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /preview/
 Sitemap: https://mpcescrow.com/sitemap.xml
+
+#DaumWebMasterTool:ba7f401584225e0fabc6c84a9111535ef37b35c523e95ad025d8c3c7bc8452a6:CwADIp+6ZHYYqogn2XaFYA==
